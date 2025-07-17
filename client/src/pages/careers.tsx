@@ -1,8 +1,29 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
+interface Job {
+  id: string;
+  title: string;
+  type: string;
+  typeColor: string;
+  description: string;
+  skills: string[];
+  location: string;
+  experience: string;
+  department: string;
+}
+
 export default function Careers() {
+  const [jobs, setJobs] = useState<Job[]>([]);
+
+  useEffect(() => {
+    fetch('/data/jobs.json')
+      .then(response => response.json())
+      .then(data => setJobs(data))
+      .catch(error => console.error('Error loading jobs:', error));
+  }, []);
   const benefits = [
     {
       icon: "fas fa-rocket",
@@ -36,71 +57,10 @@ export default function Careers() {
     }
   ];
 
-  const jobs = [
-    {
-      title: "Senior Full Stack Developer",
-      type: "Full-time",
-      typeColor: "primary-custom",
-      description: "Join our engineering team to build scalable web applications using React, Node.js, and cloud technologies. You'll work on exciting projects that impact millions of users worldwide.",
-      skills: ["React", "Node.js", "TypeScript", "AWS", "MongoDB", "GraphQL"],
-      location: "San Francisco, CA / Remote",
-      experience: "5+ years",
-      department: "Engineering"
-    },
-    {
-      title: "UX/UI Designer",
-      type: "Full-time",
-      typeColor: "accent-custom",
-      description: "Create beautiful and intuitive user experiences for our suite of products used by millions worldwide. Work closely with product managers and engineers to bring designs to life.",
-      skills: ["Figma", "User Research", "Prototyping", "Design Systems", "Adobe Creative Suite"],
-      location: "New York, NY / Remote",
-      experience: "3+ years",
-      department: "Design"
-    },
-    {
-      title: "DevOps Engineer",
-      type: "Contract",
-      typeColor: "emerald-700",
-      description: "Build and maintain our cloud infrastructure to ensure scalability, security, and reliability. Implement CI/CD pipelines and monitor system performance.",
-      skills: ["Docker", "Kubernetes", "CI/CD", "Terraform", "AWS", "Monitoring"],
-      location: "Austin, TX / Remote",
-      experience: "4+ years",
-      department: "Infrastructure"
-    },
-    {
-      title: "Product Manager",
-      type: "Full-time",
-      typeColor: "blue-600",
-      description: "Drive product strategy and execution for our core platform. Work with cross-functional teams to deliver features that delight our customers.",
-      skills: ["Product Strategy", "Analytics", "Roadmapping", "Agile", "User Research"],
-      location: "Seattle, WA / Remote",
-      experience: "4+ years",
-      department: "Product"
-    },
-    {
-      title: "Marketing Specialist",
-      type: "Full-time",
-      typeColor: "purple-600",
-      description: "Develop and execute marketing campaigns to grow our brand awareness and customer acquisition. Work on content creation, social media, and digital marketing.",
-      skills: ["Digital Marketing", "Content Creation", "SEO", "Social Media", "Analytics"],
-      location: "Los Angeles, CA / Remote",
-      experience: "2+ years",
-      department: "Marketing"
-    },
-    {
-      title: "Data Scientist",
-      type: "Full-time",
-      typeColor: "indigo-600",
-      description: "Analyze large datasets to extract insights and build predictive models. Work on machine learning projects that drive business decisions.",
-      skills: ["Python", "Machine Learning", "SQL", "TensorFlow", "Statistics", "Data Visualization"],
-      location: "Boston, MA / Remote",
-      experience: "3+ years",
-      department: "Data"
-    }
-  ];
+
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
       <Navigation />
       
       {/* Hero Section */}

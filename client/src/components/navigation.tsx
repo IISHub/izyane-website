@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ThemeToggle } from '@/components/theme-toggle';
+import { Link } from 'wouter';
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
@@ -20,7 +22,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 z-50">
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -29,7 +31,7 @@ export default function Navigation() {
               alt="iZyane Logo" 
               className="w-8 h-8 rounded-lg object-contain"
             />
-            <span className="text-xl font-bold text-secondary-custom">iZyane</span>
+            <span className="text-xl font-bold text-secondary-custom dark:text-white">iZyane</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -47,18 +49,25 @@ export default function Navigation() {
               Products
             </button>
 
-            <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium">
+            <Link href="/contact" className="text-slate-600 dark:text-slate-300 hover:text-primary-custom transition-colors duration-200 font-medium">
               Contact
-            </button>
+            </Link>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
           </div>
           
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-slate-600 hover:text-primary-custom"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <i className="fas fa-bars text-xl"></i>
-          </button>
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <button 
+              className="text-slate-600 dark:text-slate-300 hover:text-primary-custom"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <i className="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
         
         {/* Mobile Navigation */}
@@ -78,9 +87,9 @@ export default function Navigation() {
                 Products
               </button>
 
-              <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
+              <Link href="/contact" className="text-slate-600 dark:text-slate-300 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Contact
-              </button>
+              </Link>
             </div>
           </div>
         )}

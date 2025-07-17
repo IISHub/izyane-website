@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Microsoft",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+    "category": "partner"
+  },
+  {
+    "name": "AWS",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    "category": "partner"
+  },
+  {
+    "name": "Google Cloud",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    "category": "partner"
+  },
+  {
+    "name": "Docker",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    "category": "partner"
+  },
+  {
+    "name": "React",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "category": "technology"
+  },
+  {
+    "name": "Node.js",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "category": "technology"
+  },
+  {
+    "name": "MongoDB",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    "category": "technology"
+  },
+  {
+    "name": "PostgreSQL",
+    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    "category": "technology"
+  }
+]

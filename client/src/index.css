@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   --background: hsl(210, 20%, 98%);
@@ -25,6 +25,11 @@
   --destructive-foreground: hsl(210, 40%, 98%);
   --ring: hsl(221, 83%, 53%);
   --radius: 0.5rem;
+  
+  /* Custom brand colors */
+  --primary-custom: hsl(221, 83%, 53%);
+  --accent-custom: hsl(142, 71%, 45%);
+  --secondary-custom: hsl(222, 84%, 5%);
 }
 
 .dark {
@@ -62,6 +67,70 @@
 @layer utilities {
   .font-inter {
     font-family: 'Inter', sans-serif;
+  }
+  
+  /* Custom animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--primary-custom), var(--accent-custom));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Custom container */
+  .container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-padding {
+    padding: 5rem 0;
+  }
+  
+  /* Card hover effect */
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (min-width: 640px) {
+    .container-custom {
+      padding: 0 2rem;
+    }
   }
 }
 
