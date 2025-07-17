@@ -23,7 +23,7 @@ export default function HeroSection() {
     {
       title: "Building the Future of Technology",
       subtitle: "Innovative Solutions",
-      description: "We deliver cutting-edge solutions that transform businesses and drive innovation. Join the thousands of companies already accelerating their growth with TechFlow.",
+      description: "We deliver cutting-edge solutions that transform businesses and drive innovation. Join the thousands of companies already accelerating their growth with iZyane.",
       backgroundGradient: "from-slate-50 via-blue-50 to-indigo-100",
       stats: [
         { number: "500+", label: "Happy Clients" },
@@ -128,7 +128,7 @@ export default function HeroSection() {
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="text-slate-400 text-sm">dashboard.techflow.com</div>
+                  <div className="text-slate-400 text-sm">dashboard.izyane.com</div>
                 </div>
                 <div className={`h-32 bg-gradient-to-r from-${currentSlideData.primaryColor}/20 to-accent-custom/20 rounded-lg flex items-center justify-center`}>
                   <i className={`${currentSlideData.mockupIcon} text-4xl text-${currentSlideData.primaryColor}`}></i>

@@ -72,10 +72,17 @@ export default function Footer() {
       title: "Company",
       links: [
         { name: "About Us", action: () => scrollToSection('about') },
-        { name: "Careers", action: () => scrollToSection('careers') },
         { name: "News", action: () => {} },
         { name: "Blog", action: () => {} },
         { name: "Contact", action: () => scrollToSection('contact') }
+      ]
+    },
+    {
+      title: "Opportunities",
+      links: [
+        { name: "Careers", action: () => window.location.href = '/careers' },
+        { name: "Partnerships", action: () => {} },
+        { name: "Internships", action: () => {} }
       ]
     }
   ];
@@ -99,10 +106,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary-custom to-accent-custom rounded-lg flex items-center justify-center">
-                <i className="fas fa-bolt text-white text-sm"></i>
-              </div>
-              <span className="text-xl font-bold">TechFlow</span>
+              <img 
+                src="/logo.png" 
+                alt="iZyane Logo" 
+                className="w-8 h-8 rounded-lg object-contain brightness-200"
+              />
+              <span className="text-xl font-bold">iZyane</span>
             </div>
             <p className="text-slate-300 mb-6">
               Building the future of technology, one solution at a time.
@@ -164,7 +173,7 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-300 text-sm">
-              © 2024 TechFlow. All rights reserved.
+              © 2025 iZyane. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {legalLinks.map((link, index) => (

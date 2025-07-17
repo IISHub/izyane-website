@@ -33,7 +33,7 @@ export default function AboutSection() {
     <section id="about" className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">About TechFlow</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">About iZyane</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Founded in 2018, we've grown from a small team of passionate developers to a leading technology company serving clients worldwide.
           </p>

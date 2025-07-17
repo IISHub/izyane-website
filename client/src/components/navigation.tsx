@@ -24,10 +24,12 @@ export default function Navigation() {
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-primary-custom to-accent-custom rounded-lg flex items-center justify-center">
-              <i className="fas fa-bolt text-white text-sm"></i>
-            </div>
-            <span className="text-xl font-bold text-secondary-custom">TechFlow</span>
+            <img 
+              src="/logo.png" 
+              alt="iZyane Logo" 
+              className="w-8 h-8 rounded-lg object-contain"
+            />
+            <span className="text-xl font-bold text-secondary-custom">iZyane</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -44,9 +46,7 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('products')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium">
               Products
             </button>
-            <button onClick={() => scrollToSection('careers')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium">
-              Careers
-            </button>
+
             <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium">
               Contact
             </button>
@@ -77,9 +77,7 @@ export default function Navigation() {
               <button onClick={() => scrollToSection('products')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Products
               </button>
-              <button onClick={() => scrollToSection('careers')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
-                Careers
-              </button>
+
               <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Contact
               </button>

@@ -18,6 +18,12 @@ Preferred communication style: Simple, everyday language.
   - Slide 3: Scalable Cloud Infrastructure
 ✓ Added auto-advance carousel with navigation controls and indicators
 ✓ Implemented smooth transitions and animations between slides
+✓ Rebranded website from "TechFlow" to "iZyane"
+✓ Added custom logo (IISP logo provided by user)
+✓ Added SVG support for future logo usage
+✓ Moved Careers to separate page (/careers) with enhanced content
+✓ Updated footer with Careers link in "Opportunities" section
+✓ Removed Careers from main navigation menu
 
 ## System Architecture
 
