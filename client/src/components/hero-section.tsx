@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,22 +82,47 @@ export default function HeroSection() {
     <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 h-[85vh] flex items-center relative overflow-hidden transition-all duration-1000`}>
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
-            <div className={`inline-block px-4 py-2 bg-${currentSlideData.primaryColor}/10 text-${currentSlideData.primaryColor} rounded-full text-sm font-semibold mb-4 animate-fadeInUp`}>
+          <motion.div 
+            className="text-center lg:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.div 
+              className={`inline-block px-4 py-2 bg-${currentSlideData.primaryColor}/10 text-${currentSlideData.primaryColor} rounded-full text-sm font-semibold mb-4`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               {currentSlideData.subtitle}
-            </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6 animate-fadeInUp">
+            </motion.div>
+            <motion.h1 
+              className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               {currentSlideData.title.split(' ').map((word, index) => {
                 if (word === 'Future' || word === 'AI-Powered' || word === 'Scalable') {
                   return <span key={index} className="gradient-text">{word} </span>;
                 }
                 return word + ' ';
               })}
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed animate-fadeInUp">
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               {currentSlideData.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fadeInUp">
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+            >
               <Button 
                 onClick={scrollToContact}
                 className={`bg-${currentSlideData.primaryColor} text-white px-8 py-4 rounded-lg hover:bg-${currentSlideData.primaryColor}/90 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1`}
@@ -105,22 +131,43 @@ export default function HeroSection() {
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg hover:border-primary-custom hover:text-primary-custom transition-all duration-200 font-semibold text-lg"
+                className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-lg hover:border-primary-custom hover:text-primary-custom dark:hover:border-primary-custom dark:hover:text-primary-custom transition-all duration-200 font-semibold text-lg"
               >
                 <i className="fas fa-play mr-2"></i>Watch Demo
               </Button>
-            </div>
-            <div className="grid grid-cols-3 gap-8 text-center animate-fadeInUp">
+            </motion.div>
+            <motion.div 
+              className="grid grid-cols-3 gap-8 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
               {currentSlideData.stats.map((stat, index) => (
                 <div key={index}>
                   <div className="text-3xl font-bold text-secondary-custom dark:text-white">{stat.number}</div>
                   <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">{stat.label}</div>
                 </div>
               ))}
-            </div>
-          </div>
-          <div className="relative animate-fadeInUp">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3">
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+          >
+            <motion.div 
+              className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-8 transform rotate-3"
+              animate={{ 
+                y: [0, -10, 0],
+                rotate: [3, 4, 3]
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -128,24 +175,24 @@ export default function HeroSection() {
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="text-slate-400 text-sm">dashboard.izyane.com</div>
+                  <div className="text-slate-400 dark:text-slate-500 text-sm">dashboard.izyane.com</div>
                 </div>
                 <div className={`h-32 bg-gradient-to-r from-${currentSlideData.primaryColor}/20 to-accent-custom/20 rounded-lg flex items-center justify-center`}>
                   <i className={`${currentSlideData.mockupIcon} text-4xl text-${currentSlideData.primaryColor}`}></i>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="h-16 bg-slate-100 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-users text-slate-400"></i>
+                  <div className="h-16 bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-users text-slate-400 dark:text-slate-500"></i>
                   </div>
-                  <div className="h-16 bg-slate-100 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-server text-slate-400"></i>
+                  <div className="h-16 bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-server text-slate-400 dark:text-slate-500"></i>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className={`absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-r from-accent-custom to-${currentSlideData.primaryColor} rounded-full opacity-20 animate-pulse`}></div>
             <div className={`absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-${currentSlideData.primaryColor} to-accent-custom rounded-full opacity-30 animate-pulse`}></div>
-          </div>
+          </motion.div>
         </div>
       </div>
       

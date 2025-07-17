@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const teamMembers = [
@@ -32,12 +33,18 @@ export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">About iZyane</h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Founded in 2018, we've grown from a small team of passionate developers to a leading technology company serving clients worldwide.
           </p>
-        </div>
+        </motion.div>
         
         <Tabs defaultValue="about" className="w-full">
           <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-12 bg-transparent border-b border-slate-200 dark:border-slate-600 rounded-none h-auto p-0">

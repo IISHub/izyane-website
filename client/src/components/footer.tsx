@@ -1,47 +1,6 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
 
 export default function Footer() {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [isSubscribing, setIsSubscribing] = useState(false);
-  const { toast } = useToast();
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!newsletterEmail || !newsletterEmail.includes('@')) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    setIsSubscribing(true);
-    
-    try {
-      // Simulate newsletter subscription
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Subscribed!",
-        description: "Thank you for subscribing to our newsletter.",
-      });
-      
-      setNewsletterEmail('');
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to subscribe. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubscribing(false);
-    }
-  };
 
 
 
@@ -149,28 +108,6 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Newsletter</h4>
-            <p className="text-slate-300 mb-4">Stay updated with our latest news and insights.</p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <Input
-                type="email"
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="w-full bg-slate-700 text-white border-slate-600 focus:border-primary-custom"
-                required
-              />
-              <Button 
-                type="submit" 
-                className="w-full bg-primary-custom text-white hover:bg-[hsl(221,83%,45%)] transition-colors duration-200 font-semibold"
-                disabled={isSubscribing}
-              >
-                {isSubscribing ? 'Subscribing...' : 'Subscribe'}
-              </Button>
-            </form>
-          </div>
         </div>
         
         <div className="border-t border-slate-700 pt-8">

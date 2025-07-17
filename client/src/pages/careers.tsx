@@ -64,13 +64,13 @@ export default function Careers() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom leading-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6">
               Join Our <span className="gradient-text">Amazing</span> Team
             </h1>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               We're looking for passionate individuals who want to shape the future of technology. 
               Join us and grow your career while making a real impact.
             </p>
@@ -80,27 +80,27 @@ export default function Careers() {
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg hover:border-primary-custom hover:text-primary-custom transition-all duration-200 font-semibold text-lg"
+                className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-lg hover:border-primary-custom hover:text-primary-custom dark:hover:border-primary-custom dark:hover:text-primary-custom transition-all duration-200 font-semibold text-lg"
               >
                 <i className="fas fa-users mr-2"></i>Our Culture
               </Button>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-secondary-custom">150+</div>
-                <div className="text-slate-600 text-sm font-medium">Team Members</div>
+                <div className="text-3xl font-bold text-secondary-custom dark:text-white">150+</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Team Members</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary-custom">25+</div>
-                <div className="text-slate-600 text-sm font-medium">Countries</div>
+                <div className="text-3xl font-bold text-secondary-custom dark:text-white">25+</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Countries</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary-custom">4.8/5</div>
-                <div className="text-slate-600 text-sm font-medium">Employee Rating</div>
+                <div className="text-3xl font-bold text-secondary-custom dark:text-white">4.8/5</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Employee Rating</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary-custom">98%</div>
-                <div className="text-slate-600 text-sm font-medium">Retention Rate</div>
+                <div className="text-3xl font-bold text-secondary-custom dark:text-white">98%</div>
+                <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Retention Rate</div>
               </div>
             </div>
           </div>
@@ -108,23 +108,23 @@ export default function Careers() {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-slate-800">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Why Join iZyane?</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">Why Join iZyane?</h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               We believe in creating an environment where our team can thrive, innovate, and grow together.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-50 rounded-2xl p-8 text-center card-hover">
+              <div key={index} className="bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 text-center card-hover">
                 <div className="w-16 h-16 bg-gradient-to-r from-primary-custom to-accent-custom rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className={`${benefit.icon} text-white text-2xl`}></i>
                 </div>
-                <h3 className="text-xl font-bold text-secondary-custom mb-4">{benefit.title}</h3>
-                <p className="text-slate-600">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-secondary-custom dark:text-white mb-4">{benefit.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -132,11 +132,11 @@ export default function Careers() {
       </section>
 
       {/* Jobs Section */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-slate-50 dark:bg-slate-900">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Open Positions</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">Open Positions</h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Discover opportunities to grow your career and make an impact with cutting-edge technology.
             </p>
           </div>

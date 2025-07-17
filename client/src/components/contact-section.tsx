@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -40,13 +42,35 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. We'll get back to you soon.",
-      });
+      // EmailJS configuration - you'll need to set these up at https://emailjs.com
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'iZyane Team',
+      };
+
+      // Replace these with your actual EmailJS credentials
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID || 'your_user_id';
+
+      if (SERVICE_ID === 'your_service_id') {
+        // Fallback: Show success message without actually sending email
+        console.log('EmailJS not configured. Form data:', templateParams);
+        toast({
+          title: "Demo Mode",
+          description: "Contact form is in demo mode. Please configure EmailJS to send real emails.",
+        });
+      } else {
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID);
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. We'll get back to you soon.",
+        });
+      }
       
       setFormData({
         name: '',
@@ -57,9 +81,10 @@ export default function ContactSection() {
         consent: false
       });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to send message. Please try again or contact us directly.",
         variant: "destructive"
       });
     } finally {
@@ -71,7 +96,7 @@ export default function ContactSection() {
     {
       icon: "fas fa-map-marker-alt",
       title: "Address",
-      content: "123 Tech Street\nSan Francisco, CA 94105\nUnited States"
+      content: "123 Innovation Drive\nSan Francisco, CA 94105\nUnited States"
     },
     {
       icon: "fas fa-phone",
@@ -81,7 +106,7 @@ export default function ContactSection() {
     {
       icon: "fas fa-envelope",
       title: "Email",
-      content: "hello@techflow.com"
+      content: "hello@izyane.com"
     },
     {
       icon: "fas fa-clock",
@@ -98,11 +123,11 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Get In Touch</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-white max-w-3xl mx-auto">
             Ready to start your next project? Let's discuss how we can help bring your ideas to life.
           </p>
         </div>
@@ -118,7 +143,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-secondary-custom mb-2">{info.title}</h4>
-                    <p className="text-slate-600 whitespace-pre-line">{info.content}</p>
+                    <p className="text-slate-600 dark:text-white whitespace-pre-line">{info.content}</p>
                   </div>
                 </div>
               ))}

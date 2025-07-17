@@ -144,7 +144,7 @@ export default function Portfolio() {
                     <div className="flex space-x-4">
                       <Button
                         size="sm"
-                        className="bg-white/90 text-slate-800 hover:bg-white"
+                        className="bg-white/90 dark:bg-slate-800/90 text-slate-800 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-800"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo
@@ -152,7 +152,7 @@ export default function Portfolio() {
                       <Button
                         size="sm"
                         variant="outline"
-                        className="bg-white/90 text-slate-800 border-white/90 hover:bg-white"
+                        className="bg-white/90 dark:bg-slate-800/90 text-slate-800 dark:text-slate-200 border-white/90 dark:border-slate-600/90 hover:bg-white dark:hover:bg-slate-800"
                       >
                         <Github className="w-4 h-4 mr-2" />
                         Code

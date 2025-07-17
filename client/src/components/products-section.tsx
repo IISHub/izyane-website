@@ -66,7 +66,7 @@ export default function ProductsSection() {
                   <Button className={`bg-${product.primaryColor} text-white px-8 py-3 rounded-lg hover:bg-${product.primaryColor}/90 transition-colors duration-200 font-semibold`}>
                     Start Free Trial
                   </Button>
-                  <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-primary-custom hover:text-primary-custom transition-colors duration-200 font-semibold">
+                  <Button variant="outline" className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:border-primary-custom hover:text-primary-custom dark:hover:border-primary-custom dark:hover:text-primary-custom transition-colors duration-200 font-semibold">
                     Learn More
                   </Button>
                 </div>
