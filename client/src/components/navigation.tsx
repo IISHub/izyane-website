@@ -47,12 +47,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('careers')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium">
               Careers
             </button>
-            <Button 
-              onClick={() => scrollToSection('contact')} 
-              className="bg-primary-custom text-white px-6 py-2 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-colors duration-200 font-medium"
-            >
+            <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium">
               Contact
-            </Button>
+            </button>
           </div>
           
           {/* Mobile Menu Button */}
@@ -83,12 +80,9 @@ export default function Navigation() {
               <button onClick={() => scrollToSection('careers')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Careers
               </button>
-              <Button 
-                onClick={() => scrollToSection('contact')} 
-                className="bg-primary-custom text-white px-6 py-2 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-colors duration-200 font-medium text-center"
-              >
+              <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Contact
-              </Button>
+              </button>
             </div>
           </div>
         )}

@@ -8,6 +8,17 @@ This is a full-stack web application built with React on the frontend and Expres
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes (January 17, 2025)
+
+✓ Updated About section with 3 tabs (About Us, Our Vision, Our Mission)
+✓ Changed Contact from button to regular navigation link
+✓ Created carousel hero section with 3 slides:
+  - Slide 1: Building the Future of Technology
+  - Slide 2: AI-Powered Solutions for Tomorrow  
+  - Slide 3: Scalable Cloud Infrastructure
+✓ Added auto-advance carousel with navigation controls and indicators
+✓ Implemented smooth transitions and animations between slides
+
 ## System Architecture
 
 ### Frontend Architecture
