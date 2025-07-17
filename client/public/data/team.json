@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "name": "Ackim Chisha",
+    "role": "CEO & Founder",
+    "bio": "Visionary leader with 15+ years in tech. Former VP at Google, passionate about building solutions that make a difference.",
+    "longBio": "Sarah is a visionary leader who founded iZyane with the mission to democratize technology and make it accessible to businesses of all sizes. With over 15 years of experience in the technology industry, she previously served as Vice President of Product at Google, where she led teams responsible for developing cutting-edge consumer and enterprise solutions. Sarah holds an MBA from Stanford and a Computer Science degree from MIT. She's passionate about mentoring the next generation of tech leaders and believes that technology should be a force for positive change in the world.",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["Strategy", "Leadership", "Product Vision"],
+    "skills": ["Strategic Planning", "Team Leadership", "Product Management", "Business Development", "Public Speaking"],
+    "education": ["MBA - Stanford University", "B.S. Computer Science - MIT"],
+    "experience": "15+ years",
+    "location": "San Francisco, CA",
+    "languages": ["English", "Spanish", "French"],
+    "social": {
+      "linkedin": "#",
+      "twitter": "#",
+      "email": "ackim.chisha@izyane.com"
+    },
+    "achievements": [
+      "Led $50M product initiative at Google",
+      "Featured in Forbes 40 Under 40",
+      "TEDx speaker on technology and leadership",
+      "Advisor to 3 successful tech startups"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mirriam",
+    "role": "COO",
+    "bio": "Full-stack architect and machine learning expert. Led engineering teams at Microsoft and Tesla. Loves solving complex problems.",
+    "longBio": "Michael brings deep technical expertise and a passion for innovation to iZyane. As our Chief Technology Officer, he oversees all technical aspects of our products and ensures we stay at the forefront of technology trends. Previously, he was a Principal Engineer at Microsoft Azure and later led the AI/ML engineering team at Tesla. Michael has published over 20 research papers in machine learning and holds several patents in distributed systems. He earned his Ph.D. in Computer Science from Carnegie Mellon University.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["AI/ML", "Cloud Architecture", "Team Leadership"],
+    "skills": ["Machine Learning", "Distributed Systems", "Cloud Computing", "Python", "System Design"],
+    "education": ["Ph.D. Computer Science - Carnegie Mellon", "M.S. Computer Science - Stanford"],
+    "experience": "12+ years",
+    "location": "Seattle, WA",
+    "languages": ["English", "Mandarin", "Japanese"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "mirriam@izyane.com"
+    },
+    "achievements": [
+      "20+ published research papers",
+      "5 patents in distributed systems",
+      "Led 50+ person engineering team",
+      "Keynote speaker at AWS re:Invent"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Chiselwa",
+    "role": "Accountant",
+    "bio": "Creative director with a passion for user-centered design. Previously at Apple and Airbnb, creating beautiful and intuitive experiences.",
+    "longBio": "Emily is a creative visionary who leads our design team with a user-first philosophy. She brings over 10 years of experience from top tech companies, including 5 years at Apple working on iOS interface design and 3 years at Airbnb revolutionizing travel experiences. Emily is passionate about creating inclusive designs that work for everyone and has been instrumental in establishing design systems that scale across multiple products. She holds a Master's in Human-Computer Interaction from the School of Design at Carnegie Mellon.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["UX Design", "Design Systems", "User Research"],
+    "skills": ["User Experience Design", "Design Thinking", "Prototyping", "User Research", "Design Systems"],
+    "education": ["M.S. Human-Computer Interaction - Carnegie Mellon", "B.A. Graphic Design - RISD"],
+    "experience": "10+ years",
+    "location": "Austin, TX",
+    "languages": ["English", "Spanish", "Portuguese"],
+    "social": {
+      "linkedin": "#",
+      "twitter": "#",
+      "email": "emily@izyane.com"
+    },
+    "achievements": [
+      "Led design for iOS 14 notification system",
+      "Winner of UX Design Awards 2023",
+      "Speaker at Design+Research Conference",
+      "Mentor at Design+Diversity initiative"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Zawadi Kayoka",
+    "role": "Head of I.T",
+    "bio": "Full-stack developer with expertise in React, Node.js, and cloud technologies. Former senior engineer at Stripe and Shopify.",
+    "longBio": "David is a passionate full-stack developer who brings expertise in building scalable web applications. With 8 years of experience at leading fintech and e-commerce companies, he has a deep understanding of building systems that handle millions of users. At Stripe, he worked on payment processing infrastructure, and at Shopify, he led the development of merchant-facing tools. David is known for his attention to detail, clean code practices, and ability to mentor junior developers.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["Full-Stack Development", "React", "Node.js"],
+    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "PostgreSQL", "AWS"],
+    "education": ["B.S. Software Engineering - University of Waterloo"],
+    "experience": "8+ years",
+    "location": "Toronto, Canada",
+    "languages": ["English", "Korean"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "zawadi@izyane.com"
+    },
+    "achievements": [
+      "Built payment system handling $10B+ annually",
+      "Open source contributor (React ecosystem)",
+      "Tech lead for team of 12 developers",
+      "Certified AWS Solutions Architect"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Niza Tembo",
+    "role": "Technical Lead",
+    "bio": "PhD in Machine Learning with experience in predictive analytics and data-driven decision making. Former researcher at DeepMind.",
+    "longBio": "Lisa is a data scientist and researcher who transforms complex data into actionable insights. With a PhD in Machine Learning from Oxford and research experience at DeepMind, she brings cutting-edge AI expertise to our team. Lisa specializes in developing machine learning models that solve real-world business problems, from recommendation systems to fraud detection. She's passionate about making AI more interpretable and ethical.",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["Machine Learning", "Data Analytics", "AI Research"],
+    "skills": ["Python", "TensorFlow", "PyTorch", "SQL", "Statistical Analysis", "Deep Learning"],
+    "education": ["Ph.D. Machine Learning - Oxford University", "M.S. Statistics - Cambridge"],
+    "experience": "7+ years",
+    "location": "London, UK",
+    "languages": ["English", "Mandarin", "German"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "niza@izyane.com"
+    },
+    "achievements": [
+      "15+ research papers in top-tier journals",
+      "Best Paper Award at NeurIPS 2022",
+      "AI ethics advocate and speaker",
+      "Mentored 20+ PhD students"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Mwangilwa Zimba",
+    "role": "Lead Frontend Engineer",
+    "bio": "Cloud infrastructure specialist with expertise in Kubernetes, AWS, and CI/CD pipelines. Ensures our systems are reliable and scalable.",
+    "longBio": "Alex is our DevOps engineer who ensures our applications run smoothly and scale efficiently. With expertise in cloud platforms and container orchestration, Alex has built infrastructure that serves millions of users with 99.9% uptime. Previously at Netflix, Alex worked on the streaming infrastructure that delivers content worldwide. Alex is passionate about automation, monitoring, and building resilient systems.",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["DevOps", "Cloud Infrastructure", "Kubernetes"],
+    "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "Jenkins", "Monitoring"],
+    "education": ["B.S. Computer Engineering - UC Berkeley"],
+    "experience": "9+ years",
+    "location": "Los Angeles, CA",
+    "languages": ["English", "Spanish"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "mwangi@izyane.com"
+    },
+    "achievements": [
+      "Built infrastructure serving 200M+ users",
+      "Reduced deployment time by 90%",
+      "AWS Certified Solutions Architect Professional",
+      "Speaker at KubeCon conferences"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Emmanuel Tembo",
+    "role": "Senior Software Engineer",
+    "bio": "Cloud infrastructure specialist with expertise in Kubernetes, AWS, and CI/CD pipelines. Ensures our systems are reliable and scalable.",
+    "longBio": "Alex is our DevOps engineer who ensures our applications run smoothly and scale efficiently. With expertise in cloud platforms and container orchestration, Alex has built infrastructure that serves millions of users with 99.9% uptime. Previously at Netflix, Alex worked on the streaming infrastructure that delivers content worldwide. Alex is passionate about automation, monitoring, and building resilient systems.",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
+    "expertise": ["DevOps", "Cloud Infrastructure", "Kubernetes"],
+    "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "Jenkins", "Monitoring"],
+    "education": ["B.S. Computer Engineering - UC Berkeley"],
+    "experience": "9+ years",
+    "location": "Los Angeles, CA",
+    "languages": ["English", "Spanish"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "e.t@izyane.com"
+    },
+    "achievements": [
+      "Built infrastructure serving 200M+ users",
+      "Reduced deployment time by 90%",
+      "AWS Certified Solutions Architect Professional",
+      "Speaker at KubeCon conferences"
+    ]
+  }
+]

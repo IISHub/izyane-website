@@ -1,0 +1,152 @@
+[
+  {
+    "id": "flowanalytics",
+    "name": "Flow-Analytics",
+    "description": "Advanced analytics platform that transforms your data into actionable insights with real-time dashboards and predictive modeling.",
+    "shortDescription": "Transform data into actionable insights with AI-powered analytics",
+    "features": [
+      "Real-time data visualization",
+      "Machine learning predictions", 
+      "Custom dashboard builder",
+      "API integrations",
+      "Advanced reporting tools",
+      "Data export capabilities"
+    ],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    "category": "Featured Product",
+    "categoryIcon": "fas fa-star",
+    "primaryColor": "primary-custom",
+    "isFeatured": true,
+    "technologies": ["React", "Python", "TensorFlow", "PostgreSQL"],
+    "pricing": {
+      "starter": "$29/month",
+      "professional": "$99/month", 
+      "enterprise": "Custom"
+    }
+  },
+  {
+    "id": "teamsync",
+    "name": "TeamSync",
+    "description": "All-in-one collaboration platform that brings teams together with integrated chat, video calls, and project management.",
+    "shortDescription": "Unified collaboration platform for modern teams",
+    "features": [
+      "HD video conferencing",
+      "Real-time messaging",
+      "Task management",
+      "File sharing & storage",
+      "Screen sharing",
+      "Calendar integration"
+    ],
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    "category": "Collaboration",
+    "categoryIcon": "fas fa-users",
+    "primaryColor": "accent-custom",
+    "isFeatured": true,
+    "technologies": ["React", "Node.js", "WebRTC", "MongoDB"],
+    "pricing": {
+      "starter": "$15/month",
+      "professional": "$49/month",
+      "enterprise": "Custom"
+    }
+  },
+  {
+    "id": "cloudvault",
+    "name": "CloudVault",
+    "description": "Enterprise-grade cloud storage solution with advanced security, compliance features, and seamless integration across all your business applications.",
+    "shortDescription": "Secure cloud storage for enterprise needs",
+    "features": [
+      "256-bit encryption",
+      "Automated backups",
+      "Version control",
+      "Compliance reporting",
+      "Multi-device sync",
+      "Admin controls"
+    ],
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    "category": "Cloud Storage",
+    "categoryIcon": "fas fa-cloud",
+    "primaryColor": "blue-600",
+    "isFeatured": false,
+    "technologies": ["AWS", "Docker", "Kubernetes", "PostgreSQL"],
+    "pricing": {
+      "starter": "$25/month",
+      "professional": "$75/month",
+      "enterprise": "Custom"
+    }
+  },
+  {
+    "id": "aiassist",
+    "name": "AI Assist",
+    "description": "Intelligent automation platform that leverages machine learning to streamline business processes and enhance decision-making across your organization.",
+    "shortDescription": "AI-powered automation for business processes",
+    "features": [
+      "Natural language processing",
+      "Workflow automation",
+      "Predictive analytics",
+      "Smart recommendations",
+      "Document processing",
+      "Integration APIs"
+    ],
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    "category": "Artificial Intelligence",
+    "categoryIcon": "fas fa-brain",
+    "primaryColor": "purple-600",
+    "isFeatured": false,
+    "technologies": ["Python", "TensorFlow", "React", "FastAPI"],
+    "pricing": {
+      "starter": "$199/month",
+      "professional": "$499/month",
+      "enterprise": "Custom"
+    }
+  },
+  {
+    "id": "securelink",
+    "name": "SecureLink",
+    "description": "Comprehensive cybersecurity platform that protects your digital assets with advanced threat detection, real-time monitoring, and incident response capabilities.",
+    "shortDescription": "Advanced cybersecurity protection platform",
+    "features": [
+      "Real-time threat detection",
+      "24/7 monitoring",
+      "Incident response",
+      "Vulnerability scanning",
+      "Compliance reporting",
+      "Security analytics"
+    ],
+    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    "category": "Cybersecurity",
+    "categoryIcon": "fas fa-shield-alt",
+    "primaryColor": "red-600",
+    "isFeatured": false,
+    "technologies": ["Python", "Elasticsearch", "Kafka", "Redis"],
+    "pricing": {
+      "starter": "$149/month",
+      "professional": "$399/month",
+      "enterprise": "Custom"
+    }
+  },
+  {
+    "id": "mobileforge",
+    "name": "MobileForge",
+    "description": "Cross-platform mobile development framework that enables rapid creation of native mobile applications with a single codebase for iOS and Android.",
+    "shortDescription": "Cross-platform mobile development made simple",
+    "features": [
+      "Cross-platform development",
+      "Native performance",
+      "Hot reload",
+      "Rich UI components",
+      "Device APIs access",
+      "App store deployment"
+    ],
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    "category": "Mobile Development",
+    "categoryIcon": "fas fa-mobile-alt",
+    "primaryColor": "green-600",
+    "isFeatured": false,
+    "technologies": ["React Native", "TypeScript", "Firebase", "Redux"],
+    "pricing": {
+      "starter": "$59/month",
+      "professional": "$159/month",
+      "enterprise": "Custom"
+    }
+  }
+]

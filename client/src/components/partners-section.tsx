@@ -14,7 +14,7 @@ export default function PartnersSection() {
     <section className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
         <div className="text-center mb-12 animate-fadeInUp">
-          <h2 className="text-3xl font-bold text-secondary-custom dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-responsive mb-4">
             Trusted by Industry <span className="gradient-text">Leaders</span>
           </h2>
           <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">

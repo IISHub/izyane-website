@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -97,7 +96,7 @@ export default function HeroSection() {
               {currentSlideData.subtitle}
             </motion.div>
             <motion.h1 
-              className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6"
+              className="text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -123,18 +122,17 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
-              <Button 
+              <button 
                 onClick={scrollToContact}
-                className={`bg-${currentSlideData.primaryColor} text-white px-8 py-4 rounded-lg hover:bg-${currentSlideData.primaryColor}/90 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1`}
+                className="btn-solid text-lg px-8 py-4"
               >
                 Get Started
-              </Button>
-              <Button 
-                variant="outline"
-                className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-lg hover:border-primary-custom hover:text-primary-custom dark:hover:border-primary-custom dark:hover:text-primary-custom transition-all duration-200 font-semibold text-lg"
+              </button>
+              <button 
+                className="btn-outline text-lg px-8 py-4"
               >
                 <i className="fas fa-play mr-2"></i>Watch Demo
-              </Button>
+              </button>
             </motion.div>
             <motion.div 
               className="grid grid-cols-3 gap-8 text-center"
@@ -144,7 +142,7 @@ export default function HeroSection() {
             >
               {currentSlideData.stats.map((stat, index) => (
                 <div key={index}>
-                  <div className="text-3xl font-bold text-secondary-custom dark:text-white">{stat.number}</div>
+                  <div className="text-3xl font-bold text-responsive">{stat.number}</div>
                   <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">{stat.label}</div>
                 </div>
               ))}

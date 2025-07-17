@@ -65,6 +65,8 @@ export default {
         "primary-custom": "var(--primary-custom)",
         "secondary-custom": "var(--secondary-custom)",
         "accent-custom": "var(--accent-custom)",
+        "text-dark": "var(--text-dark)",
+        "text-light": "var(--text-light)",
       },
       keyframes: {
         "accordion-down": {

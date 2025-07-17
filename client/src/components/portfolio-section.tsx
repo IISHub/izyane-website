@@ -1,9 +1,36 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 import { ExternalLink, Github } from "lucide-react";
+
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  detailedDescription: string;
+  image: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl: string;
+  featured: boolean;
+  client: string;
+  duration: string;
+  teamSize: string;
+  year: string;
+  results: string[];
+  features: string[];
+  challenges: string[];
+}
 
 export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    fetch('/data/portfolio.json')
+      .then(response => response.json())
+      .then(data => setProjects(data))
+      .catch(error => console.error('Error loading portfolio data:', error));
+  }, []);
 
   const categories = [
     { id: "all", name: "All Projects" },
@@ -13,101 +40,30 @@ export default function PortfolioSection() {
     { id: "blockchain", name: "Blockchain" }
   ];
 
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      category: "web",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Healthcare Management System",
-      category: "web",
-      description: "HIPAA-compliant healthcare management system with patient records, appointment scheduling, and telemedicine features.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
-      technologies: ["Vue.js", "Django", "PostgreSQL", "Redis"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      id: 3,
-      title: "Fitness Tracking App",
-      category: "mobile",
-      description: "Cross-platform mobile app for fitness tracking with workout plans, nutrition logging, and social features.",
-      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=250&fit=crop",
-      technologies: ["React Native", "Firebase", "Redux", "Chart.js"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
-      id: 4,
-      title: "AI Content Generator",
-      category: "ai",
-      description: "AI-powered content generation platform using GPT models for blog posts, social media content, and marketing copy.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
-      technologies: ["Next.js", "OpenAI API", "Prisma", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
-      id: 5,
-      title: "DeFi Trading Platform",
-      category: "blockchain",
-      description: "Decentralized finance platform for cryptocurrency trading with automated market making and yield farming.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop",
-      technologies: ["React", "Web3.js", "Solidity", "Ethereum"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Smart Home Dashboard",
-      category: "mobile",
-      description: "IoT dashboard for smart home automation with device control, energy monitoring, and security features.",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
-      technologies: ["Flutter", "Node.js", "MQTT", "InfluxDB"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    }
-  ];
-
   const filteredProjects = activeCategory === "all" 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="section-padding bg-white dark:bg-slate-800">
+    <section id="portfolio" className="section-padding bg-slate-50 dark:bg-slate-900">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-fadeInUp">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">
-            Our <span className="gradient-text">Portfolio</span>
-          </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Our Portfolio</h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Discover our latest projects and see how we've helped businesses transform their digital presence with innovative solutions.
+            Showcasing our latest projects and innovations that have helped businesses transform and grow.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fadeInUp">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeCategory === category.id
-                  ? "bg-primary-custom text-white shadow-lg"
-                  : "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"
+                  ? "btn-solid shadow-lg scale-105"
+                  : "btn-outline"
               }`}
             >
               {category.name}
@@ -117,97 +73,109 @@ export default function PortfolioSection() {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className={`bg-slate-50 dark:bg-slate-700 rounded-2xl overflow-hidden card-hover animate-fadeInUp ${
-                project.featured ? "lg:col-span-2" : ""
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex space-x-4">
-                    <Button
-                      size="sm"
-                      className="bg-white/90 text-slate-800 hover:bg-white"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="bg-white/90 text-slate-800 border-white/90 hover:bg-white"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-secondary-custom dark:text-white">
-                    {project.title}
-                  </h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-4 right-4">
                   {project.featured && (
-                    <span className="bg-primary-custom/10 text-primary-custom px-2 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-primary-custom text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
                   )}
                 </div>
+                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex gap-2">
+                    <button
+                      className="btn-solid btn-sm bg-white/90 text-slate-900 hover:bg-white border-white/90"
+                      onClick={() => window.open(project.liveUrl, '_blank')}
+                    >
+                      <ExternalLink size={16} className="mr-1" />
+                      Live Demo
+                    </button>
+                    <button
+                      className="btn-outline btn-sm border-white/90 text-white hover:bg-white/10"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                    >
+                      <Github size={16} className="mr-1" />
+                      Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-primary-custom font-semibold text-sm">{project.client}</span>
+                  <span className="text-slate-500 dark:text-slate-400 text-sm">{project.year}</span>
+                </div>
                 
-                <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                <h3 className="text-xl font-bold text-responsive mb-3 group-hover:text-primary-custom transition-colors">
+                  {project.title}
+                </h3>
+                
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="bg-slate-200 dark:bg-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies.slice(0, 4).map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 4 && (
+                      <span className="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs font-medium">
+                        +{project.technologies.length - 4} more
+                      </span>
+                    )}
+                  </div>
                 </div>
-                
-                <div className="flex space-x-3">
-                  <Button
-                    size="sm"
-                    className="bg-primary-custom text-white hover:bg-[hsl(221,83%,45%)] flex-1"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Live
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300"
-                  >
-                    <Github className="w-4 h-4" />
-                  </Button>
+
+                <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
+                  <span>{project.duration}</span>
+                  <span>{project.teamSize}</span>
                 </div>
+
+                {project.results && project.results.length > 0 && (
+                  <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+                    <h4 className="text-sm font-semibold text-responsive mb-2">Key Results:</h4>
+                    <ul className="text-xs text-slate-600 dark:text-slate-300 space-y-1">
+                      {project.results.slice(0, 2).map((result, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="text-emerald-500 mr-1 mt-1">•</span>
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fadeInUp">
-          <p className="text-slate-600 dark:text-slate-400 mb-6">
-            Have a project in mind? Let's discuss how we can bring your vision to life.
-          </p>
-          <Button className="bg-primary-custom text-white px-8 py-3 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Start Your Project
-          </Button>
-        </div>
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <div className="w-24 h-24 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
+              <ExternalLink size={32} className="text-slate-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-600 dark:text-slate-300 mb-2">No projects found</h3>
+            <p className="text-slate-500 dark:text-slate-400">Try selecting a different category to see more projects.</p>
+          </div>
+        )}
       </div>
     </section>
   );

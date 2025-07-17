@@ -100,7 +100,7 @@ export default function Contact() {
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6 animate-fadeInUp">
+            <h1 className="text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-6 animate-fadeInUp">
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed animate-fadeInUp">
@@ -108,19 +108,19 @@ export default function Contact() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp">
               <div className="text-center">
-                <div className="text-2xl font-bold text-secondary-custom dark:text-white">24h</div>
+                <div className="text-2xl font-bold text-responsive">24h</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm">Response Time</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-secondary-custom dark:text-white">500+</div>
+                <div className="text-2xl font-bold text-responsive">500+</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-secondary-custom dark:text-white">99%</div>
+                <div className="text-2xl font-bold text-responsive">99%</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm">Satisfaction Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-secondary-custom dark:text-white">24/7</div>
+                <div className="text-2xl font-bold text-responsive">24/7</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm">Support Available</div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-secondary-custom dark:text-white mb-6">
+              <h2 className="text-3xl font-bold text-responsive mb-6">
                 Send us a message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -225,7 +225,7 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-secondary-custom dark:text-white mb-6">
+              <h2 className="text-3xl font-bold text-responsive mb-6">
                 Contact Information
               </h2>
               <div className="space-y-6 mb-8">
@@ -235,7 +235,7 @@ export default function Contact() {
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-secondary-custom dark:text-white mb-1">
+                      <h3 className="font-semibold text-responsive mb-1">
                         {info.title}
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300 font-medium">
@@ -250,14 +250,14 @@ export default function Contact() {
               </div>
 
               {/* Office Locations */}
-              <h3 className="text-xl font-bold text-secondary-custom dark:text-white mb-4">
+              <h3 className="text-xl font-bold text-responsive mb-4">
                 Office Locations
               </h3>
               <div className="space-y-4">
                 {officeLocations.map((office, index) => (
                   <div key={index} className="bg-slate-50 dark:bg-slate-700 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-secondary-custom dark:text-white">
+                      <h4 className="font-semibold text-responsive">
                         {office.city}
                       </h4>
                       {office.isHeadquarters && (

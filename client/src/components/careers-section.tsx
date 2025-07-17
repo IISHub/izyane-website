@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 export default function CareersSection() {
   const benefits = [
     {
@@ -50,7 +48,7 @@ export default function CareersSection() {
     <section id="careers" className="section-padding bg-slate-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Join Our Team</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Join Our Team</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             We're looking for passionate individuals who want to shape the future of technology. Join us and grow your career.
           </p>
@@ -62,21 +60,21 @@ export default function CareersSection() {
               <div className="w-16 h-16 bg-gradient-to-r from-primary-custom to-accent-custom rounded-full flex items-center justify-center mx-auto mb-6">
                 <i className={`${benefit.icon} text-white text-2xl`}></i>
               </div>
-              <h3 className="text-xl font-bold text-secondary-custom mb-4">{benefit.title}</h3>
+              <h3 className="text-xl font-bold text-responsive mb-4">{benefit.title}</h3>
               <p className="text-slate-600">{benefit.description}</p>
             </div>
           ))}
         </div>
         
         <div>
-          <h3 className="text-3xl font-bold text-secondary-custom text-center mb-12">Open Positions</h3>
+          <h3 className="text-3xl font-bold text-responsive text-center mb-12">Open Positions</h3>
           <div className="space-y-6">
             {jobs.map((job, index) => (
               <div key={index} className="bg-white rounded-xl p-6 card-hover">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-2">
-                      <h4 className="text-xl font-bold text-secondary-custom">{job.title}</h4>
+                      <h4 className="text-xl font-bold text-responsive">{job.title}</h4>
                       <span className={`bg-${job.typeColor}/10 text-${job.typeColor} px-3 py-1 rounded-full text-sm font-medium`}>
                         {job.type}
                       </span>
@@ -95,9 +93,9 @@ export default function CareersSection() {
                     </div>
                   </div>
                   <div className="mt-4 lg:mt-0 lg:ml-6">
-                    <Button className="bg-primary-custom text-white px-6 py-2 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-colors duration-200 font-semibold w-full lg:w-auto">
+                    <button className="btn-solid px-6 py-2 w-full lg:w-auto">
                       Apply Now
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -106,12 +104,9 @@ export default function CareersSection() {
           
           <div className="text-center mt-12">
             <p className="text-slate-600 mb-6">Don't see a position that fits? We're always looking for talented people.</p>
-            <Button 
-              variant="outline" 
-              className="border-2 border-primary-custom text-primary-custom px-8 py-3 rounded-lg hover:bg-primary-custom hover:text-white transition-all duration-200 font-semibold"
-            >
+            <button className="btn-outline px-8 py-3">
               Send Your Resume
-            </Button>
+            </button>
           </div>
         </div>
       </div>

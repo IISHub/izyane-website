@@ -1,0 +1,146 @@
+[
+  {
+    "id": "web-development",
+    "icon": "fas fa-code",
+    "title": "Web Development",
+    "description": "Custom web applications built with modern frameworks and best practices for performance and scalability.",
+    "detailedDescription": "We create powerful, scalable web applications using cutting-edge technologies. Our full-stack development approach ensures your web solution is fast, secure, and user-friendly. From single-page applications to complex enterprise systems, we deliver solutions that drive business growth.",
+    "features": ["React & Vue.js", "Node.js & Python", "Cloud Deployment"],
+    "technologies": ["React", "Vue.js", "Angular", "Node.js", "Python", "Django", "Next.js", "TypeScript"],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "Responsive web applications",
+      "API development and integration",
+      "Database design and optimization",
+      "Performance optimization",
+      "Security implementation",
+      "Testing and deployment"
+    ],
+    "pricing": {
+      "basic": "$5,000 - $15,000",
+      "standard": "$15,000 - $50,000",
+      "enterprise": "$50,000+"
+    }
+  },
+  {
+    "id": "mobile-apps",
+    "icon": "fas fa-mobile-alt",
+    "title": "Mobile Apps",
+    "description": "Native and cross-platform mobile applications that deliver exceptional user experiences.",
+    "detailedDescription": "Transform your ideas into powerful mobile applications that users love. We develop both native and cross-platform solutions that provide seamless experiences across iOS and Android devices. Our mobile apps are optimized for performance, user engagement, and business growth.",
+    "features": ["iOS & Android", "React Native", "App Store Publishing"],
+    "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux", "Expo"],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Native iOS and Android apps",
+      "Cross-platform solutions",
+      "App Store optimization",
+      "Push notifications",
+      "Offline functionality",
+      "Analytics integration"
+    ],
+    "pricing": {
+      "basic": "$10,000 - $25,000",
+      "standard": "$25,000 - $75,000",
+      "enterprise": "$75,000+"
+    }
+  },
+  {
+    "id": "cloud-solutions",
+    "icon": "fas fa-cloud",
+    "title": "Cloud Solutions",
+    "description": "Scalable cloud infrastructure and DevOps solutions to power your business growth.",
+    "detailedDescription": "Leverage the power of cloud computing to scale your business efficiently. We design and implement robust cloud architectures that are secure, scalable, and cost-effective. Our DevOps expertise ensures smooth deployment and continuous integration workflows.",
+    "features": ["AWS & Azure", "DevOps & CI/CD", "Security & Monitoring"],
+    "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins"],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "Cloud architecture design",
+      "Infrastructure as Code",
+      "Auto-scaling solutions",
+      "Security implementation",
+      "Monitoring and logging",
+      "Disaster recovery planning"
+    ],
+    "pricing": {
+      "basic": "$3,000 - $10,000",
+      "standard": "$10,000 - $30,000",
+      "enterprise": "$30,000+"
+    }
+  },
+  {
+    "id": "ai-machine-learning",
+    "icon": "fas fa-brain",
+    "title": "AI & Machine Learning",
+    "description": "Intelligent solutions powered by artificial intelligence and machine learning algorithms.",
+    "detailedDescription": "Unlock the potential of your data with advanced AI and machine learning solutions. We develop intelligent systems that automate processes, provide insights, and enhance decision-making. From chatbots to predictive analytics, we make AI accessible and practical for your business.",
+    "features": ["Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    "technologies": ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenAI", "Hugging Face", "MLflow"],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Custom AI models",
+      "Data preprocessing pipelines",
+      "Model training and optimization",
+      "API integration",
+      "Performance monitoring",
+      "Documentation and training"
+    ],
+    "pricing": {
+      "basic": "$15,000 - $35,000",
+      "standard": "$35,000 - $100,000",
+      "enterprise": "$100,000+"
+    }
+  },
+  {
+    "id": "ui-ux-design",
+    "icon": "fas fa-palette",
+    "title": "UI/UX Design",
+    "description": "User-centered design that creates engaging and intuitive digital experiences.",
+    "detailedDescription": "Create exceptional user experiences that delight your customers and drive engagement. Our design process combines user research, modern design principles, and usability testing to deliver interfaces that are both beautiful and functional.",
+    "features": ["User Research", "Prototyping", "Design Systems"],
+    "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle", "Framer", "Zeplin"],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "User research and personas",
+      "Wireframes and prototypes",
+      "Visual design mockups",
+      "Design system creation",
+      "Usability testing",
+      "Design handoff documentation"
+    ],
+    "pricing": {
+      "basic": "$5,000 - $15,000",
+      "standard": "$15,000 - $40,000",
+      "enterprise": "$40,000+"
+    }
+  },
+  {
+    "id": "consulting",
+    "icon": "fas fa-cogs",
+    "title": "Consulting",
+    "description": "Strategic technology consulting to help you make informed decisions and plan for growth.",
+    "detailedDescription": "Navigate the complex technology landscape with expert guidance. Our consulting services help you make strategic decisions, optimize existing systems, and plan for future growth. We provide actionable insights and roadmaps tailored to your business goals.",
+    "features": ["Digital Strategy", "Architecture Review", "Technology Roadmap"],
+    "technologies": ["Various", "Technology Assessment", "Best Practices", "Industry Standards"],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Technology assessment",
+      "Strategic roadmap",
+      "Architecture recommendations",
+      "Process optimization",
+      "Risk assessment",
+      "Implementation planning"
+    ],
+    "pricing": {
+      "basic": "$2,000 - $5,000",
+      "standard": "$5,000 - $15,000",
+      "enterprise": "$15,000+"
+    }
+  }
+]

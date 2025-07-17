@@ -55,7 +55,7 @@ export default function Navigation() {
               alt="iZyane Logo" 
               className="w-8 h-8 rounded-lg object-contain"
             />
-            <span className="text-xl font-bold text-secondary-custom dark:text-white">iZyane</span>
+            <span className="text-xl font-bold text-responsive">iZyane</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -72,6 +72,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('products')} className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium">
               Products
             </button>
+            <Link href="/team" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium">
+              Team
+            </Link>
             <Link href="/contact" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium">
               Contact
             </Link>
@@ -111,6 +114,10 @@ export default function Navigation() {
               <button onClick={() => scrollToSection('products')} className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Products
               </button>
+
+              <Link href="/team" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium text-left">
+                Team
+              </Link>
 
               <Link href="/contact" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Contact

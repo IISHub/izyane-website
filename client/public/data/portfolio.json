@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce ",
+    "category": "web",
+    "description": "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features real-time inventory, payment processing, and admin dashboard.",
+    "detailedDescription": "A comprehensive e-commerce platform built for a retail client handling over 10,000 products and processing $2M+ in monthly transactions. The platform features advanced inventory management, multi-payment gateway integration, real-time analytics, and a sophisticated admin dashboard for order management and customer service.",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": true,
+    "client": "RetailTech Solutions",
+    "duration": "6 months",
+    "teamSize": "5 developers",
+    "year": "2024",
+    "results": [
+      "40% increase in conversion rate",
+      "60% reduction in page load time",
+      "99.9% uptime achieved",
+      "$2M+ monthly transaction volume"
+    ],
+    "features": [
+      "Real-time inventory management",
+      "Multi-vendor marketplace",
+      "Advanced search and filtering",
+      "Mobile-responsive design",
+      "Payment gateway integration",
+      "Order tracking system"
+    ],
+    "challenges": [
+      "Handling high traffic during sales events",
+      "Integrating with legacy inventory systems",
+      "Ensuring PCI compliance for payments"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Healthcare Management System",
+    "category": "web",
+    "description": "HIPAA-compliant healthcare management system with patient records, appointment scheduling, and telemedicine features.",
+    "detailedDescription": "A comprehensive healthcare management platform designed for a network of medical practices. The system manages patient records, appointment scheduling, billing, and includes telemedicine capabilities. Built with strict HIPAA compliance and security standards, serving over 50 healthcare providers and 10,000+ patients.",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+    "technologies": ["Vue.js", "Django", "PostgreSQL", "Redis"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": false,
+    "client": "MedCare Network",
+    "duration": "8 months",
+    "teamSize": "7 developers",
+    "year": "2023",
+    "results": [
+      "50% reduction in administrative workload",
+      "30% increase in patient satisfaction",
+      "HIPAA compliance achieved",
+      "Integration with 15+ insurance providers"
+    ],
+    "features": [
+      "Electronic health records (EHR)",
+      "Appointment scheduling",
+      "Telemedicine platform",
+      "Billing and insurance integration",
+      "Patient portal",
+      "Prescription management"
+    ],
+    "challenges": [
+      "Ensuring HIPAA compliance",
+      "Integrating with legacy medical systems",
+      "Implementing secure telemedicine features"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Fitness Tracking App",
+    "category": "mobile",
+    "description": "Cross-platform mobile app for fitness tracking with workout plans, nutrition logging, and social features.",
+    "detailedDescription": "A comprehensive fitness and wellness mobile application that helps users track their fitness journey, connect with trainers, and maintain healthy habits. The app includes AI-powered workout recommendations, nutrition tracking, social challenges, and integration with popular fitness wearables.",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=250&fit=crop",
+    "technologies": ["React Native", "Firebase", "Redux", "Chart.js"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": true,
+    "client": "FitLife Technologies",
+    "duration": "4 months",
+    "teamSize": "4 developers",
+    "year": "2024",
+    "results": [
+      "100,000+ downloads in first 3 months",
+      "4.8/5 app store rating",
+      "85% user retention rate",
+      "Featured in App Store 'Health & Fitness'"
+    ],
+    "features": [
+      "Workout tracking and planning",
+      "Nutrition and calorie logging",
+      "Social challenges and leaderboards",
+      "Wearable device integration",
+      "Personal trainer matching",
+      "Progress analytics and insights"
+    ],
+    "challenges": [
+      "Real-time synchronization across devices",
+      "Integrating with multiple fitness APIs",
+      "Optimizing battery usage for tracking"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "AI Content Generator",
+    "category": "ai",
+    "description": "Advanced AI platform for generating marketing content, blog posts, and social media content using GPT and custom models.",
+    "detailedDescription": "An AI-powered content generation platform that helps marketing teams create high-quality content at scale. The platform uses advanced natural language processing models to generate blog posts, social media content, ad copy, and email campaigns. Features custom model training, brand voice consistency, and content optimization tools.",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
+    "technologies": ["Python", "OpenAI GPT", "React", "FastAPI", "PostgreSQL"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": true,
+    "client": "ContentFlow Inc.",
+    "duration": "5 months",
+    "teamSize": "6 developers",
+    "year": "2024",
+    "results": [
+      "75% reduction in content creation time",
+      "500+ enterprise customers",
+      "10M+ pieces of content generated",
+      "$5M ARR within first year"
+    ],
+    "features": [
+      "Multi-format content generation",
+      "Brand voice customization",
+      "SEO optimization",
+      "Content calendar integration",
+      "Performance analytics",
+      "Team collaboration tools"
+    ],
+    "challenges": [
+      "Ensuring content quality and originality",
+      "Managing API costs and rate limits",
+      "Training custom models for brand voices"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Cryptocurrency Trading Platform",
+    "category": "blockchain",
+    "description": "Secure trading platform with real-time market data, advanced charting, and multi-wallet support for cryptocurrency enthusiasts.",
+    "detailedDescription": "A sophisticated cryptocurrency trading platform built for both novice and professional traders. Features real-time market data, advanced technical analysis tools, secure wallet integration, and regulatory compliance. The platform supports trading of 100+ cryptocurrencies with institutional-grade security.",
+    "image": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=400&h=250&fit=crop",
+    "technologies": ["React", "Node.js", "WebSocket", "MongoDB", "Blockchain APIs"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": false,
+    "client": "CryptoTrade Pro",
+    "duration": "10 months",
+    "teamSize": "8 developers",
+    "year": "2023",
+    "results": [
+      "$100M+ trading volume in first 6 months",
+      "50,000+ active traders",
+      "99.99% platform uptime",
+      "SOC 2 Type II compliance achieved"
+    ],
+    "features": [
+      "Real-time trading engine",
+      "Advanced charting tools",
+      "Multi-wallet integration",
+      "Automated trading bots",
+      "Risk management tools",
+      "Regulatory compliance features"
+    ],
+    "challenges": [
+      "Handling high-frequency trading requests",
+      "Ensuring platform security",
+      "Meeting regulatory requirements"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Smart City Dashboard",
+    "category": "web",
+    "description": "IoT-powered city management dashboard for monitoring traffic, energy usage, and public services in real-time.",
+    "detailedDescription": "A comprehensive smart city management platform that aggregates data from thousands of IoT sensors throughout the city. The dashboard provides real-time insights into traffic patterns, energy consumption, air quality, and public service utilization, enabling data-driven urban planning and resource optimization.",
+    "image": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=250&fit=crop",
+    "technologies": ["Vue.js", "Python", "InfluxDB", "Grafana", "IoT Sensors"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": false,
+    "client": "Metropolitan City Council",
+    "duration": "12 months",
+    "teamSize": "10 developers",
+    "year": "2023",
+    "results": [
+      "25% reduction in traffic congestion",
+      "20% decrease in energy consumption",
+      "Improved emergency response times",
+      "Data from 10,000+ IoT sensors"
+    ],
+    "features": [
+      "Real-time traffic monitoring",
+      "Energy consumption analytics",
+      "Air quality tracking",
+      "Public transportation optimization",
+      "Emergency response coordination",
+      "Predictive maintenance alerts"
+    ],
+    "challenges": [
+      "Processing massive amounts of sensor data",
+      "Ensuring data privacy and security",
+      "Integrating with legacy city systems"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Learning Management System",
+    "category": "web",
+    "description": "Comprehensive online learning platform with course creation, student progress tracking, and interactive assessments.",
+    "detailedDescription": "An advanced learning management system designed for educational institutions and corporate training programs. The platform supports multimedia course content, real-time collaboration, automated grading, and detailed analytics to track student progress and learning outcomes.",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop",
+    "technologies": ["React", "Django", "PostgreSQL", "WebRTC", "AWS"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": false,
+    "client": "EduTech University",
+    "duration": "7 months",
+    "teamSize": "6 developers",
+    "year": "2024",
+    "results": [
+      "10,000+ students enrolled",
+      "95% course completion rate",
+      "40% improvement in test scores",
+      "Integration with 50+ third-party tools"
+    ],
+    "features": [
+      "Interactive course builder",
+      "Video conferencing integration",
+      "Automated assessment tools",
+      "Progress tracking and analytics",
+      "Discussion forums",
+      "Mobile learning app"
+    ],
+    "challenges": [
+      "Supporting concurrent video sessions",
+      "Implementing plagiarism detection",
+      "Ensuring accessibility compliance"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Delivery Optimization App",
+    "category": "mobile",
+    "description": "Route optimization mobile app for delivery drivers with real-time tracking and customer communication features.",
+    "detailedDescription": "A mobile application that optimizes delivery routes for logistics companies and individual drivers. The app uses machine learning algorithms to calculate the most efficient routes, provides real-time tracking for customers, and includes features for driver communication and delivery proof.",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
+    "technologies": ["Flutter", "Google Maps API", "Firebase", "Machine Learning"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "featured": false,
+    "client": "QuickDelivery Solutions",
+    "duration": "3 months",
+    "teamSize": "3 developers",
+    "year": "2024",
+    "results": [
+      "30% reduction in delivery time",
+      "25% fuel cost savings",
+      "98% on-time delivery rate",
+      "5,000+ active drivers"
+    ],
+    "features": [
+      "AI-powered route optimization",
+      "Real-time GPS tracking",
+      "Customer notification system",
+      "Proof of delivery capture",
+      "Driver performance analytics",
+      "Offline mode support"
+    ],
+    "challenges": [
+      "Optimizing routes for multiple variables",
+      "Ensuring accurate GPS tracking",
+      "Supporting offline functionality"
+    ]
+  }
+]

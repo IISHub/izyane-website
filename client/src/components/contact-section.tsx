@@ -126,7 +126,7 @@ export default function ContactSection() {
     <section id="contact" className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Get In Touch</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Get In Touch</h2>
           <p className="text-xl text-slate-600 dark:text-white max-w-3xl mx-auto">
             Ready to start your next project? Let's discuss how we can help bring your ideas to life.
           </p>
@@ -134,7 +134,7 @@ export default function ContactSection() {
         
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-secondary-custom mb-8">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-responsive mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -142,7 +142,7 @@ export default function ContactSection() {
                     <i className={`${info.icon} text-primary-custom`}></i>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-secondary-custom mb-2">{info.title}</h4>
+                    <h4 className="text-lg font-semibold text-responsive mb-2">{info.title}</h4>
                     <p className="text-slate-600 dark:text-white whitespace-pre-line">{info.content}</p>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export default function ContactSection() {
             </div>
             
             <div className="mt-8">
-              <h4 className="text-lg font-semibold text-secondary-custom mb-4">Follow Us</h4>
+              <h4 className="text-lg font-semibold text-responsive mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a 
@@ -169,7 +169,7 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-secondary-custom mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-responsive mb-2">
                     Name *
                   </label>
                   <Input
@@ -183,7 +183,7 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-secondary-custom mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-responsive mb-2">
                     Email *
                   </label>
                   <Input
@@ -199,7 +199,7 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-sm font-semibold text-secondary-custom mb-2">
+                <label htmlFor="company" className="block text-sm font-semibold text-responsive mb-2">
                   Company
                 </label>
                 <Input
@@ -213,7 +213,7 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-secondary-custom mb-2">
+                <label htmlFor="subject" className="block text-sm font-semibold text-responsive mb-2">
                   Subject *
                 </label>
                 <Select value={formData.subject} onValueChange={(value) => handleInputChange('subject', value)}>
@@ -232,7 +232,7 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-secondary-custom mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-responsive mb-2">
                   Message *
                 </label>
                 <Textarea
@@ -258,14 +258,14 @@ export default function ContactSection() {
                 </label>
               </div>
               
-              <Button 
+              <button 
                 type="submit" 
-                className="w-full bg-primary-custom text-white px-8 py-4 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-colors duration-200 font-semibold text-lg"
+                className="btn-solid w-full text-lg px-8 py-4"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
                 <i className="fas fa-paper-plane ml-2"></i>
-              </Button>
+              </button>
             </form>
           </div>
         </div>

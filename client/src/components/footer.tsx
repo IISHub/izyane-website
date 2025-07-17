@@ -73,10 +73,10 @@ export default function Footer() {
                 alt="iZyane Logo" 
                 className="w-8 h-8 rounded-lg object-contain brightness-200"
               />
-              <span className="text-xl font-bold">iZyane</span>
+              <span className="text-xl font-bold">iZyane InovSolutions</span>
             </div>
             <p className="text-slate-300 mb-6">
-              Building the future of technology, one solution at a time.
+              Ahead with Innovation.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (

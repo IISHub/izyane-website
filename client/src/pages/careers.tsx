@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import JobApplicationModal from "@/components/job-application-modal";
+import JobDetailsModal from "@/components/job-details-modal";
 
 interface Job {
   id: string;
@@ -13,17 +15,71 @@ interface Job {
   location: string;
   experience: string;
   department: string;
+  minimumQualifications: string[];
+  preferredQualifications: string[];
+  aboutTheJob: string;
+  responsibilities: string[];
 }
 
 export default function Careers() {
   const [jobs, setJobs] = useState<Job[]>([]);
+  const [filteredJobs, setFilteredJobs] = useState<Job[]>([]);
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('All');
+  const [selectedType, setSelectedType] = useState<string>('All');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [isApplicationModalOpen, setIsApplicationModalOpen] = useState(false);
+  const [isJobDetailsModalOpen, setIsJobDetailsModalOpen] = useState(false);
+
+  const handleApplyClick = (job: Job) => {
+    setSelectedJob(job);
+    setIsApplicationModalOpen(true);
+  };
+
+  const handleReadMoreClick = (job: Job) => {
+    setSelectedJob(job);
+    setIsJobDetailsModalOpen(true);
+  };
 
   useEffect(() => {
     fetch('/data/jobs.json')
       .then(response => response.json())
-      .then(data => setJobs(data))
+      .then(data => {
+        setJobs(data);
+        setFilteredJobs(data);
+      })
       .catch(error => console.error('Error loading jobs:', error));
   }, []);
+
+  // Filter jobs based on search term, department, and type
+  useEffect(() => {
+    let filtered = jobs;
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(job => 
+        job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    // Filter by department
+    if (selectedDepartment !== 'All') {
+      filtered = filtered.filter(job => job.department === selectedDepartment);
+    }
+
+    // Filter by job type
+    if (selectedType !== 'All') {
+      filtered = filtered.filter(job => job.type === selectedType);
+    }
+
+    setFilteredJobs(filtered);
+  }, [jobs, searchTerm, selectedDepartment, selectedType]);
+
+  // Get unique departments and types for filters
+  const departments = ['All', ...Array.from(new Set(jobs.map(job => job.department)))];
+  const jobTypes = ['All', ...Array.from(new Set(jobs.map(job => job.type)))];
   const benefits = [
     {
       icon: "fas fa-rocket",
@@ -67,7 +123,7 @@ export default function Careers() {
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-6">
               Join Our <span className="gradient-text">Amazing</span> Team
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
@@ -75,31 +131,28 @@ export default function Careers() {
               Join us and grow your career while making a real impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button className="bg-primary-custom text-white px-8 py-4 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button className="btn-solid px-8 py-4 text-lg">
                 View Open Positions
-              </Button>
-              <Button 
-                variant="outline"
-                className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-lg hover:border-primary-custom hover:text-primary-custom dark:hover:border-primary-custom dark:hover:text-primary-custom transition-all duration-200 font-semibold text-lg"
-              >
+              </button>
+              <button className="btn-outline px-8 py-4 text-lg">
                 <i className="fas fa-users mr-2"></i>Our Culture
-              </Button>
+              </button>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-secondary-custom dark:text-white">150+</div>
+                <div className="text-3xl font-bold text-responsive">150+</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Team Members</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary-custom dark:text-white">25+</div>
+                <div className="text-3xl font-bold text-responsive">25+</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Countries</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary-custom dark:text-white">4.8/5</div>
+                <div className="text-3xl font-bold text-responsive">4.8/5</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Employee Rating</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary-custom dark:text-white">98%</div>
+                <div className="text-3xl font-bold text-responsive">98%</div>
                 <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">Retention Rate</div>
               </div>
             </div>
@@ -111,7 +164,7 @@ export default function Careers() {
       <section className="section-padding bg-white dark:bg-slate-800">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">Why Join iZyane?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Why Join iZyane?</h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               We believe in creating an environment where our team can thrive, innovate, and grow together.
             </p>
@@ -123,7 +176,7 @@ export default function Careers() {
                 <div className="w-16 h-16 bg-gradient-to-r from-primary-custom to-accent-custom rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className={`${benefit.icon} text-white text-2xl`}></i>
                 </div>
-                <h3 className="text-xl font-bold text-secondary-custom dark:text-white mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-responsive mb-4">{benefit.title}</h3>
                 <p className="text-slate-600 dark:text-slate-300">{benefit.description}</p>
               </div>
             ))}
@@ -135,35 +188,82 @@ export default function Careers() {
       <section className="section-padding bg-slate-50 dark:bg-slate-900">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">Open Positions</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Open Positions</h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Discover opportunities to grow your career and make an impact with cutting-edge technology.
             </p>
           </div>
+
+          {/* Search and Filter Section */}
+          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 mb-8">
+            <div className="grid md:grid-cols-3 gap-4">
+              {/* Search Bar */}
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i className="fas fa-search text-slate-400"></i>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search jobs, skills, or keywords..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-3 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-custom focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
+                />
+              </div>
+
+              {/* Department Filter */}
+              <select
+                value={selectedDepartment}
+                onChange={(e) => setSelectedDepartment(e.target.value)}
+                className="w-full px-3 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-custom focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-white"
+              >
+                {departments.map(dept => (
+                  <option key={dept} value={dept}>{dept === 'All' ? 'All Departments' : dept}</option>
+                ))}
+              </select>
+
+              {/* Job Type Filter */}
+              <select
+                value={selectedType}
+                onChange={(e) => setSelectedType(e.target.value)}
+                className="w-full px-3 py-3 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-custom focus:border-transparent bg-white dark:bg-slate-700 text-slate-900 dark:text-white"
+              >
+                {jobTypes.map(type => (
+                  <option key={type} value={type}>{type === 'All' ? 'All Types' : type}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Results Summary */}
+            <div className="mt-4 text-sm text-slate-600 dark:text-slate-400">
+              Showing {filteredJobs.length} of {jobs.length} positions
+            </div>
+          </div>
           
           <div className="grid gap-6">
-            {jobs.map((job, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 card-hover">
+            {filteredJobs.length > 0 ? (
+              filteredJobs.map((job, index) => (
+              <div key={index} className="bg-white dark:bg-slate-800 rounded-xl p-6 card-hover">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-4 mb-4">
-                      <h3 className="text-xl font-bold text-secondary-custom">{job.title}</h3>
+                      <h3 className="text-xl font-bold text-responsive">{job.title}</h3>
                       <span className={`bg-${job.typeColor}/10 text-${job.typeColor} px-3 py-1 rounded-full text-sm font-medium`}>
                         {job.type}
                       </span>
-                      <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">
+                      <span className="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm">
                         {job.department}
                       </span>
                     </div>
-                    <p className="text-slate-600 mb-4">{job.description}</p>
+                    <p className="text-slate-600 dark:text-slate-300 mb-4">{job.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {job.skills.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm">
+                        <span key={skillIndex} className="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm">
                           {skill}
                         </span>
                       ))}
                     </div>
-                    <div className="flex flex-wrap items-center gap-4 text-slate-500 text-sm">
+                    <div className="flex flex-wrap items-center gap-4 text-slate-500 dark:text-slate-400 text-sm">
                       <div className="flex items-center">
                         <i className="fas fa-map-marker-alt mr-2"></i>
                         <span>{job.location}</span>
@@ -174,27 +274,67 @@ export default function Careers() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-4 lg:mt-0 lg:ml-6">
-                    <Button className="bg-primary-custom text-white px-6 py-2 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-colors duration-200 font-semibold w-full lg:w-auto">
+                  <div className="mt-4 lg:mt-0 lg:ml-6 flex flex-col sm:flex-row gap-3">
+                    <button 
+                      onClick={() => handleReadMoreClick(job)}
+                      className="btn-outline px-6 py-2 w-full sm:w-auto"
+                    >
+                      Read More
+                    </button>
+                    <button 
+                      onClick={() => handleApplyClick(job)}
+                      className="btn-solid px-6 py-2 w-full sm:w-auto"
+                    >
                       Apply Now
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </div>
-            ))}
+            ))
+            ) : (
+              <div className="text-center py-12">
+                <div className="w-20 h-20 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-search text-slate-400 text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-600 dark:text-slate-400 mb-2">No positions found</h3>
+                <p className="text-slate-500 dark:text-slate-500 mb-4">
+                  Try adjusting your search criteria or browse all positions
+                </p>
+                <button 
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedDepartment('All');
+                    setSelectedType('All');
+                  }}
+                  className="btn-outline"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            )}
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-slate-600 mb-6">Don't see a position that fits? We're always looking for talented people.</p>
-            <Button 
-              variant="outline" 
-              className="border-2 border-primary-custom text-primary-custom px-8 py-3 rounded-lg hover:bg-primary-custom hover:text-white transition-all duration-200 font-semibold"
-            >
+            <p className="text-slate-600 dark:text-slate-300 mb-6">Don't see a position that fits? We're always looking for talented people.</p>
+            <button className="btn-outline px-8 py-3">
               Send Your Resume
-            </Button>
+            </button>
           </div>
         </div>
       </section>
+
+      <JobDetailsModal 
+        isOpen={isJobDetailsModalOpen}
+        onClose={() => setIsJobDetailsModalOpen(false)}
+        job={selectedJob}
+        onApply={handleApplyClick}
+      />
+
+      <JobApplicationModal 
+        isOpen={isApplicationModalOpen}
+        onClose={() => setIsApplicationModalOpen(false)}
+        job={selectedJob}
+      />
 
       <Footer />
     </div>
