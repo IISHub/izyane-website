@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { ExternalLink, Github } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
@@ -68,7 +67,7 @@ export default function Portfolio() {
             Our <span className="gradient-text">Portfolio</span>
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-            Discover our latest projects and see how we've helped businesses transform their digital presence with innovative solutions.
+            A curated collection of our finest work showcasing creative excellence and technical innovation across various industries.
           </p>
         </div>
       </section>
@@ -93,108 +92,53 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Projects Gallery */}
-          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          {/* Projects Gallery - Photos Only */}
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className={`bg-white dark:bg-slate-700 rounded-2xl overflow-hidden card-hover animate-fadeInUp break-inside-avoid mb-6 group ${
-                  project.featured ? "ring-2 ring-primary-custom/30" : ""
-                }`}
+                className="break-inside-avoid mb-4 group cursor-pointer portfolio-gallery"
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => window.open(project.liveUrl, '_blank')}
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className={`w-full object-cover transition-all duration-500 group-hover:scale-105 ${
-                      index % 4 === 0 ? "h-64" : 
-                      index % 4 === 1 ? "h-48" : 
-                      index % 4 === 2 ? "h-56" : "h-52"
+                    className={`w-full object-cover transition-all duration-700 group-hover:scale-110 ${
+                      index % 6 === 0 ? "h-72" : 
+                      index % 6 === 1 ? "h-48" : 
+                      index % 6 === 2 ? "h-64" : 
+                      index % 6 === 3 ? "h-56" : 
+                      index % 6 === 4 ? "h-80" : "h-52"
                     }`}
                   />
                   {project.featured && (
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary-custom text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
-                        Featured
-                      </span>
+                    <div className="absolute top-3 left-3">
+                      <div className="w-3 h-3 bg-primary-custom rounded-full shadow-lg"></div>
                     </div>
                   )}
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-black/70 text-white px-2 py-1 rounded text-xs font-medium">
-                      {project.year}
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                      <button 
-                        onClick={() => window.open(project.liveUrl, '_blank')}
-                        className="btn-solid btn-sm bg-white text-slate-900 hover:bg-slate-100 flex-1"
-                      >
-                        <ExternalLink className="w-3 h-3 mr-1" />
-                        Live
-                      </button>
-                      <button 
-                        onClick={() => window.open(project.githubUrl, '_blank')}
-                        className="btn-outline btn-sm border-white text-white hover:bg-white hover:text-slate-900"
-                      >
-                        <Github className="w-3 h-3" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-responsive line-clamp-2">
-                      {project.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-3 line-clamp-3">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex items-center gap-2 mb-4 text-xs text-slate-500 dark:text-slate-400">
-                    <span>{project.client}</span>
-                    <span>•</span>
-                    <span>{project.duration}</span>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="bg-slate-100 dark:bg-slate-600 text-slate-700 dark:text-slate-300 px-2 py-1 rounded text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="bg-slate-100 dark:bg-slate-600 text-slate-700 dark:text-slate-300 px-2 py-1 rounded text-xs">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
-                  
-                  {project.results && project.results.length > 0 && (
-                    <div className="border-t border-slate-200 dark:border-slate-600 pt-3">
-                      <p className="text-xs text-primary-custom font-medium">
-                        🎯 {project.results[0]}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <h3 className="text-white font-semibold text-sm drop-shadow-lg">
+                        {project.title}
+                      </h3>
+                      <p className="text-white/80 text-xs mt-1 drop-shadow">
+                        {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12 animate-fadeInUp">
-            <p className="text-slate-600 dark:text-slate-400 mb-6">
-              Have a project in mind? Let's discuss how we can bring your vision to life.
+          <div className="text-center mt-16 animate-fadeInUp">
+            <p className="text-slate-600 dark:text-slate-400 mb-6 text-lg">
+              Inspired by our work? Let's create something amazing together.
             </p>
             <button className="btn-solid px-8 py-3 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Start Your Project
+              View All Projects
             </button>
           </div>
         </div>

@@ -1,42 +1,52 @@
 [
   {
-    "name": "Microsoft",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+    "name": "TechRowth",
+    "logo": "https://techrowth.s3.eu-north-1.amazonaws.com/Techrowth+Website/logo%402x.png",
     "category": "partner"
   },
   {
-    "name": "AWS",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    "name": "Techurate",
+    "logo": "https://techurate.com/wp-content/uploads/2022/10/techurate.png",
     "category": "partner"
   },
   {
-    "name": "Google Cloud",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    "name": "Mojaloop",
+    "logo": "https://mojaloop.io/wp-content/uploads/2025/03/FullLogo_Standard_RGB.svg",
     "category": "partner"
   },
   {
-    "name": "Docker",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    "name": "Infitx",
+    "logo": "https://www.infitx.com/wp-content/uploads/2022/11/INFITX-Colour.png",
     "category": "partner"
   },
   {
-    "name": "React",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "category": "technology"
+    "name": "PaySys Labs",
+    "logo": "https://paysyslabs.com/wp-content/uploads/2025/02/Logo-01.png",
+    "category": "partner"
   },
   {
-    "name": "Node.js",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    "category": "technology"
+    "name": "IZB",
+    "logo": "https://techrowthweb.azurewebsites.net/wp-content/uploads/2021/08/Screenshot-2021-09-06-at-2.07.43-PM.png",
+    "category": "customers"
   },
   {
-    "name": "MongoDB",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    "category": "technology"
+    "name": "ZICB",
+    "logo": "https://www.zicb.co.zm/wp-content/uploads/2019/01/logo-1.png",
+    "category": "customers"
   },
   {
-    "name": "PostgreSQL",
-    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-    "category": "technology"
+    "name": "Hitalys",
+    "logo": "https://hitalys.com/wp-content/uploads/2025/02/cropped-Untitled-design-1-2.png",
+    "category": "customers"
+  },
+  {
+    "name": "ACSZ",
+    "logo": "https://www.acsz.co.zm/images/logo.png",
+    "category": "customers"
+  },
+  {
+    "name": "ABSA",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/ABSA_Group_Limited_Logo.svg/1200px-ABSA_Group_Limited_Logo.svg.png",
+    "category": "customers"
   }
 ]

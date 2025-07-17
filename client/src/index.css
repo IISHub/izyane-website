@@ -417,3 +417,16 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Portfolio Gallery Enhancements */
+.portfolio-gallery {
+  position: relative;
+}
+
+.portfolio-gallery img {
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.portfolio-gallery:hover img {
+  filter: brightness(0.9) contrast(1.1);
+}
