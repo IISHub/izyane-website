@@ -34,6 +34,10 @@ Preferred communication style: Simple, everyday language.
 ✓ Added team member profiles section with social links and expertise tags
 ✓ Implemented newsletter signup with email integration and form validation
 ✓ Fixed navbar sizing issues and enhanced dark mode theming across entire website
+✓ Created separate Team and Portfolio pages with dedicated routes
+✓ Moved Team and Portfolio links to footer under "Opportunities" section
+✓ Increased navbar height for better prominence and visual presence
+✓ Fixed dark mode text colors in Products and Services sections for better readability
 
 ## System Architecture
 

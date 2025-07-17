@@ -83,8 +83,9 @@ export default function Footer() {
       title: "Opportunities",
       links: [
         { name: "Careers", action: () => window.location.href = '/careers' },
-        { name: "Partnerships", action: () => {} },
-        { name: "Internships", action: () => {} }
+        { name: "Team", action: () => window.location.href = '/team' },
+        { name: "Portfolio", action: () => window.location.href = '/portfolio' },
+        { name: "Partnerships", action: () => {} }
       ]
     }
   ];

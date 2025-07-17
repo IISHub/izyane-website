@@ -35,11 +35,11 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section id="products" className="section-padding bg-white">
+    <section id="products" className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Our Products</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">Our Products</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Innovative solutions designed to solve real-world problems and accelerate business growth.
           </p>
         </div>
@@ -52,11 +52,11 @@ export default function ProductsSection() {
                   <i className={`${product.categoryIcon} mr-2`}></i>
                   {product.category}
                 </div>
-                <h3 className="text-3xl font-bold text-secondary-custom mb-6">{product.name}</h3>
-                <p className="text-xl text-slate-600 mb-6">{product.description}</p>
+                <h3 className="text-3xl font-bold text-secondary-custom dark:text-white mb-6">{product.name}</h3>
+                <p className="text-xl text-slate-600 dark:text-slate-300 mb-6">{product.description}</p>
                 <ul className="space-y-3 mb-8">
                   {product.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-slate-600">
+                    <li key={featureIndex} className="flex items-center text-slate-600 dark:text-slate-300">
                       <i className="fas fa-check-circle text-emerald-500 mr-3"></i>
                       {feature}
                     </li>

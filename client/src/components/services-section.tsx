@@ -56,23 +56,23 @@ export default function ServicesSection() {
     <section id="services" className="section-padding bg-slate-50 dark:bg-slate-900">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">Our Services</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">Our Services</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             From concept to deployment, we provide comprehensive technology solutions tailored to your business needs.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 card-hover group">
+            <div key={index} className="bg-white dark:bg-slate-700 rounded-2xl p-8 card-hover group">
               <div className={`w-16 h-16 bg-gradient-to-r ${service.gradientFrom} ${service.gradientTo} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200`}>
                 <i className={`${service.icon} text-white text-2xl`}></i>
               </div>
-              <h3 className="text-xl font-bold text-secondary-custom mb-4">{service.title}</h3>
-              <p className="text-slate-600 mb-6">{service.description}</p>
+              <h3 className="text-xl font-bold text-secondary-custom dark:text-white mb-4">{service.title}</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-6">{service.description}</p>
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-slate-600">
+                  <li key={featureIndex} className="flex items-center text-slate-600 dark:text-slate-300">
                     <i className="fas fa-check text-emerald-500 mr-3 text-sm"></i>
                     {feature}
                   </li>
