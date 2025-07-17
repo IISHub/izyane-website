@@ -43,6 +43,8 @@ export default function Footer() {
     }
   };
 
+
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -101,7 +103,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-secondary-custom text-white py-12">
+    <footer className="bg-secondary-custom dark:bg-slate-900 text-white py-12">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>

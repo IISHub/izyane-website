@@ -1,79 +1,65 @@
-import { useEffect, useState } from "react";
-
-interface Partner {
-  name: string;
-  logo: string;
-  category: string;
-}
-
 export default function PartnersSection() {
-  const [partners, setPartners] = useState<Partner[]>([]);
-
-  useEffect(() => {
-    fetch('/data/partners.json')
-      .then(response => response.json())
-      .then(data => setPartners(data))
-      .catch(error => console.error('Error loading partners:', error));
-  }, []);
-
-  // Duplicate the array for seamless infinite scroll
-  const duplicatedPartners = [...partners, ...partners];
+  const partners = [
+    { name: "Microsoft", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg" },
+    { name: "Google", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg" },
+    { name: "Amazon", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazon.svg" },
+    { name: "Netflix", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/netflix.svg" },
+    { name: "Apple", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apple.svg" },
+    { name: "Meta", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/meta.svg" },
+    { name: "Tesla", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tesla.svg" },
+    { name: "Spotify", logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spotify.svg" }
+  ];
 
   return (
-    <section className="section-padding bg-slate-50 dark:bg-slate-900 overflow-hidden">
+    <section className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">
-            Our <span className="gradient-text">Partners</span> & Technologies
+        <div className="text-center mb-12 animate-fadeInUp">
+          <h2 className="text-3xl font-bold text-secondary-custom dark:text-white mb-4">
+            Trusted by Industry <span className="gradient-text">Leaders</span>
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            We work with industry leaders and cutting-edge technologies to deliver exceptional solutions.
+          <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+            We're proud to work with some of the world's most innovative companies to deliver cutting-edge solutions.
           </p>
         </div>
-        
-        <div className="relative">
-          {/* Animated logo strip */}
-          <div className="flex space-x-12 animate-scroll">
-            {duplicatedPartners.map((partner, index) => (
+
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll space-x-12">
+            {/* First set of logos */}
+            {partners.map((partner, index) => (
               <div
-                key={`${partner.name}-${index}`}
-                className="flex-shrink-0 group"
+                key={index}
+                className="flex-shrink-0 w-32 h-16 flex items-center justify-center bg-slate-50 dark:bg-slate-700 rounded-lg hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-24 h-24 bg-white dark:bg-slate-800 rounded-xl shadow-lg flex items-center justify-center p-4 transition-all duration-300 hover:shadow-2xl hover:scale-110 group-hover:bg-gradient-to-r group-hover:from-primary-custom/10 group-hover:to-accent-custom/10">
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} logo`}
-                    className="w-full h-full object-contain filter transition-all duration-300 group-hover:brightness-110"
-                    onError={(e) => {
-                      // Fallback to text if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const fallback = document.createElement('div');
-                      fallback.className = 'text-sm font-semibold text-slate-600 dark:text-slate-300 text-center';
-                      fallback.textContent = partner.name;
-                      target.parentNode?.appendChild(fallback);
-                    }}
-                  />
-                </div>
-                <p className="text-center text-sm text-slate-600 dark:text-slate-400 mt-2 font-medium">
-                  {partner.name}
-                </p>
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="w-20 h-8 object-contain filter grayscale hover:grayscale-0 transition-all duration-300 dark:invert"
+                />
+              </div>
+            ))}
+            {/* Duplicate for seamless scrolling */}
+            {partners.map((partner, index) => (
+              <div
+                key={`duplicate-${index}`}
+                className="flex-shrink-0 w-32 h-16 flex items-center justify-center bg-slate-50 dark:bg-slate-700 rounded-lg hover:shadow-lg transition-shadow duration-300"
+              >
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="w-20 h-8 object-contain filter grayscale hover:grayscale-0 transition-all duration-300 dark:invert"
+                />
               </div>
             ))}
           </div>
-          
-          {/* Gradient overlays for fade effect */}
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-50 dark:from-slate-900 to-transparent pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-50 dark:from-slate-900 to-transparent pointer-events-none"></div>
         </div>
-        
-        <div className="text-center mt-12">
-          <p className="text-slate-600 dark:text-slate-400">
-            Interested in partnering with us? 
-            <button className="text-primary-custom hover:text-accent-custom font-semibold ml-1 transition-colors duration-200">
-              Get in touch
-            </button>
+
+        <div className="text-center mt-12 animate-fadeInUp">
+          <p className="text-slate-600 dark:text-slate-400 mb-6">
+            Ready to join our growing list of satisfied clients?
           </p>
+          <button className="bg-primary-custom text-white px-8 py-3 rounded-lg hover:bg-[hsl(221,83%,45%)] transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Become a Partner
+          </button>
         </div>
       </div>
     </section>

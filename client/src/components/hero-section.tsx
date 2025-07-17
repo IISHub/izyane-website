@@ -78,14 +78,14 @@ export default function HeroSection() {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} min-h-screen flex items-center relative overflow-hidden transition-all duration-1000`}>
+    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 min-h-screen flex items-center relative overflow-hidden transition-all duration-1000`}>
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <div className={`inline-block px-4 py-2 bg-${currentSlideData.primaryColor}/10 text-${currentSlideData.primaryColor} rounded-full text-sm font-semibold mb-4 animate-fadeInUp`}>
               {currentSlideData.subtitle}
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom leading-tight mb-6 animate-fadeInUp">
+            <h1 className="text-5xl lg:text-6xl font-bold text-secondary-custom dark:text-white leading-tight mb-6 animate-fadeInUp">
               {currentSlideData.title.split(' ').map((word, index) => {
                 if (word === 'Future' || word === 'AI-Powered' || word === 'Scalable') {
                   return <span key={index} className="gradient-text">{word} </span>;
@@ -93,7 +93,7 @@ export default function HeroSection() {
                 return word + ' ';
               })}
             </h1>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed animate-fadeInUp">
+            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed animate-fadeInUp">
               {currentSlideData.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fadeInUp">
@@ -113,8 +113,8 @@ export default function HeroSection() {
             <div className="grid grid-cols-3 gap-8 text-center animate-fadeInUp">
               {currentSlideData.stats.map((stat, index) => (
                 <div key={index}>
-                  <div className="text-3xl font-bold text-secondary-custom">{stat.number}</div>
-                  <div className="text-slate-600 text-sm font-medium">{stat.label}</div>
+                  <div className="text-3xl font-bold text-secondary-custom dark:text-white">{stat.number}</div>
+                  <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>

@@ -30,11 +30,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom mb-6">About iZyane</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-secondary-custom dark:text-white mb-6">About iZyane</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Founded in 2018, we've grown from a small team of passionate developers to a leading technology company serving clients worldwide.
           </p>
         </div>
