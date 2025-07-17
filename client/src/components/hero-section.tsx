@@ -78,7 +78,7 @@ export default function HeroSection() {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 min-h-screen flex items-center relative overflow-hidden transition-all duration-1000`}>
+    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 h-[85vh] flex items-center relative overflow-hidden transition-all duration-1000`}>
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">

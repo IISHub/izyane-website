@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import ServiceModal from "@/components/service-modal";
 
 export default function ServicesSection() {
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleLearnMore = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
   const services = [
     {
       icon: "fas fa-code",
@@ -78,13 +88,23 @@ export default function ServicesSection() {
                   </li>
                 ))}
               </ul>
-              <Button variant="ghost" className="text-primary-custom font-semibold hover:text-accent-custom transition-colors duration-200 p-0">
+              <Button 
+                variant="ghost" 
+                onClick={() => handleLearnMore(service)}
+                className="text-primary-custom font-semibold hover:text-accent-custom transition-colors duration-200 p-0"
+              >
                 Learn More <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </div>
           ))}
         </div>
       </div>
+      
+      <ServiceModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        service={selectedService}
+      />
     </section>
   );
 }

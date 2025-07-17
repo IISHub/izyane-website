@@ -40,10 +40,25 @@ export default function AboutSection() {
         </div>
         
         <Tabs defaultValue="about" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-12">
-            <TabsTrigger value="about">About Us</TabsTrigger>
-            <TabsTrigger value="vision">Our Vision</TabsTrigger>
-            <TabsTrigger value="mission">Our Mission</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-12 bg-transparent border-b border-slate-200 dark:border-slate-600 rounded-none h-auto p-0">
+            <TabsTrigger 
+              value="about"
+              className="py-4 px-6 border-b-2 font-medium text-sm transition-all duration-200 data-[state=active]:border-primary-custom data-[state=active]:text-primary-custom border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-500 bg-transparent data-[state=active]:bg-transparent rounded-none data-[state=active]:shadow-none"
+            >
+              About Us
+            </TabsTrigger>
+            <TabsTrigger 
+              value="vision"
+              className="py-4 px-6 border-b-2 font-medium text-sm transition-all duration-200 data-[state=active]:border-primary-custom data-[state=active]:text-primary-custom border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-500 bg-transparent data-[state=active]:bg-transparent rounded-none data-[state=active]:shadow-none"
+            >
+              Our Vision
+            </TabsTrigger>
+            <TabsTrigger 
+              value="mission"
+              className="py-4 px-6 border-b-2 font-medium text-sm transition-all duration-200 data-[state=active]:border-primary-custom data-[state=active]:text-primary-custom border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-500 bg-transparent data-[state=active]:bg-transparent rounded-none data-[state=active]:shadow-none"
+            >
+              Our Mission
+            </TabsTrigger>
           </TabsList>
           
           <TabsContent value="about" className="space-y-16">
@@ -56,21 +71,21 @@ export default function AboutSection() {
                 />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-secondary-custom mb-6">Our Story</h3>
-                <p className="text-lg text-slate-600 mb-6">
+                <h3 className="text-3xl font-bold text-secondary-custom dark:text-white mb-6">Our Story</h3>
+                <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                   We started with a simple mission: to bridge the gap between complex technology and business needs. Today, we're proud to help companies of all sizes leverage technology to achieve their goals.
                 </p>
-                <p className="text-lg text-slate-600 mb-8">
+                <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
                   Our team combines deep technical expertise with business acumen to deliver solutions that not only work beautifully but drive real results.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary-custom">2018</div>
-                    <div className="text-slate-600">Founded</div>
+                    <div className="text-slate-600 dark:text-slate-400">Founded</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary-custom">50+</div>
-                    <div className="text-slate-600">Team Members</div>
+                    <div className="text-slate-600 dark:text-slate-400">Team Members</div>
                   </div>
                 </div>
               </div>
