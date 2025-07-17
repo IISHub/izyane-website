@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --background: hsl(210, 20%, 98%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215, 13.8%, 34.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(262, 73%, 61%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(221, 83%, 53%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(262, 73%, 61%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(221, 83%, 53%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(210, 40%, 96%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(221, 83%, 53%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(221, 83%, 45%);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(221, 83%, 53%), hsl(262, 73%, 61%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-[hsl(221,83%,53%)] text-white hover:bg-[hsl(221,83%,45%)] transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply border-2 border-slate-300 text-slate-700 hover:border-[hsl(221,83%,53%)] hover:text-[hsl(221,83%,53%)] transition-all duration-200;
+}
+
+.btn-accent {
+  @apply bg-[hsl(262,73%,61%)] text-white hover:bg-[hsl(262,73%,55%)] transition-all duration-200;
+}
+
+/* Section padding */
+.section-padding {
+  @apply py-16 lg:py-24;
+}
+
+/* Container max width */
+.container-custom {
+  @apply container mx-auto px-6;
+}
+
+/* Card styles */
+.card-hover {
+  @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+/* Text colors matching design */
+.text-secondary-custom {
+  color: hsl(222, 84%, 4.9%);
+}
+
+.text-primary-custom {
+  color: hsl(221, 83%, 53%);
+}
+
+.text-accent-custom {
+  color: hsl(262, 73%, 61%);
+}
+
+.bg-primary-custom {
+  background-color: hsl(221, 83%, 53%);
+}
+
+.bg-secondary-custom {
+  background-color: hsl(222, 84%, 4.9%);
+}
+
+.bg-accent-custom {
+  background-color: hsl(262, 73%, 61%);
+}
