@@ -138,16 +138,16 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-padding bg-white dark:bg-slate-800">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Get In Touch</h2>
-          <p className="text-xl text-slate-600 dark:text-white max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl xs:text-4xl lg:text-5xl font-bold text-responsive mb-4 sm:mb-6">Get In Touch</h2>
+          <p className="text-lg xs:text-xl text-slate-600 dark:text-white max-w-3xl mx-auto px-4">
             Ready to start your next project? Let's discuss how we can help bring your ideas to life.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold text-responsive mb-8">Contact Information</h3>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="order-2 lg:order-1">
+            <h3 className="text-xl xs:text-2xl font-bold text-responsive mb-6 sm:mb-8">Contact Information</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -189,8 +189,8 @@ export default function ContactSection() {
             </div>
           </div>
           
-          <div>
-            <h3 className="text-2xl font-bold text-responsive mb-8">Send us a Message</h3>
+          <div className="order-1 lg:order-2">
+            <h3 className="text-xl xs:text-2xl font-bold text-responsive mb-6 sm:mb-8">Send us a Message</h3>
             
             <form 
               name="contact" 
@@ -214,7 +214,7 @@ export default function ContactSection() {
               <input type="hidden" name="subject" value={formData.subject} />
               <input type="hidden" name="consent" value={formData.consent.toString()} />
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-responsive mb-2">
                     Name *
@@ -226,7 +226,7 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     placeholder="John Doe"
-                    className="w-full"
+                    className="w-full h-12"
                     required
                   />
                 </div>

@@ -47,15 +47,15 @@ export default function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container-custom py-4">
+      <div className="container-custom py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img 
               src="/logo.png" 
               alt="iZyane Logo" 
-              className="w-8 h-8 rounded-lg object-contain"
+              className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-contain"
             />
-            <span className="text-xl font-bold text-responsive">iZyane</span>
+            <span className="text-lg sm:text-xl font-bold text-responsive">iZyane</span>
           </div>
           
           {/* Desktop Navigation */}

@@ -12,7 +12,70 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 205 70% 36%; /* rgb(24, 104, 159) converted to HSL */
+    --primary: 205 70% /* Responsive text utilities */
+.text-responsive {
+  color: hsl(var(--text-dark));
+}
+
+.dark .text-responsive {
+  color: hsl(var(--foreground));
+}
+
+/* Responsive heading sizes */
+.heading-xl {
+  @apply text-3xl font-bold;
+}
+
+.heading-lg {
+  @apply text-2xl font-bold;
+}
+
+.heading-md {
+  @apply text-xl font-semibold;
+}
+
+.heading-sm {
+  @apply text-lg font-semibold;
+}
+
+/* Responsive breakpoints for headings */
+@media (min-width: 640px) {
+  .heading-xl {
+    @apply text-4xl;
+  }
+  
+  .heading-lg {
+    @apply text-3xl;
+  }
+  
+  .heading-md {
+    @apply text-2xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-xl {
+    @apply text-5xl;
+  }
+  
+  .heading-lg {
+    @apply text-4xl;
+  }
+  
+  .heading-md {
+    @apply text-3xl;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heading-xl {
+    @apply text-6xl;
+  }
+  
+  .heading-lg {
+    @apply text-5xl;
+  }
+} rgb(24, 104, 159) converted to HSL */
     --primary-foreground: 210 40% 98%;
     --secondary: 355 100% 24%; /* rgb(122, 0, 3) */
     --secondary-foreground: 210 40% 98%;
@@ -202,20 +265,28 @@
   .container-custom {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* Smaller mobile padding */
   }
   
   /* Navigation specific container */
   .nav-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* Smaller mobile padding */
+  }
+  
+  /* Responsive breakpoints with proper padding */
+  @media (min-width: 480px) {
+    .container-custom,
+    .nav-container {
+      padding: 0 1.5rem;
+    }
   }
   
   @media (min-width: 640px) {
     .container-custom,
     .nav-container {
-      padding: 12px 2rem !important;
+      padding: 0 2rem;
     }
   }
   
@@ -226,8 +297,21 @@
     }
   }
   
+  /* Responsive section padding */
   .section-padding {
-    padding: 5rem 0;
+    padding: 3rem 0; /* Smaller on mobile */
+  }
+  
+  @media (min-width: 640px) {
+    .section-padding {
+      padding: 4rem 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding: 5rem 0;
+    }
   }
   
   /* Navigation improvements */
@@ -256,6 +340,72 @@
   .card-hover:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive utilities */
+  .mobile-center {
+    @apply text-center;
+  }
+  
+  @media (min-width: 1024px) {
+    .mobile-center {
+      @apply text-left;
+    }
+  }
+  
+  /* Responsive grid utilities */
+  .responsive-grid-1 {
+    @apply grid grid-cols-1;
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-grid-1 {
+      @apply grid-cols-2;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-grid-1 {
+      @apply grid-cols-3;
+    }
+  }
+  
+  .responsive-grid-2 {
+    @apply grid grid-cols-1;
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-grid-2 {
+      @apply grid-cols-2;
+    }
+  }
+  
+  /* Responsive spacing */
+  .responsive-gap {
+    @apply gap-4;
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-gap {
+      @apply gap-6;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-gap {
+      @apply gap-8;
+    }
+  }
+  
+  /* Mobile-first button sizes */
+  .btn-responsive {
+    @apply px-6 py-3 text-base;
+  }
+  
+  @media (min-width: 640px) {
+    .btn-responsive {
+      @apply px-8 py-4 text-lg;
+    }
   }
   
   @media (min-width: 640px) {

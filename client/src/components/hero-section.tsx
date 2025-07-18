@@ -84,17 +84,17 @@ export default function HeroSection() {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:bg-gradient-to-br dark:${currentSlideData.darkBackgroundGradient} h-[85vh] flex items-center relative overflow-hidden transition-all duration-1000`}>
+    <section id="home" className={`pt-16 pb-12 xs:pt-20 xs:pb-14 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:bg-gradient-to-br dark:${currentSlideData.darkBackgroundGradient} min-h-[80vh] xs:min-h-[85vh] flex items-center relative overflow-hidden transition-all duration-1000`}>
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div 
-            className="text-center lg:text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.div 
-              className={`inline-block px-4 py-2 ${currentSlideData.accentTheme === 'primary' ? 'bg-primary-accent-light text-primary-custom' : 'bg-secondary-accent-light text-secondary-custom'} rounded-full text-sm font-semibold mb-4`}
+              className={`inline-block px-3 py-2 xs:px-4 ${currentSlideData.accentTheme === 'primary' ? 'bg-primary-accent-light text-primary-custom' : 'bg-secondary-accent-light text-secondary-custom'} rounded-full text-xs xs:text-sm font-semibold mb-4`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -102,7 +102,7 @@ export default function HeroSection() {
               {currentSlideData.subtitle}
             </motion.div>
             <motion.h1 
-              className="text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-6"
+              className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -115,7 +115,7 @@ export default function HeroSection() {
               })}
             </motion.h1>
             <motion.p 
-              className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed"
+              className="text-base xs:text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -123,39 +123,39 @@ export default function HeroSection() {
               {currentSlideData.description}
             </motion.p>
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+              className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center lg:justify-start mb-8 sm:mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
               <button 
                 onClick={scrollToContact}
-                className="btn-solid text-lg px-8 py-4"
+                className="btn-solid text-base xs:text-lg px-6 xs:px-8 py-3 xs:py-4 w-full xs:w-auto"
               >
                 Get Started
               </button>
               <button 
-                className="btn-outline text-lg px-8 py-4"
+                className="btn-outline text-base xs:text-lg px-6 xs:px-8 py-3 xs:py-4 w-full xs:w-auto"
               >
                 <i className="fas fa-play mr-2"></i>Watch Demo
               </button>
             </motion.div>
             <motion.div 
-              className="grid grid-cols-3 gap-8 text-center"
+              className="grid grid-cols-3 gap-4 xs:gap-6 lg:gap-8 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               {currentSlideData.stats.map((stat, index) => (
                 <div key={index}>
-                  <div className="text-3xl font-bold text-responsive">{stat.number}</div>
-                  <div className="text-slate-600 dark:text-slate-400 text-sm font-medium">{stat.label}</div>
+                  <div className="text-xl xs:text-2xl sm:text-3xl font-bold text-responsive">{stat.number}</div>
+                  <div className="text-slate-600 dark:text-slate-400 text-xs xs:text-sm font-medium">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
           </motion.div>
           <motion.div 
-            className="relative"
+            className="relative order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}

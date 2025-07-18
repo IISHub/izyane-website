@@ -50,24 +50,24 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Our Services</h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <h2 className="text-3xl xs:text-4xl lg:text-5xl font-bold text-responsive mb-4 sm:mb-6">Our Services</h2>
+          <p className="text-lg xs:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
             From concept to deployment, we provide comprehensive technology solutions tailored to your business needs.
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {displayedServices.map((service, index) => (
             <motion.div 
               key={service.id} 
-              className="bg-white dark:bg-slate-700 rounded-xl p-6 card-hover group"
+              className="bg-white dark:bg-slate-700 rounded-xl p-4 sm:p-6 card-hover group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className={`w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
                 <i className={`${service.icon} text-white text-lg`}></i>
               </div>
               <h3 className="text-lg font-bold text-responsive mb-3">{service.title}</h3>
