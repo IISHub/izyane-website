@@ -102,22 +102,29 @@ export default function ContactSection() {
     {
       icon: "fas fa-map-marker-alt",
       title: "Address",
-      content: "123 Innovation Drive\nSan Francisco, CA 94105\nUnited States"
+      content: "Engineering House - 3rd Floor, Kelvin Siwale Road, Lusaka - Zambia",
+      link: "https://www.google.com/maps/place/iZyane+InovSolutions/@-15.3954016,28.3198545,1004m/data=!3m2!1e3!4b1!4m6!3m5!1s0x19408be262a33ec5:0xcc7121ba1cc55fec!8m2!3d-15.3954016!4d28.3198545!16s%2Fg%2F11vs8s0hnh?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D",
+      isClickable: true
     },
     {
       icon: "fas fa-phone",
       title: "Phone",
-      content: "+1 (555) 123-4567"
+      content: "+260 958 169 735",
+      link: "tel:+260958169735",
+      isClickable: true
     },
     {
       icon: "fas fa-envelope",
       title: "Email",
-      content: "hello@izyane.com"
+      content: "info@izyane.com",
+      link: "mailto:info@izyane.com",
+      isClickable: true
     },
     {
       icon: "fas fa-clock",
       title: "Business Hours",
-      content: "Monday - Friday: 9:00 AM - 6:00 PM PST\nSaturday: 10:00 AM - 2:00 PM PST\nSunday: Closed"
+      content: "Monday - Friday: 8:00 AM - 5:00 PM CAT\nSaturday: 9:00 AM - 2:00 PM CAT\nSunday: Closed",
+      isClickable: false
     }
   ];
 
@@ -149,7 +156,18 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-responsive mb-2">{info.title}</h4>
-                    <p className="text-slate-600 dark:text-white whitespace-pre-line">{info.content}</p>
+                    {info.isClickable ? (
+                      <a 
+                        href={info.link} 
+                        target={info.title === 'Address' ? '_blank' : '_self'}
+                        rel={info.title === 'Address' ? 'noopener noreferrer' : ''}
+                        className="text-slate-600 dark:text-white whitespace-pre-line hover:text-primary-custom transition-colors duration-200 cursor-pointer"
+                      >
+                        {info.content}
+                      </a>
+                    ) : (
+                      <p className="text-slate-600 dark:text-white whitespace-pre-line">{info.content}</p>
+                    )}
                   </div>
                 </div>
               ))}
