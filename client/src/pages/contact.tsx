@@ -25,23 +25,44 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      subject: "",
-      message: ""
-    });
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const contactInfo = [
@@ -146,7 +167,24 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-responsive mb-6">
                 Send us a message
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="contact-page"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                {/* Hidden form-name input for Netlify */}
+                <input type="hidden" name="form-name" value="contact-page" />
+                
+                {/* Honeypot field for spam protection */}
+                <div style={{ display: 'none' }}>
+                  <label>
+                    Don't fill this out if you're human: 
+                    <input name="bot-field" />
+                  </label>
+                </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
