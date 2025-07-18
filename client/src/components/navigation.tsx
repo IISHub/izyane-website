@@ -75,9 +75,9 @@ export default function Navigation() {
             <Link href="/team" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium">
               Team
             </Link>
-            <Link href="/contact" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium">
+            <button onClick={() => scrollToSection('contact')} className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium">
               Contact
-            </Link>
+            </button>
             
             <ThemeToggle />
           </div>
@@ -119,9 +119,9 @@ export default function Navigation() {
                 Team
               </Link>
 
-              <Link href="/contact" className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium text-left">
+              <button onClick={() => scrollToSection('contact')} className="text-slate-600 dark:text-white hover:text-primary-custom transition-colors duration-200 font-medium text-left">
                 Contact
-              </Link>
+              </button>
             </div>
           </div>
         )}
