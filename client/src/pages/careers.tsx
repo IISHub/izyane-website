@@ -120,9 +120,12 @@ export default function Careers() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
-        <div className="container-custom">
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-800 relative overflow-hidden">
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-block px-4 py-2 bg-primary-accent-light text-primary-custom rounded-full text-sm font-semibold mb-4">
+              Join Our Mission
+            </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-6">
               Join Our <span className="gradient-text">Amazing</span> Team
             </h1>
@@ -158,6 +161,12 @@ export default function Careers() {
             </div>
           </div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 hero-decoration-primary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 hero-decoration-primary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-1/2 left-20 w-8 h-8 bg-primary-accent-medium rounded-full opacity-30"></div>
+        <div className="absolute top-1/3 right-32 w-12 h-12 bg-primary-accent-medium rounded-full opacity-20"></div>
       </section>
 
       {/* Benefits Section */}

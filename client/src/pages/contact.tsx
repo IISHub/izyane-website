@@ -97,9 +97,12 @@ export default function Contact() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
-        <div className="container-custom">
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-800 relative overflow-hidden">
+        <div className="container-custom relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-block px-4 py-2 bg-primary-accent-light text-primary-custom rounded-full text-sm font-semibold mb-4 animate-fadeInUp">
+              Let's Connect
+            </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-responsive leading-tight mb-6 animate-fadeInUp">
               Get in <span className="gradient-text">Touch</span>
             </h1>
@@ -126,6 +129,12 @@ export default function Contact() {
             </div>
           </div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-12 w-16 h-16 hero-decoration-primary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-20 right-12 w-28 h-28 hero-decoration-primary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-1/3 left-24 w-4 h-4 bg-primary-accent-medium rounded-full opacity-50"></div>
+        <div className="absolute top-2/3 right-20 w-8 h-8 bg-primary-accent-medium rounded-full opacity-30"></div>
       </section>
 
       {/* Contact Form and Info */}

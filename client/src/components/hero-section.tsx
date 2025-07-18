@@ -24,40 +24,46 @@ export default function HeroSection() {
       title: "Building the Future of Technology",
       subtitle: "Innovative Solutions",
       description: "We deliver cutting-edge solutions that transform businesses and drive innovation. Join the thousands of companies already accelerating their growth with iZyane.",
-      backgroundGradient: "from-slate-50 via-blue-50 to-indigo-100",
+      backgroundGradient: "from-blue-50 via-indigo-50 to-slate-100",
+      darkBackgroundGradient: "from-slate-900 via-blue-900/20 to-slate-800",
       stats: [
         { number: "500+", label: "Happy Clients" },
         { number: "1000+", label: "Projects Delivered" },
         { number: "99%", label: "Satisfaction Rate" }
       ],
       mockupIcon: "fas fa-chart-line",
-      primaryColor: "primary-custom"
+      primaryColor: "primary-custom",
+      accentTheme: "primary"
     },
     {
       title: "AI-Powered Solutions for Tomorrow",
       subtitle: "Artificial Intelligence",
       description: "Harness the power of AI and machine learning to automate processes, gain insights, and stay ahead of the competition with our intelligent solutions.",
-      backgroundGradient: "from-purple-50 via-indigo-50 to-blue-100",
+      backgroundGradient: "from-slate-50 via-blue-100 to-indigo-100",
+      darkBackgroundGradient: "from-slate-900 via-indigo-900/30 to-slate-800",
       stats: [
         { number: "95%", label: "Accuracy Rate" },
         { number: "10x", label: "Faster Processing" },
         { number: "24/7", label: "AI Monitoring" }
       ],
       mockupIcon: "fas fa-brain",
-      primaryColor: "accent-custom"
+      primaryColor: "primary-custom",
+      accentTheme: "primary"
     },
     {
       title: "Scalable Cloud Infrastructure",
       subtitle: "Cloud Excellence",
       description: "Build, deploy, and scale your applications with our robust cloud solutions. From microservices to enterprise-grade platforms, we've got you covered.",
-      backgroundGradient: "from-emerald-50 via-teal-50 to-cyan-100",
+      backgroundGradient: "from-red-50 via-rose-50 to-slate-100",
+      darkBackgroundGradient: "from-slate-900 via-red-900/20 to-slate-800",
       stats: [
         { number: "99.9%", label: "Uptime SLA" },
         { number: "50+", label: "Cloud Deployments" },
         { number: "3s", label: "Load Time" }
       ],
       mockupIcon: "fas fa-cloud",
-      primaryColor: "emerald-600"
+      primaryColor: "secondary-custom",
+      accentTheme: "secondary"
     }
   ];
 
@@ -78,7 +84,7 @@ export default function HeroSection() {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 h-[85vh] flex items-center relative overflow-hidden transition-all duration-1000`}>
+    <section id="home" className={`pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br ${currentSlideData.backgroundGradient} dark:bg-gradient-to-br dark:${currentSlideData.darkBackgroundGradient} h-[85vh] flex items-center relative overflow-hidden transition-all duration-1000`}>
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -88,7 +94,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.div 
-              className={`inline-block px-4 py-2 bg-${currentSlideData.primaryColor}/10 text-${currentSlideData.primaryColor} rounded-full text-sm font-semibold mb-4`}
+              className={`inline-block px-4 py-2 ${currentSlideData.accentTheme === 'primary' ? 'bg-primary-accent-light text-primary-custom' : 'bg-secondary-accent-light text-secondary-custom'} rounded-full text-sm font-semibold mb-4`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -175,8 +181,8 @@ export default function HeroSection() {
                   </div>
                   <div className="text-slate-400 dark:text-slate-500 text-sm">dashboard.izyane.com</div>
                 </div>
-                <div className={`h-32 bg-gradient-to-r from-${currentSlideData.primaryColor}/20 to-accent-custom/20 rounded-lg flex items-center justify-center`}>
-                  <i className={`${currentSlideData.mockupIcon} text-4xl text-${currentSlideData.primaryColor}`}></i>
+                <div className={`h-32 rounded-lg flex items-center justify-center ${currentSlideData.accentTheme === 'primary' ? 'hero-accent-primary' : 'hero-accent-secondary'}`}>
+                  <i className={`${currentSlideData.mockupIcon} text-4xl ${currentSlideData.accentTheme === 'primary' ? 'text-primary-custom' : 'text-secondary-custom'}`}></i>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="h-16 bg-slate-100 dark:bg-slate-700 rounded-lg flex items-center justify-center">
@@ -188,8 +194,6 @@ export default function HeroSection() {
                 </div>
               </div>
             </motion.div>
-            <div className={`absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-r from-accent-custom to-${currentSlideData.primaryColor} rounded-full opacity-20 animate-pulse`}></div>
-            <div className={`absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-${currentSlideData.primaryColor} to-accent-custom rounded-full opacity-30 animate-pulse`}></div>
           </motion.div>
         </div>
       </div>
@@ -210,13 +214,13 @@ export default function HeroSection() {
       
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
-        {slides.map((_, index) => (
+        {slides.map((slide, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
               index === currentSlide 
-                ? `bg-${currentSlideData.primaryColor}` 
+                ? (slide.accentTheme === 'primary' ? 'bg-primary-custom' : 'bg-secondary-custom')
                 : 'bg-white/50 hover:bg-white/80'
             }`}
           />

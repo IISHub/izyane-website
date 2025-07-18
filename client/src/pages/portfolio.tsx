@@ -61,8 +61,11 @@ export default function Portfolio() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
-        <div className="container-custom text-center">
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 relative overflow-hidden">
+        <div className="container-custom text-center relative z-10">
+          <div className="inline-block px-4 py-2 bg-secondary-accent-light text-secondary-custom rounded-full text-sm font-semibold mb-4">
+            Our Creative Work
+          </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-responsive mb-6">
             Our <span className="gradient-text">Portfolio</span>
           </h1>
@@ -70,6 +73,12 @@ export default function Portfolio() {
             A curated collection of our finest work showcasing creative excellence and technical innovation across various industries.
           </p>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-16 left-16 w-24 h-24 hero-decoration-secondary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-16 right-16 w-36 h-36 hero-decoration-secondary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-1/2 left-32 w-6 h-6 bg-secondary-accent-medium rounded-full opacity-40"></div>
+        <div className="absolute top-1/4 right-24 w-10 h-10 bg-secondary-accent-medium rounded-full opacity-30"></div>
       </section>
 
       {/* Portfolio Content */}

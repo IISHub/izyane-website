@@ -26,14 +26,18 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 205 70% 36%;
     --radius: 0.5rem;
-    /* Custom brand colors */
-    --primary-custom: rgb(24, 104, 159);
-    --secondary-custom: rgb(122, 0, 3);
-    --accent-custom: rgb(24, 104, 159);
-    --text-dark: hsl(222, 84%, 4.9%);
-  }
-
-  .dark {
+  /* Custom brand colors */
+  --primary-custom: rgb(24, 104, 159);
+  --secondary-custom: rgb(122, 0, 3);
+  --accent-custom: rgb(24, 104, 159);
+  --text-dark: hsl(222, 84%, 4.9%);
+  
+  /* Accent variations */
+  --primary-accent-light: rgba(24, 104, 159, 0.1);
+  --primary-accent-medium: rgba(24, 104, 159, 0.2);
+  --secondary-accent-light: rgba(122, 0, 3, 0.1);
+  --secondary-accent-medium: rgba(122, 0, 3, 0.2);
+}  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -58,6 +62,12 @@
     --secondary-custom: rgb(122, 0, 3);
     --accent-custom: rgb(24, 104, 159);
     --text-light: hsl(210, 40%, 98%);
+    
+    /* Accent variations for dark mode */
+    --primary-accent-light: rgba(24, 104, 159, 0.15);
+    --primary-accent-medium: rgba(24, 104, 159, 0.25);
+    --secondary-accent-light: rgba(122, 0, 3, 0.15);
+    --secondary-accent-medium: rgba(122, 0, 3, 0.25);
   }
 }
 
@@ -383,6 +393,84 @@ html {
 
 .dark .text-responsive {
   color: var(--text-light);
+}
+
+/* Accent background utilities */
+.bg-primary-accent-light {
+  background-color: var(--primary-accent-light);
+}
+
+.bg-primary-accent-medium {
+  background-color: var(--primary-accent-medium);
+}
+
+.bg-secondary-accent-light {
+  background-color: var(--secondary-accent-light);
+}
+
+.bg-secondary-accent-medium {
+  background-color: var(--secondary-accent-medium);
+}
+
+/* Hero section accent elements */
+.hero-accent-primary {
+  position: relative;
+}
+
+.hero-accent-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-accent-light), var(--primary-accent-medium));
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.hero-accent-secondary {
+  position: relative;
+}
+
+.hero-accent-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--secondary-accent-light), var(--secondary-accent-medium));
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Hero decorative elements */
+.hero-decoration-primary {
+  background: linear-gradient(135deg, var(--primary-custom), rgba(24, 104, 159, 0.7));
+  box-shadow: 0 20px 40px var(--primary-accent-medium);
+}
+
+.hero-decoration-secondary {
+  background: linear-gradient(135deg, var(--secondary-custom), rgba(122, 0, 3, 0.7));
+  box-shadow: 0 20px 40px var(--secondary-accent-medium);
+}
+
+/* Background overlay effects */
+.bg-hero-primary {
+  background: linear-gradient(135deg, rgba(24, 104, 159, 0.03), rgba(24, 104, 159, 0.08));
+}
+
+.bg-hero-secondary {
+  background: linear-gradient(135deg, rgba(122, 0, 3, 0.03), rgba(122, 0, 3, 0.08));
+}
+
+.dark .bg-hero-primary {
+  background: linear-gradient(135deg, rgba(24, 104, 159, 0.08), rgba(24, 104, 159, 0.15));
+}
+
+.dark .bg-hero-secondary {
+  background: linear-gradient(135deg, rgba(122, 0, 3, 0.08), rgba(122, 0, 3, 0.15));
 }
 
 /* Button size variants */

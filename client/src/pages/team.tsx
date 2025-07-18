@@ -41,8 +41,11 @@ export default function Team() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700">
-        <div className="container-custom text-center">
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-800 relative overflow-hidden">
+        <div className="container-custom text-center relative z-10">
+          <div className="inline-block px-4 py-2 bg-primary-accent-light text-primary-custom rounded-full text-sm font-semibold mb-4">
+            The People Behind iZyane
+          </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-responsive mb-6">
             Meet Our <span className="gradient-text">Team</span>
           </h1>
@@ -50,6 +53,12 @@ export default function Team() {
             Our diverse team of experts brings together decades of experience from leading tech companies to deliver exceptional results.
           </p>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-16 left-8 w-20 h-20 hero-decoration-primary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute bottom-16 right-8 w-32 h-32 hero-decoration-primary rounded-full opacity-10 animate-pulse"></div>
+        <div className="absolute top-1/2 left-16 w-6 h-6 bg-primary-accent-medium rounded-full opacity-40"></div>
+        <div className="absolute top-1/4 right-16 w-10 h-10 bg-primary-accent-medium rounded-full opacity-30"></div>
       </section>
 
       {/* Team Members */}
