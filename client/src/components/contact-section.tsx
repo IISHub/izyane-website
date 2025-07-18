@@ -5,10 +5,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 
 export default function ContactSection() {
+  // This should always show in console
+  console.log('🚀 ContactSection component loaded!');
+  
+  const { toast } = useToast();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,8 +21,8 @@ export default function ContactSection() {
     message: '',
     consent: false
   });
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({
@@ -42,46 +46,48 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration - you'll need to set these up at https://emailjs.com
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        company: formData.company,
-        subject: formData.subject,
-        message: formData.message,
-        to_name: 'iZyane Team',
-      };
+      // Create form data manually to ensure all fields are captured correctly
+      const submitData = new URLSearchParams();
+      submitData.append('form-name', 'contact');
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('company', formData.company);
+      submitData.append('subject', formData.subject);
+      submitData.append('message', formData.message);
+      submitData.append('consent', formData.consent.toString());
 
-      // Replace these with your actual EmailJS credentials
-      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
-      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
-      const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID || 'your_user_id';
+      console.log('Submitting form data:', Object.fromEntries(submitData));
 
-      if (SERVICE_ID === 'your_service_id') {
-        // Fallback: Show success message without actually sending email
-        console.log('EmailJS not configured. Form data:', templateParams);
-        toast({
-          title: "Demo Mode",
-          description: "Contact form is in demo mode. Please configure EmailJS to send real emails.",
-        });
-      } else {
-        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: submitData.toString()
+      });
+
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+
+      if (response.ok) {
         toast({
           title: "Message Sent!",
           description: "Thank you for your message. We'll get back to you soon.",
         });
+        
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: '',
+          consent: false
+        });
+      } else {
+        const responseText = await response.text();
+        console.error('Response error:', responseText);
+        throw new Error(`Form submission failed: ${response.status}`);
       }
-      
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: '',
-        consent: false
-      });
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or contact us directly.",
@@ -166,7 +172,30 @@ export default function ContactSection() {
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <h3 className="text-2xl font-bold text-responsive mb-8">Send us a Message</h3>
+            
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+            >
+              {/* Hidden field for Netlify */}
+              <input type="hidden" name="form-name" value="contact" />
+              
+              {/* Honeypot field for spam protection */}
+              <div style={{ display: 'none' }}>
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </div>
+              
+              {/* Hidden inputs that sync with state for complex form elements */}
+              <input type="hidden" name="subject" value={formData.subject} />
+              <input type="hidden" name="consent" value={formData.consent.toString()} />
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-responsive mb-2">
@@ -174,6 +203,7 @@ export default function ContactSection() {
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
@@ -188,6 +218,7 @@ export default function ContactSection() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
@@ -204,6 +235,7 @@ export default function ContactSection() {
                 </label>
                 <Input
                   id="company"
+                  name="company"
                   type="text"
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
@@ -237,6 +269,7 @@ export default function ContactSection() {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   placeholder="Tell us about your project..."
@@ -253,7 +286,7 @@ export default function ContactSection() {
                   onCheckedChange={(checked) => handleInputChange('consent', checked as boolean)}
                   className="mt-1"
                 />
-                <label htmlFor="consent" className="text-sm text-slate-600">
+                <label htmlFor="consent" className="text-sm text-slate-600 dark:text-slate-300">
                   I agree to the <a href="#" className="text-primary-custom hover:underline">Privacy Policy</a> and <a href="#" className="text-primary-custom hover:underline">Terms of Service</a>
                 </label>
               </div>

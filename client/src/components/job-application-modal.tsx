@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { X, Upload, CheckCircle } from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
 
 interface Job {
   id: string;
@@ -22,6 +23,9 @@ interface JobApplicationModalProps {
 }
 
 export default function JobApplicationModal({ isOpen, onClose, job }: JobApplicationModalProps) {
+  // Using the same Formspree endpoint for job applications (you can create a separate one if needed)
+  const [state, handleFormSubmit] = useForm("xanbnbez");
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -36,8 +40,6 @@ export default function JobApplicationModal({ isOpen, onClose, job }: JobApplica
   });
 
   const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   if (!job) return null;
 
@@ -52,37 +54,8 @@ export default function JobApplicationModal({ isOpen, onClose, job }: JobApplica
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds and close modal
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        linkedIn: '',
-        coverLetter: '',
-        yearsExperience: '',
-        availability: '',
-        salary: '',
-        referralSource: ''
-      });
-      setResumeFile(null);
-      onClose();
-    }, 3000);
-  };
-
-  if (isSubmitted) {
+  // Show success message if form was submitted successfully
+  if (state.succeeded) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent className="max-w-md">
@@ -96,9 +69,12 @@ export default function JobApplicationModal({ isOpen, onClose, job }: JobApplica
             <p className="text-slate-600 dark:text-slate-300 mb-4">
               Thank you for your interest in the {job.title} position. We'll review your application and get back to you soon.
             </p>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              This modal will close automatically in a few seconds...
-            </p>
+            <button 
+              onClick={onClose}
+              className="btn-solid px-6 py-2"
+            >
+              Close
+            </button>
           </div>
         </DialogContent>
       </Dialog>
@@ -117,7 +93,20 @@ export default function JobApplicationModal({ isOpen, onClose, job }: JobApplica
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form 
+          onSubmit={handleFormSubmit} 
+          className="space-y-6"
+        >
+          {/* Hidden fields for job information */}
+          <input type="hidden" name="job-title" value={job.title} />
+          <input type="hidden" name="job-department" value={job.department} />
+          <input type="hidden" name="job-location" value={job.location} />
+          <input type="hidden" name="job-type" value={job.type} />
+          
+          {/* Hidden fields for select elements */}
+          <input type="hidden" name="yearsExperience" value={formData.yearsExperience} />
+          <input type="hidden" name="availability" value={formData.availability} />
+          <input type="hidden" name="referralSource" value={formData.referralSource} />
           {/* Personal Information */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Personal Information</h3>
@@ -223,6 +212,7 @@ export default function JobApplicationModal({ isOpen, onClose, job }: JobApplica
             <div className="border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-lg p-6 text-center">
               <input
                 type="file"
+                name="resume"
                 accept=".pdf,.doc,.docx"
                 onChange={handleFileChange}
                 className="hidden"
@@ -307,10 +297,10 @@ export default function JobApplicationModal({ isOpen, onClose, job }: JobApplica
             </button>
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={state.submitting}
               className="btn-solid px-8 py-2 disabled:opacity-50"
             >
-              {isSubmitting ? (
+              {state.submitting ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
                   Submitting...
