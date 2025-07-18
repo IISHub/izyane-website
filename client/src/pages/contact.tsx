@@ -29,14 +29,25 @@ export default function Contact() {
     e.preventDefault();
     
     try {
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
-      
+      // Create form data manually to ensure all fields are captured correctly (matching working contact section)
+      const submitData = new URLSearchParams();
+      submitData.append('form-name', 'contact-page');
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('company', formData.company);
+      submitData.append('subject', formData.subject);
+      submitData.append('message', formData.message);
+
+      console.log('Submitting contact page form data:', Object.fromEntries(submitData));
+
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
+        body: submitData.toString()
       });
+
+      console.log('Contact page response status:', response.status);
+      console.log('Contact page response ok:', response.ok);
 
       if (response.ok) {
         toast({
@@ -56,7 +67,7 @@ export default function Contact() {
         throw new Error('Form submission failed');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting contact page form:', error);
       toast({
         title: "Error sending message",
         description: "Please try again later or contact us directly.",
