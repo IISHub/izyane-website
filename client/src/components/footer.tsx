@@ -53,10 +53,8 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: "fab fa-twitter", href: "#" },
-    { icon: "fab fa-linkedin", href: "#" },
-    { icon: "fab fa-github", href: "#" },
-    { icon: "fab fa-youtube", href: "#" }
+    { icon: "fab fa-facebook", href: "https://www.facebook.com/izyaneinovsolutions/" },
+    { icon: "fab fa-linkedin", href: "https://zm.linkedin.com/company/izyane-inovsolutions" }
   ];
 
   const legalLinks = [
