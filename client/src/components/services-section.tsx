@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ServiceModal from "@/components/service-modal";
 import { motion } from "framer-motion";
+import { useParallax } from "@/hooks/use-parallax";
 
 interface Service {
   id: string;
@@ -26,6 +27,10 @@ export default function ServicesSection() {
   const [services, setServices] = useState<Service[]>([]);
   const [showAll, setShowAll] = useState(false);
 
+  // Parallax effects
+  const backgroundParallax = useParallax({ speed: 0.2 });
+  const decorationParallax = useParallax({ speed: -0.3 });
+
   useEffect(() => {
     fetch('/data/services.json')
       .then(response => response.json())
@@ -41,8 +46,21 @@ export default function ServicesSection() {
   const displayedServices = showAll ? services : services.slice(0, 6);
 
   return (
-    <section id="services" className="section-padding bg-slate-50 dark:bg-slate-900">
-      <div className="container-custom">
+    <section id="services" className="section-padding bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full opacity-5"
+        style={backgroundParallax}
+      >
+        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl" />
+      </div>
+      
+      <div 
+        className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-2xl opacity-10"
+        style={decorationParallax}
+      />
+      
+      <div className="container-custom relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -60,18 +78,19 @@ export default function ServicesSection() {
           {displayedServices.map((service, index) => (
             <motion.div 
               key={service.id} 
-              className="bg-white dark:bg-slate-700 rounded-xl p-4 sm:p-6 card-hover group"
+              className={`bg-white dark:bg-slate-700 rounded-xl p-4 sm:p-6 parallax-card group stagger-${(index % 6) + 1}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
-                <i className={`${service.icon} text-white text-lg`}></i>
-              </div>
-              <h3 className="text-lg font-bold text-responsive mb-3">{service.title}</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">{service.description}</p>
+              <div className="parallax-card-content">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
+                  <i className={`${service.icon} text-white text-lg`}></i>
+                </div>
+                <h3 className="text-lg font-bold text-responsive mb-3">{service.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">{service.description}</p>
               
               <div className="mb-4">
                 <ul className="space-y-1">
@@ -108,6 +127,7 @@ export default function ServicesSection() {
               >
                 Learn More
               </button>
+              </div>
             </motion.div>
           ))}
         </div>

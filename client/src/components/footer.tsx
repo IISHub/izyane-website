@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useParallax } from "@/hooks/use-parallax";
 
 export default function Footer() {
+  // Subtle parallax effect for footer
+  const footerParallax = useParallax({ speed: 0.05 });
 
 
 
@@ -63,8 +66,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-secondary-custom dark:bg-slate-900 text-white py-12">
-      <div className="container-custom">
+    <footer className="bg-secondary-custom dark:bg-slate-900 text-white py-12 relative overflow-hidden">
+      {/* Subtle parallax background */}
+      <div 
+        className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-l from-white/5 to-transparent rounded-full blur-3xl"
+        style={{ transform: footerParallax.transform }}
+      />
+      
+      <div className="container-custom relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-6">

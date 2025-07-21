@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import JobApplicationModal from "@/components/job-application-modal";
 import JobDetailsModal from "@/components/job-details-modal";
@@ -117,7 +116,6 @@ export default function Careers() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-800 relative overflow-hidden">

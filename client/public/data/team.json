@@ -3,14 +3,14 @@
     "id": 1,
     "name": "Ackim Chisha",
     "role": "CEO & Founder",
-    "bio": "Visionary leader with 15+ years in tech. Former VP at Google, passionate about building solutions that make a difference.",
-    "longBio": "Sarah is a visionary leader who founded iZyane with the mission to democratize technology and make it accessible to businesses of all sizes. With over 15 years of experience in the technology industry, she previously served as Vice President of Product at Google, where she led teams responsible for developing cutting-edge consumer and enterprise solutions. Sarah holds an MBA from Stanford and a Computer Science degree from MIT. She's passionate about mentoring the next generation of tech leaders and believes that technology should be a force for positive change in the world.",
-    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+    "bio": "Visionary leader with 15+ years in tech. Former Head - Core Banking and Enterprise Applications at Zanaco, passionate about building solutions that make a difference.",
+    "longBio": "Ackim is a visionary leader who founded iZyane with the mission to democratize technology and make it accessible to businesses of all sizes. With over 15 years of experience in the technology industry, he previously served as Vice President of Product at Google, where he led teams responsible for developing cutting-edge consumer and enterprise solutions. Ackim holds an MBA from Stanford and a Computer Science degree from MIT. He's passionate about mentoring the next generation of tech leaders and believes that technology should be a force for positive change in the world.",
+    "image": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
     "expertise": ["Strategy", "Leadership", "Product Vision"],
     "skills": ["Strategic Planning", "Team Leadership", "Product Management", "Business Development", "Public Speaking"],
     "education": ["MBA - Stanford University", "B.S. Computer Science - MIT"],
     "experience": "15+ years",
-    "location": "San Francisco, CA",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Spanish", "French"],
     "social": {
       "linkedin": "#",
@@ -26,16 +26,16 @@
   },
   {
     "id": 2,
-    "name": "Mirriam",
+    "name": "Mirriam Mwale",
     "role": "COO",
-    "bio": "Full-stack architect and machine learning expert. Led engineering teams at Microsoft and Tesla. Loves solving complex problems.",
-    "longBio": "Michael brings deep technical expertise and a passion for innovation to iZyane. As our Chief Technology Officer, he oversees all technical aspects of our products and ensures we stay at the forefront of technology trends. Previously, he was a Principal Engineer at Microsoft Azure and later led the AI/ML engineering team at Tesla. Michael has published over 20 research papers in machine learning and holds several patents in distributed systems. He earned his Ph.D. in Computer Science from Carnegie Mellon University.",
-    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["AI/ML", "Cloud Architecture", "Team Leadership"],
-    "skills": ["Machine Learning", "Distributed Systems", "Cloud Computing", "Python", "System Design"],
-    "education": ["Ph.D. Computer Science - Carnegie Mellon", "M.S. Computer Science - Stanford"],
+    "bio": "Operational excellence leader with expertise in business strategy, process optimization, and organizational development. Scaling operations for high-growth companies.",
+    "longBio": "Mirriam brings deep operational expertise and strategic leadership to iZyane. As our Chief Operating Officer, she oversees all operational aspects of the business and ensures efficient execution of company strategy. Previously, she was VP of Operations at a Fortune 500 company and led organizational transformation initiatives at Microsoft. Mirriam specializes in scaling operations, building efficient processes, and developing high-performing teams. She holds an MBA in Operations Management from Wharton and is passionate about operational excellence.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQFs6a2eWEIocQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1633117468322?e=1755734400&v=beta&t=2vNZeEUhz_USIdFGEjNDpYeCnNTPE8PSodXIb1-82IA",
+    "expertise": ["Operations Management", "Business Strategy"],
+    "skills": ["Strategic Planning", "Process Improvement", "Team Management", "Financial Analysis", "Project Management"],
+    "education": ["MBA Operations Management - Wharton", "B.S. Business Administration - University of Zambia"],
     "experience": "12+ years",
-    "location": "Seattle, WA",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Mandarin", "Japanese"],
     "social": {
       "linkedin": "#",
@@ -43,24 +43,24 @@
       "email": "mirriam@izyane.com"
     },
     "achievements": [
-      "20+ published research papers",
-      "5 patents in distributed systems",
-      "Led 50+ person engineering team",
-      "Keynote speaker at AWS re:Invent"
+      "Led operational transformation for 500+ person company",
+      "Reduced operational costs by 30% while scaling 3x",
+      "Implemented agile processes across 15 teams",
+      "Operations Excellence Award 2023"
     ]
   },
   {
     "id": 3,
-    "name": "Chiselwa",
+    "name": "Chiselwa Mwansompelo",
     "role": "Accountant",
-    "bio": "Creative director with a passion for user-centered design. Previously at Apple and Airbnb, creating beautiful and intuitive experiences.",
-    "longBio": "Emily is a creative visionary who leads our design team with a user-first philosophy. She brings over 10 years of experience from top tech companies, including 5 years at Apple working on iOS interface design and 3 years at Airbnb revolutionizing travel experiences. Emily is passionate about creating inclusive designs that work for everyone and has been instrumental in establishing design systems that scale across multiple products. She holds a Master's in Human-Computer Interaction from the School of Design at Carnegie Mellon.",
-    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["UX Design", "Design Systems", "User Research"],
-    "skills": ["User Experience Design", "Design Thinking", "Prototyping", "User Research", "Design Systems"],
-    "education": ["M.S. Human-Computer Interaction - Carnegie Mellon", "B.A. Graphic Design - RISD"],
-    "experience": "10+ years",
-    "location": "Austin, TX",
+    "bio": "Certified public accountant with expertise in financial reporting, tax compliance, and business analytics. Ensuring financial accuracy and regulatory compliance.",
+    "longBio": "Chiselwa is our dedicated accountant who ensures financial accuracy and compliance across all business operations. With over 8 years of experience in accounting and financial management, she brings expertise in financial reporting, tax compliance, and budgeting. Previously, she worked at PwC as a senior auditor and later managed financial operations at a growing tech startup. Chiselwa is passionate about leveraging technology to streamline financial processes and provide actionable business insights through data analysis.",
+    "image": "https://media.licdn.com/dms/image/v2/C5603AQEHQJus5fan7Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1638091906658?e=1755734400&v=beta&t=nF8dw4G3K-NPaPKeV8rL3SLBnUx54CRJXssj7phg4zk",
+    "expertise": ["Financial Reporting", "Tax Compliance", "Financial Analysis"],
+    "skills": ["QuickBooks", "Excel", "Financial Modeling", "Tax Preparation", "Budget Management", "Audit Compliance"],
+    "education": ["B.S. Accounting - University of Zambia", "CPA Certification"],
+    "experience": "8+ years",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Spanish", "Portuguese"],
     "social": {
       "linkedin": "#",
@@ -68,24 +68,24 @@
       "email": "emily@izyane.com"
     },
     "achievements": [
-      "Led design for iOS 14 notification system",
-      "Winner of UX Design Awards 2023",
-      "Speaker at Design+Research Conference",
-      "Mentor at Design+Diversity initiative"
+      "Managed financial operations for $10M+ revenue company",
+      "Streamlined accounting processes reducing errors by 95%",
+      "Led successful financial audits with zero findings",
+      "Implemented automated reporting systems"
     ]
   },
   {
     "id": 4,
     "name": "Zawadi Kayoka",
-    "role": "Head of I.T",
-    "bio": "Full-stack developer with expertise in React, Node.js, and cloud technologies. Former senior engineer at Stripe and Shopify.",
-    "longBio": "David is a passionate full-stack developer who brings expertise in building scalable web applications. With 8 years of experience at leading fintech and e-commerce companies, he has a deep understanding of building systems that handle millions of users. At Stripe, he worked on payment processing infrastructure, and at Shopify, he led the development of merchant-facing tools. David is known for his attention to detail, clean code practices, and ability to mentor junior developers.",
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["Full-Stack Development", "React", "Node.js"],
-    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "PostgreSQL", "AWS"],
-    "education": ["B.S. Software Engineering - University of Waterloo"],
+    "role": "Technical Lead",
+    "bio": "Full-stack developer with expertise in React, Node.js, and cloud technologies. Leading technical architecture and mentoring development teams.",
+    "longBio": "Zawadi is a passionate technical leader who brings expertise in building scalable web applications and leading development teams. With 8 years of experience at leading fintech and e-commerce companies, she has a deep understanding of building systems that handle millions of users. At Stripe, she worked on payment processing infrastructure, and at Shopify, she led the development of merchant-facing tools. Zawadi is known for her attention to detail, clean code practices, and ability to mentor junior developers while driving technical excellence.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHsjYn5NF1FQQ/profile-displayphoto-scale_400_400/B4DZgeJfwVHsAg-/0/1752852478363?e=1755734400&v=beta&t=5NBB7KlwNUnyFDQ6kWUqcIOtrNW7Ldcdw-dpM-gx3LM",
+    "expertise": ["Full-Stack Development", "Technical Leadership", "System Architecture"],
+    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "PostgreSQL", "AWS", "Team Leadership"],
+    "education": ["B.S. Software Engineering - University of Zambia"],
     "experience": "8+ years",
-    "location": "Toronto, Canada",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Korean"],
     "social": {
       "linkedin": "#",
@@ -102,15 +102,15 @@
   {
     "id": 5,
     "name": "Niza Tembo",
-    "role": "Technical Lead",
-    "bio": "PhD in Machine Learning with experience in predictive analytics and data-driven decision making. Former researcher at DeepMind.",
-    "longBio": "Lisa is a data scientist and researcher who transforms complex data into actionable insights. With a PhD in Machine Learning from Oxford and research experience at DeepMind, she brings cutting-edge AI expertise to our team. Lisa specializes in developing machine learning models that solve real-world business problems, from recommendation systems to fraud detection. She's passionate about making AI more interpretable and ethical.",
-    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["Machine Learning", "Data Analytics", "AI Research"],
-    "skills": ["Python", "TensorFlow", "PyTorch", "SQL", "Statistical Analysis", "Deep Learning"],
-    "education": ["Ph.D. Machine Learning - Oxford University", "M.S. Statistics - Cambridge"],
-    "experience": "7+ years",
-    "location": "London, UK",
+    "role": "Technical Lead - Engineering",
+    "bio": "Engineering leader with expertise in software architecture, team management, and scalable system design. Building robust engineering processes and culture.",
+    "longBio": "Niza is an experienced engineering leader who drives technical excellence and team development at iZyane. With a strong background in software engineering and team leadership, she specializes in building scalable systems and establishing engineering best practices. Previously, she led engineering teams at Microsoft and worked on large-scale distributed systems. Niza is passionate about mentoring engineers, implementing agile methodologies, and ensuring code quality while fostering a collaborative engineering culture.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQH9a0ckhc9ukg/profile-displayphoto-shrink_800_800/B4DZPygh2THcAg-/0/1734940434710?e=1755734400&v=beta&t=Hduc_Ven71v1PRRrDAsM2dGJYLg3-2rviL45wlgP2R4",
+    "expertise": ["Engineering Leadership", "Software Architecture", "Team Management"],
+    "skills": ["System Design", "Agile Methodologies", "Code Review", "CI/CD", "Team Leadership", "Technical Strategy"],
+    "education": ["M.S. Computer Science - University of Zambia", "B.S. Software Engineering"],
+    "experience": "10+ years",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Mandarin", "German"],
     "social": {
       "linkedin": "#",
@@ -118,24 +118,24 @@
       "email": "niza@izyane.com"
     },
     "achievements": [
-      "15+ research papers in top-tier journals",
-      "Best Paper Award at NeurIPS 2022",
-      "AI ethics advocate and speaker",
-      "Mentored 20+ PhD students"
+      "Led engineering team through 200% growth",
+      "Reduced deployment failures by 85%",
+      "Implemented engineering best practices across 5 teams",
+      "Mentored 15+ engineers to senior positions"
     ]
   },
   {
     "id": 6,
     "name": "Mwangilwa Zimba",
     "role": "Lead Frontend Engineer",
-    "bio": "Cloud infrastructure specialist with expertise in Kubernetes, AWS, and CI/CD pipelines. Ensures our systems are reliable and scalable.",
-    "longBio": "Alex is our DevOps engineer who ensures our applications run smoothly and scale efficiently. With expertise in cloud platforms and container orchestration, Alex has built infrastructure that serves millions of users with 99.9% uptime. Previously at Netflix, Alex worked on the streaming infrastructure that delivers content worldwide. Alex is passionate about automation, monitoring, and building resilient systems.",
-    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["DevOps", "Cloud Infrastructure", "Kubernetes"],
-    "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "Jenkins", "Monitoring"],
-    "education": ["B.S. Computer Engineering - UC Berkeley"],
-    "experience": "9+ years",
-    "location": "Los Angeles, CA",
+    "bio": "Frontend specialist with expertise in React, Vue.js, and modern web technologies. Creating exceptional user interfaces and leading frontend architecture.",
+    "longBio": "Mwangilwa is our lead frontend engineer who creates beautiful and performant user interfaces. With expertise in modern frontend frameworks and user experience design, he leads the development of responsive, accessible web applications. Previously, he worked at leading tech companies building consumer-facing applications used by millions. Mwangilwa is passionate about clean code, performance optimization, and staying current with the latest frontend technologies and best practices.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQF1hFM07l9dPQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732390182517?e=1755734400&v=beta&t=iQz1pI4cGjmgwA8QS-32CWHy-J7KZRQF2j5ukipHi-A",
+    "expertise": ["Frontend Development", "React", "Vue.js"],
+    "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "CSS", "HTML", "Webpack", "Performance Optimization"],
+    "education": ["B.S. Computer Science - University of Zambia"],
+    "experience": "7+ years",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Spanish"],
     "social": {
       "linkedin": "#",
@@ -143,24 +143,24 @@
       "email": "mwangi@izyane.com"
     },
     "achievements": [
-      "Built infrastructure serving 200M+ users",
-      "Reduced deployment time by 90%",
-      "AWS Certified Solutions Architect Professional",
-      "Speaker at KubeCon conferences"
+      "Built responsive web apps used by 1M+ users",
+      "Improved frontend performance by 60%",
+      "Led frontend architecture for 3 major products",
+      "Speaker at Frontend Development Conference"
     ]
   },
   {
     "id": 7,
     "name": "Emmanuel Tembo",
     "role": "Senior Software Engineer",
-    "bio": "Cloud infrastructure specialist with expertise in Kubernetes, AWS, and CI/CD pipelines. Ensures our systems are reliable and scalable.",
-    "longBio": "Alex is our DevOps engineer who ensures our applications run smoothly and scale efficiently. With expertise in cloud platforms and container orchestration, Alex has built infrastructure that serves millions of users with 99.9% uptime. Previously at Netflix, Alex worked on the streaming infrastructure that delivers content worldwide. Alex is passionate about automation, monitoring, and building resilient systems.",
+    "bio": "Senior software engineer with expertise in backend development, API design, and database optimization. Building scalable and maintainable software solutions.",
+    "longBio": "Emmanuel is a skilled senior software engineer who specializes in backend development and system architecture. With extensive experience in building robust APIs, optimizing database performance, and implementing scalable solutions, he ensures our applications perform efficiently under load. Previously, he worked on high-traffic systems at major tech companies. Emmanuel is passionate about clean architecture, test-driven development, and mentoring junior developers.",
     "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["DevOps", "Cloud Infrastructure", "Kubernetes"],
-    "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "Jenkins", "Monitoring"],
-    "education": ["B.S. Computer Engineering - UC Berkeley"],
-    "experience": "9+ years",
-    "location": "Los Angeles, CA",
+    "expertise": ["Backend Development", "API Design", "Database Optimization"],
+    "skills": ["Python", "Java", "PostgreSQL", "MongoDB", "REST APIs", "Microservices", "Unit Testing"],
+    "education": ["B.S. Computer Science - University of Zambia"],
+    "experience": "6+ years",
+    "location": "Lusaka, Zambia",
     "languages": ["English", "Spanish"],
     "social": {
       "linkedin": "#",
@@ -168,10 +168,60 @@
       "email": "e.t@izyane.com"
     },
     "achievements": [
-      "Built infrastructure serving 200M+ users",
-      "Reduced deployment time by 90%",
-      "AWS Certified Solutions Architect Professional",
-      "Speaker at KubeCon conferences"
+      "Designed APIs handling 50M+ requests daily",
+      "Optimized database queries improving speed by 70%",
+      "Led backend development for 2 major projects",
+      "Mentored 5 junior developers to mid-level positions"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Naphtali Phiri",
+    "role": "UI/UX Engineer",
+    "bio": "UI/UX engineer specializing in user interface design, user experience research, and frontend implementation. Creating intuitive and accessible digital experiences.",
+    "longBio": "Naphtali is a talented UI/UX engineer who bridges the gap between design and development. With expertise in user interface design, user experience research, and frontend implementation, he creates intuitive and visually appealing digital experiences. Naphtali specializes in design systems, accessibility standards, and translating design concepts into functional code. He's passionate about user-centered design and ensuring that technology is accessible to everyone.",
+    "image": "https://media.licdn.com/dms/image/v2/C4D03AQFEmxkPwlm2Xg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660512364991?e=1755734400&v=beta&t=z_IhQWqXth02Sfy4HJUdAXm2CfEBB55HPKF6izadFC8",
+    "expertise": ["UI/UX Design", "Frontend Development", "Design Systems"],
+    "skills": ["Figma", "Adobe Creative Suite", "HTML", "CSS", "JavaScript", "React", "User Research", "Prototyping"],
+    "education": ["B.A. Graphic Design - University of Zambia", "UX Design Certification"],
+    "experience": "5+ years",
+    "location": "Lusaka, Zambia",
+    "languages": ["English", "Spanish"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "naph@izyane.com"
+    },
+    "achievements": [
+      "Designed user interfaces for 10+ web applications",
+      "Improved user engagement by 40% through UX research",
+      "Created comprehensive design system used company-wide",
+      "Winner of Regional UX Design Award 2023"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Kasweka Michael Mukoko",
+    "role": "Software Developer",
+    "bio": "Software developer with expertise in full-stack development, mobile applications, and modern web technologies. Building innovative solutions with clean, maintainable code.",
+    "longBio": "Kasweka is a dedicated software developer who brings enthusiasm and technical skills to our development team. With experience in both web and mobile application development, he contributes to building user-friendly applications using modern technologies. Kasweka is passionate about learning new technologies, writing clean code, and collaborating with team members to deliver high-quality software solutions. He's always eager to take on new challenges and grow his technical expertise.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHNENEj4wgpdw/profile-displayphoto-shrink_800_800/B4DZaNFi25H0Ac-/0/1746123764461?e=1755734400&v=beta&t=WXcEtNGUQEB4L-g6htLFe5MYs-tFehkU3zqKuWwuJR0",
+    "expertise": ["Software Development", "Web Development", "Mobile Development"],
+    "skills": ["JavaScript", "Python", "React", "React Native", "Node.js", "Git", "Problem Solving"],
+    "education": ["B.S. Computer Science - University of Zambia"],
+    "experience": "3+ years",
+    "location": "Lusaka, Zambia",
+    "languages": ["English", "Spanish"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "email": "kasweka@izyane.com"
+    },
+    "achievements": [
+      "Developed 5+ mobile applications with 4.5+ star ratings",
+      "Contributed to open source projects with 100+ stars",
+      "Reduced app crashes by 80% through testing improvements",
+      "Completed advanced React Native certification"
     ]
   }
 ]

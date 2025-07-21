@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { useParallax, useScrollRotation } from "@/hooks/use-parallax";
 
 interface TeamMember {
   id: number;
@@ -27,6 +28,11 @@ export default function TeamSection() {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
 
+  // Parallax effects
+  const backgroundParallax = useParallax({ speed: 0.1 });
+  const iconRotation = useScrollRotation({ speed: 0.08 });
+  const decorationParallax = useParallax({ speed: -0.15 });
+
   useEffect(() => {
     fetch('/data/team.json')
       .then(response => response.json())
@@ -35,8 +41,29 @@ export default function TeamSection() {
   }, []);
 
   return (
-    <section id="team" className="section-padding bg-white dark:bg-slate-800">
-      <div className="container-custom">
+    <section id="team" className="section-padding bg-white dark:bg-slate-800 relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full opacity-5"
+        style={{ transform: backgroundParallax.transform }}
+      >
+        <div className="absolute top-32 right-32 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-3xl" />
+      </div>
+      
+      <div 
+        className="absolute bottom-32 left-32 w-80 h-80 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-2xl opacity-10"
+        style={{ transform: decorationParallax.transform }}
+      />
+      
+      {/* Rotating Icons */}
+      <div 
+        className="absolute top-20 right-20 w-8 h-8 text-purple-400/30"
+        style={{ transform: iconRotation.transform }}
+      >
+        <i className="fas fa-users text-3xl" />
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Meet Our Team</h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
@@ -45,19 +72,20 @@ export default function TeamSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
+          {teamMembers.map((member, index) => (
             <div 
               key={member.id}
-              className="group relative bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 card-hover"
+              className={`group relative bg-slate-50 dark:bg-slate-700 rounded-2xl p-6 parallax-card float-animation-slow stagger-${(index % 6) + 1}`}
               onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
             >
-              <div className="relative mb-6">
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className="parallax-card-content">
+                <div className="relative mb-6">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg parallax-image"
+                  />
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <div className="flex space-x-2">
                     {member.social.linkedin && (
@@ -142,6 +170,7 @@ export default function TeamSection() {
                     </div>
                   </div>
                 )}
+              </div>
               </div>
             </div>
           ))}

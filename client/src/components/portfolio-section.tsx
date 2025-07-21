@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import { useParallax, useParallaxScale } from "@/hooks/use-parallax";
 
 interface Project {
   id: number;
@@ -25,6 +26,11 @@ export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [projects, setProjects] = useState<Project[]>([]);
 
+  // Parallax effects
+  const backgroundParallax = useParallax({ speed: 0.2 });
+  const imageScale = useParallaxScale({ speed: 0.05, initialScale: 1 });
+  const decorationParallax = useParallax({ speed: -0.3 });
+
   useEffect(() => {
     fetch('/data/portfolio.json')
       .then(response => response.json())
@@ -45,8 +51,19 @@ export default function PortfolioSection() {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="section-padding bg-slate-50 dark:bg-slate-900">
-      <div className="container-custom">
+    <section id="portfolio" className="section-padding bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div 
+        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-indigo-100/30 to-transparent dark:from-indigo-900/20 rounded-full blur-3xl"
+        style={{ transform: backgroundParallax.transform }}
+      />
+      
+      <div 
+        className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-r from-pink-100/30 to-transparent dark:from-pink-900/20 rounded-full blur-3xl"
+        style={{ transform: decorationParallax.transform }}
+      />
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Our Portfolio</h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">

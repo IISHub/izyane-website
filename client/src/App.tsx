@@ -9,6 +9,7 @@ import Careers from "@/pages/careers";
 import Team from "@/pages/team";
 import Portfolio from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
+import TopDockNavigation from "./components/top-dock-navigation";
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function App() {
     <ThemeProvider defaultTheme="light" storageKey="izyane-ui-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
+          <TopDockNavigation />
           <Toaster />
           <Router />
         </TooltipProvider>

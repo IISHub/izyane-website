@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useParallax, useParallaxScale } from "@/hooks/use-parallax";
 
 interface Product {
   id: string;
@@ -24,6 +25,11 @@ export default function ProductsSection() {
   const [products, setProducts] = useState<Product[]>([]);
   const [showAll, setShowAll] = useState(false);
 
+  // Parallax effects
+  const backgroundParallax = useParallax({ speed: 0.1 });
+  const imageScale = useParallaxScale({ speed: 0.1, initialScale: 1 });
+  const decorationParallax = useParallax({ speed: -0.2 });
+
   useEffect(() => {
     fetch('/data/products.json')
       .then(response => response.json())
@@ -34,8 +40,19 @@ export default function ProductsSection() {
   const displayedProducts = showAll ? products : products.filter(product => product.isFeatured);
 
   return (
-    <section id="products" className="section-padding bg-white dark:bg-slate-800">
-      <div className="container-custom">
+    <section id="products" className="section-padding bg-white dark:bg-slate-800 relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div 
+        className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-l from-green-100/30 to-transparent dark:from-green-900/20 rounded-full blur-3xl"
+        style={backgroundParallax}
+      />
+      
+      <div 
+        className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-r from-blue-100/30 to-transparent dark:from-blue-900/20 rounded-full blur-3xl"
+        style={decorationParallax}
+      />
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Our Products</h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
@@ -97,12 +114,14 @@ export default function ProductsSection() {
                   </div>
                 </div>
                 <div className={`${reverse ? 'lg:col-start-1' : 'order-1 lg:order-2'}`}>
-                  <div className="relative group">
-                    <img 
-                      src={product.image} 
-                      alt={`${product.name} interface`}
-                      className="rounded-2xl shadow-2xl w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                    />
+                  <div className="relative group overflow-hidden rounded-2xl">
+                    <div style={{ transform: imageScale.transform }}>
+                      <img 
+                        src={product.image} 
+                        alt={`${product.name} interface`}
+                        className="rounded-2xl shadow-2xl w-full h-auto transition-all duration-500 group-hover:shadow-3xl"
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 </div>

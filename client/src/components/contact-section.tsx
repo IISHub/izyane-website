@@ -6,12 +6,18 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import { useParallax, useScrollRotation } from "@/hooks/use-parallax";
 
 export default function ContactSection() {
   // This should always show in console
   console.log('🚀 ContactSection component loaded!');
   
   const { toast } = useToast();
+  
+  // Parallax effects
+  const backgroundParallax = useParallax({ speed: 0.1 });
+  const iconRotation = useScrollRotation({ speed: 0.03 });
+  const decorationParallax = useParallax({ speed: -0.2 });
   
   const [formData, setFormData] = useState({
     name: '',
@@ -136,8 +142,29 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-slate-800">
-      <div className="container-custom">
+    <section id="contact" className="section-padding bg-white dark:bg-slate-800 relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full opacity-5"
+        style={{ transform: backgroundParallax.transform }}
+      >
+        <div className="absolute top-40 right-40 w-80 h-80 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full blur-3xl" />
+      </div>
+      
+      <div 
+        className="absolute bottom-40 left-40 w-72 h-72 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full blur-2xl opacity-10"
+        style={{ transform: decorationParallax.transform }}
+      />
+      
+      {/* Floating Icon */}
+      <div 
+        className="absolute top-32 left-32 w-8 h-8 text-emerald-400/30"
+        style={{ transform: iconRotation.transform }}
+      >
+        <i className="fas fa-paper-plane text-2xl" />
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl xs:text-4xl lg:text-5xl font-bold text-responsive mb-4 sm:mb-6">Get In Touch</h2>
           <p className="text-lg xs:text-xl text-slate-600 dark:text-white max-w-3xl mx-auto px-4">

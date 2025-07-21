@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
-import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 interface TeamMember {
@@ -38,7 +37,6 @@ export default function Team() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-100 dark:bg-gradient-to-br dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-800 relative overflow-hidden">

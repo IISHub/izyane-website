@@ -1,0 +1,322 @@
+/* Parallax and smooth scrolling enhancements */
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Static content with parallax background */
+.static-content-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.static-content-bg {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  will-change: transform;
+  z-index: 0;
+}
+
+.static-content-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.static-content-wrapper > * {
+  pointer-events: auto;
+}
+
+/* Enhanced parallax container */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parallax background layers */
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-animation-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.float-animation-fast {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Parallax text reveal effect */
+@keyframes parallax-reveal {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.parallax-reveal {
+  animation: parallax-reveal 0.8s ease-out forwards;
+}
+
+/* Enhanced card hover with parallax effect */
+.parallax-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.parallax-card:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.parallax-card:hover .parallax-card-content {
+  transform: translateZ(20px);
+}
+
+.parallax-card-content {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Parallax image effects */
+.parallax-image {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.parallax-image:hover {
+  transform: scale(1.05) translateZ(0);
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Smooth transition for parallax elements */
+.parallax-element {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* Navigation Dock Styles */
+.nav-dock {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.nav-dock-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.dark .nav-dock {
+  background: rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .nav-dock-scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-dock-item {
+  position: relative;
+  padding: 8px 16px;
+  margin: 0 2px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(51, 65, 85, 0.8);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.dark .nav-dock-item {
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.nav-dock-item:hover {
+  color: rgb(24, 104, 159);
+  background: rgba(24, 104, 159, 0.1);
+  transform: translateY(-1px);
+}
+
+.dark .nav-dock-item:hover {
+  color: rgb(56, 189, 248);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.nav-dock-item:active {
+  transform: translateY(0);
+}
+
+/* Active state for current page */
+.nav-dock-item.active {
+  color: rgb(24, 104, 159);
+  background: rgba(24, 104, 159, 0.15);
+}
+
+.dark .nav-dock-item.active {
+  color: rgb(56, 189, 248);
+  background: rgba(56, 189, 248, 0.15);
+}
+
+/* Mobile dock styles */
+@media (max-width: 768px) {
+  .nav-dock,
+  .nav-dock-scrolled {
+    display: none;
+  }
+}
+
+/* Parallax section spacing */
+.section-parallax {
+  position: relative;
+  z-index: 1;
+}
+
+/* Performance optimizations */
+.parallax-optimized {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Mobile parallax adjustments */
+@media (max-width: 768px) {
+  .parallax-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .float-animation,
+  .float-animation-slow,
+  .float-animation-fast {
+    animation-duration: 3s;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-element,
+  .parallax-card,
+  .parallax-image,
+  .float-animation,
+  .float-animation-slow,
+  .float-animation-fast {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav-item {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(51 65 85);
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.dark .mobile-nav-item {
+  color: rgb(203 213 225);
+}
+
+.mobile-nav-item:hover {
+  color: #3b82f6;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .mobile-nav-item:hover {
+  background-color: rgba(30, 41, 59, 0.1);
+}
+
+.mobile-nav-item:active {
+  transform: scale(0.98);
+}
+
+/* Text responsive for logo */
+.text-responsive {
+  color: rgb(30 41 59);
+}
+
+.dark .text-responsive {
+  color: rgb(226 232 240);
+}
+
+/* Hero static content positioning */
+.hero-content-static {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero-content-static > * {
+  pointer-events: auto;
+}
+
+/* Responsive dock visibility */
+@media (max-width: 768px) {
+  .nav-dock,
+  .nav-dock-scrolled {
+    display: none;
+  }
+}

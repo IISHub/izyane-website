@@ -1,11 +1,36 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { useParallax, useScrollRotation } from "@/hooks/use-parallax";
 
 export default function AboutSection() {
+  // Parallax effects
+  const backgroundParallax = useParallax({ speed: 0.15 });
+  const iconRotation = useScrollRotation({ speed: 0.05 });
+  const decorationParallax = useParallax({ speed: -0.25 });
+
   return (
-    <section id="about" className="section-padding bg-white dark:bg-slate-800">
-      <div className="container-custom">
+    <section id="about" className="section-padding bg-white dark:bg-slate-800 relative overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div 
+        className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-blue-100/50 to-transparent dark:from-blue-900/20 rounded-full blur-3xl"
+        style={backgroundParallax}
+      />
+      
+      <div 
+        className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-r from-purple-100/50 to-transparent dark:from-purple-900/20 rounded-full blur-3xl"
+        style={decorationParallax}
+      />
+      
+      {/* Rotating Icons */}
+      <div 
+        className="absolute top-20 left-20 w-8 h-8 text-blue-400/30"
+        style={iconRotation}
+      >
+        <i className="fas fa-cog text-2xl" />
+      </div>
+      
+      <div className="container-custom relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
