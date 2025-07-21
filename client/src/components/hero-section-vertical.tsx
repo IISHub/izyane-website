@@ -1,12 +1,19 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function HeroSection() {
   const targetRef = useRef<HTMLDivElement | null>(null);
+  const [isInitialized, setIsInitialized] = useState(false);
+  
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end end"],
   });
+
+  // Ensure proper initialization
+  useEffect(() => {
+    setIsInitialized(true);
+  }, []);
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -64,7 +71,7 @@ export default function HeroSection() {
   // Enhanced parallax transforms with proper content switching
   const x = useTransform(scrollYProgress, [0, 0.33, 0.66, 1], [0, -100, -200, -200]);
 
-  // Individual slide opacities for proper content switching
+  // Individual slide opacities for proper content switching - start with slide 1 visible, others hidden
   const slide1Opacity = useTransform(scrollYProgress, [0, 0.25, 0.33, 0.4], [1, 1, 0, 0]);
   const slide2Opacity = useTransform(scrollYProgress, [0.25, 0.33, 0.58, 0.66], [0, 1, 1, 0]);
   const slide3Opacity = useTransform(scrollYProgress, [0.58, 0.66, 0.9, 1], [0, 1, 1, 1]);
@@ -99,14 +106,16 @@ export default function HeroSection() {
         {/* Background Images for all slides - positioned to cover entire screen */}
         {slides.map((slide, index) => {
           const slideOpacity = index === 0 ? slide1Opacity : index === 1 ? slide2Opacity : slide3Opacity;
+          
           return (
             <motion.div 
               key={`bg-${index}`}
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ 
                 backgroundImage: `url(${slide.heroImage})`,
-                opacity: slideOpacity
+                opacity: isInitialized ? slideOpacity : (index === 0 ? 1 : 0) // Prevent stacking on initial load
               }}
+              initial={{ opacity: index === 0 ? 1 : 0 }} // Only first slide visible initially
             >
               {/* Dark overlay for better text readability */}
               <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
@@ -117,8 +126,8 @@ export default function HeroSection() {
               {/* Background Content Overlay for all slides */}
               <motion.div 
                 className="absolute inset-0 flex items-center justify-center z-10"
-                style={{ opacity: slideOpacity }}
-                initial={{ opacity: 0, y: 50 }}
+                style={{ opacity: isInitialized ? slideOpacity : (index === 0 ? 1 : 0) }} // Prevent stacking on initial load
+                initial={{ opacity: index === 0 ? 1 : 0, y: 50 }} // Only first slide content visible initially
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
