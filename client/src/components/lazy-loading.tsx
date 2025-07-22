@@ -1,5 +1,5 @@
 import { lazy, ComponentType, LazyExoticComponent, Suspense } from 'react';
-import { Skeleton } from './skeleton';
+import { Skeleton } from './ui/skeleton';
 
 // Generic code splitting utility
 export function createAsyncComponent<T = {}>(
@@ -95,7 +95,12 @@ export const SectionSkeletons = {
           <Skeleton className="h-96 w-full" />
           <div className="space-y-4">
             <Skeleton className="h-8 w-1/2" />
-            <Skeleton lines={4} />
+            <div className="space-y-3">
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-5/6" />
+              <Skeleton className="h-4 w-4/6" />
+              <Skeleton className="h-4 w-3/6" />
+            </div>
           </div>
         </div>
       </div>
@@ -114,7 +119,11 @@ export const SectionSkeletons = {
             <div key={i} className="space-y-4 p-6 border rounded-lg">
               <Skeleton className="h-12 w-12" />
               <Skeleton className="h-6 w-3/4" />
-              <Skeleton lines={3} />
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-5/6" />
+                <Skeleton className="h-4 w-4/6" />
+              </div>
             </div>
           ))}
         </div>
@@ -137,7 +146,12 @@ export const SectionSkeletons = {
           </div>
           <div className="space-y-4">
             <Skeleton className="h-8 w-1/2" />
-            <Skeleton lines={4} />
+            <div className="space-y-3">
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-5/6" />
+              <Skeleton className="h-4 w-4/6" />
+              <Skeleton className="h-4 w-3/6" />
+            </div>
           </div>
         </div>
       </div>

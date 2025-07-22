@@ -343,7 +343,7 @@ export default function MobileMenuEnhanced() {
                 />
                 <div>
                   <h1 className="text-lg font-bold text-slate-900 dark:text-white">iZyane</h1>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">Innovation Solutions</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Ahead with Innovation</p>
                 </div>
               </motion.div>
               
@@ -561,7 +561,7 @@ export default function MobileMenuEnhanced() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <p className="font-medium">© 2025 iZyane</p>
+                <p className="font-medium">© {new Date().getFullYear()} iZyane InovSolutions</p>
                 <p className="mt-1 text-xs flex items-center justify-center gap-2">
                   <ArrowLeft className="w-3 h-3" />
                   Swipe right to close
