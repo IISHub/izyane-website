@@ -37,6 +37,20 @@ export default function ProductsSection() {
       .catch(error => console.error('Error loading products:', error));
   }, []);
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const displayedProducts = showAll ? products : products.filter(product => product.isFeatured);
 
   return (
@@ -105,11 +119,8 @@ export default function ProductsSection() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="btn-solid px-8 py-3">
-                      Start Free Trial
-                    </button>
-                    <button className="btn-outline px-8 py-3">
-                      Learn More
+                    <button className="btn-solid px-8 py-3" onClick={scrollToContact}>
+                      Inquire
                     </button>
                   </div>
                 </div>

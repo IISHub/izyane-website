@@ -1,152 +1,102 @@
 [
   {
-    "id": "flowanalytics",
-    "name": "Flow-Analytics",
-    "description": "Advanced analytics platform that transforms your data into actionable insights with real-time dashboards and predictive modeling.",
-    "shortDescription": "Transform data into actionable insights with AI-powered analytics",
+    "id": "izyane-erp",
+    "name": "iZyane ERP",
+    "description": "Comprehensive Enterprise Resource Planning solution designed to streamline business operations, manage resources, and improve organizational efficiency across all departments.",
+    "shortDescription": "Complete ERP solution for modern businesses",
     "features": [
-      "Real-time data visualization",
-      "Machine learning predictions", 
-      "Custom dashboard builder",
-      "API integrations",
-      "Advanced reporting tools",
-      "Data export capabilities"
+      "Financial management and accounting",
+      "Human resources management",
+      "Supply chain and inventory control",
+      "Customer relationship management",
+      "Business intelligence and reporting",
+      "Multi-location support"
     ],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     "category": "Featured Product",
     "categoryIcon": "fas fa-star",
     "primaryColor": "primary-custom",
     "isFeatured": true,
-    "technologies": ["React", "Python", "TensorFlow", "PostgreSQL"],
+    "technologies": ["React", "Node.js", "PostgreSQL", "Docker"],
     "pricing": {
-      "starter": "$29/month",
-      "professional": "$99/month", 
-      "enterprise": "Custom"
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
     }
   },
   {
-    "id": "teamsync",
-    "name": "TeamSync",
-    "description": "All-in-one collaboration platform that brings teams together with integrated chat, video calls, and project management.",
-    "shortDescription": "Unified collaboration platform for modern teams",
+    "id": "eticketing-system",
+    "name": "eTicketing System",
+    "description": "Modern digital ticketing platform for events, transportation, and venues with real-time booking, payment processing, and comprehensive analytics.",
+    "shortDescription": "Complete digital ticketing solution for events and venues",
     "features": [
-      "HD video conferencing",
-      "Real-time messaging",
-      "Task management",
-      "File sharing & storage",
-      "Screen sharing",
-      "Calendar integration"
+      "Online ticket booking and sales",
+      "Real-time seat selection",
+      "Multiple payment gateways",
+      "QR code ticket validation",
+      "Event management dashboard",
+      "Customer analytics and reporting"
     ],
     "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    "category": "Collaboration",
-    "categoryIcon": "fas fa-users",
+    "category": "Event Management",
+    "categoryIcon": "fas fa-ticket-alt",
     "primaryColor": "accent-custom",
     "isFeatured": true,
-    "technologies": ["React", "Node.js", "WebRTC", "MongoDB"],
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
     "pricing": {
-      "starter": "$15/month",
-      "professional": "$49/month",
-      "enterprise": "Custom"
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
     }
   },
   {
-    "id": "cloudvault",
-    "name": "CloudVault",
-    "description": "Enterprise-grade cloud storage solution with advanced security, compliance features, and seamless integration across all your business applications.",
-    "shortDescription": "Secure cloud storage for enterprise needs",
+    "id": "smart-pos",
+    "name": "Smart POS",
+    "description": "Intelligent Point of Sale system with cloud integration, inventory management, and advanced analytics designed for retail and hospitality businesses.",
+    "shortDescription": "Next-generation POS system for modern businesses",
     "features": [
-      "256-bit encryption",
-      "Automated backups",
-      "Version control",
-      "Compliance reporting",
-      "Multi-device sync",
-      "Admin controls"
+      "Touch-screen interface",
+      "Inventory management",
+      "Payment processing integration",
+      "Sales analytics and reporting",
+      "Customer management",
+      "Multi-location support"
     ],
     "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    "category": "Cloud Storage",
-    "categoryIcon": "fas fa-cloud",
+    "category": "Retail Technology",
+    "categoryIcon": "fas fa-cash-register",
     "primaryColor": "blue-600",
     "isFeatured": false,
-    "technologies": ["AWS", "Docker", "Kubernetes", "PostgreSQL"],
+    "technologies": ["React Native", "Node.js", "SQLite", "Cloud APIs"],
     "pricing": {
-      "starter": "$25/month",
-      "professional": "$75/month",
-      "enterprise": "Custom"
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
     }
   },
   {
-    "id": "aiassist",
-    "name": "AI Assist",
-    "description": "Intelligent automation platform that leverages machine learning to streamline business processes and enhance decision-making across your organization.",
-    "shortDescription": "AI-powered automation for business processes",
+    "id": "ai-virtual-assistant",
+    "name": "AI Virtual Assistant",
+    "description": "Advanced AI-powered virtual assistant that automates customer service, handles inquiries, and provides intelligent support across multiple communication channels.",
+    "shortDescription": "Intelligent AI assistant for customer service automation",
     "features": [
       "Natural language processing",
-      "Workflow automation",
-      "Predictive analytics",
-      "Smart recommendations",
-      "Document processing",
-      "Integration APIs"
+      "24/7 customer support automation",
+      "Multi-channel integration",
+      "Smart conversation routing",
+      "Learning and adaptation capabilities",
+      "Analytics and performance tracking"
     ],
     "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     "category": "Artificial Intelligence",
-    "categoryIcon": "fas fa-brain",
+    "categoryIcon": "fas fa-robot",
     "primaryColor": "purple-600",
     "isFeatured": false,
-    "technologies": ["Python", "TensorFlow", "React", "FastAPI"],
+    "technologies": ["Python", "TensorFlow", "OpenAI", "React"],
     "pricing": {
-      "starter": "$199/month",
-      "professional": "$499/month",
-      "enterprise": "Custom"
-    }
-  },
-  {
-    "id": "securelink",
-    "name": "SecureLink",
-    "description": "Comprehensive cybersecurity platform that protects your digital assets with advanced threat detection, real-time monitoring, and incident response capabilities.",
-    "shortDescription": "Advanced cybersecurity protection platform",
-    "features": [
-      "Real-time threat detection",
-      "24/7 monitoring",
-      "Incident response",
-      "Vulnerability scanning",
-      "Compliance reporting",
-      "Security analytics"
-    ],
-    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    "category": "Cybersecurity",
-    "categoryIcon": "fas fa-shield-alt",
-    "primaryColor": "red-600",
-    "isFeatured": false,
-    "technologies": ["Python", "Elasticsearch", "Kafka", "Redis"],
-    "pricing": {
-      "starter": "$149/month",
-      "professional": "$399/month",
-      "enterprise": "Custom"
-    }
-  },
-  {
-    "id": "mobileforge",
-    "name": "MobileForge",
-    "description": "Cross-platform mobile development framework that enables rapid creation of native mobile applications with a single codebase for iOS and Android.",
-    "shortDescription": "Cross-platform mobile development made simple",
-    "features": [
-      "Cross-platform development",
-      "Native performance",
-      "Hot reload",
-      "Rich UI components",
-      "Device APIs access",
-      "App store deployment"
-    ],
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    "category": "Mobile Development",
-    "categoryIcon": "fas fa-mobile-alt",
-    "primaryColor": "green-600",
-    "isFeatured": false,
-    "technologies": ["React Native", "TypeScript", "Firebase", "Redux"],
-    "pricing": {
-      "starter": "$59/month",
-      "professional": "$159/month",
-      "enterprise": "Custom"
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
     }
   }
 ]

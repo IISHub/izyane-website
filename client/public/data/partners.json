@@ -5,6 +5,36 @@
     "category": "partner"
   },
   {
+    "name": "PayGo",
+    "logo": "https://digitalpaygo.com/_next/image?url=%2Fimages%2Flogo%2Flogo_purple.png&w=256&q=75",
+    "category": "partner"
+  },
+  {
+    "name": "Feitian",
+    "logo": "https://portal.ftsafe.com/wp-content/uploads/2023/09/FEITIAN.svg",
+    "category": "partner"
+  },
+  {
+    "name": "Array Networks",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Array_Networks_Logo.svg/500px-Array_Networks_Logo.svg.png",
+    "category": "partner"
+  },
+  {
+    "name": "Pio-Tech",
+    "logo": "https://pio-tech-production.s3.amazonaws.com/pio_tech_logo_white_dark_fc6b9031af.png",
+    "category": "partner"
+  },
+  {
+    "name": "Pay-Logic",
+    "logo": "https://pay-logic.com/wp-content/uploads/2023/11/R-scaled.webp",
+    "category": "partner"
+  },
+  {
+    "name": "BITS",
+    "logo": "https://seekvectorlogo.com/wp-content/uploads/2018/10/business-it-solutions-vector-logo.png",
+    "category": "partner"
+  },
+  {
     "name": "Techurate",
     "logo": "https://media.licdn.com/dms/image/v2/C4D16AQGoJBS6__-tTQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1516781349487?e=2147483647&v=beta&t=7cIIqVy1mIFTszKypYmfNKG61Ny6a-VAOrCh5jOhhzI",
     "category": "partner"
@@ -42,6 +72,36 @@
   {
     "name": "ACSZ",
     "logo": "https://www.acsz.co.zm/images/logo.png",
+    "category": "customers"
+  },
+  {
+    "name": "Sinomine Kitumba",
+    "logo": "https://sinominekitumba.com/wp-content/uploads/2025/02/sinomine-logo-1.png",
+    "category": "customers"
+  },
+  {
+    "name": "COMESA",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Comesa-logo.png",
+    "category": "customers"
+  },
+  {
+    "name": "CBC",
+    "logo": "https://comesabusinesscouncil.org/wp-content/uploads/2022/10/cropped-cbc_logo.jpg",
+    "category": "customers"
+  },
+  {
+    "name": "InvestTrust Bank",
+    "logo": "https://www.zccm-ih.com.zm/wp-content/uploads/2019/05/logo-INVESTRUST-BANK.png",
+    "category": "customers"
+  },
+  {
+    "name": "Digital Financial Solutions",
+    "logo": "https://doslimited.com/img/logo/logo.png",
+    "category": "customers"
+  },
+  {
+    "name": "Bank of Botswana",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Bank_of_Botswana_logo.svg/260px-Bank_of_Botswana_logo.svg.png",
     "category": "customers"
   },
   {

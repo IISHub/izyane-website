@@ -3,10 +3,21 @@
     "id": "web-development",
     "icon": "fas fa-code",
     "title": "Web Development",
-    "description": "Custom web applications built with modern frameworks and best practices for performance and scalability.",
+    "description": "Custom web applications built with modern frameworks and best practices.",
     "detailedDescription": "We create powerful, scalable web applications using cutting-edge technologies. Our full-stack development approach ensures your web solution is fast, secure, and user-friendly. From single-page applications to complex enterprise systems, we deliver solutions that drive business growth.",
-    "features": ["React & Vue.js", "Node.js & Python", "Cloud Deployment"],
-    "technologies": ["React", "Vue.js", "Angular", "Node.js", "Python", "Django", "Next.js", "TypeScript"],
+    "features": [
+      "React.js",
+      "Node.js & Python",
+      "Cloud Deployment"
+    ],
+    "technologies": [
+      "React",
+      "Angular",
+      "Node.js",
+      "Django",
+      "Next.js",
+      "TypeScript"
+    ],
     "gradientFrom": "from-primary-custom",
     "gradientTo": "to-accent-custom",
     "deliverables": [
@@ -16,12 +27,7 @@
       "Performance optimization",
       "Security implementation",
       "Testing and deployment"
-    ],
-    "pricing": {
-      "basic": "$5,000 - $15,000",
-      "standard": "$15,000 - $50,000",
-      "enterprise": "$50,000+"
-    }
+    ]
   },
   {
     "id": "mobile-apps",
@@ -29,8 +35,20 @@
     "title": "Mobile Apps",
     "description": "Native and cross-platform mobile applications that deliver exceptional user experiences.",
     "detailedDescription": "Transform your ideas into powerful mobile applications that users love. We develop both native and cross-platform solutions that provide seamless experiences across iOS and Android devices. Our mobile apps are optimized for performance, user engagement, and business growth.",
-    "features": ["iOS & Android", "React Native", "App Store Publishing"],
-    "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux", "Expo"],
+    "features": [
+      "iOS & Android",
+      "React Native",
+      "App Store Publishing"
+    ],
+    "technologies": [
+      "React Native",
+      "Flutter",
+      "Swift",
+      "Kotlin",
+      "Firebase",
+      "Redux",
+      "Expo"
+    ],
     "gradientFrom": "from-accent-custom",
     "gradientTo": "to-primary-custom",
     "deliverables": [
@@ -40,6 +58,61 @@
       "Push notifications",
       "Offline functionality",
       "Analytics integration"
+    ]
+  },
+  {
+    "id": "mojaloop-integration",
+    "icon": "fas fa-cloud",
+    "title": "Mojaloop Integration",
+    "description": "Seamless integration with the Mojaloop platform for financial services.",
+    "detailedDescription": "Unlocking financial possibilities with Mojaloop integration. With our team of IIPS certified professionals we have successfully deployed Mojaloop to the cloud, and are connecting the world through seamless digital transactions.",
+    "features": [
+      "Mojaloop API Integration",
+      "Real-time Data Synchronization",
+      "Compliance and Security"
+    ],
+    "technologies": [
+      "Mojaloop",
+      "REST APIs",
+      "Docker",
+      "Kubernetes"
+    ],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "Mojaloop platform setup",
+      "API integration and configuration",
+      "Real-time transaction processing",
+      "Compliance and security implementation",
+      "Performance monitoring",
+      "Technical documentation and training"
+    ]
+  },
+  {
+    "id": "security-solutions",
+    "icon": "fas fa-shield",
+    "title": "Security Solutions",
+    "description": "Comprehensive cybersecurity solutions to protect your digital assets and infrastructure.",
+    "detailedDescription": "Safeguard your business with our comprehensive security solutions. We provide end-to-end cybersecurity services including risk assessment, security architecture design, implementation of security controls, and ongoing monitoring to protect your digital assets from evolving threats.",
+    "features": [
+      "Security Assessment & Auditing",
+      "Infrastructure Protection",
+      "Compliance & Risk Management"
+    ],
+    "technologies": [
+      "Identity Management",
+      "Vulnerability Assessment",
+      "Penetration Testing"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Security assessment and gap analysis",
+      "Security architecture design",
+      "Implementation of security controls",
+      "Incident response planning",
+      "Compliance documentation",
+      "Security monitoring and maintenance"
     ],
     "pricing": {
       "basic": "$10,000 - $25,000",
@@ -48,37 +121,183 @@
     }
   },
   {
-    "id": "cloud-solutions",
-    "icon": "fas fa-cloud",
-    "title": "Cloud Solutions",
-    "description": "Scalable cloud infrastructure and DevOps solutions to power your business growth.",
-    "detailedDescription": "Leverage the power of cloud computing to scale your business efficiently. We design and implement robust cloud architectures that are secure, scalable, and cost-effective. Our DevOps expertise ensures smooth deployment and continuous integration workflows.",
-    "features": ["AWS & Azure", "DevOps & CI/CD", "Security & Monitoring"],
-    "technologies": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins"],
+    "id": "erp-system-implementation",
+    "icon": "fas fa-fingerprint",
+    "title": "Enterprise Resource Planning",
+    "description": "Comprehensive ERP system supply and implementation for streamlined business operations.",
+    "detailedDescription": "Transform your business operations with our comprehensive ERP system solutions. We provide end-to-end ERP implementation services, from system selection and customization to deployment and training, ensuring your organization achieves operational excellence and improved efficiency.",
+    "features": [
+      "System Analysis & Selection",
+      "Custom Configuration",
+      "Data Migration & Training"
+    ],
+    "technologies": [
+      "ERPNext",
+      "Sage"
+    ],
     "gradientFrom": "from-primary-custom",
     "gradientTo": "to-accent-custom",
     "deliverables": [
-      "Cloud architecture design",
-      "Infrastructure as Code",
-      "Auto-scaling solutions",
-      "Security implementation",
-      "Monitoring and logging",
-      "Disaster recovery planning"
-    ],
-    "pricing": {
-      "basic": "$3,000 - $10,000",
-      "standard": "$10,000 - $30,000",
-      "enterprise": "$30,000+"
-    }
+      "ERP system assessment and selection",
+      "Custom configuration and setup",
+      "Data migration and integration",
+      "User training and documentation",
+      "Go-live support and optimization",
+      "Ongoing maintenance and support"
+    ]
   },
   {
-    "id": "ai-machine-learning",
-    "icon": "fas fa-brain",
-    "title": "AI & Machine Learning",
-    "description": "Intelligent solutions powered by artificial intelligence and machine learning algorithms.",
-    "detailedDescription": "Unlock the potential of your data with advanced AI and machine learning solutions. We develop intelligent systems that automate processes, provide insights, and enhance decision-making. From chatbots to predictive analytics, we make AI accessible and practical for your business.",
-    "features": ["Natural Language Processing", "Computer Vision", "Predictive Analytics"],
-    "technologies": ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenAI", "Hugging Face", "MLflow"],
+    "id": "business-process-reengineering",
+    "icon": "fas fa-business-time",
+    "title": "Business Process Re-Engineering",
+    "description": "Strategic business process optimization to enhance efficiency and drive organizational transformation.",
+    "detailedDescription": "Revolutionize your business operations through comprehensive Business Process Re-Engineering. Our expert team analyzes existing workflows, identifies bottlenecks, and redesigns processes to maximize efficiency, reduce costs, and improve overall organizational performance.",
+    "features": [
+      "Process Analysis & Mapping",
+      "Workflow Optimization",
+      "Change Management"
+    ],
+    "technologies": [
+      "Project Management"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Current state process assessment",
+      "Future state process design",
+      "Gap analysis and recommendations",
+      "Implementation roadmap",
+      "Change management strategy",
+      "Performance metrics and KPIs"
+    ]
+  },
+  {
+    "id": "pos-supply-development",
+    "icon": "fas fa-mobile",
+    "title": "POS Supply and Application Development",
+    "description": "Complete Point of Sale systems with custom application development for retail and hospitality businesses.",
+    "detailedDescription": "Streamline your business operations with our comprehensive POS solutions. We provide hardware supply, custom application development, and integration services tailored to your specific industry needs, helping you manage transactions, inventory, and customer relationships efficiently.",
+    "features": [
+      "Hardware Supply & Setup",
+      "Custom POS Applications",
+      "Payment Integration"
+    ],
+    "technologies": [
+      "Android",
+      "Offline Sync",
+      "Receipt Printers"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "POS hardware procurement and setup",
+      "Custom POS application development",
+      "Payment gateway integration",
+      "Inventory management system",
+      "Sales reporting and analytics",
+      "Training and ongoing support"
+    ]
+  },
+  {
+    "id": "go-to-market-strategy",
+    "icon": "fas fa-store",
+    "title": "Go-to-Market Strategy for Digital Solutions",
+    "description": "Strategic market entry planning and execution for digital products and services.",
+    "detailedDescription": "Launch your digital solutions successfully with our comprehensive Go-to-Market strategy services. We help you identify target markets, develop positioning strategies, create launch plans, and execute marketing campaigns that drive adoption and growth for your digital products.",
+    "features": [
+      "Market Research & Analysis",
+      "Product Positioning",
+      "Launch Strategy & Execution"
+    ],
+    "technologies": [
+      "Market Analysis Tools",
+      "CRM Systems",
+      "Marketing Automation",
+      "Analytics Platforms",
+      "Social Media Tools",
+      "Content Management",
+      "SEO/SEM Tools"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Market research and competitor analysis",
+      "Target audience identification",
+      "Product positioning and messaging",
+      "Go-to-market strategy document",
+      "Launch plan and timeline",
+      "Performance tracking and optimization"
+    ]
+  },
+  {
+    "id": "core-banking-consultancy",
+    "icon": "fas fa-vault",
+    "title": "Core Banking Implementation Consultancy",
+    "description": "Expert consulting services for core banking system implementation and digital transformation.",
+    "detailedDescription": "Transform your banking operations with our specialized core banking implementation consultancy. Our team of certified professionals provides end-to-end guidance for selecting, implementing, and optimizing core banking systems to meet regulatory requirements and enhance customer experiences.",
+    "features": [
+      "System Selection & Assessment",
+      "Implementation Planning",
+      "Regulatory Compliance"
+    ],
+    "technologies": [
+      "Oracle FLEXCUBE",
+      "Regulatory Frameworks"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Core banking system assessment",
+      "Implementation strategy and roadmap",
+      "Project management and oversight",
+      "Regulatory compliance guidance",
+      "Staff training and knowledge transfer",
+      "Go-live support and optimization"
+    ]
+  },
+  {
+    "id": "digital-marketing-branding",
+    "icon": "fas fa-rectangle-ad",
+    "title": "Digital Marketing, Branding & Advertisement",
+    "description": "Comprehensive digital marketing solutions to build your brand and drive business growth.",
+    "detailedDescription": "Elevate your brand presence and drive measurable results with our comprehensive digital marketing services. From brand strategy and creative design to performance marketing and advertising campaigns, we help businesses establish strong digital footprints and achieve their marketing objectives.",
+    "features": [
+      "Brand Strategy & Identity",
+      "Digital Advertising",
+      "Content Marketing & SEO"
+    ],
+    "technologies": [
+      "Google Ads",
+      "Facebook Ads Manager",
+      "Google Analytics",
+      "Adobe Creative Suite",
+      "Content Management Systems",
+      "Email Marketing Platforms",
+      "Social Media Tools"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Brand strategy and identity development",
+      "Website design and development",
+      "Digital advertising campaigns",
+      "Content creation and marketing",
+      "Social media management",
+      "Performance tracking and optimization"
+    ]
+  },
+  {
+    "id": "agency-merchant-aggregation",
+    "icon": "fas fa-building-columns",
+    "title": "Agency & Merchant Aggregation",
+    "description": "We do trade development, able to onboard agents, and merchant with our own application.",
+    "detailedDescription": "Specializing in trade development, our capabilities extend to seamless onboarding of agents and merchants through our proprietary application. At the forefront of our services is a commitment to fostering growth in the trade sector. Our platform is designed to facilitate the onboarding process, ensuring efficiency and ease for both agents and merchants. With our dedicated application, we empower businesses to navigate the trade landscape with confidence. Our comprehensive trade development services encompass every stage of onboarding, providing a robust framework for agents and merchants to thrive in their respective roles.",
+    "features": [
+      "Trade & Development Reps"
+    ],
+    "technologies": [
+      "TDRs"
+    ],
     "gradientFrom": "from-accent-custom",
     "gradientTo": "to-primary-custom",
     "deliverables": [
@@ -88,59 +307,6 @@
       "API integration",
       "Performance monitoring",
       "Documentation and training"
-    ],
-    "pricing": {
-      "basic": "$15,000 - $35,000",
-      "standard": "$35,000 - $100,000",
-      "enterprise": "$100,000+"
-    }
-  },
-  {
-    "id": "ui-ux-design",
-    "icon": "fas fa-palette",
-    "title": "UI/UX Design",
-    "description": "User-centered design that creates engaging and intuitive digital experiences.",
-    "detailedDescription": "Create exceptional user experiences that delight your customers and drive engagement. Our design process combines user research, modern design principles, and usability testing to deliver interfaces that are both beautiful and functional.",
-    "features": ["User Research", "Prototyping", "Design Systems"],
-    "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle", "Framer", "Zeplin"],
-    "gradientFrom": "from-primary-custom",
-    "gradientTo": "to-accent-custom",
-    "deliverables": [
-      "User research and personas",
-      "Wireframes and prototypes",
-      "Visual design mockups",
-      "Design system creation",
-      "Usability testing",
-      "Design handoff documentation"
-    ],
-    "pricing": {
-      "basic": "$5,000 - $15,000",
-      "standard": "$15,000 - $40,000",
-      "enterprise": "$40,000+"
-    }
-  },
-  {
-    "id": "consulting",
-    "icon": "fas fa-cogs",
-    "title": "Consulting",
-    "description": "Strategic technology consulting to help you make informed decisions and plan for growth.",
-    "detailedDescription": "Navigate the complex technology landscape with expert guidance. Our consulting services help you make strategic decisions, optimize existing systems, and plan for future growth. We provide actionable insights and roadmaps tailored to your business goals.",
-    "features": ["Digital Strategy", "Architecture Review", "Technology Roadmap"],
-    "technologies": ["Various", "Technology Assessment", "Best Practices", "Industry Standards"],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Technology assessment",
-      "Strategic roadmap",
-      "Architecture recommendations",
-      "Process optimization",
-      "Risk assessment",
-      "Implementation planning"
-    ],
-    "pricing": {
-      "basic": "$2,000 - $5,000",
-      "standard": "$5,000 - $15,000",
-      "enterprise": "$15,000+"
-    }
+    ]
   }
 ]
