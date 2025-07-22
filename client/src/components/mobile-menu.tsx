@@ -1,8 +1,8 @@
-import { motion, AnimatePresence, PanInfo, useDragControls } from "framer-motion";
+import { motion, AnimatePresence, PanInfo, useDragControls, useMotionValue, useAnimation } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { useLocation } from "wouter";
 import { ThemeToggle } from "./theme-toggle";
-import { Menu, X, Home, User, Briefcase, Package, Phone, ArrowLeft, Wifi, WifiOff } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, Package, Phone, ArrowLeft, Wifi, WifiOff, ChevronDown, Navigation } from "lucide-react";
 
 const navLinks = [
   { href: "#home", label: "Home", route: "/", icon: Home },
@@ -18,7 +18,13 @@ export default function MobileMenu() {
   const [dragProgress, setDragProgress] = useState(0);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
   const [lastActiveSection, setLastActiveSection] = useState("");
+  const [menuHeight, setMenuHeight] = useState(0);
+  const [isCollapsing, setIsCollapsing] = useState(false);
+  const [gestureHint, setGestureHint] = useState(true);
+  
   const dragControls = useDragControls();
+  const x = useMotionValue(0);
+  const controls = useAnimation();
 
   // Network status monitoring
   useEffect(() => {
