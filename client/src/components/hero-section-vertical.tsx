@@ -141,7 +141,7 @@ export default function HeroSection() {
                     {index === 0 && (
                       <>
                         <span className="text-blue-400">Digital</span> Innovation<br />
-                        <span className="text-purple-400">Unleashed</span>
+                        <span className="text-red-800">Unleashed</span>
                       </>
                     )}
                     {index === 1 && (

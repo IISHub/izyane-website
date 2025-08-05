@@ -1,0 +1,1893 @@
+<style>
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 24px;
+    }
+
+    .header-container .header-logo {
+        background-color: #fff;
+        border-top-right-radius: 20px;
+        padding: 14px 20px 20px;
+    }
+
+    .header-container .header-logo img {
+        max-width: 200px;
+    }
+
+    .header-mega-menu .first-level-menu {
+        display: flex;
+        margin-bottom: 0px;
+    }
+
+    .header-mega-menu .first-level-menu li {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding: 0px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .header-mega-menu .first-level-menu li a {
+        padding: 14px 20px 47px;
+        display: block;
+    }
+
+    .header-mega-menu .first-level-menu>li:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='1' height='16' viewBox='0 0 1 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.5' x2='0.5' y2='16' stroke='%23C4C5C6'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0px;
+        top: 17px;
+    }
+
+    .header-mega-menu .first-level-menu li:last-child::after {
+        display: none;
+    }
+
+    .header-mega-menu .first-level-menu>li:hover {
+        background: #f3f3f3;
+    }
+
+
+    .header-mega-menu .first-level-menu li:hover::after {
+        display: none;
+    }
+
+    .header-mega-menu .first-level-menu li:last-child {
+        border-right: none;
+    }
+
+    .header-mega-menu .first-level-menu>li:hover a,
+    .header-mega-menu .first-level-menu>li:hover span a,
+    .header-mega-menu .first-level-menu>li.active {
+        color: #f18a00;
+    }
+
+    .first-level-menu>li.active {
+        background-color: #fff;
+        color: #f18a00;
+    }
+
+    .first-level-menu>li.active a {
+        color: #f18a00;
+    }
+
+    .header-mega-menu li {
+        list-style: none;
+    }
+
+    .header-mega-menu li a,
+    .header-buttons .single-level-menu a {
+        text-decoration: none;
+        color: #63686f;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .hmm-about {
+        position: relative;
+    }
+
+    .header-buttons {
+        position: relative;
+        padding-right: 30px;
+    }
+
+    .header-buttons ul {
+        list-style: none;
+    }
+
+    .header-mega-menu .single-level-menu {
+        position: absolute;
+        top: 84px;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        transition: visibility 0.3s ease;
+        padding: 0px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        width: 180px;
+        transition: all 0.3s ease;
+    }
+
+    .header-mega-menu .single-level-menu.single-level-menu-stage-1 {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 280px;
+    }
+
+    .header-mega-menu .single-level-menu.single-level-menu-stage-1 li a {
+        padding: 20px;
+    }
+
+    .header-mega-menu .single-level-menu.single-level-menu-stage-1>a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2 {
+        position: absolute;
+        left: 280px;
+        top: -50px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2 {
+        opacity: 1;
+        visibility: visible;
+        width: 250px;
+        top: -20px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-left: 1px solid #f3f3f3;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2.last-2 {
+        top: -80px !important;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2.last {
+        top: -275px !important;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2 li {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transition: all 0.3s ease;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2 li:hover {
+        background: #ef8903;
+        color: #fff;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2 li:hover a {
+        color: #fff !important;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2 li:first-child {
+        border-top-right-radius: 25px !important;
+        border-top-left-radius: 0px !important;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2 li:last-child {
+        border-bottom-right-radius: 25px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+
+    .header-mega-menu .single-level-menu li:hover .single-level-menu-stage-2 li a {
+        color: #63686f !important;
+    }
+
+    .header-mega-menu .single-level-menu li:hover>.single-level-menu-stage-2 li:hover a {
+        color: #fff !important;
+    }
+
+    .single-level-menu.single-level-menu-stage-1 li:last-child {
+        border-bottom-left-radius: 25px !important;
+        border-bottom-right-radius: 25px !important;
+    }
+
+    .header-buttons .single-level-menu {
+        position: absolute;
+        top: 47px;
+        left: -50px;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        transition: visibility 0.3s ease;
+        padding: 0px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        transition: all 0.3s ease;
+    }
+
+    .header-mega-menu .single-level-menu>li,
+    .header-buttons .single-level-menu>li {
+        margin-bottom: 0px;
+        padding: 0px;
+        border-bottom: 1px solid #e8e8e8;
+        font-size: 16px;
+        background: #f3f3f3;
+    }
+
+    .header-mega-menu .single-level-menu>li a,
+    .header-buttons .single-level-menu>li a {
+        display: block;
+        padding: 16px 20px;
+    }
+
+    .header-mega-menu .single-level-menu>li:first-child,
+    .header-buttons .single-level-menu>li:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .header-mega-menu .single-level-menu>li:last-child,
+    .header-buttons .single-level-menu>li:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .header-mega-menu .hmm-about .single-level-menu,
+    .header-buttons .internet-banking-menu .single-level-menu {
+        transform: translateY(20px);
+    }
+
+    .header-mega-menu .hmm-about .single-level-menu {
+        margin-left: 0px;
+    }
+
+    .header-mega-menu .hmm-about:hover .single-level-menu,
+    .header-buttons .internet-banking-menu:hover .single-level-menu {
+        opacity: 1;
+        visibility: visible;
+        background: #f3f3f3 !important;
+        transform: translateY(0px);
+    }
+
+    .header-mega-menu .single-level-menu>li:hover,
+    .header-buttons .single-level-menu>li:hover {
+        background: #f18a00;
+        border-radius: 0;
+    }
+
+    .header-mega-menu .single-level-menu>li:first-child:hover,
+    .header-buttons .single-level-menu>li:first-child:hover {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .header-mega-menu .single-level-menu>li:last-child:hover,
+    .header-buttons .single-level-menu>li:last-child:hover {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .header-mega-menu .single-level-menu>li a {
+        color: #63686f !important;
+    }
+
+    .header-mega-menu .single-level-menu>li:hover a,
+    .header-buttons .single-level-menu>li:hover a {
+        color: #fff !important;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2>li {
+        margin-bottom: 0px;
+        padding: 0px;
+        border-bottom: 1px solid #e8e8e8;
+        font-size: 16px;
+        background: #f3f3f3;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2>li a {
+        display: block;
+        padding: 16px 20px;
+        color: #63686f;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2>li:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2>li:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .header-mega-menu .single-level-menu-stage-2 {
+        transform: translateY(20px);
+    }
+
+    .header-mega-menu .single-level-menu-stage-2 {
+        margin-left: 0px;
+    }
+
+    .header-mega-menu .single-level-menu.single-level-menu-stage-1>li:first-child a {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgb(51, 65, 85);
+    }
+
+    .header-mega-menu .single-level-menu.single-level-menu-stage-1>li:first-child:hover {
+        background: #f3f3f3;
+        border-radius: 0px !important;
+    }
+
+      .header-mega-menu .single-level-menu.single-level-menu-stage-1>li:last-child:hover {
+        background: #f3f3f3;
+      }
+
+    .header-mega-menu .single-level-menu.single-level-menu-stage-1>li:first-child:hover a {
+        color: rgb(51, 65, 85) !important;
+    }
+
+    .single-level-menu.single-level-menu-stage-1 li>a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .single-level-menu.single-level-menu-stage-1 li span:last-child {
+        height: 24px;
+    }
+
+    .hmm-about .single-level-menu.single-level-menu-stage-1 li:hover > span svg path {
+        fill: #fff !important;
+        z-index: 99999;
+        position: relative;
+    }
+
+    .hmm-about .single-level-menu li > span svg path {
+        fill: #606060 !important;
+        transition: fill 0.3s ease !important;
+    }
+
+    .hmm-about .single-level-menu li:hover > span svg path {
+        fill: #fff !important;
+    }
+
+    .header-mega-menu .single-level-menu>li:hover span svg path {
+        fill: #fff !important;
+    }
+
+    .single-level-menu-stage-1 span svg {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 99999999999999999999 !important;
+        position: relative !important;
+    }
+
+    header {
+        background-color: #edeeef;
+    }
+
+    .header-internet-banking-button {
+        color: #63686f;
+        border: 1px solid #63686f;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        border-radius: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .header-internet-banking-button:hover {
+        background-color: #f18a00;
+        border: 1px solid #f18a00;
+        color: #fff;
+    }
+
+    .header-internet-banking-button .light-icon {
+        display: none;
+    }
+
+    .header-internet-banking-button:hover .dark-icon {
+        display: none;
+    }
+
+    .header-internet-banking-button:hover .light-icon {
+        display: block;
+    }
+
+    .header-internet-banking-button img {
+        max-width: 24px;
+    }
+
+    .header-open-account-button {
+        background-color: #f18a00;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0px 12px;
+        border-radius: 8px;
+        height: 40px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-open-account-button:hover {
+        background-color: #004d72;
+        color: #fff !important;
+    }
+
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .header-mega-menu .second-level-menu {
+        position: absolute;
+        /* background-color: #f7f7f7; */
+        background-color: #f3f3f3;
+        display: block;
+        top: 0px;
+        left: calc(50% - 200px);
+        transform: translateX(-50%);
+        width: 350px;
+        max-width: 80%;
+        padding-left: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 0px 0px 35px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        z-index: 9999;
+    }
+
+    .header-mega-menu .second-level-menu.active {
+        width: 100%;
+        left: 50%;
+    }
+
+    .header-mega-menu .second-level-menu li {
+        padding: 20px 20px 20px 40px;
+    }
+
+    .header-mega-menu .second-level-menu li,
+    .header-mega-menu .second-level-menu li a {
+        color: #000 !important;
+    }
+
+    .second-level-menu-holder span {
+        height: 24px;
+    }
+
+    .second-level-menu-holder>div {
+        display: flex;
+        align-items: center;
+    }
+
+    .mega-menu-shower {
+        background-color: rgba(96, 96, 96, 0.7);
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        height: 600px;
+    }
+
+    .second-level-menu-content {
+        display: flex;
+    }
+
+    .second-level-menu-content-left {
+        width: 100%;
+        padding: 30px 40px 40px 40px;
+    }
+
+    .header-mega-menu .second-level-menu.active .second-level-menu-content-left {
+        width: 25%;
+        padding-right: 20px;
+        padding: 30px 15px 40px 40px;
+    }
+
+    .second-level-menu-content-right {
+        display: none;
+        transition: all 1.2s ease;
+        justify-content: space-between;
+        width: 75%;
+        background-color: #fff;
+        padding: 30px 60px 10px 50px;
+        border-bottom-left-radius: 12px;
+    }
+
+    .second-level-menu h2 {
+        padding: 20px 0px 16px 30px;
+    }
+
+    .hmm-personal-megamenu-before>div,
+    .hmm-business-megamenu-before>div,
+    .hmm-corporate-and-commercial-megamenu-before>div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        color: #27100b;
+    }
+
+    .hmm-personal-megamenu-after>div p,
+    .hmm-business-megamenu-after>div p,
+    .hmm-corporate-and-commercial-megamenu-after>div p {
+        margin: 0 0 4px;
+    }
+
+    .hmm-personal-megamenu-after>div a,
+    .hmm-business-megamenu-after>div a,
+    .hmm-corporate-and-commercial-megamenu-after>div a {
+        text-decoration: none;
+        color: #606060;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-top: 2px;
+        display: block;
+        font-weight: 500;
+    }
+
+    .hmm-personal-megamenu-before>div.active,
+    .hmm-business-megamenu-before>div.active,
+    .hmm-corporate-and-commercial-megamenu-before>div.active {
+        color: #f18a00;
+    }
+
+    .hmm-personal-megamenu-before>div:hover,
+    .hmm-business-megamenu-before>div:hover,
+    .hmm-corporate-and-commercial-megamenu-before>div:hover {
+        color: #f18a00;
+        opacity: 0.7;
+    }
+
+    .hmm-personal-megamenu-before>div span:nth-child(2),
+    .hmm-business-megamenu-before>div span:nth-child(2),
+    .hmm-corporate-and-commercial-megamenu-before>div span:nth-child(2) {
+        margin-top: 0px;
+    }
+
+    .hmm-personal-megamenu-banners h3,
+    .hmm-business-megamenu-banners h3,
+    .hmm-corporate-and-commercial-megamenu-banners h3 {
+        color: #f18a00;
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 24px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .internet-banking-menu {
+        cursor: pointer;
+    }
+
+    .mega-menu-shower h2>a {
+        color: #606060;
+        transition: all 0.3s ease;
+    }
+
+    .mega-menu-shower h2:hover>a {
+        color: #004d72;
+    }
+
+    .mega-menu-shower {
+        display: none;
+    }
+
+    .custom-search-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .custom-search-modal-content {
+        position: relative;
+        top: 30%;
+        max-width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .custom-search-modal input[type="text"] {
+        width: 80%;
+        padding: 0px 10px 4px;
+        margin-bottom: 0px;
+        height: 40px;
+        border: 1px solid #606060;
+        border-radius: 8px;
+        outline: none;
+        box-shadow: none;
+        font-size: 14px;
+    }
+
+    .custom-search-modal input[type="text"]::placeholder {
+        font-size: 14px;
+    }
+
+    #custom-search-close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #custom-search-btn {
+        background: none;
+        box-shadow: none;
+        margin: -30px 0 0 0;
+    }
+
+    #custom-search-btm img {
+        mix-blend-mode: darken;
+    }
+
+    .mega-menu-holder {
+        display: flex;
+        align-items: center;
+    }
+
+    .mega-menu-holder>ul.first-level-menu {
+        margin-left: 0 !important;
+    }
+
+    #custom-search-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        background: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #custom-search-form button {
+        background-color: #004d72;
+        height: 40px;
+        padding: 0px 20px;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+    }
+
+    #custom-search-form button:hover {
+        background-color: #ef8903;
+    }
+
+    #custom-search-form {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+
+    .header-mega-menu .single-level-menu-stage-2 li:hover a {
+        color: #f3f3f3 !important;
+    }
+
+
+    .mega-menu-shower.animated {
+        animation: fadeSlideIn 0.3s ease-out forwards;
+    }
+
+    .mega-menu-shower.fade-out {
+        animation: fadeSlideOut 0.25s ease-out forwards;
+    }
+
+    .animated-submenu {
+        animation: fadeSlideIn 0.3s ease-out forwards;
+    }
+
+    @keyframes fadeSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeSlideOut {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+
+    @media screen and (max-width: 1400px) {
+        .header-mega-menu li a {
+            font-size: 14px;
+        }
+
+        .header-mega-menu .first-level-menu li a {
+            padding: 14px 14px 47px;
+        }
+    }
+
+
+    @media screen and (max-width: 1280px) {
+        .header-container .header-logo img {
+            max-width: 120px;
+        }
+
+        .header-mega-menu .first-level-menu li a {
+            padding: 14px 14px 26px;
+        }
+
+        .header-buttons {
+            margin-bottom: 16px;
+        }
+
+        .header-internet-banking-button,
+        .header-open-account-button {
+            font-size: 14px;
+        }
+
+        .header-mega-menu .first-level-menu>li:after {
+            top: 14px;
+        }
+
+        #custom-search-btn {
+            margin: -10px 0 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1140px) {
+
+        .header-internet-banking-button,
+        .header-open-account-button,
+        .header-mega-menu li a {
+            font-size: 10px;
+        }
+
+        .header-buttons {
+            padding-right: 20px;
+        }
+
+
+        #custom-search-btn {
+            margin: -12px 0 0 0;
+        }
+
+        .header-mega-menu .hmm-about:hover .single-level-menu {
+            top: 55px;
+        }
+
+        .header-mega-menu .single-level-menu.single-level-menu-stage-1 li a {
+            padding: 12px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .header-container {
+            display: none;
+        }
+    }
+</style>
+
+<header>
+    <div class="header-container">
+        <div class="header-logo">
+            <a href="https://8j2.211.myftpupload.com">
+                <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/01/Asset-1@2x-1-2.png" alt="header-logo">
+            </a>
+        </div>
+
+        <div class="header-mega-menu">
+            <div class="mega-menu-holder">
+                <ul class="first-level-menu">
+
+                    <li>
+                        <a href="https://8j2.211.myftpupload.com">Home</a>
+                    </li>
+
+                    <li class="hmm-about hmm-personal-updated">
+                        <span class="hmm-about-main">
+                            <a href="https://8j2.211.myftpupload.com/personal-banking">Personal</a>
+                        </span>
+                        <ul class="single-level-menu single-level-menu-stage-1">
+                            <li>
+                                <a href="/personal-banking">Personal Banking.</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Transact</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/easy-kwacha-account">Easy Kwacha
+                                            Account</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/nkwazi-gold-account">Nkwazi Gold
+                                            Account</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/mukula-platinum-account">Mukula Platinum
+                                            Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Save</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/cool-save-account">Cool Save Account</a>
+                                    </li>
+                                    <li><a href="https://8j2.211.myftpupload.com/zicb-savings-account">ZICB Personal
+                                            Savings Account</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/village-banking-account">Village Banking
+                                            Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Invest</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/fixed-deposit-account-personal-banking">Fixed
+                                            Deposit Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Borrow</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/personal-loan">Personal Loan</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Digital Banking</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2 last">
+                                    <li><a href="https://8j2.211.myftpupload.com/internet-banking">Internet Banking</a>
+                                    </li>
+                                    <li><a href="https://8j2.211.myftpupload.com/etax">eTax</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></li>
+                                </ul>
+                            </li>
+                            <li><a></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hmm-about hmm-business-updated">
+                        <span class="hmm-about-main">
+                            <a href="https://8j2.211.myftpupload.com/business-banking">Business</a>
+                        </span>
+                        <ul class="single-level-menu single-level-menu-stage-1">
+                            <li>
+                                <a href="/business-banking">Business Banking.</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Transact</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/sme-business-account">SME Current Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Borrow</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/fixed-term-loan">Fixed Term Loan</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/operating-capital-finance">Operating Capital Finance</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/overdrafts">Overdrafts</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/employee-scheme-loans">Employee Scheme Loans</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Invest</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/fixed-deposit-account-business-banking">Fixed
+                                            Deposit Account</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/call-account">Call Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Cash & Trade</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2 last-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/cash-management">Cash Management</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/forex">Forex</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/trade-finance">Trade</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Digital Banking</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2 last">
+                                    <li><a href="https://8j2.211.myftpupload.com/internet-banking">Internet Banking</a>
+                                    </li>
+                                    <li><a href="https://8j2.211.myftpupload.com/etax">eTax</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></li>
+                                </ul>
+                            </li>
+                            <li><a></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hmm-about hmm-corporate-updated">
+                        <span class="hmm-about-main">
+                            <a href="https://8j2.211.myftpupload.com/corporate-and-commercial">Corporate</a>
+                        </span>
+                        <ul class="single-level-menu single-level-menu-stage-1">
+                            <li>
+                                <a href="/corparate-banking">Corporate Banking.</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Transact</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/current-account-corporate/">Current Account – Corporate</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/corporate-current-account-agribusiness">Corporate Current Account – Agribusiness</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/ngo-corporate-account">NGO Corporate Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Borrow</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/corporate-fixed-term-loan">Fixed Term Loan</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/corporate-operating-capital-finance">Operating Capital Finance</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/corporate-overdrafts">Overdrafts</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/corporate-employee-scheme-loans">Employee Scheme Loans</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Invest</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/fixed-deposit-account-corporate-banking">Fixed Deposit Account</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/corporate-call-account">Call Account</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Cash & Trade</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2 last-2">
+                                    <li><a href="https://8j2.211.myftpupload.com/cash-management">Cash Management</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/forex">Forex</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/trade-finance">Trade</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Digital Banking</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="single-level-menu-stage-2 last">
+                                    <li><a href="https://8j2.211.myftpupload.com/internet-banking">Internet Banking</a>
+                                    </li>
+                                    <li><a href="https://8j2.211.myftpupload.com/etax">eTax</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></li>
+                                    <li><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></li>
+                                </ul>
+                            </li>
+                            <li><a></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hmm-about hmm-digital-updated">
+                        <span class="hmm-about-main">
+                            <a href="https://8j2.211.myftpupload.com/digital-banking">Digital</a>
+                        </span>
+                        <ul class="single-level-menu">
+                            <li><a href="https://8j2.211.myftpupload.com/internet-banking">Internet Banking</a></li>
+                            <li><a href="https://8j2.211.myftpupload.com/etax">eTax</a></li>
+                            <li><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></li>
+                            <li><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></li>
+                            <li><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hmm-about">
+                        <span class="hmm-about-main">
+                            <a>About Us</a>
+                        </span>
+                        <ul class="single-level-menu">
+                            <li><a href="https://8j2.211.myftpupload.com/about-us">About us</a></li>
+                            <li><a href="https://8j2.211.myftpupload.com/board-of-directors">Board of Directors</a></li>
+                            <li><a href="https://8j2.211.myftpupload.com/management">Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="https://8j2.211.myftpupload.com/contact-us">Contact us</a></li>
+                </ul>
+
+                <button id="custom-search-btn" class="custom-search-trigger">
+                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/05/search-interface-symbol-1.png"
+                        class="search-icon">
+                </button>
+            </div>
+
+            <div class="mega-menu-shower">
+
+                <div class="hmm-personal-megamenu second-level-menu">
+                    <div class="hmm-personal-megamenu-heading second-level-menu-heading">
+                        <h2><a href="https://8j2.211.myftpupload.com/personal-banking/">Personal Banking.</a></h2>
+                    </div>
+
+                    <div class="hmm-personal-megamenu-content second-level-menu-content">
+
+                        <div class="hmm-personal-megamenu-content-left second-level-menu-content-left">
+                            <div class="hmm-personal-megamenu-before">
+                                <div class="hmm-personal-megamenu-before-1">
+                                    <span>Transact</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-before-2">
+                                    <span>Save</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-personal-megamenu-before-3">
+                                    <span>Invest</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-personal-megamenu-before-4">
+                                    <span>Borrow</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-before-5">
+                                    <span>Digital Banking</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hmm-personal-megamenu-content-right second-level-menu-content-right">
+                            <div class="hmm-personal-megamenu-after">
+
+                                <div class="hmm-personal-megamenu-after-1">
+                                    <p><a href="https://8j2.211.myftpupload.com/easy-kwacha-account">Easy Kwacha
+                                            Account</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/nkwazi-gold-account">Nkwazi Gold
+                                            Account</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/mukula-platinum-account">Mukula Platinum
+                                            Account</a></p>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-after-2">
+                                    <p><a href="https://8j2.211.myftpupload.com/cool-save-account">Cool Save Account</a>
+                                    </p>
+                                    <p><a href="https://8j2.211.myftpupload.com/zicb-savings-account">ZICB Personal Savings
+                                            Account</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/village-banking-account">Village Banking
+                                            Account</a></p>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-after-3">
+                                    <p><a href="https://8j2.211.myftpupload.com/fixed-deposit-account-personal-banking">Fixed
+                                            Deposit Account</a></p>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-after-4">
+                                    <p><a href="https://8j2.211.myftpupload.com/personal-loan">Personal Loan</a></p>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-after-5">
+                                    <p><a href="https://8j2.211.myftpupload.com/internet-banking">Internet Banking</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/etax">eTax</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></p>
+                                </div>
+
+                            </div>
+
+                            <div class="hmm-personal-megamenu-banners">
+                                <div class="hmm-personal-megamenu-banners-1">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Personal-Banking-transact.webp"
+                                        alt="" srcset="">
+                                    <h3>Shaping Your Tomorrow</h3>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-banners-2">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Personal-Banking-save.webp"
+                                        alt="" srcset="">
+                                    <h3>A smart way to save<br />for a rainy day</h3>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-banners-3">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-personal-banking-invest.webp"
+                                        alt="" srcset="">
+                                    <h3>Your investment journey<br />begins here</h3>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-banners-4">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-personal-borrow.webp"
+                                        alt="" srcset="">
+                                    <h3>Designed to help you<br />finance a personal goal</h3>
+                                </div>
+
+                                <div class="hmm-personal-megamenu-banners-5">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/drop-down-corporate-digital-banking.webp"
+                                        alt="" srcset="">
+                                    <h3>Access banking services<br />anytime, anywhere</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hmm-business-megamenu second-level-menu">
+
+                    <div class="hmm-business-megamenu-heading second-level-menu-heading">
+                        <h2><a href="https://8j2.211.myftpupload.com/business-banking/">Business Banking.</a></h2>
+                    </div>
+
+                    <div class="hmm-business-megamenu-content second-level-menu-content">
+
+                        <div class="hmm-business-megamenu-content-left second-level-menu-content-left">
+                            <div class="hmm-business-megamenu-before">
+                                <div class="hmm-business-megamenu-before-1">
+                                    <span>Transact</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-business-megamenu-before-2">
+                                    <span>Borrow</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-business-megamenu-before-3">
+                                    <span>Invest</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="hmm-business-megamenu-before-4">
+                                    <span>Cash & Trade</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="hmm-business-megamenu-before-5">
+                                    <span>Digital Banking</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hmm-business-megamenu-content-right second-level-menu-content-right">
+
+                            <div class="hmm-business-megamenu-after">
+
+                                <div class="hmm-business-megamenu-after-1">
+                                    <p><a href="https://8j2.211.myftpupload.com/sme-business-account">SME Current
+                                            Account</a></p>
+                                </div>
+
+                                <div class="hmm-business-megamenu-after-2">
+                                    <p><a href="https://8j2.211.myftpupload.com/fixed-term-loan">Fixed Term Loan</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/operating-capital-finance">Operating
+                                            Capital Finance</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/overdrafts">Overdrafts</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/employee-scheme-loans">Employee Scheme
+                                            Loans</a></p>
+                                </div>
+
+                                <div class="hmm-business-megamenu-after-3">
+                                    <p><a href="https://8j2.211.myftpupload.com/fixed-deposit-account-business-banking">Fixed
+                                            Deposit Account</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/call-account">Call Account</a></p>
+                                </div>
+
+                                <div class="hmm-business-megamenu-after-4">
+                                    <p><a href="https://8j2.211.myftpupload.com/cash-management">Cash Management</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/forex">Forex</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/trade-finance">Trade</a></p>
+                                </div>
+
+                                <div class="hmm-business-megamenu-after-5">
+                                    <p><a href="https://8j2.211.myftpupload.com/internet-banking">Internet Banking</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/etax">eTax</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></p>
+                                </div>
+
+                            </div>
+
+                            <div class="hmm-business-megamenu-banners">
+                                <div class="hmm-business-megamenu-banners-1">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Business-transact.webp"
+                                        alt="" srcset="">
+                                    <h3>Banking solutions to help<br />grow your business</h3>
+                                </div>
+
+                                <div class="hmm-business-megamenu-banners-2">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-BUSINESS-Borrow.webp"
+                                        alt="" srcset="">
+                                    <h3>Earn competitive interest<br />on excess cash</h3>
+                                </div>
+
+                                <div class="hmm-business-megamenu-banners-3">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Business-save.webp"
+                                        alt="" srcset="">
+                                    <h3>Finance for your<br />business operations</h3>
+                                </div>
+
+                                <div class="hmm-business-megamenu-banners-4">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Business-cash-and-trade.webp"
+                                        alt="" srcset="">
+                                    <h3>Manage movement of bulk cash<br />using our digital channels</h3>
+                                </div>
+
+                                <div class="hmm-business-megamenu-banners-5">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/drop-down-corporate-digital-banking.webp"
+                                        alt="" srcset="">
+                                    <h3>Access banking services<br />anytime, anywhere</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="hmm-corporate-and-commercial-megamenu second-level-menu">
+
+                    <div class="hmm-corporate-and-commercial-megamenu-heading second-level-menu-heading">
+                        <h2><a href="https://8j2.211.myftpupload.com/corporate-and-commercial/">Corporate.</a></h2>
+                    </div>
+
+                    <div class="hmm-corporate-and-commercial-megamenu-content second-level-menu-content">
+
+                        <div class="hmm-corporate-and-commercial-megamenu-content-left second-level-menu-content-left">
+                            <div class="hmm-corporate-and-commercial-megamenu-before">
+                                <div class="hmm-corporate-and-commercial-megamenu-before-1">
+                                    <span>Transact</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-corporate-and-commercial-megamenu-before-2">
+                                    <span>Borrow</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-corporate-and-commercial-megamenu-before-3">
+                                    <span>Invest</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-corporate-and-commercial-megamenu-before-4">
+                                    <span>Cash & Trade</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="hmm-corporate-and-commercial-megamenu-before-5">
+                                    <span>Digital Banking</span>
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_255_3454)">
+                                                <path
+                                                    d="M9.99984 6L8.58984 7.41L13.1698 12L8.58984 16.59L9.99984 18L15.9998 12L9.99984 6Z"
+                                                    fill="#606060" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_255_3454">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="hmm-corporate-and-commercial-megamenu-content-right second-level-menu-content-right">
+
+                            <div class="hmm-corporate-and-commercial-megamenu-after">
+
+                                <div class="hmm-corporate-and-commercial-megamenu-after-1">
+                                    <p><a href="https://8j2.211.myftpupload.com/current-account-corporate/">Current Account
+                                            – Corporate</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-current-account-agribusiness">Corporate
+                                            Current Account – Agribusiness</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/ngo-corporate-account">NGO Corporate
+                                            Account</a></p>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-after-2">
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-fixed-term-loan">Fixed Term
+                                            Loan</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-operating-capital-finance">Operating
+                                            Capital Finance</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-overdrafts">Overdrafts</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-employee-scheme-loans">Employee
+                                            Scheme Loans</a></p>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-after-3">
+                                    <p><a href="https://8j2.211.myftpupload.com/fixed-deposit-account-corporate-banking">Fixed
+                                            Deposit Account</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-call-account">Call Account</a>
+                                    </p>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-after-4">
+                                    <p><a href="https://8j2.211.myftpupload.com/cash-management">Cash Management</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/forex">Forex</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/trade-finance">Trade</a></p>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-after-5">
+                                    <p><a href="https://8j2.211.myftpupload.com/corporate-internet-banking">Internet
+                                            Banking</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/etax">eTax</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/enapsa">eNapsa</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/enhima">eNhima</a></p>
+                                    <p><a href="https://8j2.211.myftpupload.com/eworkers">eWorkers</a></p>
+                                </div>
+
+                            </div>
+
+                            <div class="hmm-corporate-and-commercial-megamenu-banners">
+                                <div class="hmm-corporate-and-commercial-megamenu-banners-1">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-corporate-transact.webp"
+                                        alt="" srcset="">
+                                    <h3>Supporting industrialization <br />and commercialization</h3>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-banners-2">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-corporate-borrow.webp"
+                                        alt="" srcset="">
+                                    <h3>Earn competitive interest<br />on excess cash</h3>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-banners-3">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Corporate-Banking-Invest.webp"
+                                        alt="" srcset="">
+                                    <h3>Finance for your<br />business operations</h3>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-banners-4">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/Drop-Down-Corporate-Cash-and-trade.webp"
+                                        alt="" srcset="">
+                                    <h3>Manage movement of bulk cash<br />using our digital channels</h3>
+                                </div>
+
+                                <div class="hmm-corporate-and-commercial-megamenu-banners-5">
+                                    <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/06/drop-down-corporate-digital-banking.webp"
+                                        alt="" srcset="">
+                                    <h3>Access banking services<br />anytime, anywhere</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="header-buttons">
+            <div class="internet-banking-menu">
+                <div class="header-internet-banking-button">
+                    <span class="header-internet-banking-button_icon">
+                        <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/05/dark-lock.png" alt="dark-icon"
+                            class="dark-icon">
+                        <img src="https://8j2.211.myftpupload.com/wp-content/uploads/2025/05/dark-light.png"
+                            alt="light-icon" class="light-icon">
+                    </span>
+                    <span class="header-internet-banking-button_text">Internet Banking</span>
+                </div>
+
+                <ul class="single-level-menu">
+                    <li><a href="https://onlinebanking.zicb.co.zm/Corporate_Banking/#/login" target="_blank">Corporate
+                            Internet Banking</a></li>
+                    <li><a href="https://onlinebanking.zicb.co.zm/NormalBanking/#/auth" target="_blank">Retail Internet
+                            Banking</a></li>
+                    <li><a href="https://epayments.zicb.co.zm" target="_blank">SmartPay</a></li>
+                </ul>
+            </div>
+
+            <a href="https://8j2.211.myftpupload.com/open-account/" class="header-open-account-button">
+                Open Account
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Search Modal -->
+    <div id="custom-search-modal" class="custom-search-modal">
+        <div class="custom-search-modal-content">
+
+            <button id="custom-search-close" aria-label="Close search">
+                <svg width="12" height="12" viewBox="0 0 20 20">
+                    <line x1="1" y1="1" x2="19" y2="19" stroke="black" stroke-width="2" />
+                    <line x1="19" y1="1" x2="1" y2="19" stroke="black" stroke-width="2" />
+                </svg>
+            </button>
+
+            <form id="custom-search-form" action="/" method="get">
+                <input type="text" name="s" id="custom-search-input" placeholder="Search..." required />
+                <button type="submit">Go</button>
+            </form>
+        </div>
+    </div>
+</header>
