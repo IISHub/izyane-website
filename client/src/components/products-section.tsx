@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useParallax, useParallaxScale } from "@/hooks/use-parallax";
+"use client";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Product {
   id: string;
@@ -23,143 +23,228 @@ interface Product {
 
 export default function ProductsSection() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [showAll, setShowAll] = useState(false);
-
-  // Parallax effects
-  const backgroundParallax = useParallax({ speed: 0.1 });
-  const imageScale = useParallaxScale({ speed: 0.1, initialScale: 1 });
-  const decorationParallax = useParallax({ speed: -0.2 });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    fetch('/data/products.json')
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Error loading products:', error));
+    fetch("/data/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("Error loading products:", err));
   }, []);
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerOffset;
+  // Prevent page scroll when section is in view
+  useEffect(() => {
+    if (isInView) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isInView]);
+
+  const handleNext = () => {
+    if (isScrolling || !products.length) return;
+    setIsScrolling(true);
+    setDirection(1);
+    setActiveIndex((prev) => (prev + 1) % products.length);
+    setTimeout(() => setIsScrolling(false), 500);
+  };
+
+  const handlePrev = () => {
+    if (isScrolling || !products.length) return;
+    setIsScrolling(true);
+    setDirection(-1);
+    setActiveIndex((prev) => (prev - 1 + products.length) % products.length);
+    setTimeout(() => setIsScrolling(false), 500);
+  };
+
+  // Handle wheel/scroll events globally when section is in view
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (!isInView || isScrolling) return;
       
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      e.preventDefault();
+      
+      if (e.deltaY > 0) {
+        handleNext();
+      } else if (e.deltaY < 0) {
+        handlePrev();
+      }
+    };
+
+    if (isInView) {
+      window.addEventListener('wheel', handleWheel, { passive: false });
+    }
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, [isInView, isScrolling, activeIndex, products.length]);
+
+  // Handle touch events for swipe
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!isInView) return;
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientY);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isInView) return;
+    setTouchEnd(e.targetTouches[0].clientY);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isInView || !touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isUpSwipe = distance > 50;
+    const isDownSwipe = distance < -50;
+
+    if (isUpSwipe) {
+      handleNext();
+    } else if (isDownSwipe) {
+      handlePrev();
     }
   };
 
-  const displayedProducts = showAll ? products : products.filter(product => product.isFeatured);
+  const variants = {
+    enter: (direction: number) => ({
+      y: direction > 0 ? 100 : -100,
+      opacity: 0
+    }),
+    center: {
+      y: 0,
+      opacity: 1
+    },
+    exit: (direction: number) => ({
+      y: direction < 0 ? 100 : -100,
+      opacity: 0
+    })
+  };
+
+  if (!products.length) return null;
+
+  const currentProduct = products[activeIndex];
 
   return (
-    <section id="products" className="section-padding bg-white dark:bg-slate-800 relative overflow-hidden">
+    <section 
+      ref={sectionRef} 
+      id="products" 
+      className="min-h-screen bg-white dark:bg-slate-800 relative overflow-hidden flex items-center"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Parallax Background Elements */}
-      <div 
-        className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-l from-green-100/30 to-transparent dark:from-green-900/20 rounded-full blur-3xl"
-        style={backgroundParallax}
-      />
-      
-      <div 
-        className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-r from-blue-100/30 to-transparent dark:from-blue-900/20 rounded-full blur-3xl"
-        style={decorationParallax}
-      />
-      
-      <div className="container-custom relative z-10">
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-gradient-to-l from-green-100/30 to-transparent dark:from-green-900/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-gradient-to-r from-blue-100/30 to-transparent dark:from-blue-900/20 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-custom/5 to-transparent" />
+
+      <div className="container-custom w-full relative z-10">
+        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Our Products</h2>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Innovative solutions designed to solve real-world problems and accelerate business growth.
           </p>
         </div>
-        
-        <div className="space-y-16">
-          {displayedProducts.map((product, index) => {
-            const reverse = index % 2 !== 0;
-            return (
-              <div key={product.id} className={`grid lg:grid-cols-2 gap-12 items-center ${reverse ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={`${reverse ? 'lg:col-start-2' : 'order-2 lg:order-1'}`}>
-                  <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
-                    product.primaryColor === 'primary-custom' 
-                      ? 'bg-primary-custom/10 text-primary-custom'
-                      : product.primaryColor === 'accent-custom'
-                      ? 'bg-accent-custom/10 text-accent-custom'
-                      : `bg-${product.primaryColor}/10 text-${product.primaryColor}`
-                  }`}>
-                    <i className={`${product.categoryIcon} mr-2`}></i>
-                    {product.category}
-                  </div>
-                  <h3 className="text-3xl font-bold text-responsive mb-6">{product.name}</h3>
-                  <p className="text-xl text-slate-600 dark:text-slate-300 mb-6">{product.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-responsive mb-3">Key Features:</h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {product.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-slate-600 dark:text-slate-300">
-                          <i className="fas fa-check-circle text-emerald-500 mr-3 flex-shrink-0"></i>
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  <div className="mb-8">
-                    <div className="flex flex-wrap gap-2">
-                      {product.technologies.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-xs font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Column (Image) */}
+          <div className="relative">
+            <motion.img
+              key={activeIndex}
+              src={currentProduct.image}
+              alt={currentProduct.name}
+              className="rounded-2xl shadow-2xl w-full h-[480px] object-cover"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            />
+          </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="btn-solid px-8 py-3" onClick={scrollToContact}>
-                      Inquire
-                    </button>
+          {/* Right Column (Carousel Content) */}
+          <div className="relative overflow-hidden h-[480px] flex flex-col">
+            <div className="flex-1 relative">
+              <AnimatePresence initial={false} custom={direction} mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    y: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.3 }
+                  }}
+                  className="absolute inset-0 flex flex-col justify-center"
+                >
+                  <div
+                    className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold mb-4 w-fit ${
+                      currentProduct.primaryColor === "primary-custom"
+                        ? "bg-primary-custom/10 text-primary-custom"
+                        : currentProduct.primaryColor === "accent-custom"
+                        ? "bg-accent-custom/10 text-accent-custom"
+                        : `bg-${currentProduct.primaryColor}/10 text-${currentProduct.primaryColor}`
+                    }`}
+                  >
+                    <i className={`${currentProduct.categoryIcon} mr-2`}></i>
+                    {currentProduct.category}
                   </div>
-                </div>
-                <div className={`${reverse ? 'lg:col-start-1' : 'order-1 lg:order-2'}`}>
-                  <div className="relative group overflow-hidden rounded-2xl">
-                    <div style={{ transform: imageScale.transform }}>
-                      <img 
-                        src={product.image} 
-                        alt={`${product.name} interface`}
-                        className="rounded-2xl shadow-2xl w-full h-auto transition-all duration-500 group-hover:shadow-3xl"
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h3 className="text-3xl font-bold mb-6">{currentProduct.name}</h3>
+                  <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
+                    {currentProduct.description}
+                  </p>
+                  <div className="flex justify-start">
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center text-primary-custom hover:text-primary-custom/80 font-semibold transition-colors duration-200"
+                      onClick={e => {
+                        e.preventDefault();
+                        const el = document.getElementById("contact");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      Learn More
+                      <i className="fas fa-arrow-right ml-2"></i>
+                    </a>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
 
-        {!showAll && products.length > 2 && (
-          <div className="text-center mt-16">
-            <button 
-              onClick={() => setShowAll(true)}
-              className="btn-outline px-8 py-3"
-            >
-              See All Products ({products.length - 2} more)
-            </button>
-          </div>
-        )}
-
-        {showAll && (
-          <div className="text-center mt-16">
-            <button 
-              onClick={() => setShowAll(false)}
-              className="btn-outline px-8 py-3"
-            >
-              Show Less
-            </button>
+        {/* Visual indicator for scroll interaction */}
+        {isInView && (
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
+              Scroll to browse products
+            </p>
+            <div className="flex justify-center space-x-1">
+              {products.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === activeIndex
+                      ? "bg-primary-custom"
+                      : "bg-slate-300 dark:bg-slate-600"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         )}
       </div>
