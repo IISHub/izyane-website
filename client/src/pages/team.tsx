@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { Linkedin, Twitter, Github, } from "lucide-react";
 import Footer from "@/components/footer";
 
 interface TeamMember {
@@ -19,7 +19,6 @@ interface TeamMember {
     linkedin?: string;
     twitter?: string;
     github?: string;
-    email?: string;
   };
   achievements: string[];
 }
@@ -128,14 +127,7 @@ export default function Team() {
                       <Github className="w-5 h-5" />
                     </a>
                   )}
-                  {member.social.email && (
-                    <a
-                      href={`mailto:${member.social.email}`}
-                      className="w-10 h-10 bg-slate-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-primary-custom hover:text-white transition-all duration-200"
-                    >
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  )}
+                  
                 </div>
               </div>
             ))}
