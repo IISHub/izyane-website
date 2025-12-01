@@ -25,7 +25,6 @@ export default function ServicesSection() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [services, setServices] = useState<Service[]>([]);
-  const [showAll, setShowAll] = useState(false);
 
   // Parallax effects
   const backgroundParallax = useParallax({ speed: 0.2 });
@@ -43,7 +42,7 @@ export default function ServicesSection() {
     setIsModalOpen(true);
   };
 
-  const displayedServices = showAll ? services : services.slice(0, 6);
+  const displayedServices = services;
 
   return (
     <section
@@ -81,88 +80,72 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {displayedServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              className={`bg-white dark:bg-slate-700 rounded-xl p-4 sm:p-6 parallax-card group stagger-${
-                (index % 6) + 1
-              }`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-            >
-              <div className="parallax-card-content">
-                <div
-                  className={`w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}
-                >
-                  <i className={`${service.icon} text-white text-lg`}></i>
-                </div>
-                <h3 className="text-lg font-bold text-responsive mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">
-                  {service.description}
-                </p>
-
-                <div className="mb-4">
-                  <ul className="space-y-1">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-slate-600 dark:text-slate-300 text-sm"
-                      >
-                        <i className="fas fa-check text-emerald-500 mr-2 text-xs"></i>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-1">
-                    {service.technologies.slice(0, 4).map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-slate-700 dark:text-slate-300 rounded text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {service.technologies.length > 4 && (
-                      <span className="px-2 py-1 bg-slate-100 dark:bg-slate-600 text-slate-700 dark:text-slate-300 rounded text-xs">
-                        +{service.technologies.length - 4} more
-                      </span>
-                    )}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Left Column - Image */}
+          <motion.div
+            className="lg:col-span-1"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="sticky top-24 h-full">
+              <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px] rounded-xl overflow-hidden bg-gradient-to-br from-primary to-accent">
+                <img
+                  src="/services-image.jpg"
+                  alt="Our Services"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback to gradient if image doesn't exist
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center">
+                  <div className="text-center text-white p-6">
+                    <i className="fas fa-code text-6xl mb-4 opacity-80"></i>
+                    <h3 className="text-2xl font-bold mb-2">Our Services</h3>
+                    <p className="text-white/90">
+                      Comprehensive solutions for your business needs
+                    </p>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => handleLearnMore(service)}
-                  className="btn-outline w-full"
-                >
-                  Learn More
-                </button>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
+
+          {/* Middle and Right Columns - Services */}
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {displayedServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                className="bg-white dark:bg-slate-700 rounded-xl p-4 parallax-card group cursor-pointer shadow-sm hover:shadow-lg transition-shadow duration-200"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -3 }}
+                onClick={() => handleLearnMore(service)}
+              >
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                      <i className={`${service.icon} text-primary text-lg`}></i>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base font-bold text-responsive mb-1.5 group-hover:text-primary transition-colors line-clamp-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed line-clamp-2">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* See More / Show Less Button */}
-        {services.length > 6 && (
-          <div className="text-center mt-12">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="btn-outline px-8 py-3"
-            >
-              {showAll
-                ? `Show Less`
-                : `See All Services (${services.length - 6} more)`}
-            </button>
-          </div>
-        )}
       </div>
 
       <ServiceModal
