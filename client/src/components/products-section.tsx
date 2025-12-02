@@ -134,8 +134,8 @@ export default function ProductsSection() {
       {/* Section Header */}
       <div className="container-custom pt-20 pb-12">
         <div className="text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mb-6">Our Products</h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-bold text-responsive mt-16 mb-6" style={{ lineHeight: 3 }}>Our Products</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mb-6 mx-auto">
             Innovative solutions designed to solve real-world problems and accelerate business growth.
           </p>
         </div>
