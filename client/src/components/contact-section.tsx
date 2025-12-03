@@ -9,8 +9,6 @@ import { motion } from "framer-motion";
 import { useParallax, useScrollRotation } from "@/hooks/use-parallax";
 
 export default function ContactSection() {
-  // This should always show in console
-  console.log('🚀 ContactSection component loaded!');
   
   const { toast } = useToast();
   
@@ -62,16 +60,11 @@ export default function ContactSection() {
       submitData.append('message', formData.message);
       submitData.append('consent', formData.consent.toString());
 
-      console.log('Submitting form data:', Object.fromEntries(submitData));
-
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: submitData.toString()
       });
-
-      console.log('Response status:', response.status);
-      console.log('Response ok:', response.ok);
 
       if (response.ok) {
         toast({
@@ -88,12 +81,9 @@ export default function ContactSection() {
           consent: false
         });
       } else {
-        const responseText = await response.text();
-        console.error('Response error:', responseText);
         throw new Error(`Form submission failed: ${response.status}`);
       }
     } catch (error) {
-      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or contact us directly.",
@@ -125,12 +115,6 @@ export default function ContactSection() {
       content: "info@izyane.com",
       link: "mailto:info@izyane.com",
       isClickable: true
-    },
-    {
-      icon: "fas fa-clock",
-      title: "Business Hours",
-      content: "Monday - Friday: 8:00 AM - 5:00 PM CAT\nSaturday: 9:00 AM - 2:00 PM CAT\nSunday: Closed",
-      isClickable: false
     }
   ];
 
@@ -197,19 +181,22 @@ export default function ContactSection() {
                 </div>
               ))}
             </div>
-            
+
+            {/* Interactive Map */}
             <div className="mt-8">
-              <h4 className="text-lg font-semibold text-responsive mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a 
-                    key={index}
-                    href={social.href} 
-                    className="w-10 h-10 bg-primary-custom text-white rounded-lg flex items-center justify-center hover:bg-[hsl(221,83%,45%)] transition-colors duration-200"
-                  >
-                    <i className={social.icon}></i>
-                  </a>
-                ))}
+              <h4 className="text-lg font-semibold text-responsive mb-4">Our Location</h4>
+              <div className="rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1004!2d28.3198545!3d-15.3954016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408be262a33ec5%3A0xcc7121ba1cc55fec!2siZyane%20InovSolutions!5e0!3m2!1sen!2szm!4v1699999999999!5m2!1sen!2szm"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="iZyane InovSolutions Location"
+                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -322,17 +309,7 @@ export default function ContactSection() {
                 />
               </div>
               
-              <div className="flex items-start space-x-3">
-                <Checkbox
-                  id="consent"
-                  checked={formData.consent}
-                  onCheckedChange={(checked) => handleInputChange('consent', checked as boolean)}
-                  className="mt-1"
-                />
-                <label htmlFor="consent" className="text-sm text-slate-600 dark:text-slate-300">
-                  I agree to the <a href="#" className="text-primary-custom hover:underline">Privacy Policy</a> and <a href="#" className="text-primary-custom hover:underline">Terms of Service</a>
-                </label>
-              </div>
+              
               
               <button 
                 type="submit" 

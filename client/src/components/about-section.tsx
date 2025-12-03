@@ -1,7 +1,67 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { useParallax, useScrollRotation } from "@/hooks/use-parallax";
+
+// Animated Counter Hook
+function useAnimatedCounter(end: number, duration: number = 2000, suffix: string = "") {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const startTime = Date.now();
+          const animate = () => {
+            const now = Date.now();
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 4);
+            setCount(Math.floor(eased * end));
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [end, duration, hasAnimated]);
+
+  return { ref, display: `${count}${suffix}` };
+}
+
+// Stat Card Component with Animation
+function StatCard({ number, suffix, label, duration = 2000, delay = 0 }: { 
+  number: number; 
+  suffix: string; 
+  label: string; 
+  duration?: number;
+  delay?: number;
+}) {
+  const { ref, display } = useAnimatedCounter(number, duration, suffix);
+  
+  return (
+    <motion.div 
+      ref={ref}
+      className="text-center p-4 bg-slate-50 dark:bg-slate-700/50 rounded-xl"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: delay / 1000 }}
+      viewport={{ once: true }}
+    >
+      <div className="text-2xl sm:text-3xl font-bold text-primary-custom">
+        {display}
+      </div>
+      <div className="text-slate-600 dark:text-slate-400 text-sm mt-1">
+        {label}
+      </div>
+    </motion.div>
+  );
+}
 
 export default function AboutSection() {
   // Parallax effects
@@ -98,23 +158,11 @@ export default function AboutSection() {
                   and a cashless economy. The team has more than 2 decades of
                   combined digital transformation experience.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary-custom">
-                      2019
-                    </div>
-                    <div className="text-slate-600 dark:text-slate-400">
-                      Founded
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary-custom">
-                      50+
-                    </div>
-                    <div className="text-slate-600 dark:text-slate-400">
-                      Team Members
-                    </div>
-                  </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                  <StatCard number={2019} suffix="" label="Founded" duration={1500} />
+                  <StatCard number={50} suffix="+" label="Team Members" duration={2000} delay={200} />
+                  <StatCard number={10} suffix="+" label="Happy Clients" duration={1800} delay={400} />
+                  <StatCard number={20} suffix="+" label="Years Experience" duration={2200} delay={600} />
                 </div>
               </div>
             </div>

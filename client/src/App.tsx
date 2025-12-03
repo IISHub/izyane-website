@@ -10,6 +10,9 @@ import Team from "@/pages/team";
 import Portfolio from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
 import TopDockNavigation from "./components/top-dock-navigation";
+import BackToTop from "./components/back-to-top";
+import PagePreloader from "./components/page-preloader";
+import Chatbot from "@/components/Chatbot";
 
 function Router() {
   return (
@@ -28,9 +31,12 @@ function App() {
     <ThemeProvider defaultTheme="light" storageKey="izyane-ui-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
+          <PagePreloader />
           <TopDockNavigation />
           <Toaster />
           <Router />
+          <BackToTop />
+          <Chatbot />
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>
