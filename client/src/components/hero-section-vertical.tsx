@@ -35,9 +35,9 @@ export default function HeroSection() {
       darkBackgroundGradient: "from-slate-900 via-blue-900/20 to-slate-800",
       heroImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       stats: [
-        { number: "10+", label: "Happy Clients" },
-        { number: "95%", label: "Customer Support" },
-        { number: "90%", label: "Satisfaction Rate" }
+        { number: "100+", label: "DSA's" },
+        { number: "95%", label: "Client Support" },
+        { number: "5000+", label: "Agencies Opened" }
       ],
       mockupIcon: "fas fa-rocket",
       accentTheme: "primary"
@@ -48,8 +48,8 @@ export default function HeroSection() {
       heroImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       stats: [
         { number: "10+", label: "Projects Delivered" },
-        { number: "88%", label: "App Safety" },
-        { number: "1200+", label: "POS Supplied" }
+        { number: "10+", label: "Happy Clients" },
+        { number: "99%", label: "Satisfaction Rate" }
       ],
       mockupIcon: "fas fa-brain",
       accentTheme: "primary"
@@ -59,9 +59,9 @@ export default function HeroSection() {
       darkBackgroundGradient: "from-slate-900 via-orange-900/20 to-slate-800",
       heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
       stats: [
-        { number: "5000+", label: "Agencies Opened" },
-        { number: "100+", label: "DSA's" },
-        { number: "65+", label: "TDR's" }
+        { number: "1700+", label: "POS Supplied" },
+        { number: "2", label: "Countries" },
+        { number: "70+", label: "Locations" }
       ],
       mockupIcon: "fas fa-cloud",
       accentTheme: "secondary"
@@ -152,8 +152,8 @@ export default function HeroSection() {
                     )}
                     {index === 2 && (
                       <>
-                        <span className="text-orange-400">Limitless</span> Scale<br />
-                        <span className="text-amber-400">Infinite</span> Possibilities
+                        <span className="text-orange-400">POS Supply</span> &<br/>
+                        <span className="text-amber-400">Application</span> Development
                       </>
                     )}
                   </motion.h2>

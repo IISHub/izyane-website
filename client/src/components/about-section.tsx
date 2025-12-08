@@ -160,9 +160,9 @@ export default function AboutSection() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
                   <StatCard number={2019} suffix="" label="Founded" duration={1500} />
-                  <StatCard number={50} suffix="+" label="Team Members" duration={2000} delay={200} />
+                  <StatCard number={20} suffix="+" label="Team Members" duration={2000} delay={200} />
                   <StatCard number={10} suffix="+" label="Happy Clients" duration={1800} delay={400} />
-                  <StatCard number={20} suffix="+" label="Years Experience" duration={2200} delay={600} />
+                  <StatCard number={5} suffix="+" label="Years Experience" duration={2200} delay={600} />
                 </div>
               </div>
             </div>
