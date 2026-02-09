@@ -136,7 +136,7 @@ export default function AboutSection() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                  src="/img/about.png?w=800&h=600"
                   alt="Team collaboration in modern office"
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
@@ -206,7 +206,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                  src="/img/vision.png?w=800&h=600"
                   alt="Vision - Future technology workspace"
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
@@ -218,7 +218,7 @@ export default function AboutSection() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                  src="/img/mission.jpg"
                   alt="Mission - Team working together"
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />

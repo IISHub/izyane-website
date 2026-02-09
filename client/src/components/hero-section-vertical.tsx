@@ -33,7 +33,7 @@ export default function HeroSection() {
     {
       backgroundGradient: "from-blue-50 via-indigo-50 to-purple-100",
       darkBackgroundGradient: "from-slate-900 via-blue-900/20 to-slate-800",
-      heroImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      heroImage: "/img/banner1.png",
       stats: [
         { number: "100+", label: "DSA's" },
         { number: "95%", label: "Client Support" },
@@ -45,7 +45,7 @@ export default function HeroSection() {
     {
       backgroundGradient: "from-emerald-50 via-teal-50 to-cyan-100",
       darkBackgroundGradient: "from-slate-900 via-emerald-900/20 to-slate-800",
-      heroImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      heroImage: "/img/banner2.png",
       stats: [
         { number: "10+", label: "Projects Delivered" },
         { number: "10+", label: "Happy Clients" },
@@ -57,7 +57,7 @@ export default function HeroSection() {
     {
       backgroundGradient: "from-orange-50 via-amber-50 to-yellow-100",
       darkBackgroundGradient: "from-slate-900 via-orange-900/20 to-slate-800",
-      heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+      heroImage: "/img/banner3.png",
       stats: [
         { number: "1700+", label: "POS Supplied" },
         { number: "2", label: "Countries" },

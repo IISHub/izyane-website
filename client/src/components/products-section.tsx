@@ -111,7 +111,17 @@ export default function ProductsSection() {
     }
   };
 
+  const resolveImage = (src: string | undefined) => {
+    if (!src) return '';
+    // If it's an external URL, return as-is
+    if (/^https?:\/\//.test(src)) return src;
+    // For local assets, respect Vite's base (import.meta.env.BASE_URL)
+    const base = typeof import.meta !== 'undefined' && (import.meta as any).env ? (import.meta as any).env.BASE_URL || '/' : '/';
+    return src.startsWith('/') ? `${base}${src.slice(1)}` : `${base}${src}`;
+  };
+
   const currentProduct = products[currentProductIndex] || products[0];
+  const currentImageSrc = resolveImage(currentProduct?.image);
 
   if (products.length === 0) {
     return (
@@ -153,13 +163,19 @@ export default function ProductsSection() {
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={currentProduct?.id}
-                    src={currentProduct?.image}
+                    src={currentImageSrc}
                     alt={`${currentProduct?.name} interface`}
                     className="absolute inset-0 w-full h-full object-cover"
                     initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
+                    onError={(e) => {
+                      // Fallback to a bundled local image if the primary fails
+                      const fallback = resolveImage('/img/img.jpg');
+                      (e.currentTarget as HTMLImageElement).onerror = null;
+                      (e.currentTarget as HTMLImageElement).src = fallback;
+                    }}
                   />
                 </AnimatePresence>
 
