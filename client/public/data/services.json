@@ -1,312 +1,302 @@
 [
   {
-    "id": "web-development",
+    "id": "software-mobile-web-development",
     "icon": "fas fa-code",
-    "title": "Web Development",
-    "description": "Custom web applications built with modern frameworks and best practices.",
-    "detailedDescription": "We create powerful, scalable web applications using cutting-edge technologies. Our full-stack development approach ensures your web solution is fast, secure, and user-friendly. From single-page applications to complex enterprise systems, we deliver solutions that drive business growth.",
+    "title": "Software, Mobile & Web Development",
+    "description": "Custom software, mobile and web solutions tailored to business and individual needs.",
+    "detailedDescription": "We design and develop modern software systems, mobile applications, and web platforms that help businesses automate operations and improve digital experiences. Our solutions are scalable, secure, and built using modern technologies.",
     "features": [
-      "React.js",
-      "Node.js & Python",
-      "Cloud Deployment"
+      "Custom Software Development",
+      "Mobile Applications",
+      "Web Platforms"
     ],
     "technologies": [
       "React",
       "Angular",
       "Node.js",
       "Django",
-      "Next.js",
-      "TypeScript"
+      "Flutter",
+      "React Native"
     ],
     "gradientFrom": "from-primary-custom",
     "gradientTo": "to-accent-custom",
     "deliverables": [
-      "Responsive web applications",
-      "API development and integration",
-      "Database design and optimization",
-      "Performance optimization",
-      "Security implementation",
-      "Testing and deployment"
-    ]
-  },
-  {
-    "id": "mobile-apps",
-    "icon": "fas fa-mobile-alt",
-    "title": "Mobile Apps",
-    "description": "Native and cross-platform mobile applications that deliver exceptional user experiences.",
-    "detailedDescription": "Transform your ideas into powerful mobile applications that users love. We develop both native and cross-platform solutions that provide seamless experiences across iOS and Android devices. Our mobile apps are optimized for performance, user engagement, and business growth.",
-    "features": [
-      "iOS & Android",
-      "React Native",
-      "App Store Publishing"
-    ],
-    "technologies": [
-      "React Native",
-      "Flutter",
-      "Swift",
-      "Kotlin",
-      "Firebase",
-      "Redux",
-      "Expo"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Native iOS and Android apps",
-      "Cross-platform solutions",
-      "App Store optimization",
-      "Push notifications",
-      "Offline functionality",
-      "Analytics integration"
+      "Web and mobile applications",
+      "Backend systems and APIs",
+      "Cloud deployment",
+      "System integration",
+      "Maintenance and support",
+      "Testing and optimization"
     ]
   },
   {
     "id": "mojaloop-integration",
     "icon": "fas fa-cloud",
     "title": "Mojaloop Integration",
-    "description": "Seamless integration with the Mojaloop platform for financial services.",
-    "detailedDescription": "Unlocking financial possibilities with Mojaloop integration. With our team of IIPS certified professionals we have successfully deployed Mojaloop to the cloud, and are connecting the world through seamless digital transactions.",
+    "description": "Unlocking financial possibilities through seamless Mojaloop integration.",
+    "detailedDescription": "We help organizations integrate with the Mojaloop platform to enable real-time digital financial transactions. Our team deploys and connects Mojaloop solutions to support secure and efficient financial ecosystems.",
     "features": [
       "Mojaloop API Integration",
-      "Real-time Data Synchronization",
-      "Compliance and Security"
+      "Real-time Transactions",
+      "Secure Financial Connectivity"
     ],
     "technologies": [
       "Mojaloop",
       "REST APIs",
       "Docker",
-      "Kubernetes"
+      "Cloud Infrastructure"
     ],
     "gradientFrom": "from-primary-custom",
     "gradientTo": "to-accent-custom",
     "deliverables": [
-      "Mojaloop platform setup",
-      "API integration and configuration",
-      "Real-time transaction processing",
-      "Compliance and security implementation",
-      "Performance monitoring",
-      "Technical documentation and training"
-    ]
-  },
-  {
-    "id": "security-solutions",
-    "icon": "fas fa-shield",
-    "title": "Security Solutions",
-    "description": "Comprehensive cybersecurity solutions to protect your digital assets and infrastructure.",
-    "detailedDescription": "Safeguard your business with our comprehensive security solutions. We provide end-to-end cybersecurity services including risk assessment, security architecture design, implementation of security controls, and ongoing monitoring to protect your digital assets from evolving threats.",
-    "features": [
-      "Security Assessment & Auditing",
-      "Infrastructure Protection",
-      "Compliance & Risk Management"
-    ],
-    "technologies": [
-      "Identity Management",
-      "Vulnerability Assessment",
-      "Penetration Testing"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Security assessment and gap analysis",
-      "Security architecture design",
-      "Implementation of security controls",
-      "Incident response planning",
-      "Compliance documentation",
-      "Security monitoring and maintenance"
-    ],
-    "pricing": {
-      "basic": "$10,000 - $25,000",
-      "standard": "$25,000 - $75,000",
-      "enterprise": "$75,000+"
-    }
-  },
-  {
-    "id": "erp-system-implementation",
-    "icon": "fas fa-fingerprint",
-    "title": "Enterprise Resource Planning",
-    "description": "Comprehensive ERP system supply and implementation for streamlined business operations.",
-    "detailedDescription": "Transform your business operations with our comprehensive ERP system solutions. We provide end-to-end ERP implementation services, from system selection and customization to deployment and training, ensuring your organization achieves operational excellence and improved efficiency.",
-    "features": [
-      "System Analysis & Selection",
-      "Custom Configuration",
-      "Data Migration & Training"
-    ],
-    "technologies": [
-      "ERPNext",
-      "Sage"
-    ],
-    "gradientFrom": "from-primary-custom",
-    "gradientTo": "to-accent-custom",
-    "deliverables": [
-      "ERP system assessment and selection",
-      "Custom configuration and setup",
-      "Data migration and integration",
-      "User training and documentation",
-      "Go-live support and optimization",
-      "Ongoing maintenance and support"
-    ]
-  },
-  {
-    "id": "business-process-reengineering",
-    "icon": "fas fa-business-time",
-    "title": "Business Process Re-Engineering",
-    "description": "Strategic business process optimization to enhance efficiency and drive organizational transformation.",
-    "detailedDescription": "Revolutionize your business operations through comprehensive Business Process Re-Engineering. Our expert team analyzes existing workflows, identifies bottlenecks, and redesigns processes to maximize efficiency, reduce costs, and improve overall organizational performance.",
-    "features": [
-      "Process Analysis & Mapping",
-      "Workflow Optimization",
-      "Change Management"
-    ],
-    "technologies": [
-      "Project Management"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Current state process assessment",
-      "Future state process design",
-      "Gap analysis and recommendations",
-      "Implementation roadmap",
-      "Change management strategy",
-      "Performance metrics and KPIs"
-    ]
-  },
-  {
-    "id": "pos-supply-development",
-    "icon": "fas fa-mobile",
-    "title": "POS Supply and Application Development",
-    "description": "Complete Point of Sale systems with custom application development for retail and hospitality businesses.",
-    "detailedDescription": "Streamline your business operations with our comprehensive POS solutions. We provide hardware supply, custom application development, and integration services tailored to your specific industry needs, helping you manage transactions, inventory, and customer relationships efficiently.",
-    "features": [
-      "Hardware Supply & Setup",
-      "Custom POS Applications",
-      "Payment Integration"
-    ],
-    "technologies": [
-      "Android",
-      "Offline Sync",
-      "Receipt Printers"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "POS hardware procurement and setup",
-      "Custom POS application development",
-      "Payment gateway integration",
-      "Inventory management system",
-      "Sales reporting and analytics",
-      "Training and ongoing support"
-    ]
-  },
-  {
-    "id": "go-to-market-strategy",
-    "icon": "fas fa-store",
-    "title": "Go-to-Market Strategy for Digital Solutions",
-    "description": "Strategic market entry planning and execution for digital products and services.",
-    "detailedDescription": "Launch your digital solutions successfully with our comprehensive Go-to-Market strategy services. We help you identify target markets, develop positioning strategies, create launch plans, and execute marketing campaigns that drive adoption and growth for your digital products.",
-    "features": [
-      "Market Research & Analysis",
-      "Product Positioning",
-      "Launch Strategy & Execution"
-    ],
-    "technologies": [
-      "Market Analysis Tools",
-      "CRM Systems",
-      "Marketing Automation",
-      "Analytics Platforms",
-      "Social Media Tools",
-      "Content Management",
-      "SEO/SEM Tools"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Market research and competitor analysis",
-      "Target audience identification",
-      "Product positioning and messaging",
-      "Go-to-market strategy document",
-      "Launch plan and timeline",
-      "Performance tracking and optimization"
-    ]
-  },
-  {
-    "id": "core-banking-consultancy",
-    "icon": "fas fa-vault",
-    "title": "Core Banking Implementation Consultancy",
-    "description": "Expert consulting services for core banking system implementation and digital transformation.",
-    "detailedDescription": "Transform your banking operations with our specialized core banking implementation consultancy. Our team of certified professionals provides end-to-end guidance for selecting, implementing, and optimizing core banking systems to meet regulatory requirements and enhance customer experiences.",
-    "features": [
-      "System Selection & Assessment",
-      "Implementation Planning",
-      "Regulatory Compliance"
-    ],
-    "technologies": [
-      "Oracle FLEXCUBE",
-      "Regulatory Frameworks"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Core banking system assessment",
-      "Implementation strategy and roadmap",
-      "Project management and oversight",
-      "Regulatory compliance guidance",
-      "Staff training and knowledge transfer",
-      "Go-live support and optimization"
-    ]
-  },
-  {
-    "id": "digital-marketing-branding",
-    "icon": "fas fa-rectangle-ad",
-    "title": "Digital Marketing, Branding & Advertisement",
-    "description": "Comprehensive digital marketing solutions to build your brand and drive business growth.",
-    "detailedDescription": "Elevate your brand presence and drive measurable results with our comprehensive digital marketing services. From brand strategy and creative design to performance marketing and advertising campaigns, we help businesses establish strong digital footprints and achieve their marketing objectives.",
-    "features": [
-      "Brand Strategy & Identity",
-      "Digital Advertising",
-      "Content Marketing & SEO"
-    ],
-    "technologies": [
-      "Google Ads",
-      "Facebook Ads Manager",
-      "Google Analytics",
-      "Adobe Creative Suite",
-      "Content Management Systems",
-      "Email Marketing Platforms",
-      "Social Media Tools"
-    ],
-    "gradientFrom": "from-accent-custom",
-    "gradientTo": "to-primary-custom",
-    "deliverables": [
-      "Brand strategy and identity development",
-      "Website design and development",
-      "Digital advertising campaigns",
-      "Content creation and marketing",
-      "Social media management",
-      "Performance tracking and optimization"
+      "Mojaloop setup and configuration",
+      "API integration",
+      "Transaction monitoring",
+      "Compliance implementation",
+      "Technical support",
+      "Training and documentation"
     ]
   },
   {
     "id": "agency-merchant-aggregation",
     "icon": "fas fa-building-columns",
     "title": "Agency & Merchant Aggregation",
-    "description": "We do trade development, able to onboard agents, and merchant with our own application.",
-    "detailedDescription": "Specializing in trade development, our capabilities extend to seamless onboarding of agents and merchants through our proprietary application. At the forefront of our services is a commitment to fostering growth in the trade sector. Our platform is designed to facilitate the onboarding process, ensuring efficiency and ease for both agents and merchants. With our dedicated application, we empower businesses to navigate the trade landscape with confidence. Our comprehensive trade development services encompass every stage of onboarding, providing a robust framework for agents and merchants to thrive in their respective roles.",
+    "description": "Trade development services with agent and merchant onboarding solutions.",
+    "detailedDescription": "We support trade development by onboarding agents and merchants using our custom-built aggregation application. Our platform ensures seamless management, onboarding, and operational support.",
     "features": [
-      "Trade & Development Reps"
+      "Agent Onboarding",
+      "Merchant Onboarding",
+      "Trade Development Support"
     ],
     "technologies": [
-      "TDRs"
+      "Web Platforms",
+      "Mobile Applications",
+      "Cloud Systems"
     ],
     "gradientFrom": "from-accent-custom",
     "gradientTo": "to-primary-custom",
     "deliverables": [
-      "Custom AI models",
-      "Data preprocessing pipelines",
-      "Model training and optimization",
-      "API integration",
-      "Performance monitoring",
-      "Documentation and training"
+      "Agent onboarding platform",
+      "Merchant onboarding system",
+      "Trade development support",
+      "Reporting dashboards",
+      "Training and support",
+      "System integration"
+    ]
+  },
+  {
+    "id": "erp-system-implementation",
+    "icon": "fas fa-fingerprint",
+    "title": "Supply and Implementation of ERP Systems",
+    "description": "Customizable ERP solutions for small and medium enterprises.",
+    "detailedDescription": "We provide customizable ERP systems designed to streamline business operations. Our services include system setup, customization, deployment, and training for SMEs.",
+    "features": [
+      "ERP Customization",
+      "System Deployment",
+      "Training & Support"
+    ],
+    "technologies": [
+      "ERPNext",
+      "Sage",
+      "Cloud ERP"
+    ],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "ERP installation and configuration",
+      "Custom module development",
+      "Data migration",
+      "User training",
+      "System integration",
+      "Ongoing support"
+    ]
+  },
+  {
+    "id": "business-process-reengineering",
+    "icon": "fas fa-business-time",
+    "title": "Business Process Re-Engineering (BPR)",
+    "description": "Analyzing and redesigning business processes to improve efficiency.",
+    "detailedDescription": "We analyze current business processes, identify gaps, and design improved workflows that enhance productivity, reduce costs, and improve operational performance.",
+    "features": [
+      "Process Analysis",
+      "Workflow Redesign",
+      "Efficiency Optimization"
+    ],
+    "technologies": [
+      "Process Mapping Tools",
+      "Project Management Tools"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Current process assessment",
+      "Process redesign plans",
+      "Gap analysis",
+      "Implementation roadmap",
+      "Performance metrics setup",
+      "Change management support"
+    ]
+  },
+  {
+    "id": "pos-supply-development",
+    "icon": "fas fa-mobile",
+    "title": "POS Supply and Application Development",
+    "description": "Supply of Android smart POS devices with custom application development.",
+    "detailedDescription": "We provide Android smart POS hardware along with tailored POS applications that support business transactions, inventory tracking, and payment integration.",
+    "features": [
+      "Android POS Devices",
+      "Custom POS Applications",
+      "Payment Integration"
+    ],
+    "technologies": [
+      "Android",
+      "Payment Gateways",
+      "Cloud Sync"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "POS hardware supply",
+      "Custom POS software",
+      "Payment integration",
+      "Inventory tools",
+      "Sales reporting",
+      "Training and support"
+    ]
+  },
+  {
+    "id": "go-to-market-strategy",
+    "icon": "fas fa-store",
+    "title": "Go-to-Market Strategy for Digital Solutions",
+    "description": "Helping digital startups successfully take their products to market.",
+    "detailedDescription": "We assist digital newcomers in planning and executing market entry strategies. From positioning to launch planning, we guide businesses through the entire process of introducing digital products to the market.",
+    "features": [
+      "Market Research",
+      "Product Positioning",
+      "Launch Planning"
+    ],
+    "technologies": [
+      "Market Analytics",
+      "CRM Systems",
+      "Marketing Platforms"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Market analysis",
+      "Target audience definition",
+      "Product positioning strategy",
+      "Launch planning",
+      "Marketing strategy",
+      "Performance tracking"
+    ]
+  },
+  {
+    "id": "digital-marketing-branding",
+    "icon": "fas fa-rectangle-ad",
+    "title": "Digital Marketing, Branding & Advertisement",
+    "description": "Creative branding and digital marketing strategies to grow your business.",
+    "detailedDescription": "Our team of graphic designers and marketers create strong brand identities and digital marketing strategies that help businesses reach and engage their target audiences.",
+    "features": [
+      "Brand Identity Design",
+      "Digital Advertising",
+      "Content Marketing"
+    ],
+    "technologies": [
+      "Google Ads",
+      "Social Media Platforms",
+      "Adobe Creative Suite"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Brand design",
+      "Marketing strategy",
+      "Ad campaign management",
+      "Content creation",
+      "Social media management",
+      "Performance analytics"
+    ]
+  },
+  {
+    "id": "visa-mastercard-certification",
+    "icon": "fas fa-credit-card",
+    "title": "Visa & MasterCard Certification",
+    "description": "Supporting financial institutions to launch certified payment solutions.",
+    "detailedDescription": "We help financial institutions build and launch payment systems that meet Visa and MasterCard global standards through compliance support, integration, and certification preparation.",
+    "features": [
+      "Compliance Support",
+      "Integration Guidance",
+      "Certification Preparation"
+    ],
+    "technologies": [
+      "Payment Switches",
+      "Card Processing Systems",
+      "ISO Standards"
+    ],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "Certification readiness assessment",
+      "Integration support",
+      "Compliance documentation",
+      "Testing support",
+      "System optimization",
+      "Technical guidance"
+    ]
+  },
+  {
+    "id": "core-banking-consultancy",
+    "icon": "fas fa-vault",
+    "title": "Core Banking Implementation Consultancy",
+    "description": "Expert consultancy for deploying and maintaining core banking systems.",
+    "detailedDescription": "Our team has over a decade of experience in deploying and maintaining Flexcube core banking systems. We support banks through implementation, integration, and optimization processes.",
+    "features": [
+      "Flexcube Expertise",
+      "System Deployment",
+      "Integration Support"
+    ],
+    "technologies": [
+      "Oracle FLEXCUBE",
+      "Banking APIs",
+      "Regulatory Frameworks"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Core banking system setup",
+      "Implementation planning",
+      "Integration services",
+      "System optimization",
+      "Staff training",
+      "Ongoing support"
+    ]
+  },
+  {
+    "id": "atm-pos-switch-implementation",
+    "icon": "fas fa-network-wired",
+    "title": "ATM & POS Switch Implementation",
+    "description": "ATM and POS switch implementation including mobile money integration.",
+    "detailedDescription": "We implement ATM and POS switch systems that connect financial institutions, ATMs, POS devices, and mobile money platforms for seamless transaction processing.",
+    "features": [
+      "ATM Switch Setup",
+      "POS Network Integration",
+      "Mobile Money Integration"
+    ],
+    "technologies": [
+      "Switch Platforms",
+      "Payment Networks",
+      "Mobile Money APIs"
+    ],
+    "gradientFrom": "from-primary-custom",
+    "gradientTo": "to-accent-custom",
+    "deliverables": [
+      "ATM switch implementation",
+      "POS switch integration",
+      "Mobile money connectivity",
+      "Transaction routing setup",
+      "System testing",
+      "Technical support"
     ]
   }
 ]

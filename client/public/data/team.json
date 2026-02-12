@@ -6,12 +6,29 @@
     "bio": "Visionary leader with 15+ years in tech. Former Head - Core Banking and Enterprise Applications at Zanaco, passionate about building solutions that make a difference.",
     "longBio": "Ackim is a visionary leader who founded iZyane with the mission to democratize technology and make it accessible to businesses of all sizes. With over 15 years of experience in the technology industry, he previously served as Vice President of Product at Google, where he led teams responsible for developing cutting-edge consumer and enterprise solutions. Ackim holds an MBA from Stanford and a Computer Science degree from MIT. He's passionate about mentoring the next generation of tech leaders and believes that technology should be a force for positive change in the world.",
     "image": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    "expertise": ["Strategy", "Leadership", "Product Vision"],
-    "skills": ["Strategic Planning", "Team Leadership", "Product Management", "Business Development", "Public Speaking"],
-    "education": ["MBA - Stanford University", "B.S. Computer Science - MIT"],
+    "expertise": [
+      "Strategy",
+      "Leadership",
+      "Product Vision"
+    ],
+    "skills": [
+      "Strategic Planning",
+      "Team Leadership",
+      "Product Management",
+      "Business Development",
+      "Public Speaking"
+    ],
+    "education": [
+      "MBA - Stanford University",
+      "B.S. Computer Science - MIT"
+    ],
     "experience": "15+ years",
     "location": "Lusaka, Zambia",
-    "languages": ["English", "Spanish", "French"],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
     "social": {
       "linkedin": "#",
       "twitter": "#",
@@ -31,12 +48,28 @@
     "bio": "Operational excellence leader with expertise in business strategy, process optimization, and organizational development. Scaling operations for high-growth companies.",
     "longBio": "Mirriam brings deep operational expertise and strategic leadership to iZyane. As our Chief Operating Officer, she oversees all operational aspects of the business and ensures efficient execution of company strategy. Previously, she was VP of Operations at a Fortune 500 company and led organizational transformation initiatives at Microsoft. Mirriam specializes in scaling operations, building efficient processes, and developing high-performing teams. She holds an MBA in Operations Management from Wharton and is passionate about operational excellence.",
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQFs6a2eWEIocQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1633117468322?e=1755734400&v=beta&t=2vNZeEUhz_USIdFGEjNDpYeCnNTPE8PSodXIb1-82IA",
-    "expertise": ["Operations Management", "Business Strategy"],
-    "skills": ["Strategic Planning", "Process Improvement", "Team Management", "Financial Analysis", "Project Management"],
-    "education": ["MBA Operations Management - Wharton", "B.S. Business Administration - University of Zambia"],
+    "expertise": [
+      "Operations Management",
+      "Business Strategy"
+    ],
+    "skills": [
+      "Strategic Planning",
+      "Process Improvement",
+      "Team Management",
+      "Financial Analysis",
+      "Project Management"
+    ],
+    "education": [
+      "MBA Operations Management - Wharton",
+      "B.S. Business Administration - University of Zambia"
+    ],
     "experience": "12+ years",
     "location": "Lusaka, Zambia",
-    "languages": ["English", "Mandarin", "Japanese"],
+    "languages": [
+      "English",
+      "Mandarin",
+      "Japanese"
+    ],
     "social": {
       "linkedin": "#",
       "github": "#",
@@ -51,121 +84,87 @@
   },
   {
     "id": 3,
-    "name": "Chiselwa Mwansompelo",
-    "role": "Accountant",
-    "bio": "Certified public accountant with expertise in financial reporting, tax compliance, and business analytics. Ensuring financial accuracy and regulatory compliance.",
-    "longBio": "Chiselwa is our dedicated accountant who ensures financial accuracy and compliance across all business operations. With over 8 years of experience in accounting and financial management, she brings expertise in financial reporting, tax compliance, and budgeting. Previously, she worked at PwC as a senior auditor and later managed financial operations at a growing tech startup. Chiselwa is passionate about leveraging technology to streamline financial processes and provide actionable business insights through data analysis.",
-    "image": "https://media.licdn.com/dms/image/v2/C5603AQEHQJus5fan7Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1638091906658?e=1755734400&v=beta&t=nF8dw4G3K-NPaPKeV8rL3SLBnUx54CRJXssj7phg4zk",
-    "expertise": ["Financial Reporting", "Tax Compliance", "Financial Analysis"],
-    "skills": ["QuickBooks", "Excel", "Financial Modeling", "Tax Preparation", "Budget Management", "Audit Compliance"],
-    "education": ["B.S. Accounting - University of Zambia", "CPA Certification"],
+    "name": "Zawadi Kayoka",
+    "role": "Manager Tech-Ops",
+    "bio": "Manager Tech-Ops at iZyane InovSolutions with strong expertise in IT project management, UX/UI, POS systems, payment solutions, wallet management, and business analysis.",
+    "longBio": "Zawadi Kayoka is a results-driven technology operations leader at iZyane InovSolutions, specializing in IT project management, UX/UI design, POS management, and digital payment ecosystems. She has extensive experience supporting payment solutions, wallet platforms, and merchant & agency banking operations. Zawadi is also skilled in reconciliation processes, ERP systems, and TDR training, helping organizations streamline operations and improve service delivery. Her work focuses on aligning technology with business needs, optimizing operational efficiency, and supporting scalable fintech solutions.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHsjYn5NF1FQQ/profile-displayphoto-scale_200_200/B4DZgeJfwVHsAY-/0/1752852478363?e=1772064000&v=beta&t=ZvS-a0Rq_at_xDa-d83qZzNGI94u_M1B8DZyBOI8Nxc",
+    "expertise": [
+      "IT Project Management",
+      "Payment Solutions",
+      "POS Management",
+      "Wallet Management",
+      "Business Analysis",
+      "ERP Systems",
+      "Merchant & Agency Banking Support"
+    ],
+    "skills": [
+      "Project Coordination",
+      "UX/UI",
+      "Reconciliation (Recon)",
+      "ERP Implementation",
+      "TDR Training",
+      "Operations Management",
+      "Stakeholder Management",
+      "Process Optimization"
+    ],
+    "education": [
+      "Bachelor of ICT - Mulungushi University"
+    ],
     "experience": "8+ years",
     "location": "Lusaka, Zambia",
-    "languages": ["English", "Spanish", "Portuguese"],
+    "languages": [
+      "English"
+    ],
     "social": {
-      "linkedin": "#",
-      "twitter": "#",
-      "email": "emily@izyane.com"
+      "linkedin": "https://www.linkedin.com/in/zawadi-kayoka-811090106/",
+      "github": "www.github.com/@Zawadi15",
+      "email": "zawadi.kayoka@izyane.com"
     },
     "achievements": [
-      "Managed financial operations for $10M+ revenue company",
-      "Streamlined accounting processes reducing errors by 95%",
-      "Led successful financial audits with zero findings",
-      "Implemented automated reporting systems"
+      "Led deployment of POS and payment solutions across multiple merchants",
+      "Supported rollout of wallet and digital payment platforms",
+      "Delivered ERP support and operational optimization initiatives",
+      "Provided TDR training and merchant onboarding support"
     ]
   },
   {
     "id": 4,
-    "name": "Zawadi Kayoka",
-    "role": "Technical Lead",
-    "bio": "Full-stack developer with expertise in React, Node.js, and cloud technologies. Leading technical architecture and mentoring development teams.",
-    "longBio": "Zawadi is a passionate technical leader who brings expertise in building scalable web applications and leading development teams. With 8 years of experience at leading fintech and e-commerce companies, she has a deep understanding of building systems that handle millions of users. At Stripe, she worked on payment processing infrastructure, and at Shopify, she led the development of merchant-facing tools. Zawadi is known for her attention to detail, clean code practices, and ability to mentor junior developers while driving technical excellence.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHsjYn5NF1FQQ/profile-displayphoto-scale_400_400/B4DZgeJfwVHsAg-/0/1752852478363?e=1755734400&v=beta&t=5NBB7KlwNUnyFDQ6kWUqcIOtrNW7Ldcdw-dpM-gx3LM",
-    "expertise": ["Full-Stack Development", "Technical Leadership", "System Architecture"],
-    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "PostgreSQL", "AWS", "Team Leadership"],
-    "education": ["B.S. Software Engineering - University of Zambia"],
-    "experience": "8+ years",
-    "location": "Lusaka, Zambia",
-    "languages": ["English", "Korean"],
-    "social": {
-      "linkedin": "#",
-      "github": "#",
-      "email": "zawadi@izyane.com"
-    },
-    "achievements": [
-      "Built payment system handling $10B+ annually",
-      "Open source contributor (React ecosystem)",
-      "Tech lead for team of 12 developers",
-      "Certified AWS Solutions Architect"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Niza Tembo",
-    "role": "Technical Lead - Engineering",
-    "bio": "Engineering leader with expertise in software architecture, team management, and scalable system design. Building robust engineering processes and culture.",
-    "longBio": "Niza is an experienced engineering leader who drives technical excellence and team development at iZyane. With a strong background in software engineering and team leadership, she specializes in building scalable systems and establishing engineering best practices. Previously, she led engineering teams at Microsoft and worked on large-scale distributed systems. Niza is passionate about mentoring engineers, implementing agile methodologies, and ensuring code quality while fostering a collaborative engineering culture.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQH9a0ckhc9ukg/profile-displayphoto-shrink_800_800/B4DZPygh2THcAg-/0/1734940434710?e=1755734400&v=beta&t=Hduc_Ven71v1PRRrDAsM2dGJYLg3-2rviL45wlgP2R4",
-    "expertise": ["Engineering Leadership", "Software Architecture", "Team Management"],
-    "skills": ["System Design", "Agile Methodologies", "Code Review", "CI/CD", "Team Leadership", "Technical Strategy"],
-    "education": ["M.S. Computer Science - University of Zambia", "B.S. Software Engineering"],
-    "experience": "10+ years",
-    "location": "Lusaka, Zambia",
-    "languages": ["English", "Mandarin", "German"],
-    "social": {
-      "linkedin": "#",
-      "github": "#",
-      "email": "niza@izyane.com"
-    },
-    "achievements": [
-      "Led engineering team through 200% growth",
-      "Reduced deployment failures by 85%",
-      "Implemented engineering best practices across 5 teams",
-      "Mentored 15+ engineers to senior positions"
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Mwangilwa Zimba",
-    "role": "Lead Frontend Engineer",
-    "bio": "Frontend specialist with expertise in React, Vue.js, and modern web technologies. Creating exceptional user interfaces and leading frontend architecture.",
-    "longBio": "Mwangilwa is our lead frontend engineer who creates beautiful and performant user interfaces. With expertise in modern frontend frameworks and user experience design, he leads the development of responsive, accessible web applications. Previously, he worked at leading tech companies building consumer-facing applications used by millions. Mwangilwa is passionate about clean code, performance optimization, and staying current with the latest frontend technologies and best practices.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQF1hFM07l9dPQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732390182517?e=1755734400&v=beta&t=iQz1pI4cGjmgwA8QS-32CWHy-J7KZRQF2j5ukipHi-A",
-    "expertise": ["Frontend Development", "React", "Vue.js"],
-    "skills": ["JavaScript", "TypeScript", "React", "Vue.js", "CSS", "HTML", "Webpack", "Performance Optimization"],
-    "education": ["B.S. Computer Science - University of Zambia"],
-    "experience": "7+ years",
-    "location": "Lusaka, Zambia",
-    "languages": ["English", "Spanish"],
-    "social": {
-      "linkedin": "#",
-      "github": "#",
-      "email": "mwangi@izyane.com"
-    },
-    "achievements": [
-      "Built responsive web apps used by 1M+ users",
-      "Improved frontend performance by 60%",
-      "Led frontend architecture for 3 major products",
-      "Speaker at Frontend Development Conference"
-    ]
-  },
-  {
-    "id": 7,
     "name": "Emmanuel Tembo",
-    "role": "Senior Software Engineer",
+    "role": "Manager Development & Research",
     "bio": "Senior software engineer with expertise in backend development, API design, and database optimization. Building scalable and maintainable software solutions.",
     "longBio": "Emmanuel is a skilled senior software engineer who specializes in backend development and system architecture. With extensive experience in building robust APIs, optimizing database performance, and implementing scalable solutions, he ensures our applications perform efficiently under load. Previously, he worked on high-traffic systems at major tech companies. Emmanuel is passionate about clean architecture, test-driven development, and mentoring junior developers.",
     "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
-    "expertise": ["Backend Development", "API Design", "Database Optimization"],
-    "skills": ["Python", "Java", "PostgreSQL", "MongoDB", "REST APIs", "Microservices", "Unit Testing"],
-    "education": ["B.S. Computer Science - University of Zambia"],
+    "expertise": [
+      "Backend Development",
+      "API Design",
+      "Database Optimization",
+      "System Architecture",
+      "Scalable Solutions",
+      "Test-Driven Development"
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "PostgreSQL",
+      "MongoDB",
+      "REST APIs",
+      "Microservices",
+      "Unit Testing"
+    ],
+    "education": [
+      "B.S. Computer Science - University of Zambia"
+    ],
     "experience": "6+ years",
     "location": "Lusaka, Zambia",
-    "languages": ["English", "Spanish"],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
     "social": {
       "linkedin": "#",
       "github": "#",
-      "email": "e.t@izyane.com"
+      "email": "tembo.emmanuelt@izyane.com"
     },
     "achievements": [
       "Designed APIs handling 50M+ requests daily",
@@ -175,22 +174,216 @@
     ]
   },
   {
-    "id": 8,
-    "name": "Naphtali Phiri",
-    "role": "UI/UX Engineer",
-    "bio": "UI/UX engineer specializing in user interface design, user experience research, and frontend implementation. Creating intuitive and accessible digital experiences.",
-    "longBio": "Naphtali is a talented UI/UX engineer who bridges the gap between design and development. With expertise in user interface design, user experience research, and frontend implementation, he creates intuitive and visually appealing digital experiences. Naphtali specializes in design systems, accessibility standards, and translating design concepts into functional code. He's passionate about user-centered design and ensuring that technology is accessible to everyone.",
-    "image": "https://media.licdn.com/dms/image/v2/C4D03AQFEmxkPwlm2Xg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660512364991?e=1755734400&v=beta&t=z_IhQWqXth02Sfy4HJUdAXm2CfEBB55HPKF6izadFC8",
-    "expertise": ["UI/UX Design", "Frontend Development", "Design Systems"],
-    "skills": ["Figma", "Adobe Creative Suite", "HTML", "CSS", "JavaScript", "React", "User Research", "Prototyping"],
-    "education": ["B.A. Graphic Design - University of Zambia", "UX Design Certification"],
-    "experience": "5+ years",
+    "id": 5,
+    "name": "Nandiwe Mwewa",
+    "role": "Accounts and Admin",
+    "bio": "Accounts and administrative professional supporting financial operations, record keeping, and office management to ensure smooth daily business activities.",
+    "longBio": "Nandiwe is a dedicated Accounts and Administrative professional who plays a key role in supporting the organization's financial and office operations. She assists with financial record keeping, administrative coordination, and ensuring that daily processes run efficiently. With strong attention to detail and organizational skills, Nandiwe contributes to maintaining accurate documentation, supporting team activities, and ensuring a well-structured working environment.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHZ7X2zwiDFug/profile-displayphoto-scale_200_200/B4EZmvVClCKsAY-/0/1759583157604?e=1772668800&v=beta&t=eUu8MmzzI-anbTjJLEFQeJhHUSIDK8S0UfWWhKSOw_I",
+    "expertise": [
+      "Accounts Support",
+      "Office Administration",
+      "Financial Record Keeping"
+    ],
+    "skills": [
+      "Microsoft Excel",
+      "Data Entry",
+      "Document Management",
+      "Communication",
+      "Organization"
+    ],
+    "education": [
+      "The ZCAS University"
+    ],
+    "experience": "2 years",
     "location": "Lusaka, Zambia",
-    "languages": ["English", "Spanish"],
+    "languages": [
+      "English",
+      "Nyanja"
+    ],
     "social": {
       "linkedin": "#",
-      "github": "#",
-      "email": "naph@izyane.com"
+      "github": "https://github.com/nandiwemwewa-cmyk",
+      "email": "nandiwe.mwewa@izyane.com"
+    },
+    "achievements": [
+      "Maintained accurate financial and administrative records",
+      "Improved office documentation and filing processes",
+      "Supported daily accounting and administrative operations",
+      "Assisted in streamlining internal administrative workflows"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Niza Tembo",
+    "role": "Senior Software Engineer",
+    "bio": "Senior Software Engineer and IT Specialist at iZyane InovSolutions with expertise in scalable systems, API development, data analysis, and fintech solutions.",
+    "longBio": "Niza Tembo is a Senior Software Engineer and IT Specialist at iZyane InovSolutions, specializing in building scalable systems, designing robust APIs, and analyzing data to drive business insights. With extensive experience in Python, Java, and PHP, Niza contributes to fintech innovation and global technology projects. She combines software engineering skills with IT strategy to optimize processes and deliver high-quality solutions that support enterprise and digital payment systems.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQH9a0ckhc9ukg/profile-displayphoto-shrink_200_200/B4DZPygh2THcAc-/0/1734940434707?e=1772064000&v=beta&t=g_9iEw2iEz3gj4bNssZz4sbqovRcYGUap_eAGiq0ZT4",
+    "expertise": [
+      "Software Engineering",
+      "Scalable Systems",
+      "API Development",
+      "Data Analysis",
+      "Fintech Solutions",
+      "IT Strategy"
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "PHP",
+      "Data Analysis",
+      "System Architecture",
+      "API Design",
+      "Problem Solving",
+      "Fintech Platforms"
+    ],
+    "education": [
+      "NCC Education"
+    ],
+    "experience": "5+ years",
+    "location": "Lusaka Province, Zambia",
+    "languages": [
+      "English",
+      "Bemba"
+    ],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/niza-tembo-508716140/",
+      "github": "https://github.com/Mcwayz",
+      "email": "niza.tembo@izyane.com"
+    },
+    "achievements": [
+      "Designed and implemented scalable APIs for fintech platforms",
+      "Led data analysis projects to optimize business processes",
+      "Developed multi-language applications in Python, Java, and PHP",
+      "Contributed to global technology innovation initiatives"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Mwangilwa Zimba",
+    "role": "Senior Software Engineer",
+    "bio": "Software Engineer at iZyane InovSolutions specializing in frontend and Android development, with expertise as a Google Cloud Architect.",
+    "longBio": "Mwangilwa Zimba is a Software Engineer at iZyane InovSolutions, focusing on frontend and Android development while leveraging Google Cloud for scalable application deployment. He is skilled in building responsive, high-performance web and mobile applications and designing cloud-based architectures. With years of experience in modern frontend frameworks and mobile platforms, Mwangilwa contributes to fintech and enterprise solutions, ensuring robust, user-friendly applications that scale globally.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQF1hFM07l9dPQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732390182499?e=1772064000&v=beta&t=Tpl4Q2-SuY8Nl_yI8ZYjqBH-R8XMY_tLqG31xkxx1rE",
+    "expertise": [
+      "Frontend Development",
+      "Android Development",
+      "Google Cloud Architecture",
+      "Responsive Web Apps",
+      "API Integration"
+    ],
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Vue.js",
+      "Android (Java/Kotlin)",
+      "CSS",
+      "HTML",
+      "Cloud Deployment",
+      "Performance Optimization"
+    ],
+    "education": [
+      "African Leadership Experience"
+    ],
+    "experience": "7+ years",
+    "location": "Lusaka, Lusaka Province, Zambia",
+    "languages": [
+      "English"
+    ],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/mwan9ilwa/",
+      "github": "https://github.com/mwan9ilwa",
+      "email": "mwangilwa.zimba@izyane.com"
+    },
+    "achievements": [
+      "Built responsive web apps used by 1M+ users",
+      "Improved frontend performance by 60%",
+      "Led frontend and Android architecture for multiple products",
+      "Deployed scalable applications on Google Cloud"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Gerald Limbando",
+    "role": "Software Engineer",
+    "bio": "Software developer with expertise in full-stack development, mobile applications, and modern web technologies. Building innovative solutions with clean, maintainable code.",
+    "longBio": "Gerald is a dedicated software developer who brings enthusiasm and technical skills to our development team. With experience in both web and mobile application development, he contributes to building user-friendly applications using modern technologies. Gerald is passionate about learning new technologies, writing clean code, and collaborating with team members to deliver high-quality software solutions. He's always eager to take on new challenges and grow his technical expertise.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEvG1yGjApnhw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707427019454?e=1772064000&v=beta&t=6eBJ3BjxFcsPz4GdBKNJb5dYcDS9e3i7WLaVIXVkpM0",
+    "expertise": [
+      "Frontend Development",
+      "API Integration",
+      "Software Development",
+      "Mobile & Web Development"
+      
+    ],
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Flutter",
+      "React Native",
+      "Node.js",
+      "Git",
+      "Problem Solving"
+    ],
+    "education": [
+      "Bachelor of ICT - Chalimbana University"
+    ],
+    "experience": "3+ years",
+    "location": "Lusaka, Zambia",
+    "languages": [
+      "English",
+      "Nyanja"
+    ],
+    "social": {
+      "linkedin": "www.linkedin.com/in/geraldlimbando",
+      "github": "www.github.com/Gerald-87",
+      "email": "gerald.limbando@izyane.com"
+    },
+    "achievements": [
+      "Developed 5+ mobile applications with 4.5+ star ratings",
+      "Contributed to open source projects with 100+ stars",
+      "Reduced app crashes by 80% through testing improvements",
+      "Completed advanced React Native certification"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Naphtali Phiri",
+    "role": "Software Engineer",
+    "bio": "UI/UX engineer specializing in user interface design, user experience research, and frontend implementation. Creating intuitive and accessible digital experiences.",
+    "longBio": "Naphtali is a talented UI/UX engineer who bridges the gap between design and development. With expertise in user interface design, user experience research, and frontend implementation, he creates intuitive and visually appealing digital experiences. Naphtali specializes in design systems, accessibility standards, and translating design concepts into functional code. He's passionate about user-centered design and ensuring that technology is accessible to everyone.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGqSqLHqngg8A/profile-displayphoto-scale_200_200/B4DZwMCbazGQAY-/0/1769728493035?e=1772064000&v=beta&t=ZTB_PhRow9xlEC4Kfpzy9X04SMxlpQK2eR0nXZgON9M",
+    "expertise": [
+      "UI/UX Design",
+      "Frontend Development",
+      "Design Systems"
+    ],
+    "skills": [
+      "Figma",
+      "Adobe Creative Suite",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "User Research",
+      "Prototyping"
+    ],
+    "education": [
+      "Bachelor of ICT - Mulungushi University"
+    ],
+    "experience": "5+ years",
+    "location": "Lusaka, Zambia",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/naphtali-phiri-123456789/",
+      "github": "https://github.com/NaphPhiri",
+      "email": "naphtali.phiri@izyane.com"
     },
     "achievements": [
       "Designed user interfaces for 10+ web applications",
@@ -200,28 +393,174 @@
     ]
   },
   {
-    "id": 9,
-    "name": "Kasweka Michael Mukoko",
-    "role": "Software Developer",
-    "bio": "Software developer with expertise in full-stack development, mobile applications, and modern web technologies. Building innovative solutions with clean, maintainable code.",
-    "longBio": "Kasweka is a dedicated software developer who brings enthusiasm and technical skills to our development team. With experience in both web and mobile application development, he contributes to building user-friendly applications using modern technologies. Kasweka is passionate about learning new technologies, writing clean code, and collaborating with team members to deliver high-quality software solutions. He's always eager to take on new challenges and grow his technical expertise.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHNENEj4wgpdw/profile-displayphoto-shrink_800_800/B4DZaNFi25H0Ac-/0/1746123764461?e=1755734400&v=beta&t=WXcEtNGUQEB4L-g6htLFe5MYs-tFehkU3zqKuWwuJR0",
-    "expertise": ["Software Development", "Web Development", "Mobile Development"],
-    "skills": ["JavaScript", "Python", "React", "React Native", "Node.js", "Git", "Problem Solving"],
-    "education": ["B.S. Computer Science - University of Zambia"],
+    "id": 10,
+    "name": "Timothy Simwawa",
+    "role": "Software Engineer",
+    "bio": "Software Engineer at iZyane InovSolutions specializing in DevOps, backend development, and modern web technologies including Django, Flask, Spring Boot, and Next.js.",
+    "longBio": "Timothy Simwawa is a Software Engineer at iZyane InovSolutions with a strong focus on backend systems, DevOps practices, and scalable web application development. He has hands-on experience building and deploying applications using Django, Flask, Spring Boot, and Next.js. Timothy is passionate about automation, system reliability, and creating efficient software solutions that support business growth. He continuously improves his skills in cloud infrastructure, CI/CD pipelines, and modern development frameworks while contributing to innovative fintech and enterprise projects.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGlMplYONo4MA/profile-displayphoto-shrink_200_200/B4DZZsbaqSGcAc-/0/1745575849952?e=1772064000&v=beta&t=_tYaf6jMhsQBGeg5wOpLmBAU_RZeMy_gf9ocWmCsPEE",
+    "expertise": [
+      "Backend Development",
+      "DevOps",
+      "Web Application Development",
+      "API Development"
+    ],
+    "skills": [
+      "Python",
+      "Django",
+      "Flask",
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "DevOps",
+      "Git",
+      "CI/CD"
+    ],
+    "education": [
+      " B.S  SOFTWARE ENGINEERING - Zambia University of Technology"
+    ],
     "experience": "3+ years",
     "location": "Lusaka, Zambia",
-    "languages": ["English", "Spanish"],
+    "languages": [
+      "English",
+      "Bemba"
+    ],
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "email": "kasweka@izyane.com"
+      "linkedin": "https://www.linkedin.com/in/timothy-simwawa-3a6bb1339/",
+      "github": "https://github.com/ComputeAce",
+      "email": "timothy.simwawa@izyane.com"
     },
     "achievements": [
-      "Developed 5+ mobile applications with 4.5+ star ratings",
-      "Contributed to open source projects with 100+ stars",
-      "Reduced app crashes by 80% through testing improvements",
-      "Completed advanced React Native certification"
+      "Built and deployed scalable backend services using Django and Flask",
+      "Implemented DevOps workflows and CI/CD pipelines",
+      "Contributed to enterprise and fintech system development",
+      "Active contributor on GitHub with multiple technical projects"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Simon Sichilima",
+    "role": "Software Developer",
+    "bio": "Software Developer at iZyane InovSolutions with expertise in full-stack development, IT support, system administration, graphics design, and content management.",
+    "longBio": "Simon Sichilima is a versatile Software Developer at iZyane InovSolutions, specializing in full-stack development, IT support, system administration, and content management. He combines programming skills with graphics design and user experience insights to deliver robust web and mobile applications. Simon is experienced in managing servers, deploying applications, and maintaining systems while continuously improving his technical knowledge and contributing to team projects.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHzua33emlBTg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700900317637?e=1772064000&v=beta&t=4LUJEPcImSfwtD_m8s3mnO8RtFDjUf4DcSxh4kYftLQ",
+    "expertise": [
+      "Full-Stack Development",
+      "Web Development",
+      "Mobile Development",
+      "System Administration",
+      "Graphics Design",
+      "Content Management",
+      "IT Support"
+    ],
+    "skills": [
+      "JavaScript",
+      "Python",
+      "React",
+      "React Native",
+      "Node.js",
+      "PHP",
+      "Git",
+      "Linux/Windows Server Administration",
+      "Problem Solving",
+      "UI/UX Design"
+    ],
+    "education": [
+      " B.S  SOFTWARE ENGINEERING - Zambia University of Technology"
+    ],
+    "experience": "3+ years",
+    "location": "Lusaka, Zambia",
+    "languages": [
+      "English"
+    ],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/simon-sichilima-8038b7207/",
+      "github": "https://github.com/Simonsichi",
+      "email": "simon@izyane.com"
+    },
+    "achievements": [
+      "Developed multiple web and mobile applications used in fintech solutions",
+      "Implemented system administration best practices for reliable deployments",
+      "Contributed to open source projects and internal tools",
+      "Designed user interfaces and graphics for web and mobile apps"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Joshua Simfukwe",
+    "role": "IT Analyst",
+    "bio": "IT Analyst at iZyane InovSolutions & Payments, specializing in IT systems analysis, troubleshooting, and optimizing business technology solutions.",
+    "longBio": "Joshua Simfukwe is an IT Analyst at iZyane InovSolutions & Payments, focusing on analyzing IT systems, improving operational efficiency, and supporting business technology initiatives. He assists in system troubleshooting, data management, and ensures smooth IT operations across the organization. Joshua is committed to delivering effective IT solutions that enhance productivity and reliability.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQGbb5Im4fzKlA/profile-displayphoto-scale_200_200/B4EZntvcIwIoAY-/0/1760630262830?e=1772064000&v=beta&t=ACm9msMs8DEgk1octNBTLrry5_j2Cd4n-uFbtRgL268",
+    "expertise": [
+      "IT Systems Analysis",
+      "Troubleshooting",
+      "Business Technology Optimization",
+      "IT Support"
+    ],
+    "skills": [
+      "System Analysis",
+      "Problem Solving",
+      "Data Management",
+      "Technical Support",
+      "Documentation"
+    ],
+    "education": [
+      " B.S  SOFTWARE ENGINEERING - University of Zambia"
+    ],
+    "experience": "3+ years",
+    "location": "Lusaka, Lusaka Province, Zambia",
+    "languages": [
+      "English"
+    ],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/joshua-simfukwe-45519238b/",
+      "github": "#",
+      "email": "joshua.simfukwe@izyane.com"
+    },
+    "achievements": [
+      "Improved system efficiency through analysis and optimization",
+      "Supported deployment of IT solutions across teams",
+      "Documented IT processes for smoother operations"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Kausa Zimba",
+    "role": "IT Analyst",
+    "bio": "IT Analyst at iZyane InovSolutions & Payments, specializing in IT systems analysis, troubleshooting, and optimizing business technology solutions.",
+    "longBio": "Joshua Simfukwe is an IT Analyst at iZyane InovSolutions & Payments, focusing on analyzing IT systems, improving operational efficiency, and supporting business technology initiatives. He assists in system troubleshooting, data management, and ensures smooth IT operations across the organization. Joshua is committed to delivering effective IT solutions that enhance productivity and reliability.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEib74j-BlvUg/profile-displayphoto-scale_200_200/B4EZxRAQITLEAY-/0/1770885547594?e=1772668800&v=beta&t=aNx8l0v3vmeRCqrDFwGb0-NfhL_7WohGDJPw24Q11C8",
+    "expertise": [
+      "IT Systems Analysis",
+      "Troubleshooting",
+      "Business Technology Optimization",
+      "IT Support"
+    ],
+    "skills": [
+      "System Analysis",
+      "Problem Solving",
+      "Data Management",
+      "Technical Support",
+      "Documentation"
+    ],
+    "education": [
+      " B.S  SOFTWARE ENGINEERING - University of Zambia"
+    ],
+    "experience": "3+ years",
+    "location": "Lusaka, Lusaka Province, Zambia",
+    "languages": [
+      "English"
+    ],
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/kausa-zimba-45519238b/",
+      "github": "#",
+      "email": "kausa.zimba@izyane.com"
+    },
+    "achievements": [
+      "Improved system efficiency through analysis and optimization",
+      "Supported deployment of IT solutions across teams",
+      "Documented IT processes for smoother operations"
     ]
   }
 ]

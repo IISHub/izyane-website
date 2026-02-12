@@ -12,7 +12,7 @@
       "Business intelligence and reporting",
       "Multi-location support"
     ],
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=80",
+    "image": "/img/vision.png",
     "category": "Featured Product",
     "categoryIcon": "fas fa-star",
     "primaryColor": "primary-custom",
@@ -25,30 +25,31 @@
     }
   },
   {
-    "id": "eticketing-system",
-    "name": "eTicketing System",
-    "description": "Modern digital ticketing platform for events, transportation, and venues with real-time booking, payment processing, and comprehensive analytics.",
-    "shortDescription": "Complete digital ticketing solution for events and venues",
-    "features": [
-      "Online ticket booking and sales",
-      "Real-time seat selection",
-      "Multiple payment gateways",
-      "QR code ticket validation",
-      "Event management dashboard",
-      "Customer analytics and reporting"
-    ],
-    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=80",
-    "category": "Event Management",
-    "categoryIcon": "fas fa-ticket-alt",
-    "primaryColor": "accent-custom",
-    "isFeatured": true,
-    "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
-    "pricing": {
-      "starter": "Custom Quote",
-      "professional": "Custom Quote",
-      "enterprise": "Custom Quote"
-    }
-  },
+  "id": "eticketing-system",
+  "name": "eTicketing System",
+  "description": "Modern digital ticketing platform for events, transportation, and venues with real-time booking, payment processing, and comprehensive analytics.",
+  "shortDescription": "Complete digital ticketing solution for events and venues",
+  "features": [
+    "Online ticket booking and sales",
+    "Real-time seat selection",
+    "Multiple payment gateways",
+    "QR code ticket validation",
+    "Event management dashboard",
+    "Customer analytics and reporting"
+  ],
+  "image": "/img/e-ticket.jpg",
+  "category": "Event Management",
+  "categoryIcon": "fas fa-ticket-alt",
+  "primaryColor": "accent-custom",
+  "isFeatured": true,
+  "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
+  "pricing": {
+    "starter": "Custom Quote",
+    "professional": "Custom Quote",
+    "enterprise": "Custom Quote"
+  }
+}
+,
   {
     "id": "smart-pos",
     "name": "Smart POS",
@@ -62,7 +63,7 @@
       "Customer management",
       "Multi-location support"
     ],
-    "image": "/img/pos1.jpg",
+    "image": "/img/pos2.jpg",
     "category": "Retail Technology",
     "categoryIcon": "fas fa-cash-register",
     "primaryColor": "blue-600",
@@ -87,12 +88,37 @@
       "Learning and adaptation capabilities",
       "Analytics and performance tracking"
     ],
-    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=80",
+    "image": "/img/vision.png",
     "category": "Artificial Intelligence",
     "categoryIcon": "fas fa-robot",
     "primaryColor": "purple-600",
     "isFeatured": false,
     "technologies": ["Python", "TensorFlow", "OpenAI", "React"],
+    "pricing": {
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
+    }
+  },
+  {
+    "id": "online-onboarding",
+    "name": "Online Onboarding",
+    "description": "Advanced digital onboarding platform that enables organizations to register, verify, and onboard customers or employees seamlessly through secure online portals.",
+    "shortDescription": "Smart digital onboarding and verification system",
+    "features": [
+      "Online user registration and account setup",
+      "Secure document upload and verification",
+      "KYC and identity validation integration",
+      "Automated approval workflows",
+      "Real-time onboarding status tracking",
+      "Integration with enterprise systems"
+    ],
+      "image": "/img/onboarding.jpg",
+    "category": "Digital Solutions",
+    "categoryIcon": "fas fa-user-check",
+    "primaryColor": "purple-600",
+    "isFeatured": false,
+    "technologies": ["React", "Node.js", "MongoDB", "REST APIs"],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",
