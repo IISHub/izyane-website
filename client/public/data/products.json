@@ -1,7 +1,7 @@
 [
   {
-    "id": "izyane-erp",
-    "name": "iZyane ERP",
+    "id": "Enterprise-Resource-Planning(ERP)",
+    "name": "Enterprise Resource Planning",
     "description": "Comprehensive Enterprise Resource Planning solution designed to streamline business operations, manage resources, and improve organizational efficiency across all departments.",
     "shortDescription": "Complete ERP solution for modern businesses",
     "features": [
@@ -42,11 +42,9 @@
     "Event management dashboard",
     "Customer analytics and reporting"
   ],
-  "image": "/img/e-ticket.jpg",
+  "image": "/img/ACSZ.png",
   "images": [
-    "/img/banner1.png",
-    "/img/banner2.png",
-    "/img/banner3.png"
+    "/img/ACSZ.png"
   ],
   "category": "Event Management",
   "categoryIcon": "fas fa-ticket-alt",
@@ -89,8 +87,8 @@
     }
   },
   {
-    "id": "ai-recon",
-    "name": "AI Recon",
+    "id": "Automated-Reconciliation",
+    "name": "Automated Reconciliation",
     "description": "Advanced AI-powered reconciliation system that automates data matching, identifies discrepancies, and provides intelligent financial reconciliation across multiple accounts and platforms.",
     "shortDescription": "Intelligent AI reconciliation for financial data automation",
     "features": [
@@ -103,8 +101,6 @@
     ],
     "image": "/img/Recon3.png",
     "images": [
-      "/img/Recon.png",
-      "/img/Recon2.png",
       "/img/Recon3.png"
     ],
     "category": "Artificial Intelligence",
