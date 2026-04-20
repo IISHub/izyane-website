@@ -39,7 +39,7 @@
     "name": "Mirriam Mwale",
     "role": "COO",
     "longBio": "Mirriam brings deep operational expertise and strategic leadership to iZyane. As our Chief Operating Officer, she oversees all operational aspects of the business and ensures efficient execution of company strategy. Previously, she was VP of Operations at a Fortune 500 company and led organizational transformation initiatives at Microsoft. Mirriam specializes in scaling operations, building efficient processes, and developing high-performing teams. She holds an MBA in Operations Management from Wharton and is passionate about operational excellence.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQFs6a2eWEIocQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1633117468322?e=1755734400&v=beta&t=2vNZeEUhz_USIdFGEjNDpYeCnNTPE8PSodXIb1-82IA",
+    "image": "/img/mirriam.jpg",
     "skills": [
       "Strategic Planning",
       "Process Improvement",
@@ -74,7 +74,7 @@
     "name": "Zawadi Kayoka",
     "role": "Manager Tech-Ops",
     "longBio": "Zawadi Kayoka is a results-driven technology operations leader at iZyane InovSolutions, specializing in IT project management, UX/UI design, POS management, and digital payment ecosystems. She has extensive experience supporting payment solutions, wallet platforms, and merchant & agency banking operations. Zawadi is also skilled in reconciliation processes, ERP systems, and TDR training, helping organizations streamline operations and improve service delivery. Her work focuses on aligning technology with business needs, optimizing operational efficiency, and supporting scalable fintech solutions.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHsjYn5NF1FQQ/profile-displayphoto-scale_200_200/B4DZgeJfwVHsAY-/0/1752852478363?e=1778112000&v=beta&t=OXQ29GCMakgLQ44pquuG_y48RXZ5PLYGVa_wB_b2lrU",
+    "image": "/img/zawadi.jpg",
     "skills": [
       "Project Coordination",
       "UX/UI",
@@ -144,7 +144,7 @@
     "name": "Nandiwe Mwewa",
     "role": "Accounts and Admin",
     "longBio": "Nandiwe is a dedicated Accounts and Administrative professional who plays a key role in supporting the organization's financial and office operations. She assists with financial record keeping, administrative coordination, and ensuring that daily processes run efficiently. With strong attention to detail and organizational skills, Nandiwe contributes to maintaining accurate documentation, supporting team activities, and ensuring a well-structured working environment.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQFSm7H8WI0Kzw/profile-displayphoto-scale_200_200/B4DZ2m3ZR8JQAY-/0/1776621040999?e=1778112000&v=beta&t=1rE5pniOcbzWm_3SC0fln9pyK2vbE3V9XXxseBDQ4Jc",
+    "image": "/img/nandiwe.jpg",
     "skills": [
       "Microsoft Excel",
       "Data Entry",
@@ -177,7 +177,7 @@
     "name": "Niza Tembo",
     "role": "Senior Software Engineer",
     "longBio": "Niza Tembo is a Senior Software Engineer and IT Specialist at iZyane InovSolutions, specializing in building scalable systems, designing robust APIs, and analyzing data to drive business insights. With extensive experience in Python, Java, and PHP, Niza contributes to fintech innovation and global technology projects. She combines software engineering skills with IT strategy to optimize processes and deliver high-quality solutions that support enterprise and digital payment systems.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQH9a0ckhc9ukg/profile-displayphoto-shrink_400_400/B4DZPygh2THcAk-/0/1734940434707?e=1778112000&v=beta&t=5PBoOE27hnwTeUnT5a3lYx4DiAerAtNeZnC-xOjcieE",
+    "image": "/img/niza.jpg",
     "skills": [
       "Python",
       "Java",
@@ -249,7 +249,7 @@
     "name": "Gerald Limbando",
     "role": "Software Engineer",
     "longBio": "Gerald is a dedicated software developer who brings enthusiasm and technical skills to our development team. With experience in both web and mobile application development, he contributes to building user-friendly applications using modern technologies. Gerald is passionate about learning new technologies, writing clean code, and collaborating with team members to deliver high-quality software solutions. He's always eager to take on new challenges and grow his technical expertise.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEvG1yGjApnhw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707427019454?e=1778112000&v=beta&t=jfANY_snWBXVROIbeN0-2Cn_ANkQWMZutf5QOJT7dHg",
+    "image": "/img/gerald.jpg",
     "skills": [
       "JavaScript",
       "TypeScript",
@@ -285,7 +285,7 @@
     "name": "Naphtali Phiri",
     "role": "UX UI  Engineer",
     "longBio": "Naphtali is a talented UI/UX engineer who bridges the gap between design and development. With expertise in user interface design, user experience research, and frontend implementation, he creates intuitive and visually appealing digital experiences. Naphtali specializes in design systems, accessibility standards, and translating design concepts into functional code. He's passionate about user-centered design and ensuring that technology is accessible to everyone.",
-    "image": "/img/Naph.jpeg",
+    "image": "/img/naph.jpeg",
     "skills": [
       "Figma",
       "Adobe Creative Suite",
@@ -321,7 +321,7 @@
     "name": "Timothy Simwawa",
     "role": "Software Engineer",
     "longBio": "Timothy Simwawa is a Software Engineer at iZyane InovSolutions with a strong focus on backend systems, DevOps practices, and scalable web application development. He has hands-on experience building and deploying applications using Django, Flask, Spring Boot, and Next.js. Timothy is passionate about automation, system reliability, and creating efficient software solutions that support business growth. He continuously improves his skills in cloud infrastructure, CI/CD pipelines, and modern development frameworks while contributing to innovative fintech and enterprise projects.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGlMplYONo4MA/profile-displayphoto-shrink_400_400/B4DZZsbaqSGcAk-/0/1745575849969?e=1778112000&v=beta&t=hJ9Awgy_5wOUrol6FiZ2mtaSpzxCgRiC-ljSKeZEAkw",
+    "image": "/img/tim.jpg",
     "skills": [
       "Python",
       "Django",
@@ -358,7 +358,7 @@
     "name": "Simon Sichilima",
     "role": "Software Developer",
     "longBio": "Simon Sichilima is a versatile Software Developer at iZyane InovSolutions, specializing in full-stack development, IT support, system administration, and content management. He combines programming skills with graphics design and user experience insights to deliver robust web and mobile applications. Simon is experienced in managing servers, deploying applications, and maintaining systems while continuously improving his technical knowledge and contributing to team projects.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHzua33emlBTg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700900317637?e=1778112000&v=beta&t=jDjsLcuLk8AElGcMUPh47V_AGA3OqC6ONQ31I4h4iVI",
+    "image": "/img/simon.jpg",
     "skills": [
       "JavaScript",
       "Python",
@@ -395,7 +395,7 @@
     "name": "Joshua Simfukwe",
     "role": "IT Analyst",
     "longBio": "Joshua Simfukwe is an IT Analyst at iZyane InovSolutions & Payments, focusing on analyzing IT systems, improving operational efficiency, and supporting business technology initiatives. He assists in system troubleshooting, data management, and ensures smooth IT operations across the organization. Joshua is committed to delivering effective IT solutions that enhance productivity and reliability.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQGbb5Im4fzKlA/profile-displayphoto-scale_400_400/B4EZntvcIwIoAg-/0/1760630262830?e=1778112000&v=beta&t=AjOPf3L5O8EsReLrNnep3Alcw1Xpe1lKYkiABZwIkXI",
+    "image": "/img/joshua.jpg",
     "skills": [
       "System Analysis",
       "Problem Solving",
@@ -426,7 +426,7 @@
     "name": "Kausa Zimba",
     "role": "IT Analyst",
     "longBio": "Joshua Simfukwe is an IT Analyst at iZyane InovSolutions & Payments, focusing on analyzing IT systems, improving operational efficiency, and supporting business technology initiatives. He assists in system troubleshooting, data management, and ensures smooth IT operations across the organization. Joshua is committed to delivering effective IT solutions that enhance productivity and reliability.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEib74j-BlvUg/profile-displayphoto-scale_400_400/B4EZxRAQITLEAg-/0/1770885547594?e=1778112000&v=beta&t=77lRps9GXHc_mhiQmNjvJAwaUA1P6PCZI4_P0EWDpWo",
+    "image": "/img/kausa.jpg",
     "skills": [
       "System Analysis",
       "Problem Solving",
