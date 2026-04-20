@@ -90,10 +90,10 @@ export default function ServicesSection() {
             viewport={{ once: true }}
           >
             <div className="sticky top-24 h-full">
-              <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px] rounded-xl overflow-hidden bg-gradient-to-br from-primary to-accent">
+              <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px] rounded-xl overflow-hidden shadow-2xl">
                 <img
-                  src="/img/ERP 2.png"
-                  alt="ERP Services"
+                  src="/img/ACSZ.png"
+                  alt="Our Services"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Try a known fallback image if the primary one fails
@@ -101,15 +101,6 @@ export default function ServicesSection() {
                     e.currentTarget.src = '/img/ERP 1.png';
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center">
-                  <div className="text-center text-white p-6">
-                    <i className="fas fa-code text-6xl mb-4 opacity-80"></i>
-                    <h3 className="text-2xl font-bold mb-2">Our Services</h3>
-                    <p className="text-white/90">
-                      Comprehensive solutions for your business needs
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
