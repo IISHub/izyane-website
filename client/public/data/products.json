@@ -12,7 +12,12 @@
       "Business intelligence and reporting",
       "Multi-location support"
     ],
-    "image": "/img/vision.png",
+    "image": "/img/ERP 3.png",
+    "images": [
+      "/img/ERP 1.png",
+      "/img/ERP 2.png",
+      "/img/ERP 3.png"
+    ],
     "category": "Featured Product",
     "categoryIcon": "fas fa-star",
     "primaryColor": "primary-custom",
@@ -38,6 +43,11 @@
     "Customer analytics and reporting"
   ],
   "image": "/img/e-ticket.jpg",
+  "images": [
+    "/img/banner1.png",
+    "/img/banner2.png",
+    "/img/banner3.png"
+  ],
   "category": "Event Management",
   "categoryIcon": "fas fa-ticket-alt",
   "primaryColor": "accent-custom",
@@ -63,7 +73,10 @@
       "Customer management",
       "Multi-location support"
     ],
-    "image": "/img/pos2.jpg",
+    "image": "/img/pos.png",
+    "images": [
+      "/img/pos.png"
+    ],
     "category": "Retail Technology",
     "categoryIcon": "fas fa-cash-register",
     "primaryColor": "blue-600",
@@ -76,49 +89,29 @@
     }
   },
   {
-    "id": "ai-virtual-assistant",
-    "name": "AI Virtual Assistant",
-    "description": "Advanced AI-powered virtual assistant that automates customer service, handles inquiries, and provides intelligent support across multiple communication channels.",
-    "shortDescription": "Intelligent AI assistant for customer service automation",
+    "id": "ai-recon",
+    "name": "AI Recon",
+    "description": "Advanced AI-powered reconciliation system that automates data matching, identifies discrepancies, and provides intelligent financial reconciliation across multiple accounts and platforms.",
+    "shortDescription": "Intelligent AI reconciliation for financial data automation",
     "features": [
-      "Natural language processing",
-      "24/7 customer support automation",
-      "Multi-channel integration",
-      "Smart conversation routing",
-      "Learning and adaptation capabilities",
-      "Analytics and performance tracking"
+      "Automated data matching",
+      "Discrepancy detection and resolution",
+      "Multi-platform integration",
+      "Smart reconciliation algorithms",
+      "Real-time status tracking",
+      "Analytics and performance reporting"
     ],
-    "image": "/img/vision.png",
+    "image": "/img/Recon3.png",
+    "images": [
+      "/img/Recon.png",
+      "/img/Recon2.png",
+      "/img/Recon3.png"
+    ],
     "category": "Artificial Intelligence",
     "categoryIcon": "fas fa-robot",
     "primaryColor": "purple-600",
     "isFeatured": false,
     "technologies": ["Python", "TensorFlow", "OpenAI", "React"],
-    "pricing": {
-      "starter": "Custom Quote",
-      "professional": "Custom Quote",
-      "enterprise": "Custom Quote"
-    }
-  },
-  {
-    "id": "online-onboarding",
-    "name": "Online Onboarding",
-    "description": "Advanced digital onboarding platform that enables organizations to register, verify, and onboard customers or employees seamlessly through secure online portals.",
-    "shortDescription": "Smart digital onboarding and verification system",
-    "features": [
-      "Online user registration and account setup",
-      "Secure document upload and verification",
-      "KYC and identity validation integration",
-      "Automated approval workflows",
-      "Real-time onboarding status tracking",
-      "Integration with enterprise systems"
-    ],
-      "image": "/img/onboarding.jpg",
-    "category": "Digital Solutions",
-    "categoryIcon": "fas fa-user-check",
-    "primaryColor": "purple-600",
-    "isFeatured": false,
-    "technologies": ["React", "Node.js", "MongoDB", "REST APIs"],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",

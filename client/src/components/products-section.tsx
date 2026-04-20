@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "wouter";
 
 interface Product {
   id: string;
@@ -25,6 +26,7 @@ export default function ProductsSection() {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
   const productRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [, setLocation] = useLocation();
 
   const colorClassMap: Record<string, string> = {
     'primary-custom': 'bg-primary-custom/10 text-primary-custom',
@@ -120,6 +122,10 @@ export default function ProductsSection() {
     return src.startsWith('/') ? `${base}${src.slice(1)}` : `${base}${src}`;
   };
 
+  const handleProductClick = (productId: string) => {
+    setLocation(`/product/${productId}`);
+  };
+
   const currentProduct = products[currentProductIndex] || products[0];
   const currentImageSrc = resolveImage(currentProduct?.image);
 
@@ -158,7 +164,10 @@ export default function ProductsSection() {
           {/* Left Column - Sticky Image */}
           <div className="lg:h-auto">
             <div className="lg:sticky lg:top-24 h-[400px] lg:h-[70vh]">
-              <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl">
+              <div 
+                className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl cursor-pointer"
+                onClick={() => currentProduct && handleProductClick(currentProduct.id)}
+              >
                 {/* Animated Image */}
                 <AnimatePresence mode="wait">
                   <motion.img
@@ -243,7 +252,7 @@ export default function ProductsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-10%" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  onClick={() => setCurrentProductIndex(index)}
+                  onClick={() => handleProductClick(product.id)}
                 >
                   {/* Category Badge */}
                   <motion.div
@@ -276,12 +285,10 @@ export default function ProductsSection() {
                   </motion.p>
 
                   {/* Learn More Link */}
-                  <motion.a
-                    href="#contact"
+                  <motion.button
                     onClick={(e) => {
-                      e.preventDefault();
                       e.stopPropagation();
-                      scrollToContact();
+                      handleProductClick(product.id);
                     }}
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold text-base group"
                     animate={{ opacity: isActive ? 1 : 0.6 }}
@@ -290,7 +297,7 @@ export default function ProductsSection() {
                   >
                     Learn more
                     <i className="fas fa-arrow-right text-sm transition-transform group-hover:translate-x-1"></i>
-                  </motion.a>
+                  </motion.button>
                 </motion.div>
               );
             })}

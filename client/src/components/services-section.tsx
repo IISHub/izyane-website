@@ -92,13 +92,13 @@ export default function ServicesSection() {
             <div className="sticky top-24 h-full">
               <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px] rounded-xl overflow-hidden bg-gradient-to-br from-primary to-accent">
                 <img
-                  src="/img/sevices2.jpg"
-                  alt="Our Services"
+                  src="/img/ERP 2.png"
+                  alt="ERP Services"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Try a known fallback image if the primary one fails
                     e.currentTarget.onerror = null as any;
-                    e.currentTarget.src = '/img/services1.jpg';
+                    e.currentTarget.src = '/img/ERP 1.png';
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center">
