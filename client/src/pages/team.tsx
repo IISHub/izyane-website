@@ -6,10 +6,8 @@ interface TeamMember {
   id: number;
   name: string;
   role: string;
-  bio: string;
   longBio: string;
   image: string;
-  expertise: string[];
   skills: string[];
   education: string[];
   experience: string;
@@ -87,21 +85,6 @@ export default function Team() {
                 <p className="text-primary-custom font-semibold mb-4">
                   {member.role}
                 </p>
-                
-                <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                  {member.bio}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 justify-center mb-6">
-                  {member.expertise.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="bg-slate-100 dark:bg-slate-600 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
                 
                 <div className="flex justify-center space-x-3">
                   {member.social.linkedin && (

@@ -3,14 +3,8 @@
     "id": 1,
     "name": "Ackim Chisha",
     "role": "CEO & Founder",
-    "bio": "Visionary leader with 15+ years in tech. Former Head - Core Banking and Enterprise Applications at Zanaco, passionate about building solutions that make a difference.",
     "longBio": "Ackim is a visionary leader who founded iZyane with the mission to democratize technology and make it accessible to businesses of all sizes. With over 15 years of experience in the technology industry, he previously served as Vice President of Product at Google, where he led teams responsible for developing cutting-edge consumer and enterprise solutions. Ackim holds an MBA from Stanford and a Computer Science degree from MIT. He's passionate about mentoring the next generation of tech leaders and believes that technology should be a force for positive change in the world.",
     "image": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    "expertise": [
-      "Strategy",
-      "Leadership",
-      "Product Vision"
-    ],
     "skills": [
       "Strategic Planning",
       "Team Leadership",
@@ -31,7 +25,6 @@
     ],
     "social": {
       "linkedin": "#",
-      "twitter": "#",
       "email": "ackim.chisha@izyane.com"
     },
     "achievements": [
@@ -45,13 +38,8 @@
     "id": 2,
     "name": "Mirriam Mwale",
     "role": "COO",
-    "bio": "Operational excellence leader with expertise in business strategy, process optimization, and organizational development. Scaling operations for high-growth companies.",
     "longBio": "Mirriam brings deep operational expertise and strategic leadership to iZyane. As our Chief Operating Officer, she oversees all operational aspects of the business and ensures efficient execution of company strategy. Previously, she was VP of Operations at a Fortune 500 company and led organizational transformation initiatives at Microsoft. Mirriam specializes in scaling operations, building efficient processes, and developing high-performing teams. She holds an MBA in Operations Management from Wharton and is passionate about operational excellence.",
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQFs6a2eWEIocQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1633117468322?e=1755734400&v=beta&t=2vNZeEUhz_USIdFGEjNDpYeCnNTPE8PSodXIb1-82IA",
-    "expertise": [
-      "Operations Management",
-      "Business Strategy"
-    ],
     "skills": [
       "Strategic Planning",
       "Process Improvement",
@@ -72,7 +60,6 @@
     ],
     "social": {
       "linkedin": "#",
-      "github": "#",
       "email": "mirriam@izyane.com"
     },
     "achievements": [
@@ -86,18 +73,8 @@
     "id": 3,
     "name": "Zawadi Kayoka",
     "role": "Manager Tech-Ops",
-    "bio": "Manager Tech-Ops at iZyane InovSolutions with strong expertise in IT project management, UX/UI, POS systems, payment solutions, wallet management, and business analysis.",
     "longBio": "Zawadi Kayoka is a results-driven technology operations leader at iZyane InovSolutions, specializing in IT project management, UX/UI design, POS management, and digital payment ecosystems. She has extensive experience supporting payment solutions, wallet platforms, and merchant & agency banking operations. Zawadi is also skilled in reconciliation processes, ERP systems, and TDR training, helping organizations streamline operations and improve service delivery. Her work focuses on aligning technology with business needs, optimizing operational efficiency, and supporting scalable fintech solutions.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHsjYn5NF1FQQ/profile-displayphoto-scale_200_200/B4DZgeJfwVHsAY-/0/1752852478363?e=1772064000&v=beta&t=ZvS-a0Rq_at_xDa-d83qZzNGI94u_M1B8DZyBOI8Nxc",
-    "expertise": [
-      "IT Project Management",
-      "Payment Solutions",
-      "POS Management",
-      "Wallet Management",
-      "Business Analysis",
-      "ERP Systems",
-      "Merchant & Agency Banking Support"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQHsjYn5NF1FQQ/profile-displayphoto-scale_200_200/B4DZgeJfwVHsAY-/0/1752852478363?e=1778112000&v=beta&t=OXQ29GCMakgLQ44pquuG_y48RXZ5PLYGVa_wB_b2lrU",
     "skills": [
       "Project Coordination",
       "UX/UI",
@@ -118,7 +95,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/zawadi-kayoka-811090106/",
-      "github": "www.github.com/@Zawadi15",
       "email": "zawadi.kayoka@izyane.com"
     },
     "achievements": [
@@ -132,17 +108,8 @@
     "id": 4,
     "name": "Emmanuel Tembo",
     "role": "Manager Development & Research",
-    "bio": "Senior software engineer with expertise in backend development, API design, and database optimization. Building scalable and maintainable software solutions.",
     "longBio": "Emmanuel is a skilled senior software engineer who specializes in backend development and system architecture. With extensive experience in building robust APIs, optimizing database performance, and implementing scalable solutions, he ensures our applications perform efficiently under load. Previously, he worked on high-traffic systems at major tech companies. Emmanuel is passionate about clean architecture, test-driven development, and mentoring junior developers.",
-    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
-    "expertise": [
-      "Backend Development",
-      "API Design",
-      "Database Optimization",
-      "System Architecture",
-      "Scalable Solutions",
-      "Test-Driven Development"
-    ],
+    "image": "/img/et.png",
     "skills": [
       "Python",
       "Java",
@@ -163,7 +130,6 @@
     ],
     "social": {
       "linkedin": "#",
-      "github": "#",
       "email": "tembo.emmanuelt@izyane.com"
     },
     "achievements": [
@@ -177,14 +143,8 @@
     "id": 5,
     "name": "Nandiwe Mwewa",
     "role": "Accounts and Admin",
-    "bio": "Accounts and administrative professional supporting financial operations, record keeping, and office management to ensure smooth daily business activities.",
     "longBio": "Nandiwe is a dedicated Accounts and Administrative professional who plays a key role in supporting the organization's financial and office operations. She assists with financial record keeping, administrative coordination, and ensuring that daily processes run efficiently. With strong attention to detail and organizational skills, Nandiwe contributes to maintaining accurate documentation, supporting team activities, and ensuring a well-structured working environment.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHZ7X2zwiDFug/profile-displayphoto-scale_200_200/B4EZmvVClCKsAY-/0/1759583157604?e=1772668800&v=beta&t=eUu8MmzzI-anbTjJLEFQeJhHUSIDK8S0UfWWhKSOw_I",
-    "expertise": [
-      "Accounts Support",
-      "Office Administration",
-      "Financial Record Keeping"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQFSm7H8WI0Kzw/profile-displayphoto-scale_200_200/B4DZ2m3ZR8JQAY-/0/1776621040999?e=1778112000&v=beta&t=1rE5pniOcbzWm_3SC0fln9pyK2vbE3V9XXxseBDQ4Jc",
     "skills": [
       "Microsoft Excel",
       "Data Entry",
@@ -203,7 +163,6 @@
     ],
     "social": {
       "linkedin": "#",
-      "github": "https://github.com/nandiwemwewa-cmyk",
       "email": "nandiwe.mwewa@izyane.com"
     },
     "achievements": [
@@ -217,17 +176,8 @@
     "id": 6,
     "name": "Niza Tembo",
     "role": "Senior Software Engineer",
-    "bio": "Senior Software Engineer and IT Specialist at iZyane InovSolutions with expertise in scalable systems, API development, data analysis, and fintech solutions.",
     "longBio": "Niza Tembo is a Senior Software Engineer and IT Specialist at iZyane InovSolutions, specializing in building scalable systems, designing robust APIs, and analyzing data to drive business insights. With extensive experience in Python, Java, and PHP, Niza contributes to fintech innovation and global technology projects. She combines software engineering skills with IT strategy to optimize processes and deliver high-quality solutions that support enterprise and digital payment systems.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQH9a0ckhc9ukg/profile-displayphoto-shrink_200_200/B4DZPygh2THcAc-/0/1734940434707?e=1772064000&v=beta&t=g_9iEw2iEz3gj4bNssZz4sbqovRcYGUap_eAGiq0ZT4",
-    "expertise": [
-      "Software Engineering",
-      "Scalable Systems",
-      "API Development",
-      "Data Analysis",
-      "Fintech Solutions",
-      "IT Strategy"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQH9a0ckhc9ukg/profile-displayphoto-shrink_400_400/B4DZPygh2THcAk-/0/1734940434707?e=1778112000&v=beta&t=5PBoOE27hnwTeUnT5a3lYx4DiAerAtNeZnC-xOjcieE",
     "skills": [
       "Python",
       "Java",
@@ -249,7 +199,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/niza-tembo-508716140/",
-      "github": "https://github.com/Mcwayz",
       "email": "niza.tembo@izyane.com"
     },
     "achievements": [
@@ -263,16 +212,8 @@
     "id": 7,
     "name": "Mwangilwa Zimba",
     "role": "Senior Software Engineer",
-    "bio": "Software Engineer at iZyane InovSolutions specializing in frontend and Android development, with expertise as a Google Cloud Architect.",
     "longBio": "Mwangilwa Zimba is a Software Engineer at iZyane InovSolutions, focusing on frontend and Android development while leveraging Google Cloud for scalable application deployment. He is skilled in building responsive, high-performance web and mobile applications and designing cloud-based architectures. With years of experience in modern frontend frameworks and mobile platforms, Mwangilwa contributes to fintech and enterprise solutions, ensuring robust, user-friendly applications that scale globally.",
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQF1hFM07l9dPQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732390182499?e=1772064000&v=beta&t=Tpl4Q2-SuY8Nl_yI8ZYjqBH-R8XMY_tLqG31xkxx1rE",
-    "expertise": [
-      "Frontend Development",
-      "Android Development",
-      "Google Cloud Architecture",
-      "Responsive Web Apps",
-      "API Integration"
-    ],
     "skills": [
       "JavaScript",
       "TypeScript",
@@ -294,7 +235,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/mwan9ilwa/",
-      "github": "https://github.com/mwan9ilwa",
       "email": "mwangilwa.zimba@izyane.com"
     },
     "achievements": [
@@ -308,16 +248,8 @@
     "id": 8,
     "name": "Gerald Limbando",
     "role": "Software Engineer",
-    "bio": "Software developer with expertise in full-stack development, mobile applications, and modern web technologies. Building innovative solutions with clean, maintainable code.",
     "longBio": "Gerald is a dedicated software developer who brings enthusiasm and technical skills to our development team. With experience in both web and mobile application development, he contributes to building user-friendly applications using modern technologies. Gerald is passionate about learning new technologies, writing clean code, and collaborating with team members to deliver high-quality software solutions. He's always eager to take on new challenges and grow his technical expertise.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEvG1yGjApnhw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707427019454?e=1772064000&v=beta&t=6eBJ3BjxFcsPz4GdBKNJb5dYcDS9e3i7WLaVIXVkpM0",
-    "expertise": [
-      "Frontend Development",
-      "API Integration",
-      "Software Development",
-      "Mobile & Web Development"
-      
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEvG1yGjApnhw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707427019454?e=1778112000&v=beta&t=jfANY_snWBXVROIbeN0-2Cn_ANkQWMZutf5QOJT7dHg",
     "skills": [
       "JavaScript",
       "TypeScript",
@@ -339,7 +271,6 @@
     ],
     "social": {
       "linkedin": "www.linkedin.com/in/geraldlimbando",
-      "github": "www.github.com/Gerald-87",
       "email": "gerald.limbando@izyane.com"
     },
     "achievements": [
@@ -352,15 +283,9 @@
   {
     "id": 9,
     "name": "Naphtali Phiri",
-    "role": "Software Engineer",
-    "bio": "UI/UX engineer specializing in user interface design, user experience research, and frontend implementation. Creating intuitive and accessible digital experiences.",
+    "role": "UX UI  Engineer",
     "longBio": "Naphtali is a talented UI/UX engineer who bridges the gap between design and development. With expertise in user interface design, user experience research, and frontend implementation, he creates intuitive and visually appealing digital experiences. Naphtali specializes in design systems, accessibility standards, and translating design concepts into functional code. He's passionate about user-centered design and ensuring that technology is accessible to everyone.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGqSqLHqngg8A/profile-displayphoto-scale_200_200/B4DZwMCbazGQAY-/0/1769728493035?e=1772064000&v=beta&t=ZTB_PhRow9xlEC4Kfpzy9X04SMxlpQK2eR0nXZgON9M",
-    "expertise": [
-      "UI/UX Design",
-      "Frontend Development",
-      "Design Systems"
-    ],
+    "image": "/img/Naph.jpeg",
     "skills": [
       "Figma",
       "Adobe Creative Suite",
@@ -382,7 +307,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/naphtali-phiri-123456789/",
-      "github": "https://github.com/NaphPhiri",
       "email": "naphtali.phiri@izyane.com"
     },
     "achievements": [
@@ -396,15 +320,8 @@
     "id": 10,
     "name": "Timothy Simwawa",
     "role": "Software Engineer",
-    "bio": "Software Engineer at iZyane InovSolutions specializing in DevOps, backend development, and modern web technologies including Django, Flask, Spring Boot, and Next.js.",
     "longBio": "Timothy Simwawa is a Software Engineer at iZyane InovSolutions with a strong focus on backend systems, DevOps practices, and scalable web application development. He has hands-on experience building and deploying applications using Django, Flask, Spring Boot, and Next.js. Timothy is passionate about automation, system reliability, and creating efficient software solutions that support business growth. He continuously improves his skills in cloud infrastructure, CI/CD pipelines, and modern development frameworks while contributing to innovative fintech and enterprise projects.",
-    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGlMplYONo4MA/profile-displayphoto-shrink_200_200/B4DZZsbaqSGcAc-/0/1745575849952?e=1772064000&v=beta&t=_tYaf6jMhsQBGeg5wOpLmBAU_RZeMy_gf9ocWmCsPEE",
-    "expertise": [
-      "Backend Development",
-      "DevOps",
-      "Web Application Development",
-      "API Development"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4D03AQGlMplYONo4MA/profile-displayphoto-shrink_400_400/B4DZZsbaqSGcAk-/0/1745575849969?e=1778112000&v=beta&t=hJ9Awgy_5wOUrol6FiZ2mtaSpzxCgRiC-ljSKeZEAkw",
     "skills": [
       "Python",
       "Django",
@@ -427,7 +344,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/timothy-simwawa-3a6bb1339/",
-      "github": "https://github.com/ComputeAce",
       "email": "timothy.simwawa@izyane.com"
     },
     "achievements": [
@@ -441,18 +357,8 @@
     "id": 11,
     "name": "Simon Sichilima",
     "role": "Software Developer",
-    "bio": "Software Developer at iZyane InovSolutions with expertise in full-stack development, IT support, system administration, graphics design, and content management.",
     "longBio": "Simon Sichilima is a versatile Software Developer at iZyane InovSolutions, specializing in full-stack development, IT support, system administration, and content management. He combines programming skills with graphics design and user experience insights to deliver robust web and mobile applications. Simon is experienced in managing servers, deploying applications, and maintaining systems while continuously improving his technical knowledge and contributing to team projects.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHzua33emlBTg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700900317637?e=1772064000&v=beta&t=4LUJEPcImSfwtD_m8s3mnO8RtFDjUf4DcSxh4kYftLQ",
-    "expertise": [
-      "Full-Stack Development",
-      "Web Development",
-      "Mobile Development",
-      "System Administration",
-      "Graphics Design",
-      "Content Management",
-      "IT Support"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHzua33emlBTg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700900317637?e=1778112000&v=beta&t=jDjsLcuLk8AElGcMUPh47V_AGA3OqC6ONQ31I4h4iVI",
     "skills": [
       "JavaScript",
       "Python",
@@ -475,7 +381,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/simon-sichilima-8038b7207/",
-      "github": "https://github.com/Simonsichi",
       "email": "simon@izyane.com"
     },
     "achievements": [
@@ -489,15 +394,8 @@
     "id": 12,
     "name": "Joshua Simfukwe",
     "role": "IT Analyst",
-    "bio": "IT Analyst at iZyane InovSolutions & Payments, specializing in IT systems analysis, troubleshooting, and optimizing business technology solutions.",
     "longBio": "Joshua Simfukwe is an IT Analyst at iZyane InovSolutions & Payments, focusing on analyzing IT systems, improving operational efficiency, and supporting business technology initiatives. He assists in system troubleshooting, data management, and ensures smooth IT operations across the organization. Joshua is committed to delivering effective IT solutions that enhance productivity and reliability.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQGbb5Im4fzKlA/profile-displayphoto-scale_200_200/B4EZntvcIwIoAY-/0/1760630262830?e=1772064000&v=beta&t=ACm9msMs8DEgk1octNBTLrry5_j2Cd4n-uFbtRgL268",
-    "expertise": [
-      "IT Systems Analysis",
-      "Troubleshooting",
-      "Business Technology Optimization",
-      "IT Support"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQGbb5Im4fzKlA/profile-displayphoto-scale_400_400/B4EZntvcIwIoAg-/0/1760630262830?e=1778112000&v=beta&t=AjOPf3L5O8EsReLrNnep3Alcw1Xpe1lKYkiABZwIkXI",
     "skills": [
       "System Analysis",
       "Problem Solving",
@@ -515,7 +413,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/joshua-simfukwe-45519238b/",
-      "github": "#",
       "email": "joshua.simfukwe@izyane.com"
     },
     "achievements": [
@@ -528,15 +425,8 @@
     "id": 12,
     "name": "Kausa Zimba",
     "role": "IT Analyst",
-    "bio": "IT Analyst at iZyane InovSolutions & Payments, specializing in IT systems analysis, troubleshooting, and optimizing business technology solutions.",
     "longBio": "Joshua Simfukwe is an IT Analyst at iZyane InovSolutions & Payments, focusing on analyzing IT systems, improving operational efficiency, and supporting business technology initiatives. He assists in system troubleshooting, data management, and ensures smooth IT operations across the organization. Joshua is committed to delivering effective IT solutions that enhance productivity and reliability.",
-    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEib74j-BlvUg/profile-displayphoto-scale_200_200/B4EZxRAQITLEAY-/0/1770885547594?e=1772668800&v=beta&t=aNx8l0v3vmeRCqrDFwGb0-NfhL_7WohGDJPw24Q11C8",
-    "expertise": [
-      "IT Systems Analysis",
-      "Troubleshooting",
-      "Business Technology Optimization",
-      "IT Support"
-    ],
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEib74j-BlvUg/profile-displayphoto-scale_400_400/B4EZxRAQITLEAg-/0/1770885547594?e=1778112000&v=beta&t=77lRps9GXHc_mhiQmNjvJAwaUA1P6PCZI4_P0EWDpWo",
     "skills": [
       "System Analysis",
       "Problem Solving",
@@ -554,7 +444,6 @@
     ],
     "social": {
       "linkedin": "https://www.linkedin.com/in/kausa-zimba-45519238b/",
-      "github": "#",
       "email": "kausa.zimba@izyane.com"
     },
     "achievements": [
