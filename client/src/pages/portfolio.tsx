@@ -37,14 +37,14 @@ export default function Portfolio() {
       .then(data => {
         // Map products to portfolio structure
         const mappedProjects: Project[] = data.map((product: any) => ({
-          id: parseInt(product.id) || 0,
+          id: product.id,
           title: product.name,
           category: product.category,
           description: product.shortDescription,
           detailedDescription: product.description,
           image: product.image,
           technologies: product.technologies || [],
-          liveUrl: '#',
+          liveUrl: `/product/${product.id}`,
           githubUrl: '#',
           featured: product.isFeatured || false,
           client: 'iZyane',
@@ -125,7 +125,7 @@ export default function Portfolio() {
                 key={project.id}
                 className="break-inside-avoid mb-4 group cursor-pointer portfolio-gallery"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => window.open(project.liveUrl, '_blank')}
+                onClick={() => window.location.href = project.liveUrl}
               >
                 <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500">
                   <img
