@@ -11,7 +11,6 @@ export default function PartnersSection() {
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
-  const [isPausedCustomers, setIsPausedCustomers] = useState(false);
 
   useEffect(() => {
     const loadPartners = async () => {
@@ -29,8 +28,7 @@ export default function PartnersSection() {
     loadPartners();
   }, []);
 
-  const partnersList = partners.filter(p => p.category === 'partner');
-  const customersList = partners.filter(p => p.category === 'customers');
+  const allPartners = partners;
 
   if (loading) {
     return (
@@ -80,8 +78,8 @@ export default function PartnersSection() {
         </motion.div>
       </div>
 
-      {/* Partners Section */}
-      <div className="mb-20">
+      {/* Combined Partners & Customers Section */}
+      <div className="mb-16">
         <motion.div
           className="container-custom mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -93,14 +91,14 @@ export default function PartnersSection() {
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
             <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2" style={{ lineHeight: 5 }}>
               <i className="fas fa-handshake text-primary"></i>
-              Our Partners
+              Our Partners and Our Customers
             </h3>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
           </div>
         </motion.div>
 
-        {/* Infinite Scroll - Partners */}
-        <div 
+        {/* Infinite Scroll - All Partners */}
+        <div
           className="relative"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -113,11 +111,11 @@ export default function PartnersSection() {
             <motion.div
               className="flex gap-8"
               animate={{
-                x: isPaused ? 0 : [0, -50 * partnersList.length * 2.5],
+                x: isPaused ? 0 : [0, -50 * allPartners.length * 2.5],
               }}
               transition={{
                 x: {
-                  duration: partnersList.length * 4,
+                  duration: allPartners.length * 4,
                   repeat: Infinity,
                   ease: "linear",
                 },
@@ -125,7 +123,7 @@ export default function PartnersSection() {
               style={{ willChange: 'transform' }}
             >
               {/* Triple the logos for seamless loop */}
-              {[...partnersList, ...partnersList, ...partnersList].map((partner, index) => (
+              {[...allPartners, ...allPartners, ...allPartners].map((partner, index) => (
                 <motion.div
                   key={`partner-${index}`}
                   className="flex-shrink-0 group"
@@ -142,76 +140,6 @@ export default function PartnersSection() {
                   </div>
                   <p className="text-xs text-center text-slate-500 dark:text-slate-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     {partner.name}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      {/* Customers Section */}
-      <div className="mb-16">
-        <motion.div
-          className="container-custom mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="flex items-center gap-4 mb-2">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2" style={{ lineHeight: 5 }}>
-              <i className="fas fa-building text-primary"></i>
-              Our Customers
-            </h3>
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
-          </div>
-        </motion.div>
-
-        {/* Infinite Scroll - Customers (Reverse Direction) */}
-        <div 
-          className="relative"
-          onMouseEnter={() => setIsPausedCustomers(true)}
-          onMouseLeave={() => setIsPausedCustomers(false)}
-        >
-          {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50 dark:from-slate-900 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50 dark:from-slate-900 to-transparent z-10 pointer-events-none"></div>
-          
-          <div className="flex overflow-hidden">
-            <motion.div
-              className="flex gap-8"
-              animate={{
-                x: isPausedCustomers ? 0 : [-50 * customersList.length * 2.5, 0],
-              }}
-              transition={{
-                x: {
-                  duration: customersList.length * 4,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
-              style={{ willChange: 'transform' }}
-            >
-              {/* Triple the logos for seamless loop */}
-              {[...customersList, ...customersList, ...customersList].map((customer, index) => (
-                <motion.div
-                  key={`customer-${index}`}
-                  className="flex-shrink-0 group"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="w-44 h-24 flex items-center justify-center bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 px-4">
-                    <img
-                      src={customer.logo}
-                      alt={customer.name}
-                      className="max-w-full max-h-14 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="text-xs text-center text-slate-500 dark:text-slate-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {customer.name}
                   </p>
                 </motion.div>
               ))}

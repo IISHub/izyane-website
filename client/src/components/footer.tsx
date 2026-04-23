@@ -33,7 +33,7 @@ export default function Footer() {
       title: "Company",
       links: [
         { name: "About Us", action: () => scrollToSection('about') },
-        { name: "Our Team", action: () => window.location.href = '/team' },
+        // { name: "Our Team", action: () => window.location.href = '/team' },
         { name: "Careers", action: () => window.location.href = '/careers' },
         { name: "Contact", action: () => scrollToSection('contact') }
       ]
