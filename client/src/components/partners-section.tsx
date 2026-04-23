@@ -91,7 +91,7 @@ export default function PartnersSection() {
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
             <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200 flex items-center gap-2" style={{ lineHeight: 5 }}>
               <i className="fas fa-handshake text-primary"></i>
-              Our Partners and Our Customers
+              Our Partners & Customers
             </h3>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
           </div>
