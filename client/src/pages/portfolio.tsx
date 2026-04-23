@@ -31,24 +31,43 @@ export default function Portfolio() {
   const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
-    // Load projects
-    fetch('/data/portfolio.json')
+    // Load projects from products.json
+    fetch('/data/products.json')
       .then(response => response.json())
       .then(data => {
-        setProjects(data);
+        // Map products to portfolio structure
+        const mappedProjects: Project[] = data.map((product: any) => ({
+          id: parseInt(product.id) || 0,
+          title: product.name,
+          category: product.category,
+          description: product.shortDescription,
+          detailedDescription: product.description,
+          image: product.image,
+          technologies: product.technologies || [],
+          liveUrl: '#',
+          githubUrl: '#',
+          featured: product.isFeatured || false,
+          client: 'iZyane',
+          duration: 'Ongoing',
+          teamSize: '5-10',
+          year: '2024',
+          results: [],
+          features: product.features || []
+        }));
+        setProjects(mappedProjects);
         
         // Generate categories from projects
-        const uniqueCategories = Array.from(new Set(data.map((project: Project) => project.category))) as string[];
+        const uniqueCategories = Array.from(new Set(mappedProjects.map((project: Project) => project.category))) as string[];
         const categoryList: Category[] = [
           { id: "all", name: "All Projects" },
           ...uniqueCategories.map((cat: string) => ({
             id: cat,
-            name: cat.charAt(0).toUpperCase() + cat.slice(1) + (cat === 'web' ? ' Apps' : cat === 'mobile' ? ' Apps' : cat === 'ai' ? '/ML' : '')
+            name: cat
           }))
         ];
         setCategories(categoryList);
       })
-      .catch(error => console.error('Error loading portfolio data:', error));
+      .catch(error => console.error('Error loading products data:', error));
   }, []);
 
   const filteredProjects = activeCategory === "all" 
@@ -144,9 +163,6 @@ export default function Portfolio() {
             <p className="text-slate-600 dark:text-slate-400 mb-6 text-lg">
               Inspired by our work? Let's create something amazing together.
             </p>
-            <button className="btn-solid px-8 py-3 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              View All Projects
-            </button>
           </div>
         </div>
       </section>
