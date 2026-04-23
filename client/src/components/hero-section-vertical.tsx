@@ -45,7 +45,7 @@ export default function HeroSection() {
     {
       backgroundGradient: "from-emerald-50 via-teal-50 to-cyan-100",
       darkBackgroundGradient: "from-slate-900 via-emerald-900/20 to-slate-800",
-      heroImage: "/img/banner1.png",
+      heroImage: "/img/banner3.png",
       stats: [
         { number: "10+", label: "Projects Delivered" },
         { number: "10+", label: "Happy Clients" },
