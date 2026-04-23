@@ -56,12 +56,12 @@
   },
   {
     "name": "IZB",
-    "logo": "https://techrowthweb.azurewebsites.net/wp-content/uploads/2021/08/Screenshot-2021-09-06-at-2.07.43-PM.png",
+    "logo": "https://izbassetsmain.blob.core.windows.net/izbwebassets/logo.png",
     "category": "customers"
   },
   {
     "name": "ZICB",
-    "logo": "https://www.zicb.co.zm/wp-content/uploads/2019/01/logo-1.png",
+    "logo": "https://www.zicb.co.zm/wp-content/uploads/2025/01/Asset-1@2x-1-2.png",
     "category": "customers"
   },
   {
@@ -101,12 +101,12 @@
   },
   {
     "name": "Bank of Botswana",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Bank_of_Botswana_logo.svg/260px-Bank_of_Botswana_logo.svg.png",
+    "logo": "https://www.bankofbotswana.bw/sites/default/files/logo.png",
     "category": "customers"
   },
   {
     "name": "ABSA",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/ABSA_Group_Limited_Logo.svg/1200px-ABSA_Group_Limited_Logo.svg.png",
+    "logo": "https://www.absa.co.zm/content/dam/zambia/absa/logos/absa-logo-bg.png",
     "category": "customers"
   }
 ]
