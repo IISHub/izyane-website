@@ -37,7 +37,7 @@ export default function HeroSection() {
       heroImage: "/img/banner1.png",
       stats: [
         { number: "100+", label: "DSA's" },
-        { number: "95%", label: "Client Support" },
+        { number: "99%", label: "Client Support" },
         { number: "5000+", label: "Agencies Opened" }
       ],
       mockupIcon: "fas fa-rocket",
