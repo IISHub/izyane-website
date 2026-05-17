@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import OptimizedImage from "@/components/optimized-image";
 import { motion } from "framer-motion";
 import { useParallax, useScrollRotation } from "@/hooks/use-parallax";
 
@@ -135,8 +136,8 @@ export default function AboutSection() {
           <TabsContent value="about" className="space-y-16">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <img
-                  src="/img/about.png?w=800&h=600"
+                <OptimizedImage
+                  src="/img/about.png"
                   alt="Team collaboration in modern office"
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
@@ -205,8 +206,8 @@ export default function AboutSection() {
                 </div>
               </div>
               <div>
-                <img
-                  src="/img/vision.png?w=800&h=600"
+                <OptimizedImage
+                  src="/img/vision.png"
                   alt="Vision - Future technology workspace"
                   className="rounded-2xl shadow-lg w-full h-auto"
                 />
@@ -217,7 +218,7 @@ export default function AboutSection() {
           <TabsContent value="mission" className="space-y-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <img
+                <OptimizedImage
                   src="/img/mission.jpg"
                   alt="Mission - Team working together"
                   className="rounded-2xl shadow-lg w-full h-auto"

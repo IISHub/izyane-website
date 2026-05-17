@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import OptimizedImage from "@/components/optimized-image";
 import { useRef, useEffect, useState } from "react";
 
 export default function HeroSection() {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ServiceModal from "@/components/service-modal";
+import OptimizedImage from "@/components/optimized-image";
 import { motion } from "framer-motion";
 import { useParallax } from "@/hooks/use-parallax";
 
@@ -91,14 +92,13 @@ export default function ServicesSection() {
           >
             <div className="sticky top-24 h-full">
               <div className="relative w-full h-full min-h-[400px] lg:min-h-[600px] rounded-xl overflow-hidden shadow-2xl">
-                <img
+                <OptimizedImage
                   src="/img/ACSZ.png"
                   alt="Our Services"
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // Try a known fallback image if the primary one fails
                     e.currentTarget.onerror = null as any;
-                    e.currentTarget.src = '/img/ERP 1.png';
+                    e.currentTarget.src = '/img/ERP 3.png';
                   }}
                 />
               </div>
