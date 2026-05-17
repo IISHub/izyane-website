@@ -114,7 +114,7 @@
   },
   {
     "id": "kyc-onboarding",
-    "name": "KYC Inboarding",
+    "name": "KYC Onboarding",
     "description": "End-to-end Know Your Customer onboarding platform that streamlines identity verification, document validation, and compliance checks for financial institutions and regulated businesses.",
     "shortDescription": "Secure digital KYC onboarding for regulated businesses",
     "features": [
