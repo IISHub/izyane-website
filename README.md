@@ -138,3 +138,4 @@ client/
 1. Verify build output in `dist/public`
 2. Check environment variables in deployment platform
 3. Ensure correct build commands and output directory
+npm run optimize-images
