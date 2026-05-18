@@ -97,10 +97,10 @@ export default function HeroSection() {
         style={{ y: floatingElementsY }}
         className="fixed inset-0 pointer-events-none z-0"
       >
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-primary-custom/20 to-secondary-custom/20 rounded-full blur-xl"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-l from-purple-400/10 to-pink-400/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-32 left-1/4 w-24 h-24 bg-gradient-to-r from-blue-400/15 to-cyan-400/15 rounded-full blur-xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-16 h-16 bg-gradient-to-r from-green-400/20 to-teal-400/20 rounded-full blur-lg"></div>
+        <div className="hidden md:absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-primary-custom/20 to-secondary-custom/20 rounded-full blur-xl"></div>
+        <div className="hidden lg:absolute top-40 right-20 w-32 h-32 bg-gradient-to-l from-purple-400/10 to-pink-400/10 rounded-full blur-2xl"></div>
+        <div className="hidden md:absolute bottom-32 left-1/4 w-24 h-24 bg-gradient-to-r from-blue-400/15 to-cyan-400/15 rounded-full blur-xl"></div>
+        <div className="hidden lg:absolute top-1/3 right-1/3 w-16 h-16 bg-gradient-to-r from-green-400/20 to-teal-400/20 rounded-full blur-lg"></div>
       </motion.div>
 
       <div className="sticky top-0 h-screen w-full overflow-hidden">
@@ -132,9 +132,9 @@ export default function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <div className="text-center max-w-6xl px-4">
+                <div className="text-center max-w-6xl px-4 sm:px-6">
                   <motion.h2
-                    className="text-5xl md:text-7xl font-bold text-white mb-12 leading-tight drop-shadow-2xl"
+                    className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 sm:mb-8 md:mb-12 leading-tight drop-shadow-2xl"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
@@ -160,7 +160,7 @@ export default function HeroSection() {
                   </motion.h2>
                   
                   <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-4xl mx-auto"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
@@ -175,7 +175,7 @@ export default function HeroSection() {
                         }}
                       >
                         {/* Liquid Glass Background */}
-                        <div className={`relative p-8 backdrop-blur-xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-3xl border border-white/30 shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:border-white/40 ${
+                        <div className={`relative p-4 sm:p-6 md:p-8 backdrop-blur-xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-2xl sm:rounded-3xl border border-white/30 shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:border-white/40 ${
                           index === 0 ? 'hover:from-blue-400/10 hover:to-purple-400/10' : 
                           index === 1 ? 'hover:from-emerald-400/10 hover:to-teal-400/10' : 
                           'hover:from-orange-400/10 hover:to-amber-400/10'
@@ -195,10 +195,10 @@ export default function HeroSection() {
                           
                           {/* Content */}
                           <div className="relative z-10">
-                            <div className="text-4xl lg:text-5xl font-bold text-white drop-shadow-lg mb-3 bg-gradient-to-r from-white to-white/80 bg-clip-text group-hover:from-white group-hover:to-white transition-all duration-300">
+                            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg mb-2 sm:mb-3 bg-gradient-to-r from-white to-white/80 bg-clip-text group-hover:from-white group-hover:to-white transition-all duration-300">
                               {stat.number}
                             </div>
-                            <div className="text-white/90 font-semibold text-lg tracking-wide group-hover:text-white transition-colors duration-300">
+                            <div className="text-white/90 font-semibold text-xs sm:text-sm md:text-base lg:text-lg tracking-wide group-hover:text-white transition-colors duration-300">
                               {stat.label}
                             </div>
                           </div>
@@ -237,9 +237,9 @@ export default function HeroSection() {
                 id={index === 0 ? "home" : `slide-${index}`}
                 className="h-screen flex items-center justify-center relative overflow-hidden"
               >
-                {/* Floating decorative elements */}
+                {/* Floating decorative elements - hidden on mobile */}
                 <motion.div 
-                  className="absolute right-20 top-1/2 -translate-y-1/2"
+                  className="hidden md:absolute md:right-20 top-1/2 -translate-y-1/2"
                   style={{ y: mockupY, rotate }}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
