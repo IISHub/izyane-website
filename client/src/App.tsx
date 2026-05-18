@@ -40,7 +40,7 @@ function App() {
           <Toaster />
           <Router />
           <BackToTop />
-          <Chatbot />
+          {/* <Chatbot /> */}
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

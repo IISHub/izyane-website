@@ -87,7 +87,7 @@ export default function ProductDetail() {
           <div className="text-slate-500">Loading product...</div>
         </div>
         <BackToTop />
-        <Chatbot />
+        {/* <Chatbot /> */}
       </>
     );
   }
@@ -109,7 +109,7 @@ export default function ProductDetail() {
           </div>
         </div>
         <BackToTop />
-        <Chatbot />
+        {/* <Chatbot /> */}
       </>
     );
   }
@@ -287,7 +287,7 @@ export default function ProductDetail() {
       </section>
 
       <BackToTop />
-      <Chatbot />
+      {/* <Chatbot /> */}
     </>
   );
 }
