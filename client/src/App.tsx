@@ -9,6 +9,7 @@ import Careers from "@/pages/careers";
 import Team from "@/pages/team";
 import Portfolio from "@/pages/portfolio";
 import ProductDetail from "@/pages/product-detail";
+import ServiceProducts from "@/pages/service-products";
 import NotFound from "@/pages/not-found";
 import TopDockNavigation from "./components/top-dock-navigation";
 import BackToTop from "./components/back-to-top";
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/team" component={Team} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/product/:id" component={ProductDetail} />
+      <Route path="/service/:serviceId" component={ServiceProducts} />
       <Route component={NotFound} />
     </Switch>
   );

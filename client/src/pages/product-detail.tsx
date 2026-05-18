@@ -280,45 +280,7 @@ export default function ProductDetail() {
                 </motion.div>
               )}
 
-              {/* Pricing */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-700 dark:to-slate-800 rounded-xl p-6"
-              >
-                <h3 className="text-2xl font-bold text-responsive mb-4">Pricing</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-600 dark:text-slate-300">Starter</span>
-                    <span className="font-semibold text-responsive">{product.pricing.starter}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-600 dark:text-slate-300">Professional</span>
-                    <span className="font-semibold text-responsive">{product.pricing.professional}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-600 dark:text-slate-300">Enterprise</span>
-                    <span className="font-semibold text-responsive">{product.pricing.enterprise}</span>
-                  </div>
-                </div>
-              </motion.div>
 
-              {/* CTA Button */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-              >
-                <button
-                  onClick={() => setLocation('/#contact')}
-                  className={`w-full py-4 px-8 rounded-xl text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r ${
-                    gradientClassMap[product.primaryColor] ?? gradientClassMap['default']
-                  } hover:scale-105`}
-                >
-                  Get Started
-                </button>
-              </motion.div>
             </div>
           </div>
         </div>

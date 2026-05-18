@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ServiceModal from "@/components/service-modal";
+import { useLocation } from "wouter";
 import OptimizedImage from "@/components/optimized-image";
 import { motion } from "framer-motion";
 import { useParallax } from "@/hooks/use-parallax";
@@ -23,8 +23,7 @@ interface Service {
 }
 
 export default function ServicesSection() {
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [, setLocation] = useLocation();
   const [services, setServices] = useState<Service[]>([]);
 
   // Parallax effects
@@ -38,9 +37,8 @@ export default function ServicesSection() {
       .catch((error) => console.error("Error loading services:", error));
   }, []);
 
-  const handleLearnMore = (service: Service) => {
-    setSelectedService(service);
-    setIsModalOpen(true);
+  const handleServiceClick = (service: Service) => {
+    setLocation(`/service/${service.id}`);
   };
 
   const displayedServices = services;
@@ -116,7 +114,7 @@ export default function ServicesSection() {
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -3 }}
-                onClick={() => handleLearnMore(service)}
+                onClick={() => handleServiceClick(service)}
               >
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0">
@@ -139,12 +137,6 @@ export default function ServicesSection() {
         </div>
 
       </div>
-
-      <ServiceModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        service={selectedService}
-      />
     </section>
   );
 }

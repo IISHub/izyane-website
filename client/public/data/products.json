@@ -4,6 +4,7 @@
     "name": "Enterprise Resource Planning",
     "description": "Comprehensive Enterprise Resource Planning solution designed to streamline business operations, manage resources, and improve organizational efficiency across all departments.",
     "shortDescription": "Complete ERP solution for modern businesses",
+    "serviceId": "erp-system-implementation",
     "features": [
       "Financial management and accounting",
       "Human resources management",
@@ -32,6 +33,7 @@
   "name": "eTicketing System",
   "description": "Modern digital ticketing platform for events, transportation, and venues with real-time booking, payment processing, and comprehensive analytics.",
   "shortDescription": "Complete digital ticketing solution for events and venues",
+  "serviceId": "software-mobile-web-development",
   "features": [
     "Online ticket booking and sales",
     "Real-time seat selection",
@@ -60,6 +62,7 @@
     "id": "smart-pos",
     "name": "Smart POS",
     "description": "Intelligent Point of Sale system with cloud integration, inventory management, and advanced analytics designed for retail and hospitality businesses.",
+    "serviceId": "software-mobile-web-development",
     "shortDescription": "Next-generation POS system for modern businesses",
     "features": [
       "Touch-screen interface",
@@ -88,6 +91,7 @@
     "id": "Automated-Reconciliation",
     "name": "Automated Reconciliation",
     "description": "Advanced AI-powered reconciliation system that automates data matching, identifies discrepancies, and provides intelligent financial reconciliation across multiple accounts and platforms.",
+    "serviceId": "software-mobile-web-development",
     "shortDescription": "Intelligent AI reconciliation for financial data automation",
     "features": [
       "Automated data matching",
