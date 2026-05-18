@@ -136,7 +136,7 @@ export default function TopDockNavigation() {
 						src="/logo-full.png" 
 						alt="iZyane Logo" 
 						className={`transition-all duration-300 ${
-							isScrolled ? 'w-25 h-12' : 'w-27 h-14'
+							isScrolled ? 'w-22 h-24' : 'w-22 h-24'
 						} hover:scale-110`} 
 						onClick={handleLogoClick}
 					/>
