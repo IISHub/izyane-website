@@ -74,13 +74,13 @@
     ],
     "image": "/img/pos.png",
     "images": [
-      "/img/pos.png"
+      "/img/pos2.png"
     ],
     "category": "Retail Technology",
     "categoryIcon": "fas fa-cash-register",
     "primaryColor": "blue-600",
     "isFeatured": false,
-    "technologies": ["React Native", "Node.js", "SQLite", "Cloud APIs"],
+    "technologies": ["Android OS", "NFC", "4G/LTE", "WiFi-6"],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",
