@@ -37,7 +37,7 @@ export default function HeroSection() {
       heroImage: "/img/banner1.png",
       stats: [
         { number: "100+", label: "DSA's" },
-        { number: "95%", label: "Client Support" },
+        { number: "99%", label: "Client Support" },
         { number: "5000+", label: "Agencies Opened" }
       ],
       mockupIcon: "fas fa-rocket",
@@ -60,7 +60,7 @@ export default function HeroSection() {
       darkBackgroundGradient: "from-slate-900 via-orange-900/20 to-slate-800",
       heroImage: "/img/banner3.png",
       stats: [
-        { number: "1700+", label: "POS Supplied" },
+        { number: "2200+", label: "POS Supplied" },
         { number: "2", label: "Countries" },
         { number: "70+", label: "Locations" }
       ],

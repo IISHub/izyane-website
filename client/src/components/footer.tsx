@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { useParallax } from "@/hooks/use-parallax";
 
 export default function Footer() {
@@ -55,9 +56,11 @@ export default function Footer() {
   ];
 
   const legalLinks = [
-    { name: "Privacy Policy", href: "#privacy" },
-    { name: "Terms of Service", href: "#terms" },
-    { name: "Cookie Policy", href: "#cookies" }
+    { name: "Privacy Policy", href: "/legal/privacy" },
+    { name: "Terms & Conditions", href: "/legal/terms" },
+    { name: "Data Protection", href: "/legal/data-protection" },
+    { name: "Cookie Policy", href: "/legal/cookies" },
+    { name: "Acceptable Use", href: "/legal/acceptable-use" },
   ];
 
   return (
@@ -135,13 +138,13 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               {legalLinks.map((link, index) => (
-                <a 
+                <Link
                   key={index}
-                  href={link.href} 
+                  href={link.href}
                   className="text-slate-400 hover:text-white text-sm transition-colors duration-200"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

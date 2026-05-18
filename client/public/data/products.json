@@ -115,5 +115,33 @@
       "professional": "Custom Quote",
       "enterprise": "Custom Quote"
     }
+  },
+  {
+    "id": "kyc-onboarding",
+    "name": "KYC Onboarding",
+    "description": "End-to-end Know Your Customer onboarding platform that streamlines identity verification, document validation, and compliance checks for financial institutions and regulated businesses.",
+    "shortDescription": "Secure digital KYC onboarding for regulated businesses",
+    "features": [
+      "Digital identity verification",
+      "Document capture and validation",
+      "AML and sanctions screening",
+      "Risk scoring and case management",
+      "Audit trails and compliance reporting",
+      "API integration with core banking systems"
+    ],
+    "image": "/img/KYC3.png",
+    "images": [
+      "/img/KYC3.png"
+    ],
+    "category": "Identity & Compliance",
+    "categoryIcon": "fas fa-id-card",
+    "primaryColor": "green-500",
+    "isFeatured": false,
+    "technologies": ["React", "Node.js", "PostgreSQL", "REST APIs"],
+    "pricing": {
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
+    }
   }
 ]

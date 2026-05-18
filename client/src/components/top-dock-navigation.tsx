@@ -133,10 +133,10 @@ export default function TopDockNavigation() {
 					whileTap={{ scale: 0.95 }}
 				>
 					<img 
-						src="/logo.png" 
+						src="/logo-full.png" 
 						alt="iZyane Logo" 
 						className={`transition-all duration-300 ${
-							isScrolled ? 'w-12 h-12' : 'w-14 h-14'
+							isScrolled ? 'w-25 h-12' : 'w-27 h-14'
 						} hover:scale-110`} 
 						onClick={handleLogoClick}
 					/>
