@@ -1,9 +1,13 @@
 import { Link } from "wouter";
+import { useEffect, useState } from "react";
+import { useTheme } from "./theme-provider";
 import { useParallax } from "@/hooks/use-parallax";
 
 export default function Footer() {
   // Subtle parallax effect for footer
   const footerParallax = useParallax({ speed: 0.05 });
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { theme } = useTheme();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -18,6 +22,35 @@ export default function Footer() {
       });
     }
   };
+
+  // Track dark mode changes for adaptive logo
+  useEffect(() => {
+    const updateDarkMode = () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      setIsDarkMode(isDark);
+    };
+
+    updateDarkMode();
+
+    // Watch for class changes on document element
+    const observer = new MutationObserver(updateDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    // Also listen for system theme preference changes when theme is "system"
+    if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', updateDarkMode);
+      return () => {
+        observer.disconnect();
+        mediaQuery.removeEventListener('change', updateDarkMode);
+      };
+    }
+
+    return () => observer.disconnect();
+  }, [theme]);
 
   const footerSections = [
     {
@@ -81,11 +114,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <img 
-                src="/logo.png" 
+                src={isDarkMode ? "/logo-footer.png" : "/logo-footer.png"} 
                 alt="iZyane Logo" 
-                className="w-10 h-10 rounded-lg object-contain brightness-200"
+                className="w-30 h-28 rounded-lg object-contain brightness-200"
               />
-              <span className="text-xl font-bold">iZyane InovSolutions</span>
+              {/* <span className="text-xl font-bold">iZyane InovSolutions</span> */}
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed max-w-sm">
               Ahead with Innovation. We deliver cutting-edge fintech solutions that transform businesses and drive financial inclusion across Africa.

@@ -32,18 +32,6 @@ export default function HeroSection() {
 
   const slides = [
     {
-      backgroundGradient: "from-blue-50 via-indigo-50 to-purple-100",
-      darkBackgroundGradient: "from-slate-900 via-blue-900/20 to-slate-800",
-      heroImage: "/img/banner1.png",
-      stats: [
-        { number: "100+", label: "DSA's" },
-        { number: "99%", label: "Client Support" },
-        { number: "5000+", label: "Agencies Opened" }
-      ],
-      mockupIcon: "fas fa-rocket",
-      accentTheme: "primary"
-    },
-    {
       backgroundGradient: "from-emerald-50 via-teal-50 to-cyan-100",
       darkBackgroundGradient: "from-slate-900 via-emerald-900/20 to-slate-800",
       heroImage: "/img/banner3.png",
@@ -53,6 +41,18 @@ export default function HeroSection() {
         { number: "99%", label: "Satisfaction Rate" }
       ],
       mockupIcon: "fas fa-brain",
+      accentTheme: "primary"
+    },
+    {
+      backgroundGradient: "from-blue-50 via-indigo-50 to-purple-100",
+      darkBackgroundGradient: "from-slate-900 via-blue-900/20 to-slate-800",
+      heroImage: "/img/banner1.png",
+      stats: [
+        { number: "100+", label: "DSA's" },
+        { number: "99%", label: "Client Support" },
+        { number: "5000+", label: "Agencies Opened" }
+      ],
+      mockupIcon: "fas fa-rocket",
       accentTheme: "primary"
     },
     {
@@ -140,15 +140,16 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 0.5 }}
                   >
                     {index === 0 && (
+                      
                       <>
-                        <span className="text-blue-400">Digital</span> Innovation<br />
-                        <span className="text-red-800">Unleashed</span>
+                        <span className="text-emerald-400">Smart</span> Solutions<br />
+                        for <span className="text-teal-400">Tomorrow</span>
                       </>
                     )}
                     {index === 1 && (
                       <>
-                        <span className="text-emerald-400">Smart</span> Solutions<br />
-                        for <span className="text-teal-400">Tomorrow</span>
+                        <span className="text-blue-400">Digital</span> Innovation<br />
+                        <span className="text-red-800">Unleashed</span>
                       </>
                     )}
                     {index === 2 && (
