@@ -195,7 +195,7 @@ export default function ContactSection() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="iZyane InovSolutions Location"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                  className=" hover:grayscale-0 transition-all duration-500"
                 ></iframe>
               </div>
             </div>

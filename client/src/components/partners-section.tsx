@@ -130,11 +130,11 @@ export default function PartnersSection() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-44 h-24 flex items-center justify-center bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 px-4">
+                  <div className="w-44 h-24 flex items-center justify-center bg-white dark:bg-slate-800 rounded-xl shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 px-4">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-w-full max-h-14 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                      className="max-w-full max-h-14 object-contain filter group-hover:grayscale-0 transition-all duration-300"
                       loading="lazy"
                     />
                   </div>
