@@ -21,7 +21,12 @@
     "categoryIcon": "fas fa-star",
     "primaryColor": "primary-custom",
     "isFeatured": true,
-    "technologies": ["React", "Node.js", "PostgreSQL", "Docker"],
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker"
+    ],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",
@@ -29,35 +34,39 @@
     }
   },
   {
-  "id": "eticketing-system",
-  "name": "eTicketing System",
-  "description": "Modern digital ticketing platform for events, transportation, and venues with real-time booking, payment processing, and comprehensive analytics.",
-  "shortDescription": "Complete digital ticketing solution for events and venues",
-  "serviceId": "software-mobile-web-development",
-  "features": [
-    "Online ticket booking and sales",
-    "Real-time seat selection",
-    "Multiple payment gateways",
-    "QR code ticket validation",
-    "Event management dashboard",
-    "Customer analytics and reporting"
-  ],
-  "image": "/img/ACSZ.png",
-  "images": [
-    "/img/ACSZ.png"
-  ],
-  "category": "Event Management",
-  "categoryIcon": "fas fa-ticket-alt",
-  "primaryColor": "accent-custom",
-  "isFeatured": true,
-  "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
-  "pricing": {
-    "starter": "Custom Quote",
-    "professional": "Custom Quote",
-    "enterprise": "Custom Quote"
-  }
-}
-,
+    "id": "eticketing-system",
+    "name": "eTicketing System",
+    "description": "Modern digital ticketing platform for events, transportation, and venues with real-time booking, payment processing, and comprehensive analytics.",
+    "shortDescription": "Complete digital ticketing solution for events and venues",
+    "serviceId": "software-mobile-web-development",
+    "features": [
+      "Online ticket booking and sales",
+      "Real-time seat selection",
+      "Multiple payment gateways",
+      "QR code ticket validation",
+      "Event management dashboard",
+      "Customer analytics and reporting"
+    ],
+    "image": "/img/ACSZ.png",
+    "images": [
+      "/img/ACSZ.png"
+    ],
+    "category": "Event Management",
+    "categoryIcon": "fas fa-ticket-alt",
+    "primaryColor": "accent-custom",
+    "isFeatured": true,
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Stripe API"
+    ],
+    "pricing": {
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
+    }
+  },
   {
     "id": "smart-pos",
     "name": "Smart POS",
@@ -80,7 +89,12 @@
     "categoryIcon": "fas fa-cash-register",
     "primaryColor": "blue-600",
     "isFeatured": false,
-    "technologies": ["Android OS", "NFC", "4G/LTE", "WiFi-6"],
+    "technologies": [
+      "Android OS",
+      "NFC",
+      "4G/LTE",
+      "WiFi-6"
+    ],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",
@@ -89,7 +103,7 @@
   },
   {
     "id": "Automated-Reconciliation",
-    "name": "Automated Reconciliation",
+    "name": "AI Powered Automated Reconciliation",
     "description": "Advanced AI-powered reconciliation system that automates data matching, identifies discrepancies, and provides intelligent financial reconciliation across multiple accounts and platforms.",
     "serviceId": "software-mobile-web-development",
     "shortDescription": "Intelligent AI reconciliation for financial data automation",
@@ -109,7 +123,12 @@
     "categoryIcon": "fas fa-robot",
     "primaryColor": "purple-600",
     "isFeatured": false,
-    "technologies": ["Python", "TensorFlow", "OpenAI", "React"],
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "OpenAI",
+      "React"
+    ],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",
@@ -137,7 +156,75 @@
     "categoryIcon": "fas fa-id-card",
     "primaryColor": "green-500",
     "isFeatured": false,
-    "technologies": ["React", "Node.js", "PostgreSQL", "REST APIs"],
+    "technologies": [
+      "React",
+      "Typescript",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "pricing": {
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
+    }
+  },
+  {
+    "id": "loan-origination",
+    "name": "Loan Origination System",
+    "description": "A comprehensive digital loan origination platform that streamlines the entire lending process, from application and credit assessment to approval and disbursement.",
+    "shortDescription": "Streamline loan applications, assessments, approvals, and disbursements",
+    "features": [
+      "Digital loan applications",
+      "Automated credit assessment",
+      "Document collection and verification",
+      "Multi-level approval workflows",
+      "Loan decisioning and scoring",
+      "Integration with core banking systems"
+    ],
+    "image": "/img/loan-origin.png",
+    "images": [
+      "/img/loan-origin.png"
+    ],
+    "category": "Loan Management",
+    "categoryIcon": "fas fa-file-signature",
+    "primaryColor": "green-500",
+    "isFeatured": false,
+    "technologies": [
+      "React",
+      "Typescript"
+    ],
+    "pricing": {
+      "starter": "Custom Quote",
+      "professional": "Custom Quote",
+      "enterprise": "Custom Quote"
+    }
+  },
+  {
+    "id": "loan-management",
+    "name": "Loan Management System",
+    "description": "A powerful loan management platform designed to manage the complete loan lifecycle, including repayment schedules, collections, interest calculations, account servicing, and portfolio monitoring.",
+    "shortDescription": "Manage the complete loan lifecycle from disbursement to repayment",
+    "features": [
+      "Loan account management",
+      "Repayment schedule management",
+      "Interest and fee calculations",
+      "Collections and arrears management",
+      "Loan restructuring and rescheduling",
+      "Portfolio monitoring and reporting"
+    ],
+    "image": "/img/lms.png",
+    "images": [
+      "/img/lms.png"
+    ],
+    "category": "Loan Management",
+    "categoryIcon": "fas fa-money-check-dollar",
+    "primaryColor": "green-500",
+    "isFeatured": false,
+    "technologies": [
+      "Python",
+      "PostgreSQL",
+      "REST APIs"
+    ],
     "pricing": {
       "starter": "Custom Quote",
       "professional": "Custom Quote",
