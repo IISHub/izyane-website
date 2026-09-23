@@ -159,86 +159,122 @@ export default function TopDockNavigation() {
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl  transition-all duration-300 hidden md:flex items-center justify-between ${
-          isScrolled ? "transform scale-95" : ""
+      {/* Desktop Navigation — outer shell always full-width at top */}
+      <div
+        className={`fixed top-0 left-0 w-full z-50 hidden md:block transition-[padding] duration-400 ${
+          isScrolled ? "pt-0" : "pt-4"
         }`}
         role="navigation"
         aria-label="Main navigation"
       >
-        <motion.div
-          className="flex-shrink-0 cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {/* <img
-            src={isDarkMode ? "/izyane_light.png" : "/izyane_dark.png"}
-            alt="iZyane Logo"
-            className={`transition-all duration-300 w-30 h-28 object-contain hover:scale-110`}
-            onClick={handleLogoClick}
-          /> */}
-          <img
-            src={isDarkMode ? "/izyane_light.png" : "/izyane_dark.png"}
-            alt="iZyane Logo"
-            className="transition-all duration-300 h-28 w-auto max-w-[7.5rem] object-contain hover:scale-110"
-            onClick={handleLogoClick}
-          />
-        </motion.div>
-
-        <motion.ul
-          ref={navRef}
-          className={`flex items-center gap-4 backdrop-blur-md rounded-full shadow-lg p-2 transition-all duration-300 ${
+        {/* Inner container morphs between centered dock ↔ full-width header */}
+        <div
+          className={`mx-auto flex items-center justify-between transition-[max-width,padding,background-color,border-radius,box-shadow,border-color] duration-400 ease-out ${
             isScrolled
-              ? "bg-white/80 dark:bg-slate-800/80 shadow-xl"
-              : "bg-white/40 dark:bg-slate-800/40"
+              ? "max-w-full px-6 lg:px-10 py-2 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-none shadow-[0_1px_3px_rgba(0,0,0,0.05),0_4px_12px_rgba(0,0,0,0.04)] border-b border-slate-200/80 dark:border-slate-700/60"
+              : "max-w-5xl px-2 py-1 bg-transparent rounded-full border-b border-transparent shadow-none"
           }`}
-          onMouseLeave={() => setHoveredLink(null)}
-          layout
-          role="menubar"
-          aria-label="Site navigation"
         >
-          {navLinks.map((link, index) => (
-            <li key={link.href} className="relative" role="none">
-              <motion.a
-                ref={(el) => {
-                  linkRefs.current[index] = el;
-                }}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href, link.route)}
-                className="px-4 py-2 block text-sm font-medium text-slate-800 dark:text-slate-200 relative z-10 transition-all duration-200 hover:text-primary-custom focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-custom focus-visible:ring-offset-2 rounded-full"
-                onMouseEnter={() => setHoveredLink(link.href)}
-                onFocus={() => {
-                  setHoveredLink(link.href);
-                  setFocusedIndex(index);
-                }}
-                whileHover={{ y: -1 }}
-                whileTap={{ scale: 0.95 }}
-                role="menuitem"
-                aria-label={`${link.label} (Alt+${link.key.toUpperCase()})`}
-                tabIndex={0}
-              >
-                {link.label}
-              </motion.a>
-              {hoveredLink === link.href && (
-                <motion.div
-                  layoutId="hover-background"
-                  className="absolute inset-0 bg-white dark:bg-slate-700 rounded-full shadow-md"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.2, type: "spring", stiffness: 300 }}
-                  aria-hidden="true"
-                />
-              )}
-            </li>
-          ))}
-        </motion.ul>
+          {/* Logo */}
+          <motion.div
+            className="flex-shrink-0 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img
+              src={isDarkMode ? "/izyane_light.png" : "/izyane_dark.png"}
+              alt="iZyane Logo"
+              className={`object-contain transition-[height] duration-400 ease-out ${
+                isScrolled
+                  ? "h-12 w-auto max-w-[5rem]"
+                  : "h-28 w-auto max-w-[7.5rem]"
+              }`}
+              onClick={handleLogoClick}
+            />
+          </motion.div>
 
-        <div className="flex-shrink-0">
-          <ThemeToggle />
+          {/* Nav Links */}
+          <ul
+            ref={navRef}
+            className={`flex items-center transition-[gap,padding,background-color,box-shadow,border-radius] duration-400 ease-out ${
+              isScrolled
+                ? "gap-1 bg-transparent shadow-none p-0 rounded-none"
+                : "gap-3 backdrop-blur-md rounded-full shadow-lg p-2 bg-white/40 dark:bg-slate-800/40"
+            }`}
+            onMouseLeave={() => setHoveredLink(null)}
+            role="menubar"
+            aria-label="Site navigation"
+          >
+            {navLinks.map((link, index) => (
+              <li key={link.href} className="relative" role="none">
+                <motion.a
+                  ref={(el) => {
+                    linkRefs.current[index] = el;
+                  }}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href, link.route)}
+                  className={`block px-4 py-2 font-medium relative z-10 transition-colors duration-200 hover:text-primary-custom focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-custom focus-visible:ring-offset-2 rounded-full ${
+                    isScrolled
+                      ? "text-[13px] text-slate-700 dark:text-slate-300"
+                      : "text-sm text-slate-800 dark:text-slate-200"
+                  }`}
+                  onMouseEnter={() => setHoveredLink(link.href)}
+                  onFocus={() => {
+                    setHoveredLink(link.href);
+                    setFocusedIndex(index);
+                  }}
+                  whileHover={{ y: -1 }}
+                  whileTap={{ scale: 0.95 }}
+                  role="menuitem"
+                  aria-label={`${link.label} (Alt+${link.key.toUpperCase()})`}
+                  tabIndex={0}
+                >
+                  {link.label}
+                </motion.a>
+                {hoveredLink === link.href && (
+                  <motion.div
+                    layoutId="hover-background"
+                    className={`absolute inset-0 shadow-sm ${
+                      isScrolled
+                        ? "bg-slate-100 dark:bg-slate-800 rounded-lg"
+                        : "bg-white dark:bg-slate-700 rounded-full"
+                    }`}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.15, type: "spring", stiffness: 400, damping: 30 }}
+                    aria-hidden="true"
+                  />
+                )}
+              </li>
+            ))}
+          </ul>
+
+          {/* Right side: CTA + Theme Toggle */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <button
+              onClick={() => {
+                const section = document.querySelector("#contact") as HTMLElement;
+                if (section) {
+                  const headerOffset = 80;
+                  const elementPosition = section.offsetTop;
+                  const offsetPosition = elementPosition - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                }
+              }}
+              className={`font-semibold rounded-full transition-[opacity,transform,padding,max-height] duration-400 ease-out bg-primary-custom text-white shadow-md shadow-primary-custom/20 hover:shadow-lg hover:shadow-primary-custom/30 hover:scale-105 active:scale-95 ${
+                isScrolled
+                  ? "px-5 py-2 text-xs opacity-100 max-h-10"
+                  : "px-0 py-0 text-[0px] opacity-0 max-h-0 overflow-hidden pointer-events-none"
+              }`}
+              aria-label="Get in Touch"
+            >
+              Get in Touch
+            </button>
+            <ThemeToggle />
+          </div>
         </div>
-      </nav>
+      </div>
 
       {/* Enhanced Mobile Menu */}
       <MobileMenuEnhanced />
