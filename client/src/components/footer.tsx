@@ -77,6 +77,7 @@ export default function Footer() {
       links: [
         { name: "Portfolio", action: () => window.location.href = '/portfolio' },
         { name: "Partners", action: () => scrollToSection('partners') },
+        { name: "Associations", action: () => scrollToSection('associations') },
         { name: "Testimonials", action: () => scrollToSection('testimonials') },
         { name: "Products", action: () => scrollToSection('products') }
       ]
