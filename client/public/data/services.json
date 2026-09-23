@@ -273,6 +273,33 @@
     ]
   },
   {
+    "id": "core-banking-implementation",
+    "icon": "fas fa-vault",
+    "title": "Core Banking Implementation",
+    "description": "Implementation of core banking systems.",
+    "detailedDescription": "We have a team with more than a decade of extensive experience in deploying and maintaining Oracle Flexcube core banking products.",
+    "features": [
+      "Flexcube Implementation",
+      "System Deployment",
+      "Integration Support"
+    ],
+    "technologies": [
+      "Oracle FLEXCUBE",
+      "Banking APIs",
+      "Regulatory Frameworks"
+    ],
+    "gradientFrom": "from-accent-custom",
+    "gradientTo": "to-primary-custom",
+    "deliverables": [
+      "Core banking system setup",
+      "Implementation planning",
+      "Integration services",
+      "System optimization",
+      "Staff training",
+      "Ongoing support"
+    ]
+  },
+  {
     "id": "atm-pos-switch-implementation",
     "icon": "fas fa-network-wired",
     "title": "ATM & POS Switch Implementation",

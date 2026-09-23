@@ -73,9 +73,7 @@ export default function ServicesSection() {
             Our Services
           </h2>
           <p className="text-lg xs:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
-            We do the highest level of R&D for innovative and user-friendly
-            banking applications through Techurate, we are an accredited ORACLE
-            gold partner.
+            Backed by our Bank of Zambia payment license, Oracle registration, and ongoing PCI certification, we engineer secure, innovative, and user-friendly banking and payment solutions across Africa.
           </p>
         </motion.div>
 

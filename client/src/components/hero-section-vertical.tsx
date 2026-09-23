@@ -17,16 +17,25 @@ export default function HeroSection() {
   }, []);
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    scrollToSection('contact');
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       const headerOffset = 80;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerOffset;
+      const elementPosition = element.getBoundingClientRect().top + (window.pageYOffset || window.scrollY || 0);
+      const offsetPosition = Math.max(0, elementPosition - headerOffset);
       
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
       });
+    } else {
+      const fallback = document.querySelector(`[id*="${sectionId}"]`);
+      if (fallback) {
+        fallback.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -37,7 +46,7 @@ export default function HeroSection() {
       heroImage: "/img/banner3.png",
       stats: [
         { number: "10+", label: "Projects Delivered" },
-        { number: "10+", label: "Happy Clients" },
+        { number: "5+", label: "AI Products", link: "products" },
         { number: "99%", label: "Satisfaction Rate" }
       ],
       mockupIcon: "fas fa-brain",
@@ -77,6 +86,10 @@ export default function HeroSection() {
   const slide2Opacity = useTransform(scrollYProgress, [0.25, 0.33, 0.58, 0.66], [0, 1, 1, 0]);
   const slide3Opacity = useTransform(scrollYProgress, [0.58, 0.66, 0.9, 1], [0, 1, 1, 1]);
 
+  const slide1PointerEvents = useTransform(scrollYProgress, (v) => v < 0.3 ? "auto" : "none");
+  const slide2PointerEvents = useTransform(scrollYProgress, (v) => (v >= 0.25 && v < 0.66) ? "auto" : "none");
+  const slide3PointerEvents = useTransform(scrollYProgress, (v) => v >= 0.58 ? "auto" : "none");
+
   // Parallax effects for different layers
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
@@ -107,32 +120,37 @@ export default function HeroSection() {
         {/* Background Images for all slides - positioned to cover entire screen */}
         {slides.map((slide, index) => {
           const slideOpacity = index === 0 ? slide1Opacity : index === 1 ? slide2Opacity : slide3Opacity;
+          const slidePointerEvents = index === 0 ? slide1PointerEvents : index === 1 ? slide2PointerEvents : slide3PointerEvents;
           
           return (
             <motion.div 
               key={`bg-${index}`}
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
               style={{ 
                 backgroundImage: `url(${slide.heroImage})`,
-                opacity: isInitialized ? slideOpacity : (index === 0 ? 1 : 0) // Prevent stacking on initial load
+                opacity: isInitialized ? slideOpacity : (index === 0 ? 1 : 0),
+                zIndex: index === 0 ? 15 : 10
               }}
               initial={{ opacity: index === 0 ? 1 : 0 }} // Only first slide visible initially
             >
               {/* Dark overlay for better text readability */}
-              <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/40 dark:bg-black/60 pointer-events-none"></div>
               
               {/* Gradient overlay for additional styling */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${slide.backgroundGradient} dark:bg-gradient-to-br dark:${slide.darkBackgroundGradient} opacity-30 dark:opacity-20`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${slide.backgroundGradient} dark:bg-gradient-to-br dark:${slide.darkBackgroundGradient} opacity-30 dark:opacity-20 pointer-events-none`}></div>
               
               {/* Background Content Overlay for all slides */}
               <motion.div 
-                className="absolute inset-0 flex items-center justify-center z-10"
-                style={{ opacity: isInitialized ? slideOpacity : (index === 0 ? 1 : 0) }} // Prevent stacking on initial load
+                className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none"
+                style={{ 
+                  opacity: isInitialized ? slideOpacity : (index === 0 ? 1 : 0),
+                  pointerEvents: isInitialized ? slidePointerEvents : (index === 0 ? 'auto' : 'none')
+                }} // Prevent stacking on initial load
                 initial={{ opacity: index === 0 ? 1 : 0, y: 50 }} // Only first slide content visible initially
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <div className="text-center max-w-6xl px-4 sm:px-6">
+                <div className="text-center max-w-6xl px-4 sm:px-6 pointer-events-auto">
                   <motion.h2
                     className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 sm:mb-8 md:mb-12 leading-tight drop-shadow-2xl"
                     initial={{ opacity: 0, y: 30 }}
@@ -166,51 +184,71 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                   >
-                    {slide.stats.map((stat, statIndex) => (
-                      <motion.div 
-                        key={statIndex} 
-                        className="group relative text-center"
-                        whileHover={{ 
-                          scale: 1.05,
-                          transition: { duration: 0.3 }
-                        }}
-                      >
-                        {/* Liquid Glass Background */}
-                        <div className={`relative p-4 sm:p-6 md:p-8 backdrop-blur-xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-2xl sm:rounded-3xl border border-white/30 shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:border-white/40 ${
-                          index === 0 ? 'hover:from-blue-400/10 hover:to-purple-400/10' : 
-                          index === 1 ? 'hover:from-emerald-400/10 hover:to-teal-400/10' : 
-                          'hover:from-orange-400/10 hover:to-amber-400/10'
-                        }`}>
-                          {/* Animated liquid glass effect */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                          <div className={`absolute inset-0 bg-gradient-to-tl opacity-30 animate-pulse ${
-                            index === 0 ? 'from-blue-400/10 via-transparent to-purple-400/10' : 
-                            index === 1 ? 'from-emerald-400/10 via-transparent to-teal-400/10' : 
-                            'from-orange-400/10 via-transparent to-amber-400/10'
-                          }`}></div>
-                          
-                          {/* Floating particles effect */}
-                          <div className="absolute top-2 right-2 w-2 h-2 bg-white/40 rounded-full animate-ping"></div>
-                          <div className="absolute bottom-3 left-3 w-1 h-1 bg-white/60 rounded-full animate-pulse delay-300"></div>
-                          <div className="absolute top-1/2 left-2 w-1.5 h-1.5 bg-white/30 rounded-full animate-bounce delay-500"></div>
-                          
-                          {/* Content */}
-                          <div className="relative z-10">
-                            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg mb-2 sm:mb-3 bg-gradient-to-r from-white to-white/80 bg-clip-text group-hover:from-white group-hover:to-white transition-all duration-300">
-                              {stat.number}
+                    {slide.stats.map((stat, statIndex) => {
+                      const isClickable = Boolean((stat as any).link);
+
+                      return (
+                        <motion.div 
+                          key={statIndex} 
+                          className={`group relative text-center ${isClickable ? 'cursor-pointer' : ''}`}
+                          whileHover={{ 
+                            scale: 1.05,
+                            transition: { duration: 0.3 }
+                          }}
+                          whileTap={isClickable ? { scale: 0.96 } : undefined}
+                          onClick={isClickable ? () => scrollToSection((stat as any).link) : undefined}
+                          onKeyDown={isClickable ? (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              scrollToSection((stat as any).link);
+                            }
+                          } : undefined}
+                          tabIndex={isClickable ? 0 : undefined}
+                          role={isClickable ? "button" : undefined}
+                          aria-label={isClickable ? `Navigate to ${stat.label}` : undefined}
+                        >
+                          {/* Liquid Glass Background */}
+                          <div className={`relative p-4 sm:p-6 md:p-8 backdrop-blur-xl bg-gradient-to-br from-white/20 via-white/10 to-white/5 rounded-2xl sm:rounded-3xl border border-white/30 shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl hover:border-white/40 ${
+                            isClickable ? 'hover:border-white/70 hover:ring-2 hover:ring-white/30' : ''
+                          } ${
+                            index === 0 ? 'hover:from-blue-400/10 hover:to-purple-400/10' : 
+                            index === 1 ? 'hover:from-emerald-400/10 hover:to-teal-400/10' : 
+                            'hover:from-orange-400/10 hover:to-amber-400/10'
+                          }`}>
+                            {/* Animated liquid glass effect */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className={`absolute inset-0 bg-gradient-to-tl opacity-30 animate-pulse ${
+                              index === 0 ? 'from-blue-400/10 via-transparent to-purple-400/10' : 
+                              index === 1 ? 'from-emerald-400/10 via-transparent to-teal-400/10' : 
+                              'from-orange-400/10 via-transparent to-amber-400/10'
+                            }`}></div>
+                            
+                            {/* Floating particles effect */}
+                            <div className="absolute top-2 right-2 w-2 h-2 bg-white/40 rounded-full animate-ping"></div>
+                            <div className="absolute bottom-3 left-3 w-1 h-1 bg-white/60 rounded-full animate-pulse delay-300"></div>
+                            <div className="absolute top-1/2 left-2 w-1.5 h-1.5 bg-white/30 rounded-full animate-bounce delay-500"></div>
+                            
+                            {/* Content */}
+                            <div className="relative z-10">
+                              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg mb-2 sm:mb-3 bg-gradient-to-r from-white to-white/80 bg-clip-text group-hover:from-white group-hover:to-white transition-all duration-300">
+                                {stat.number}
+                              </div>
+                              <div className="text-white/90 font-semibold text-xs sm:text-sm md:text-base lg:text-lg tracking-wide group-hover:text-white transition-colors duration-300 flex items-center justify-center gap-1.5">
+                                <span>{stat.label}</span>
+                                {isClickable && (
+                                  <i className="fas fa-arrow-right text-xs opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                                )}
+                              </div>
                             </div>
-                            <div className="text-white/90 font-semibold text-xs sm:text-sm md:text-base lg:text-lg tracking-wide group-hover:text-white transition-colors duration-300">
-                              {stat.label}
+                            
+                            {/* Liquid ripple effect */}
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700">
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-[shimmer_2s_ease-in-out_infinite]"></div>
                             </div>
                           </div>
-                          
-                          {/* Liquid ripple effect */}
-                          <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700">
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-[shimmer_2s_ease-in-out_infinite]"></div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
+                        </motion.div>
+                      );
+                    })}
                   </motion.div>
                 </div>
               </motion.div>
@@ -221,13 +259,13 @@ export default function HeroSection() {
         {/* Animated background pattern */}
         <motion.div 
           style={{ y: backgroundY, opacity: fadeInOut }}
-          className="absolute inset-0 opacity-20 z-10"
+          className="absolute inset-0 opacity-20 z-10 pointer-events-none"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-y-12"></div>
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/5 to-transparent transform skew-y-6"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-y-12 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/5 to-transparent transform skew-y-6 pointer-events-none"></div>
         </motion.div>
 
-        <motion.div style={{ x, scale }} className="flex h-full w-[300%] items-center relative z-20">
+        <motion.div style={{ x, scale }} className="flex h-full w-[300%] items-center relative z-20 pointer-events-none">
           {slides.map((slide, index) => {
             // Get the appropriate opacity for each slide content
             const slideOpacity = index === 0 ? slide1Opacity : index === 1 ? slide2Opacity : slide3Opacity;
