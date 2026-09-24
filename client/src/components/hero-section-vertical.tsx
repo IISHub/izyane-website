@@ -75,20 +75,37 @@ export default function HeroSection() {
       ],
       mockupIcon: "fas fa-cloud",
       accentTheme: "secondary"
+    },
+    {
+      backgroundGradient: "from-emerald-50 via-sky-50 to-red-100",
+      darkBackgroundGradient: "from-slate-900 via-emerald-900/20 to-slate-800",
+      heroImage: "/img/boz.jpeg",
+      stats: [
+        { number: "BoZ", label: "Payment Licensed", link: "associations" },
+        { number: "Oracle", label: "Registered Partner", link: "associations" },
+        { number: "PCI DSS", label: " Underway", link: "associations" }
+      ],
+      mockupIcon: "fas fa-shield-halved",
+      accentTheme: "primary"
     }
   ];
 
   // Enhanced parallax transforms with proper content switching
-  const x = useTransform(scrollYProgress, [0, 0.33, 0.66, 1], [0, -100, -200, -200]);
+  const x = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [0, -100, -200, -300, -300]);
 
   // Individual slide opacities for proper content switching - start with slide 1 visible, others hidden
-  const slide1Opacity = useTransform(scrollYProgress, [0, 0.25, 0.33, 0.4], [1, 1, 0, 0]);
-  const slide2Opacity = useTransform(scrollYProgress, [0.25, 0.33, 0.58, 0.66], [0, 1, 1, 0]);
-  const slide3Opacity = useTransform(scrollYProgress, [0.58, 0.66, 0.9, 1], [0, 1, 1, 1]);
+  const slide1Opacity = useTransform(scrollYProgress, [0, 0.19, 0.25, 0.3], [1, 1, 0, 0]);
+  const slide2Opacity = useTransform(scrollYProgress, [0.19, 0.25, 0.44, 0.5], [0, 1, 1, 0]);
+  const slide3Opacity = useTransform(scrollYProgress, [0.44, 0.5, 0.69, 0.75], [0, 1, 1, 0]);
+  const slide4Opacity = useTransform(scrollYProgress, [0.69, 0.75, 0.95, 1], [0, 1, 1, 1]);
 
-  const slide1PointerEvents = useTransform(scrollYProgress, (v) => v < 0.3 ? "auto" : "none");
-  const slide2PointerEvents = useTransform(scrollYProgress, (v) => (v >= 0.25 && v < 0.66) ? "auto" : "none");
-  const slide3PointerEvents = useTransform(scrollYProgress, (v) => v >= 0.58 ? "auto" : "none");
+  const slide1PointerEvents = useTransform(scrollYProgress, (v) => v < 0.22 ? "auto" : "none");
+  const slide2PointerEvents = useTransform(scrollYProgress, (v) => (v >= 0.19 && v < 0.5) ? "auto" : "none");
+  const slide3PointerEvents = useTransform(scrollYProgress, (v) => (v >= 0.44 && v < 0.75) ? "auto" : "none");
+  const slide4PointerEvents = useTransform(scrollYProgress, (v) => v >= 0.69 ? "auto" : "none");
+
+  const slideOpacities = [slide1Opacity, slide2Opacity, slide3Opacity, slide4Opacity];
+  const slidePointerEventsList = [slide1PointerEvents, slide2PointerEvents, slide3PointerEvents, slide4PointerEvents];
 
   // Parallax effects for different layers
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -104,7 +121,7 @@ export default function HeroSection() {
   const fadeInOut = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
+    <section ref={targetRef} className="relative h-[400vh]">
       {/* Floating background elements with parallax */}
       <motion.div 
         style={{ y: floatingElementsY }}
@@ -119,8 +136,8 @@ export default function HeroSection() {
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         {/* Background Images for all slides - positioned to cover entire screen */}
         {slides.map((slide, index) => {
-          const slideOpacity = index === 0 ? slide1Opacity : index === 1 ? slide2Opacity : slide3Opacity;
-          const slidePointerEvents = index === 0 ? slide1PointerEvents : index === 1 ? slide2PointerEvents : slide3PointerEvents;
+          const slideOpacity = slideOpacities[index];
+          const slidePointerEvents = slidePointerEventsList[index];
           
           return (
             <motion.div 
@@ -152,7 +169,9 @@ export default function HeroSection() {
               >
                 <div className="text-center max-w-6xl px-4 sm:px-6 pointer-events-auto">
                   <motion.h2
-                    className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-6 sm:mb-8 md:mb-12 leading-tight drop-shadow-2xl"
+                    className={`text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-2xl ${
+                      index === 0 ? 'mb-4 sm:mb-6' : 'mb-6 sm:mb-8 md:mb-12'
+                    }`}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
@@ -176,8 +195,25 @@ export default function HeroSection() {
                         <span className="text-amber-400">Application</span> Development
                       </>
                     )}
+                    {index === 3 && (
+                      <>
+                        <span className="text-emerald-400">Licensed</span> &<br/>
+                        <span className="text-sky-400">Trusted</span> Fintech
+                      </>
+                    )}
                   </motion.h2>
-                  
+
+                  {index === 0 && (
+                    <motion.p
+                      className="text-sm sm:text-lg md:text-xl text-white/85 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed drop-shadow-lg"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.65 }}
+                    >
+                      {/* Render stats here — will be displayed regardless of slide content */}
+                    </motion.p>
+                  )}
+
                   <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-8 max-w-4xl mx-auto"
                     initial={{ opacity: 0, y: 20 }}
@@ -213,6 +249,7 @@ export default function HeroSection() {
                           } ${
                             index === 0 ? 'hover:from-blue-400/10 hover:to-purple-400/10' : 
                             index === 1 ? 'hover:from-emerald-400/10 hover:to-teal-400/10' : 
+                            index === 3 ? 'hover:from-emerald-400/10 hover:to-sky-400/10' :
                             'hover:from-orange-400/10 hover:to-amber-400/10'
                           }`}>
                             {/* Animated liquid glass effect */}
@@ -220,6 +257,7 @@ export default function HeroSection() {
                             <div className={`absolute inset-0 bg-gradient-to-tl opacity-30 animate-pulse ${
                               index === 0 ? 'from-blue-400/10 via-transparent to-purple-400/10' : 
                               index === 1 ? 'from-emerald-400/10 via-transparent to-teal-400/10' : 
+                              index === 3 ? 'from-emerald-400/10 via-transparent to-sky-400/10' :
                               'from-orange-400/10 via-transparent to-amber-400/10'
                             }`}></div>
                             
@@ -265,10 +303,10 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/5 to-transparent transform skew-y-6 pointer-events-none"></div>
         </motion.div>
 
-        <motion.div style={{ x, scale }} className="flex h-full w-[300%] items-center relative z-20 pointer-events-none">
+        <motion.div style={{ x, scale }} className="flex h-full w-[400%] items-center relative z-20 pointer-events-none">
           {slides.map((slide, index) => {
             // Get the appropriate opacity for each slide content
-            const slideOpacity = index === 0 ? slide1Opacity : index === 1 ? slide2Opacity : slide3Opacity;
+            const slideOpacity = slideOpacities[index];
             
             return (
             <div key={index} className="h-full w-full">
