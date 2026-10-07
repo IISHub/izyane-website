@@ -168,7 +168,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm">
-              © {new Date().getFullYear()} iZyane InovSolutions. All rights reserved.
+              © {new Date().getFullYear()} iZyane InovSolutions & Payments. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               {legalLinks.map((link, index) => (

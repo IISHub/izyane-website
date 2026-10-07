@@ -26,6 +26,7 @@ export default function ContactSection() {
     consent: false
   });
   
+  const [botField, setBotField] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -50,40 +51,37 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // Create form data manually to ensure all fields are captured correctly
-      const submitData = new URLSearchParams();
-      submitData.append('form-name', 'contact');
-      submitData.append('name', formData.name);
-      submitData.append('email', formData.email);
-      submitData.append('company', formData.company);
-      submitData.append('subject', formData.subject);
-      submitData.append('message', formData.message);
-      submitData.append('consent', formData.consent.toString());
-
-      const response = await fetch('/', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: submitData.toString()
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, botField })
       });
 
-      if (response.ok) {
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
         toast({
-          title: "Message Sent!",
-          description: "Thank you for your message. We'll get back to you soon.",
+          title: "Error",
+          description: result?.error || "Failed to send message. Please try again or contact us directly.",
+          variant: "destructive"
         });
-        
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          subject: '',
-          message: '',
-          consent: false
-        });
-      } else {
-        throw new Error(`Form submission failed: ${response.status}`);
+        return;
       }
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      });
+      
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: '',
+        consent: false
+      });
     } catch (error) {
+      console.error('Contact form submission failed:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or contact us directly.",
@@ -204,27 +202,20 @@ export default function ContactSection() {
           <div className="order-1 lg:order-2">
             <h3 className="text-xl xs:text-2xl font-bold text-responsive mb-6 sm:mb-8">Send us a Message</h3>
             
-            <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit} 
-              className="space-y-6"
-            >
-              {/* Hidden field for Netlify */}
-              <input type="hidden" name="form-name" value="contact" />
-              
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Honeypot field for spam protection */}
-              <div style={{ display: 'none' }}>
+              <div style={{ display: 'none' }} aria-hidden="true">
                 <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
+                  Don't fill this out if you're human:{' '}
+                  <input
+                    name="bot-field"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={botField}
+                    onChange={(e) => setBotField(e.target.value)}
+                  />
                 </label>
               </div>
-              
-              {/* Hidden inputs that sync with state for complex form elements */}
-              <input type="hidden" name="subject" value={formData.subject} />
-              <input type="hidden" name="consent" value={formData.consent.toString()} />
               
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
@@ -308,8 +299,19 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
-              
+
+              <div className="flex items-start space-x-3 rounded-lg border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-900/60">
+                <Checkbox
+                  id="consent"
+                  name="consent"
+                  checked={formData.consent}
+                  onCheckedChange={(checked) => handleInputChange('consent', checked === true)}
+                  required
+                />
+                <label htmlFor="consent" className="text-sm text-slate-600 dark:text-slate-300">
+                  I agree to be contacted about my enquiry and understand that my information will only be used to respond to my message.
+                </label>
+              </div>
               
               <button 
                 type="submit" 
